@@ -36,6 +36,8 @@ jobs:
         run: python3 scripts/replay_case.py --output work/indiana-replay
       - name: Media I/O, cache, PTS and reproducibility regressions
         run: python3 -m unittest discover -s robustness/tests -v
+      - name: Detection experiment geometry and hold-out guard tests
+        run: python3 -m unittest discover -s experiments/detection/tests -v
       - name: Fast end-to-end input matrix
         run: python3 robustness/matrix.py --suite smoke --output work/ci-smoke
   slow-robustness:

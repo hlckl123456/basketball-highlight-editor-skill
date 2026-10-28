@@ -1,0 +1,9 @@
+{
+  "real_dataset_include_holdout_calls": 1,
+  "configuration_frozen_before_evaluation": true,
+  "frozen_config_sha256": "3c8e116420259408188b8f3dec2c91654ba95b73d6c6400db1fa88f90ddda296",
+  "result_sha256": "71e70598085825eb3b1312c3f2b292f276bfc5dc70a5728176400f8ff9e403f4",
+  "no_more_tuning": true,
+  "holdout_recall_drop": null,
+  "drop_within_5_points": "not estimable: no confirmed made shots in either split"
+}

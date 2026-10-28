@@ -29,3 +29,5 @@ GOAL3_NODE=/path/to/node python3 experiments/detection/run.py --base BASELINE_CO
 迭代时 `verify_release.py --development-only` 明确暂不打开 34 个预留集相关文件，保留已冻结发布哈希，其内容校验推迟到最终冻结。这个结果不能冒称完整发布校验。评测单元测试也只推迟一项会读取真实 hold-out 草稿的语料检查；原测试源码和断言保留，最终全部运行。
 
 `run/finalized.json` 表示停止调参。完成 15 轮无提升后，只调用一次真实数据集的 `--include-holdout`，并恢复默认完整发布与语料检查。后续不能根据这次结果继续改参数。
+
+研究停止后的证据与只运行一次的最终评估工具是 `finalize.py`。它要求已生成 15 轮冻结记录，并使用独占创建的哨兵拒绝再次对真实数据集执行 include-holdout。最终案例只是自动挑选的未复核差异，不能直接放入人工真值。

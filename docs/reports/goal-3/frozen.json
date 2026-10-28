@@ -1,0 +1,41 @@
+{
+  "frozen_at": "2026-10-28T11:55:28.854939+00:00",
+  "state": {
+    "completed_rounds": 15,
+    "no_improvement_rounds": 15,
+    "best_metrics": {
+      "event_precision": null,
+      "event_recall": null,
+      "event_f1": null,
+      "high_assignment_accuracy": 1.0,
+      "target_event_retrieval_high_or_uncertain": 1.0,
+      "high_confidence_coverage": 1.0,
+      "unreviewed_high_predictions": 0
+    },
+    "accepted_rounds": 0,
+    "holdout_denied_accesses": []
+  },
+  "stop": {
+    "stop_reason": "15 consecutive rounds without a confirmed-label improvement",
+    "best_commit": "c3cf6c33472f039bcc2d81aaa7dc283659b753f0",
+    "best_metrics": {
+      "event_precision": null,
+      "event_recall": null,
+      "event_f1": null,
+      "high_assignment_accuracy": 1.0,
+      "target_event_retrieval_high_or_uncertain": 1.0,
+      "high_confidence_coverage": 1.0,
+      "unreviewed_high_predictions": 0
+    },
+    "roi_accuracy": null,
+    "holdout_evaluated": false,
+    "no_more_tuning": true
+  },
+  "research_engine_sha256": "e2f63d7d444f988544d6c089c5df3095463171590991c228ab0d9a951444ebf4",
+  "research_binding_sha256": "a446a9fe16690c169b796787659460b063c87b8dc2ecd672a43d7ae99944b46d",
+  "production_detector_sha256": "eba866109cb14c483f1092da84fa09817408dccfc2cc388c209090094dca7289",
+  "scorer_sha256": "c5ec54d558f51dd2e978338aa8c0d223434af39c3397a2ba13fb34b264bc30b8",
+  "confirmed_registry_sha256": "1154351e7a3be885acd147e6fe129c4f56332687ede8eb45b819937fcc977b44",
+  "catalog_sha256": "c59f558135c51a16d9ae3ad21544b164a9e0b565eb981930210a9b9b0b5ddd6f",
+  "final_predictions": "unchanged production eval/predictions; no research candidate accepted"
+}

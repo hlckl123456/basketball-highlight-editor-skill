@@ -1,0 +1,21 @@
+{
+  "round": 15,
+  "gate": "robustness/tests",
+  "assertions_reported": "17 tests OK",
+  "normal_process_exit": false,
+  "observed_owned_process_elapsed_seconds": 724,
+  "observed_cpu_seconds": 691.909967872,
+  "observed_threads": 3,
+  "action": "SIGTERM sent only after PID, PPID and exact test command validation",
+  "returncode": -15,
+  "gate_passed": false,
+  "candidate_scored": false,
+  "candidate_rolled_back": true,
+  "root_cause": "not determined; do not attribute to a particular native library without evidence",
+  "isolated_retry": {
+    "returncode": 0,
+    "tests": 17,
+    "test_seconds": 13.273,
+    "assertions_changed": false
+  }
+}

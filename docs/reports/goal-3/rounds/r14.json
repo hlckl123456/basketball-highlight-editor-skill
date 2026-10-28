@@ -1,0 +1,2570 @@
+{
+  "decision": {
+    "round": 14,
+    "name": "twelve_fps_sampling",
+    "hypothesis": "增加到12fps并保留两组错开的6fps采样，可能进一步覆盖短暂球迹。",
+    "recall": null,
+    "precision": null,
+    "f1": null,
+    "roi_accuracy": null,
+    "confirmed_made_shots": 0,
+    "reviewed_seconds": 0.0,
+    "prediction_events": 13,
+    "gates": "passed",
+    "decision": "rejected",
+    "reason": "No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote",
+    "seconds": 88.47791558300378,
+    "all_outputs_are_draft": true,
+    "code_patch_sha256": "0c0a7023a70d59b8e617c9e8008e6553cc8520a7c47aa365e356c2fc324ca18d"
+  },
+  "hypothesis": {
+    "plan": {
+      "id": 14,
+      "name": "twelve_fps_sampling",
+      "change": {
+        "sample_fps": 12
+      },
+      "hypothesis": "增加到12fps并保留两组错开的6fps采样，可能进一步覆盖短暂球迹。"
+    },
+    "before_code_sha256": "a446a9fe16690c169b796787659460b063c87b8dc2ecd672a43d7ae99944b46d",
+    "best_metrics_before": {
+      "event_precision": null,
+      "event_recall": null,
+      "event_f1": null,
+      "high_assignment_accuracy": 1.0,
+      "target_event_retrieval_high_or_uncertain": 1.0,
+      "high_confidence_coverage": 1.0,
+      "unreviewed_high_predictions": 0
+    },
+    "roi_accuracy": null,
+    "no_roi_truth": true
+  },
+  "proposals": {
+    "status": "draft",
+    "ground_truth_used": false,
+    "development_only": true,
+    "videos": [
+      {
+        "video_id": "indiana",
+        "events": 1,
+        "roi_proposals": 26,
+        "review_windows": 0,
+        "failure": null
+      },
+      {
+        "video_id": "university",
+        "events": 0,
+        "roi_proposals": 0,
+        "review_windows": 0,
+        "failure": "NO_HOOP_PROPOSAL"
+      },
+      {
+        "video_id": "moscow1",
+        "events": 0,
+        "roi_proposals": 6,
+        "review_windows": 0,
+        "failure": null
+      },
+      {
+        "video_id": "moscow2",
+        "events": 4,
+        "roi_proposals": 10,
+        "review_windows": 0,
+        "failure": null
+      },
+      {
+        "video_id": "ljubljana",
+        "events": 5,
+        "roi_proposals": 25,
+        "review_windows": 0,
+        "failure": null
+      },
+      {
+        "video_id": "ukraine",
+        "events": 2,
+        "roi_proposals": 7,
+        "review_windows": 0,
+        "failure": null
+      },
+      {
+        "video_id": "zhijiang",
+        "events": 1,
+        "roi_proposals": 2,
+        "review_windows": 0,
+        "failure": null
+      }
+    ],
+    "predictions": 13
+  },
+  "draft_proposals": {
+    "indiana": {
+      "video_id": "indiana",
+      "video_sha256": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845",
+      "not_ground_truth": true,
+      "config": {
+        "hoop_conf": 0.08,
+        "margin": 16,
+        "max_gap": 2.5,
+        "min_descent": 20,
+        "dedupe": 0.8,
+        "sample_fps": 12,
+        "detector_conf": 0.15
+      },
+      "events": [
+        {
+          "time": 6.46,
+          "x_cross": 933,
+          "above": {
+            "time": 5.916667,
+            "x": 97.00150108337402,
+            "y": 63.39050102233887,
+            "confidence": 0.43260687589645386,
+            "width": 83.4890022277832,
+            "height": 56.882999420166016
+          },
+          "below": {
+            "time": 7.0,
+            "x": 1251.4519653320312,
+            "y": 251.9040069580078,
+            "confidence": 0.5588245391845703,
+            "width": 37.1199951171875,
+            "height": 49.764007568359375
+          },
+          "rim": {
+            "center_x": 954.77,
+            "rim_y": 199.92,
+            "width": 74.62,
+            "height": 64.59,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        }
+      ],
+      "rois": [
+        {
+          "id": "rim004",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 676.44,
+            "rim_y": 605.49,
+            "width": 172.61,
+            "height": 59.95,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            0,
+            1366.88,
+            1080
+          ],
+          "support_frames": 6,
+          "near_ball_observations": 303,
+          "ranking_score": 304.9459101490553,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim001",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1442.56,
+            "rim_y": 656.99,
+            "width": 105.83,
+            "height": 68.67,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            1019.24,
+            127.84000000000003,
+            1865.8799999999999,
+            1080
+          ],
+          "support_frames": 2,
+          "near_ball_observations": 233,
+          "ranking_score": 234.0986122886681,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim024",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1238.16,
+            "rim_y": 121.18,
+            "width": 107.74,
+            "height": 62.51,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            807.2,
+            0,
+            1669.1200000000001,
+            875.3599999999999
+          ],
+          "support_frames": 18,
+          "near_ball_observations": 199,
+          "ranking_score": 201.94443897916645,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim002",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1433.86,
+            "rim_y": 123.43,
+            "width": 106.31,
+            "height": 63.76,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            1008.6199999999999,
+            0,
+            1859.1,
+            867.6000000000001
+          ],
+          "support_frames": 18,
+          "near_ball_observations": 188,
+          "ranking_score": 190.94443897916645,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim022",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1591.16,
+            "rim_y": 148.62,
+            "width": 83.67,
+            "height": 68.09,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            1256.48,
+            0,
+            1920,
+            734.3100000000001
+          ],
+          "support_frames": 6,
+          "near_ball_observations": 151,
+          "ranking_score": 152.94591014905532,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim012",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1303.81,
+            "rim_y": 445.12,
+            "width": 70.66,
+            "height": 54.85,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            1021.17,
+            91.82000000000005,
+            1586.4499999999998,
+            939.74
+          ],
+          "support_frames": 15,
+          "near_ball_observations": 149,
+          "ranking_score": 151.7725887222398,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim013",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 504.78,
+            "rim_y": 371.68,
+            "width": 86.48,
+            "height": 81.93,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            158.85999999999996,
+            0,
+            850.7,
+            977.04
+          ],
+          "support_frames": 22,
+          "near_ball_observations": 112,
+          "ranking_score": 115.13549421592916,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim005",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1417.62,
+            "rim_y": 295.0,
+            "width": 36.88,
+            "height": 52.35,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            1270.1,
+            110.6,
+            1565.1399999999999,
+            553.1600000000001
+          ],
+          "support_frames": 2,
+          "near_ball_observations": 101,
+          "ranking_score": 102.09861228866811,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim009",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 857.58,
+            "rim_y": 146.88,
+            "width": 74.36,
+            "height": 63.24,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            560.1400000000001,
+            0,
+            1155.02,
+            667.4
+          ],
+          "support_frames": 24,
+          "near_ball_observations": 98,
+          "ranking_score": 101.2188758248682,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim008",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 676.48,
+            "rim_y": 202.17,
+            "width": 81.21,
+            "height": 59.45,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            351.64000000000004,
+            0,
+            1001.3199999999999,
+            770.6399999999999
+          ],
+          "support_frames": 3,
+          "near_ball_observations": 99,
+          "ranking_score": 100.3862943611199,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim003",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 630.94,
+            "rim_y": 130.1,
+            "width": 78.11,
+            "height": 64.59,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            318.50000000000006,
+            0,
+            943.3800000000001,
+            676.87
+          ],
+          "support_frames": 5,
+          "near_ball_observations": 87,
+          "ranking_score": 88.79175946922805,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim023",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1185.96,
+            "rim_y": 450.57,
+            "width": 76.41,
+            "height": 57.43,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            880.32,
+            68.52000000000004,
+            1491.6,
+            985.44
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 87,
+          "ranking_score": 87.69314718055995,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim021",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 250.57,
+            "rim_y": 353.55,
+            "width": 88.24,
+            "height": 87.77,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            0,
+            603.53,
+            971.23
+          ],
+          "support_frames": 83,
+          "near_ball_observations": 80,
+          "ranking_score": 84.43081679884331,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim018",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1026.76,
+            "rim_y": 166.1,
+            "width": 72.17,
+            "height": 68.86,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            738.0799999999999,
+            0,
+            1315.44,
+            671.29
+          ],
+          "support_frames": 37,
+          "near_ball_observations": 78,
+          "ranking_score": 81.63758615972638,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim020",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 953.08,
+            "rim_y": 160.51,
+            "width": 69.49,
+            "height": 63.63,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            675.1200000000001,
+            0,
+            1231.04,
+            646.9399999999999
+          ],
+          "support_frames": 132,
+          "near_ball_observations": 75,
+          "ranking_score": 79.89034912822176,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim017",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 323.43,
+            "rim_y": 96.75,
+            "width": 77.27,
+            "height": 56.56,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            14.350000000000023,
+            0,
+            632.51,
+            637.64
+          ],
+          "support_frames": 2,
+          "near_ball_observations": 76,
+          "ranking_score": 77.09861228866811,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim019",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 144.19,
+            "rim_y": 346.92,
+            "width": 92.44,
+            "height": 89.97,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            0,
+            513.95,
+            994.0
+          ],
+          "support_frames": 16,
+          "near_ball_observations": 63,
+          "ranking_score": 65.83321334405622,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim010",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1177.34,
+            "rim_y": 148.29,
+            "width": 68.69,
+            "height": 59.92,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            902.5799999999999,
+            0,
+            1452.1,
+            629.12
+          ],
+          "support_frames": 23,
+          "near_ball_observations": 56,
+          "ranking_score": 59.17805383034795,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim015",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 155.44,
+            "rim_y": 71.92,
+            "width": 83.74,
+            "height": 56.44,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            0,
+            490.4,
+            658.0999999999999
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 56,
+          "ranking_score": 56.69314718055995,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim016",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 901.23,
+            "rim_y": 377.49,
+            "width": 45.37,
+            "height": 43.07,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            719.75,
+            150.64000000000001,
+            1082.71,
+            695.0799999999999
+          ],
+          "support_frames": 5,
+          "near_ball_observations": 52,
+          "ranking_score": 53.791759469228055,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim006",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1649.17,
+            "rim_y": 285.6,
+            "width": 43.22,
+            "height": 49.97,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            1476.29,
+            69.50000000000003,
+            1822.0500000000002,
+            588.14
+          ],
+          "support_frames": 29,
+          "near_ball_observations": 46,
+          "ranking_score": 49.40119738166216,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim025",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1837.93,
+            "rim_y": 112.24,
+            "width": 103.86,
+            "height": 100.36,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            1422.49,
+            0,
+            1920,
+            839.26
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 48,
+          "ranking_score": 48.69314718055995,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim000",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1337.25,
+            "rim_y": 299.44,
+            "width": 40.57,
+            "height": 48.49,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            1174.97,
+            96.59,
+            1499.53,
+            583.4300000000001
+          ],
+          "support_frames": 16,
+          "near_ball_observations": 40,
+          "ranking_score": 42.83321334405622,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim007",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1811.53,
+            "rim_y": 299.65,
+            "width": 43.97,
+            "height": 52.41,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            1635.65,
+            79.79999999999998,
+            1920,
+            607.4399999999999
+          ],
+          "support_frames": 7,
+          "near_ball_observations": 18,
+          "ranking_score": 20.079441541679834,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim014",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 23.7,
+            "rim_y": 48.81,
+            "width": 47.41,
+            "height": 63.9,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            0,
+            213.33999999999997,
+            380.68
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 10,
+          "ranking_score": 10.693147180559945,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim011",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 1894.65,
+            "rim_y": 300.88,
+            "width": 43.74,
+            "height": 50.79,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            1719.69,
+            82.17999999999998,
+            1920,
+            607.06
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 0,
+          "ranking_score": 0.6931471805599453,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        }
+      ],
+      "review_windows": [],
+      "status": "draft"
+    },
+    "university": {
+      "video_id": "university",
+      "video_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+      "not_ground_truth": true,
+      "config": {
+        "hoop_conf": 0.08,
+        "margin": 16,
+        "max_gap": 2.5,
+        "min_descent": 20,
+        "dedupe": 0.8,
+        "sample_fps": 12,
+        "detector_conf": 0.15
+      },
+      "events": [],
+      "rois": [],
+      "review_windows": [],
+      "failure": "NO_HOOP_PROPOSAL",
+      "status": "draft"
+    },
+    "moscow1": {
+      "video_id": "moscow1",
+      "video_sha256": "18e8ee2cd6313ca14123efb6c7dfcd8b29bacd6102727d0ab27d997925b4cbb3",
+      "not_ground_truth": true,
+      "config": {
+        "hoop_conf": 0.08,
+        "margin": 16,
+        "max_gap": 2.5,
+        "min_descent": 20,
+        "dedupe": 0.8,
+        "sample_fps": 12,
+        "detector_conf": 0.15
+      },
+      "events": [],
+      "rois": [
+        {
+          "id": "rim002",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 171.69,
+            "rim_y": 811.28,
+            "width": 187.15,
+            "height": 77.45,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            0,
+            478,
+            850
+          ],
+          "support_frames": 9,
+          "near_ball_observations": 14,
+          "ranking_score": 16.302585092994047,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim003",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 342.92,
+            "rim_y": 231.27,
+            "width": 47.63,
+            "height": 22.64,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            152.4,
+            0,
+            478,
+            564.6800000000001
+          ],
+          "support_frames": 2,
+          "near_ball_observations": 2,
+          "ranking_score": 3.09861228866811,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim001",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 329.96,
+            "rim_y": 375.0,
+            "width": 29.66,
+            "height": 40.07,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            211.32,
+            226.7,
+            448.59999999999997,
+            582.62
+          ],
+          "support_frames": 3,
+          "near_ball_observations": 1,
+          "ranking_score": 2.386294361119891,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim004",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 63.39,
+            "rim_y": 389.39,
+            "width": 27.69,
+            "height": 39.58,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            250.93999999999997,
+            174.15,
+            583.22
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 0,
+          "ranking_score": 0.6931471805599453,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim005",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 224.23,
+            "rim_y": 214.65,
+            "width": 14.44,
+            "height": 25.42,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            166.47,
+            142.45,
+            281.99,
+            315.73
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 0,
+          "ranking_score": 0.6931471805599453,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim000",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 456.87,
+            "rim_y": 110.61,
+            "width": 27.68,
+            "height": 26.52,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            346.15,
+            0,
+            478,
+            304.37
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 0,
+          "ranking_score": 0.6931471805599453,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        }
+      ],
+      "review_windows": [],
+      "status": "draft"
+    },
+    "moscow2": {
+      "video_id": "moscow2",
+      "video_sha256": "bc56bdd6e458dc2d4b26275297b44b565f8e26517daaa17b7c3f3610aac0e469",
+      "not_ground_truth": true,
+      "config": {
+        "hoop_conf": 0.08,
+        "margin": 16,
+        "max_gap": 2.5,
+        "min_descent": 20,
+        "dedupe": 0.8,
+        "sample_fps": 12,
+        "detector_conf": 0.15
+      },
+      "events": [
+        {
+          "time": 3.5,
+          "x_cross": 241,
+          "above": {
+            "time": 2.5,
+            "x": 51.02799987792969,
+            "y": 50.950000286102295,
+            "confidence": 0.64858478307724,
+            "width": 49.91999816894531,
+            "height": 87.43200016021729
+          },
+          "below": {
+            "time": 4.5,
+            "x": 434.1334991455078,
+            "y": 506.4460144042969,
+            "confidence": 0.2974839210510254,
+            "width": 10.469024658203125,
+            "height": 15.47003173828125
+          },
+          "rim": {
+            "center_x": 270.98,
+            "rim_y": 276.35,
+            "width": 47.19,
+            "height": 36.9,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        },
+        {
+          "time": 4.42,
+          "x_cross": 302,
+          "above": {
+            "time": 4.333333,
+            "x": 217.32450103759766,
+            "y": 128.8234977722168,
+            "confidence": 0.3265115022659302,
+            "width": 21.966995239257812,
+            "height": 40.842994689941406
+          },
+          "below": {
+            "time": 4.5,
+            "x": 434.1334991455078,
+            "y": 506.4460144042969,
+            "confidence": 0.2974839210510254,
+            "width": 10.469024658203125,
+            "height": 15.47003173828125
+          },
+          "rim": {
+            "center_x": 270.98,
+            "rim_y": 276.35,
+            "width": 47.19,
+            "height": 36.9,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        },
+        {
+          "time": 6.75,
+          "x_cross": 247,
+          "above": {
+            "time": 6.5,
+            "x": 189.15249633789062,
+            "y": 218.14550018310547,
+            "confidence": 0.1808992624282837,
+            "width": 16.7449951171875,
+            "height": 31.067001342773438
+          },
+          "below": {
+            "time": 7.0,
+            "x": 446.7615051269531,
+            "y": 478.71449279785156,
+            "confidence": 0.307567298412323,
+            "width": 15.541015625,
+            "height": 27.457000732421875
+          },
+          "rim": {
+            "center_x": 270.98,
+            "rim_y": 276.35,
+            "width": 47.19,
+            "height": 36.9,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        },
+        {
+          "time": 11.17,
+          "x_cross": 296,
+          "above": {
+            "time": 10.666667,
+            "x": 328.95899963378906,
+            "y": 187.24250030517578,
+            "confidence": 0.1829826831817627,
+            "width": 13.584014892578125,
+            "height": 23.365005493164062
+          },
+          "below": {
+            "time": 11.666667,
+            "x": 252.2909927368164,
+            "y": 394.22698974609375,
+            "confidence": 0.7995253801345825,
+            "width": 23.861984252929688,
+            "height": 34.25
+          },
+          "rim": {
+            "center_x": 270.98,
+            "rim_y": 276.35,
+            "width": 47.19,
+            "height": 36.9,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        }
+      ],
+      "rois": [
+        {
+          "id": "rim009",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 423.56,
+            "rim_y": 77.65,
+            "width": 105.97,
+            "height": 154.3,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            0,
+            478,
+            819.4399999999999
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 43,
+          "ranking_score": 43.69314718055995,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim001",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 143.69,
+            "rim_y": 267.52,
+            "width": 47.73,
+            "height": 30.72,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            28.870000000000005,
+            334.61,
+            601.6299999999999
+          ],
+          "support_frames": 4,
+          "near_ball_observations": 29,
+          "ranking_score": 30.6094379124341,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim005",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 334.96,
+            "rim_y": 451.73,
+            "width": 63.79,
+            "height": 93.43,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            79.79999999999998,
+            132.78000000000003,
+            478,
+            850
+          ],
+          "support_frames": 9,
+          "near_ball_observations": 23,
+          "ranking_score": 25.302585092994047,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim006",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 270.98,
+            "rim_y": 612.88,
+            "width": 74.07,
+            "height": 72.22,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            242.53000000000003,
+            478,
+            850
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 22,
+          "ranking_score": 22.693147180559944,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim003",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 91.54,
+            "rim_y": 218.76,
+            "width": 32.42,
+            "height": 40.56,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            56.65999999999997,
+            221.22000000000003,
+            445.7
+          ],
+          "support_frames": 3,
+          "near_ball_observations": 17,
+          "ranking_score": 18.38629436111989,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim004",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 83.82,
+            "rim_y": 87.12,
+            "width": 31.73,
+            "height": 30.61,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            0,
+            210.74,
+            309.23
+          ],
+          "support_frames": 2,
+          "near_ball_observations": 15,
+          "ranking_score": 16.09861228866811,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim000",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 175.35,
+            "rim_y": 208.29,
+            "width": 17.2,
+            "height": 21.19,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            106.55,
+            122.28999999999999,
+            244.14999999999998,
+            328.69
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 15,
+          "ranking_score": 15.693147180559945,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim002",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 125.18,
+            "rim_y": 143.4,
+            "width": 24.71,
+            "height": 26.05,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            26.340000000000003,
+            19.849999999999994,
+            224.02,
+            316.37
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 14,
+          "ranking_score": 14.693147180559945,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim007",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 415.44,
+            "rim_y": 586.69,
+            "width": 69.08,
+            "height": 115.5,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            139.12,
+            241.29000000000008,
+            478,
+            850
+          ],
+          "support_frames": 2,
+          "near_ball_observations": 11,
+          "ranking_score": 12.09861228866811,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim008",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 25.83,
+            "rim_y": 266.08,
+            "width": 22.86,
+            "height": 26.02,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            151.77999999999997,
+            117.27,
+            426.09999999999997
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 0,
+          "ranking_score": 0.6931471805599453,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        }
+      ],
+      "review_windows": [],
+      "status": "draft"
+    },
+    "ljubljana": {
+      "video_id": "ljubljana",
+      "video_sha256": "f3b68df29e1c9a64a80ab7980a92c3de823af9a222192d697af1f1ba787a51a7",
+      "not_ground_truth": true,
+      "config": {
+        "hoop_conf": 0.08,
+        "margin": 16,
+        "max_gap": 2.5,
+        "min_descent": 20,
+        "dedupe": 0.8,
+        "sample_fps": 12,
+        "detector_conf": 0.15
+      },
+      "events": [
+        {
+          "time": 146.17,
+          "x_cross": 296,
+          "above": {
+            "time": 146.0,
+            "x": 427.82701110839844,
+            "y": 90.92950057983398,
+            "confidence": 0.18031209707260132,
+            "width": 17.712005615234375,
+            "height": 32.70299530029297
+          },
+          "below": {
+            "time": 146.333333,
+            "x": 62.05100059509277,
+            "y": 219.6125030517578,
+            "confidence": 0.26669764518737793,
+            "width": 8.916004180908203,
+            "height": 14.498992919921875
+          },
+          "rim": {
+            "center_x": 306.61,
+            "rim_y": 137.2,
+            "width": 38.51,
+            "height": 33.32,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        },
+        {
+          "time": 161.58,
+          "x_cross": 330,
+          "above": {
+            "time": 161.166667,
+            "x": 317.99200439453125,
+            "y": 113.5525016784668,
+            "confidence": 0.7490194439888,
+            "width": 11.6300048828125,
+            "height": 16.448997497558594
+          },
+          "below": {
+            "time": 162.0,
+            "x": 456.65150451660156,
+            "y": 381.86199951171875,
+            "confidence": 0.18986573815345764,
+            "width": 12.319000244140625,
+            "height": 18.0579833984375
+          },
+          "rim": {
+            "center_x": 306.61,
+            "rim_y": 137.2,
+            "width": 38.51,
+            "height": 33.32,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        },
+        {
+          "time": 162.54,
+          "x_cross": 326,
+          "above": {
+            "time": 161.416667,
+            "x": 320.79100036621094,
+            "y": 84.6609992980957,
+            "confidence": 0.7286323308944702,
+            "width": 12.040008544921875,
+            "height": 16.730003356933594
+          },
+          "below": {
+            "time": 163.666667,
+            "x": 331.40399169921875,
+            "y": 188.78949737548828,
+            "confidence": 0.41015052795410156,
+            "width": 9.17401123046875,
+            "height": 13.809005737304688
+          },
+          "rim": {
+            "center_x": 306.61,
+            "rim_y": 137.2,
+            "width": 38.51,
+            "height": 33.32,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        },
+        {
+          "time": 168.46,
+          "x_cross": 332,
+          "above": {
+            "time": 168.333333,
+            "x": 357.99749755859375,
+            "y": 65.45549964904785,
+            "confidence": 0.45206332206726074,
+            "width": 11.15301513671875,
+            "height": 13.090999603271484
+          },
+          "below": {
+            "time": 168.583333,
+            "x": 325.42999267578125,
+            "y": 156.21200561523438,
+            "confidence": 0.3702227473258972,
+            "width": 13.42401123046875,
+            "height": 23.96600341796875
+          },
+          "rim": {
+            "center_x": 306.61,
+            "rim_y": 137.2,
+            "width": 38.51,
+            "height": 33.32,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        },
+        {
+          "time": 175.21,
+          "x_cross": 331,
+          "above": {
+            "time": 174.416667,
+            "x": 328.74000549316406,
+            "y": 40.86449909210205,
+            "confidence": 0.7648357152938843,
+            "width": 23.061981201171875,
+            "height": 28.30299949645996
+          },
+          "below": {
+            "time": 176.0,
+            "x": 334.50950622558594,
+            "y": 271.54649353027344,
+            "confidence": 0.2724767327308655,
+            "width": 21.251007080078125,
+            "height": 26.191009521484375
+          },
+          "rim": {
+            "center_x": 306.61,
+            "rim_y": 137.2,
+            "width": 38.51,
+            "height": 33.32,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        }
+      ],
+      "rois": [
+        {
+          "id": "rim002",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 452.86,
+            "rim_y": 227.85,
+            "width": 38.32,
+            "height": 25.26,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            299.58000000000004,
+            36.25,
+            606.14,
+            480
+          ],
+          "support_frames": 16,
+          "near_ball_observations": 485,
+          "ranking_score": 487.8332133440562,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim001",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 401.43,
+            "rim_y": 233.61,
+            "width": 33.64,
+            "height": 35.01,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            266.87,
+            65.41000000000003,
+            535.99,
+            469.09000000000003
+          ],
+          "support_frames": 101,
+          "near_ball_observations": 439,
+          "ranking_score": 443.6249728132843,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim021",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 289.31,
+            "rim_y": 136.99,
+            "width": 54.98,
+            "height": 33.81,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            69.39000000000001,
+            0,
+            509.23,
+            480
+          ],
+          "support_frames": 312,
+          "near_ball_observations": 422,
+          "ranking_score": 427.74620319054014,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim006",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 501.89,
+            "rim_y": 206.58,
+            "width": 35.54,
+            "height": 41.43,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            359.73,
+            28.880000000000024,
+            644.05,
+            455.36
+          ],
+          "support_frames": 10,
+          "near_ball_observations": 397,
+          "ranking_score": 399.3978952727984,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim009",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 502.25,
+            "rim_y": 258.45,
+            "width": 34.27,
+            "height": 44.26,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            365.16999999999996,
+            87.09999999999997,
+            639.33,
+            480
+          ],
+          "support_frames": 6,
+          "near_ball_observations": 361,
+          "ranking_score": 362.9459101490553,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim008",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 503.67,
+            "rim_y": 318.07,
+            "width": 35.96,
+            "height": 43.44,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            359.83000000000004,
+            138.26999999999998,
+            647.51,
+            480
+          ],
+          "support_frames": 8,
+          "near_ball_observations": 285,
+          "ranking_score": 287.1972245773362,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim011",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 501.11,
+            "rim_y": 148.3,
+            "width": 28.61,
+            "height": 40.26,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            386.67,
+            5.25,
+            615.55,
+            348.57
+          ],
+          "support_frames": 10,
+          "near_ball_observations": 280,
+          "ranking_score": 282.3978952727984,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim012",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 502.18,
+            "rim_y": 76.7,
+            "width": 30.3,
+            "height": 40.98,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            380.98,
+            0,
+            623.38,
+            288.8
+          ],
+          "support_frames": 11,
+          "near_ball_observations": 237,
+          "ranking_score": 239.484906649788,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim004",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 332.92,
+            "rim_y": 315.1,
+            "width": 30.21,
+            "height": 31.9,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            212.08,
+            164.05,
+            453.76,
+            480
+          ],
+          "support_frames": 32,
+          "near_ball_observations": 217,
+          "ranking_score": 220.49650756146647,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim018",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 372.66,
+            "rim_y": 52.85,
+            "width": 30.54,
+            "height": 34.74,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            250.50000000000003,
+            0,
+            494.82000000000005,
+            266.63
+          ],
+          "support_frames": 70,
+          "near_ball_observations": 206,
+          "ranking_score": 210.2626798770413,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim005",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 304.73,
+            "rim_y": 325.59,
+            "width": 32.68,
+            "height": 34.81,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            174.01000000000002,
+            162.18999999999997,
+            435.45000000000005,
+            480
+          ],
+          "support_frames": 5,
+          "near_ball_observations": 206,
+          "ranking_score": 207.79175946922805,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim016",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 454.2,
+            "rim_y": 89.71,
+            "width": 22.74,
+            "height": 24.15,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            363.24,
+            0,
+            545.16,
+            248.89
+          ],
+          "support_frames": 48,
+          "near_ball_observations": 200,
+          "ranking_score": 203.89182029811062,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim014",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 455.47,
+            "rim_y": 41.75,
+            "width": 25.72,
+            "height": 31.24,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            352.59000000000003,
+            0,
+            558.35,
+            221.79
+          ],
+          "support_frames": 42,
+          "near_ball_observations": 174,
+          "ranking_score": 177.76120011569355,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim023",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 623.07,
+            "rim_y": 225.12,
+            "width": 33.98,
+            "height": 20.2,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            487.1500000000001,
+            55.22000000000003,
+            758.99,
+            462.98
+          ],
+          "support_frames": 19,
+          "near_ball_observations": 170,
+          "ranking_score": 172.99573227355398,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim000",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 254.98,
+            "rim_y": 225.83,
+            "width": 29.65,
+            "height": 23.41,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            136.38,
+            77.58000000000001,
+            373.58,
+            433.38
+          ],
+          "support_frames": 18,
+          "near_ball_observations": 128,
+          "ranking_score": 130.94443897916645,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim010",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 808.75,
+            "rim_y": 204.69,
+            "width": 57.78,
+            "height": 24.35,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            577.63,
+            0,
+            854,
+            480
+          ],
+          "support_frames": 5,
+          "near_ball_observations": 80,
+          "ranking_score": 81.79175946922805,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim013",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 797.65,
+            "rim_y": 44.45,
+            "width": 51.98,
+            "height": 32.02,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            589.73,
+            0,
+            854,
+            408.30999999999995
+          ],
+          "support_frames": 2,
+          "near_ball_observations": 47,
+          "ranking_score": 48.09861228866811,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim003",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 255.3,
+            "rim_y": 325.35,
+            "width": 16.5,
+            "height": 27.85,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            189.3,
+            242.85000000000002,
+            321.3,
+            440.85
+          ],
+          "support_frames": 2,
+          "near_ball_observations": 34,
+          "ranking_score": 35.09861228866811,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim007",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 214.38,
+            "rim_y": 323.77,
+            "width": 24.55,
+            "height": 18.97,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            116.17999999999999,
+            201.01999999999998,
+            312.58,
+            480
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 30,
+          "ranking_score": 30.693147180559944,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim024",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 672.67,
+            "rim_y": 162.91,
+            "width": 17.06,
+            "height": 32.17,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            604.43,
+            77.61,
+            740.91,
+            282.33
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 16,
+          "ranking_score": 16.693147180559944,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim020",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 841.86,
+            "rim_y": 288.32,
+            "width": 24.28,
+            "height": 101.31,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            744.74,
+            166.92,
+            854,
+            458.28
+          ],
+          "support_frames": 7,
+          "near_ball_observations": 13,
+          "ranking_score": 15.079441541679836,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim022",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 30.12,
+            "rim_y": 114.92,
+            "width": 60.06,
+            "height": 227.95,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            0,
+            270.36,
+            480
+          ],
+          "support_frames": 55,
+          "near_ball_observations": 11,
+          "ranking_score": 15.02535169073515,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim015",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 839.11,
+            "rim_y": 141.65,
+            "width": 26.77,
+            "height": 67.77,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            732.03,
+            7.800000000000011,
+            854,
+            329.03999999999996
+          ],
+          "support_frames": 5,
+          "near_ball_observations": 7,
+          "ranking_score": 8.791759469228055,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim019",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 174.57,
+            "rim_y": 52.53,
+            "width": 26.92,
+            "height": 21.46,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            66.88999999999999,
+            0,
+            282.25,
+            240.97
+          ],
+          "support_frames": 11,
+          "near_ball_observations": 4,
+          "ranking_score": 6.484906649788,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim017",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 15.76,
+            "rim_y": 446.5,
+            "width": 30.69,
+            "height": 67.0,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            293.04999999999995,
+            138.52,
+            480
+          ],
+          "support_frames": 8,
+          "near_ball_observations": 1,
+          "ranking_score": 3.1972245773362196,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        }
+      ],
+      "review_windows": [],
+      "status": "draft"
+    },
+    "ukraine": {
+      "video_id": "ukraine",
+      "video_sha256": "f7efe3225fe142bdecca3e6a0b6db20bffb34a95d47462fa0fb82db0c233a4f4",
+      "not_ground_truth": true,
+      "config": {
+        "hoop_conf": 0.08,
+        "margin": 16,
+        "max_gap": 2.5,
+        "min_descent": 20,
+        "dedupe": 0.8,
+        "sample_fps": 12,
+        "detector_conf": 0.15
+      },
+      "events": [
+        {
+          "time": 18.08,
+          "x_cross": 172,
+          "above": {
+            "time": 17.416667,
+            "x": 195.6490020751953,
+            "y": 213.02999877929688,
+            "confidence": 0.2478259801864624,
+            "width": 14.510009765625,
+            "height": 15.4580078125
+          },
+          "below": {
+            "time": 18.75,
+            "x": 18.228000164031982,
+            "y": 499.03700256347656,
+            "confidence": 0.39616820216178894,
+            "width": 20.67400074005127,
+            "height": 22.321990966796875
+          },
+          "rim": {
+            "center_x": 210.44,
+            "rim_y": 251.84,
+            "width": 60.53,
+            "height": 77.22,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        },
+        {
+          "time": 18.88,
+          "x_cross": 236,
+          "above": {
+            "time": 17.666667,
+            "x": 169.12200164794922,
+            "y": 202.63600158691406,
+            "confidence": 0.4261658191680908,
+            "width": 15.046005249023438,
+            "height": 17.41400146484375
+          },
+          "below": {
+            "time": 20.083333,
+            "x": 454.4875030517578,
+            "y": 411.87950134277344,
+            "confidence": 0.19646000862121582,
+            "width": 14.168975830078125,
+            "height": 16.066986083984375
+          },
+          "rim": {
+            "center_x": 210.44,
+            "rim_y": 251.84,
+            "width": 60.53,
+            "height": 77.22,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        }
+      ],
+      "rois": [
+        {
+          "id": "rim003",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 75.38,
+            "rim_y": 40.4,
+            "width": 150.76,
+            "height": 80.81,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            0,
+            480,
+            720
+          ],
+          "support_frames": 11,
+          "near_ball_observations": 52,
+          "ranking_score": 54.484906649788,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim000",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 401.08,
+            "rim_y": 250.27,
+            "width": 64.89,
+            "height": 80.67,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            141.51999999999998,
+            0,
+            480,
+            704.5
+          ],
+          "support_frames": 55,
+          "near_ball_observations": 30,
+          "ranking_score": 34.02535169073515,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim004",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 189.8,
+            "rim_y": 294.73,
+            "width": 37.38,
+            "height": 34.96,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            40.28,
+            107.83000000000001,
+            339.32000000000005,
+            556.3900000000001
+          ],
+          "support_frames": 18,
+          "near_ball_observations": 31,
+          "ranking_score": 33.94443897916644,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim005",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 120.78,
+            "rim_y": 284.45,
+            "width": 36.53,
+            "height": 35.08,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            101.79999999999998,
+            266.9,
+            540.16
+          ],
+          "support_frames": 3,
+          "near_ball_observations": 22,
+          "ranking_score": 23.38629436111989,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim002",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 59.9,
+            "rim_y": 277.31,
+            "width": 39.27,
+            "height": 36.0,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            80.95999999999998,
+            216.98000000000002,
+            552.2
+          ],
+          "support_frames": 23,
+          "near_ball_observations": 14,
+          "ranking_score": 17.178053830347945,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim006",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 10.22,
+            "rim_y": 269.26,
+            "width": 20.43,
+            "height": 36.66,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            0,
+            167.10999999999999,
+            91.94,
+            412.27
+          ],
+          "support_frames": 2,
+          "near_ball_observations": 3,
+          "ranking_score": 4.09861228866811,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim001",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 467.38,
+            "rim_y": 247.88,
+            "width": 23.07,
+            "height": 109.42,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            375.1,
+            132.53,
+            480,
+            409.37
+          ],
+          "support_frames": 1,
+          "near_ball_observations": 0,
+          "ranking_score": 0.6931471805599453,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        }
+      ],
+      "review_windows": [],
+      "status": "draft"
+    },
+    "zhijiang": {
+      "video_id": "zhijiang",
+      "video_sha256": "e2ffca2d0dac0f8d974fe005292b5e31ffebc0949288e3b7231039fccaeebe92",
+      "not_ground_truth": true,
+      "config": {
+        "hoop_conf": 0.08,
+        "margin": 16,
+        "max_gap": 2.5,
+        "min_descent": 20,
+        "dedupe": 0.8,
+        "sample_fps": 12,
+        "detector_conf": 0.15
+      },
+      "events": [
+        {
+          "time": 4.54,
+          "x_cross": 544,
+          "above": {
+            "time": 4.333333,
+            "x": 490.28700256347656,
+            "y": 20.81599998474121,
+            "confidence": 0.846019446849823,
+            "width": 51.045989990234375,
+            "height": 41.63199996948242
+          },
+          "below": {
+            "time": 4.75,
+            "x": 587.0654907226562,
+            "y": 177.14999389648438,
+            "confidence": 0.7838243246078491,
+            "width": 49.2569580078125,
+            "height": 45.4219970703125
+          },
+          "rim": {
+            "center_x": 606.91,
+            "rim_y": 108.22,
+            "width": 85.09,
+            "height": 86.23,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "signals": [
+            "trajectory_crossing"
+          ],
+          "status": "draft"
+        }
+      ],
+      "rois": [
+        {
+          "id": "rim000",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 597.94,
+            "rim_y": 106.39,
+            "width": 84.44,
+            "height": 86.05,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            260.18000000000006,
+            0,
+            935.7,
+            697.4699999999999
+          ],
+          "support_frames": 69,
+          "near_ball_observations": 38,
+          "ranking_score": 42.24849524204936,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        },
+        {
+          "id": "rim001",
+          "status": "draft",
+          "requires_user_confirmation": true,
+          "rim": {
+            "center_x": 798.96,
+            "rim_y": 110.81,
+            "width": 104.23,
+            "height": 99.73,
+            "source": "median_hoop_detections",
+            "confidence_threshold": 0.08
+          },
+          "roi_xyxy": [
+            382.04,
+            0,
+            1100,
+            720
+          ],
+          "support_frames": 4,
+          "near_ball_observations": 34,
+          "ranking_score": 35.6094379124341,
+          "meaning": "ROI suggestion only; active game hoop and source bounds require review"
+        }
+      ],
+      "review_windows": [],
+      "status": "draft"
+    }
+  },
+  "scores": {
+    "schema_version": 1,
+    "dataset_id": "basketball-eval-v1",
+    "catalog_sha256": "c59f558135c51a16d9ae3ad21544b164a9e0b565eb981930210a9b9b0b5ddd6f",
+    "confirmed_registry_sha256": "1154351e7a3be885acd147e6fe129c4f56332687ede8eb45b819937fcc977b44",
+    "tolerance_seconds": 1.0,
+    "player_role": "visible",
+    "scope": "Confirmed facts only; FP requires explicitly reviewed interval or confirmed negative. Unknown fields are excluded.",
+    "holdout_evaluated": false,
+    "input_hashes": {
+      "indiana": {
+        "annotations": "eb41018020936f1f9be57d923db04855c2ac0bd1f5de4a65266a01500b065009",
+        "predictions": "f6e132bc5e389af43ca23416c789c104083e22acbd905e6b9dcd3c55f665e886",
+        "source": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845"
+      }
+    },
+    "splits": {
+      "development": {
+        "status": "scored",
+        "counts": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "confirmed_positive_events": 0,
+          "confirmed_negative_events": 0,
+          "ignored_unreviewed_predictions": 1,
+          "ignored_unknown_predictions": 0,
+          "high_total_predictions": 0,
+          "high_evaluable_predictions": 0,
+          "high_correct": 0,
+          "target_events": 2,
+          "target_retrieved": 0,
+          "target_high": 0
+        },
+        "metrics": {
+          "event_precision": null,
+          "event_recall": null,
+          "event_f1": null,
+          "high_assignment_accuracy": null,
+          "target_event_retrieval_high_or_uncertain": 0.0,
+          "high_confidence_coverage": 0.0,
+          "unreviewed_high_predictions": 0
+        },
+        "reviewed_seconds": 0.0,
+        "videos": [
+          {
+            "video_id": "indiana",
+            "counts": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "confirmed_positive_events": 0,
+              "confirmed_negative_events": 0,
+              "ignored_unreviewed_predictions": 1,
+              "ignored_unknown_predictions": 0,
+              "high_total_predictions": 0,
+              "high_evaluable_predictions": 0,
+              "high_correct": 0,
+              "target_events": 2,
+              "target_retrieved": 0,
+              "target_high": 0
+            },
+            "detection_details": [
+              {
+                "prediction_id": "research000000",
+                "status": "ignored_unreviewed"
+              }
+            ],
+            "identity_details": [
+              {
+                "event_id": "c0001",
+                "target_player_id": "p1",
+                "actual_target_presence_or_role": true,
+                "predicted_group": "missing"
+              },
+              {
+                "event_id": "c0003",
+                "target_player_id": "p1",
+                "actual_target_presence_or_role": true,
+                "predicted_group": "missing"
+              }
+            ],
+            "confirmed_events": 2,
+            "draft_events_ignored": 0,
+            "reviewed_seconds": 0,
+            "metrics": {
+              "event_precision": null,
+              "event_recall": null,
+              "event_f1": null,
+              "high_assignment_accuracy": null,
+              "target_event_retrieval_high_or_uncertain": 0.0,
+              "high_confidence_coverage": 0.0,
+              "unreviewed_high_predictions": 0
+            }
+          }
+        ],
+        "event_metric_limitation": "No human-confirmed made-shot events; recall/F1 cannot be estimated."
+      },
+      "holdout": {
+        "status": "withheld",
+        "reason": "Use --include-holdout explicitly."
+      }
+    }
+  },
+  "gates": {
+    "verified_prior_slow_code": {
+      "robustness/matrix.py": "2465baf853184ae7d429d1ed1965fa94c247daaf4e9e88950084060fa694983b",
+      "robustness/generate.py": "8cd45a889be71a06884cf6291f06af8de67bb5a803a322d3f9a08f22e7477695",
+      "skills/basketball-highlight-editor/scripts/highlight.py": "eba866109cb14c483f1092da84fa09817408dccfc2cc388c209090094dca7289",
+      "skills/basketball-highlight-editor/scripts/media_io.py": "56b2b323130510bcc8dbfe249b5390563bfdef87daf04e5c344663a77b960269",
+      "skills/basketball-highlight-editor/scripts/result_cache.py": "7b24d66bd0e31ad048b4cacfa896d41aa75a3eda56ea6df8d46129a7569d2943",
+      "robustness/people_matrix.py": "84adab112c518282bbb27f922885b6b0bdcdff7d741193353c99354e1a5f7fcc",
+      "skills/basketball-highlight-editor/scripts/person_engine.py": "cd393dedd82cbd9a947bfa6881f4601f47a4e4affb02b6c81fdba2a8ab6f3394",
+      "skills/basketball-highlight-editor/scripts/person_match.py": "84945dfb4aa693e469c6858348b3874f8bf0bd0b1c5685cad7e02db4c8c7d63d",
+      "robustness/performance.py": "5c990829b10994ec1632471054f8f8c0eb48502841f7e21a06d4e0e72dc14c7b"
+    },
+    "scope": "development only; one real-corpus label-reading test deferred until final freeze; optional full matrix and performance covered by unchanged goal-2 code hashes",
+    "jobs": [
+      {
+        "name": "manifest",
+        "returncode": 0,
+        "log": "work/goal-3/run/round-14/gates/manifest.log"
+      },
+      {
+        "name": "release",
+        "returncode": 0,
+        "log": "work/goal-3/run/round-14/gates/release.log"
+      },
+      {
+        "name": "behavior",
+        "returncode": 0,
+        "log": "work/goal-3/run/round-14/gates/behavior.log"
+      },
+      {
+        "name": "evaluation",
+        "returncode": 0,
+        "log": "work/goal-3/run/round-14/gates/evaluation.log"
+      },
+      {
+        "name": "robustness",
+        "returncode": 0,
+        "log": "work/goal-3/run/round-14/gates/robustness.log"
+      },
+      {
+        "name": "research",
+        "returncode": 0,
+        "log": "work/goal-3/run/round-14/gates/research.log"
+      },
+      {
+        "name": "review-form",
+        "returncode": 0,
+        "log": "work/goal-3/run/round-14/gates/review-form.log"
+      },
+      {
+        "name": "replay",
+        "returncode": 0,
+        "log": "work/goal-3/run/round-14/gates/replay.log"
+      },
+      {
+        "name": "input-smoke",
+        "returncode": 0,
+        "log": "work/goal-3/run/round-14/gates/input-smoke.log"
+      }
+    ],
+    "all_passed": true,
+    "deferred_real_corpus_test": "test_corpus.CorpusSafety.test_all_automatic_real_annotations_are_draft"
+  }
+}

@@ -1,0 +1,27 @@
+test_audio_only_file_is_not_a_movie (test_io_cache.IOAndCache.test_audio_only_file_is_not_a_movie) ... ok
+test_bhe_cache_hit_skips_external_scan_and_preserves_raw_json (test_io_cache.IOAndCache.test_bhe_cache_hit_skips_external_scan_and_preserves_raw_json) ... ok
+test_changed_manifest_invalidates_cache (test_io_cache.IOAndCache.test_changed_manifest_invalidates_cache) ... ok
+test_corrupt_cache_fails_closed (test_io_cache.IOAndCache.test_corrupt_cache_fails_closed) ... ok
+test_cumulative_frame_rounding_does_not_accumulate_drift (test_io_cache.IOAndCache.test_cumulative_frame_rounding_does_not_accumulate_drift) ... ok
+test_empty_and_missing_inputs_have_actionable_errors (test_io_cache.IOAndCache.test_empty_and_missing_inputs_have_actionable_errors) ... ok
+test_faststart_truncation_is_rejected (test_io_cache.IOAndCache.test_faststart_truncation_is_rejected) ... ok
+test_fixed_test_clock_never_records_user_confirmation (test_io_cache.IOAndCache.test_fixed_test_clock_never_records_user_confirmation) ... ok
+test_hash_memo_detects_same_size_content_changes (test_io_cache.IOAndCache.test_hash_memo_detects_same_size_content_changes) ... ok
+test_hot_detection_skips_detector_and_keeps_project_bytes (test_io_cache.IOAndCache.test_hot_detection_skips_detector_and_keeps_project_bytes) ... ok
+test_parameter_change_invalidates_detection_cache (test_io_cache.IOAndCache.test_parameter_change_invalidates_detection_cache) ... ok
+test_person_hash_never_loads_the_whole_movie (test_io_cache.IOAndCache.test_person_hash_never_loads_the_whole_movie) ... ok
+test_person_scan_and_match_share_rotated_presentation_frames (test_io_cache.IOAndCache.test_person_scan_and_match_share_rotated_presentation_frames) ... ok
+test_positive_video_timestamp_origin_is_relative_to_first_picture (test_io_cache.IOAndCache.test_positive_video_timestamp_origin_is_relative_to_first_picture) ... ok
+test_rotation_metadata_uses_display_coordinates (test_io_cache.IOAndCache.test_rotation_metadata_uses_display_coordinates) ... ok
+test_streaming_motion_coverage_and_hot_cache (test_io_cache.IOAndCache.test_streaming_motion_coverage_and_hot_cache) ... <REPO>/skills/basketball-highlight-editor/scripts/highlight.py:295: ResourceWarning: unclosed file <_io.BufferedReader name=8>
+  _detect_uncached(a)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_vfr_opus_priming_does_not_shift_video_boundaries (test_io_cache.IOAndCache.test_vfr_opus_priming_does_not_shift_video_boundaries) ... [opus @ 0x7f7f64404680] Error parsing Opus packet header.
+ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 13.201s
+
+OK
+{"output": "<TMP>", "samples": 1, "detections": 0}

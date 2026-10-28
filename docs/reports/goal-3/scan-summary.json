@@ -1,0 +1,161 @@
+{
+  "development_only": true,
+  "no_weights_redistributed": true,
+  "existing_local_model_no_download": true,
+  "scans": [
+    {
+      "video_id": "indiana",
+      "source_sha256": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845",
+      "records": 196,
+      "model_sha256": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+      "status": "draft",
+      "parameters": {
+        "source": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845",
+        "model": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+        "fps": 12,
+        "decode_conf": 0.03,
+        "ranges": [
+          [
+            0,
+            16.3
+          ]
+        ],
+        "scanner": "e0ea7abfbd38967c09087255ea1db16869f3485bd04bfc8f46ac6bdb270e6f6e",
+        "media_io": "56b2b323130510bcc8dbfe249b5390563bfdef87daf04e5c344663a77b960269"
+      },
+      "scan_seconds": 13.923587375000352
+    },
+    {
+      "video_id": "university",
+      "source_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+      "records": 727,
+      "model_sha256": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+      "status": "draft",
+      "parameters": {
+        "source": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+        "model": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+        "fps": 12,
+        "decode_conf": 0.03,
+        "ranges": [
+          [
+            0,
+            60.6
+          ]
+        ],
+        "scanner": "e0ea7abfbd38967c09087255ea1db16869f3485bd04bfc8f46ac6bdb270e6f6e",
+        "media_io": "56b2b323130510bcc8dbfe249b5390563bfdef87daf04e5c344663a77b960269"
+      },
+      "scan_seconds": 48.202275999996345
+    },
+    {
+      "video_id": "moscow1",
+      "source_sha256": "18e8ee2cd6313ca14123efb6c7dfcd8b29bacd6102727d0ab27d997925b4cbb3",
+      "records": 111,
+      "model_sha256": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+      "status": "draft",
+      "parameters": {
+        "source": "18e8ee2cd6313ca14123efb6c7dfcd8b29bacd6102727d0ab27d997925b4cbb3",
+        "model": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+        "fps": 12,
+        "decode_conf": 0.03,
+        "ranges": [
+          [
+            0,
+            9.394
+          ]
+        ],
+        "scanner": "e0ea7abfbd38967c09087255ea1db16869f3485bd04bfc8f46ac6bdb270e6f6e",
+        "media_io": "56b2b323130510bcc8dbfe249b5390563bfdef87daf04e5c344663a77b960269"
+      },
+      "scan_seconds": 7.528194415994221
+    },
+    {
+      "video_id": "moscow2",
+      "source_sha256": "bc56bdd6e458dc2d4b26275297b44b565f8e26517daaa17b7c3f3610aac0e469",
+      "records": 210,
+      "model_sha256": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+      "status": "draft",
+      "parameters": {
+        "source": "bc56bdd6e458dc2d4b26275297b44b565f8e26517daaa17b7c3f3610aac0e469",
+        "model": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+        "fps": 12,
+        "decode_conf": 0.03,
+        "ranges": [
+          [
+            0,
+            17.637
+          ]
+        ],
+        "scanner": "e0ea7abfbd38967c09087255ea1db16869f3485bd04bfc8f46ac6bdb270e6f6e",
+        "media_io": "56b2b323130510bcc8dbfe249b5390563bfdef87daf04e5c344663a77b960269"
+      },
+      "scan_seconds": 14.118573332991218
+    },
+    {
+      "video_id": "ljubljana",
+      "source_sha256": "f3b68df29e1c9a64a80ab7980a92c3de823af9a222192d697af1f1ba787a51a7",
+      "records": 720,
+      "model_sha256": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+      "status": "draft",
+      "parameters": {
+        "source": "f3b68df29e1c9a64a80ab7980a92c3de823af9a222192d697af1f1ba787a51a7",
+        "model": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+        "fps": 12,
+        "decode_conf": 0.03,
+        "ranges": [
+          [
+            129,
+            189
+          ]
+        ],
+        "scanner": "e0ea7abfbd38967c09087255ea1db16869f3485bd04bfc8f46ac6bdb270e6f6e",
+        "media_io": "56b2b323130510bcc8dbfe249b5390563bfdef87daf04e5c344663a77b960269"
+      },
+      "scan_seconds": 47.90395108301891
+    },
+    {
+      "video_id": "ukraine",
+      "source_sha256": "f7efe3225fe142bdecca3e6a0b6db20bffb34a95d47462fa0fb82db0c233a4f4",
+      "records": 247,
+      "model_sha256": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+      "status": "draft",
+      "parameters": {
+        "source": "f7efe3225fe142bdecca3e6a0b6db20bffb34a95d47462fa0fb82db0c233a4f4",
+        "model": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+        "fps": 12,
+        "decode_conf": 0.03,
+        "ranges": [
+          [
+            0,
+            20.612978
+          ]
+        ],
+        "scanner": "e0ea7abfbd38967c09087255ea1db16869f3485bd04bfc8f46ac6bdb270e6f6e",
+        "media_io": "56b2b323130510bcc8dbfe249b5390563bfdef87daf04e5c344663a77b960269"
+      },
+      "scan_seconds": 16.58671637502266
+    },
+    {
+      "video_id": "zhijiang",
+      "source_sha256": "e2ffca2d0dac0f8d974fe005292b5e31ffebc0949288e3b7231039fccaeebe92",
+      "records": 72,
+      "model_sha256": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+      "status": "draft",
+      "parameters": {
+        "source": "e2ffca2d0dac0f8d974fe005292b5e31ffebc0949288e3b7231039fccaeebe92",
+        "model": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de",
+        "fps": 12,
+        "decode_conf": 0.03,
+        "ranges": [
+          [
+            0,
+            6.039
+          ]
+        ],
+        "scanner": "e0ea7abfbd38967c09087255ea1db16869f3485bd04bfc8f46ac6bdb270e6f6e",
+        "media_io": "56b2b323130510bcc8dbfe249b5390563bfdef87daf04e5c344663a77b960269"
+      },
+      "scan_seconds": 4.964837791980244
+    }
+  ]
+}

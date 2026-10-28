@@ -1,0 +1,11 @@
+diff --git a/experiments/detection/trial_candidate.py b/experiments/detection/trial_candidate.py
+index 1ad3b7e..e6b2041 100644
+--- a/experiments/detection/trial_candidate.py
++++ b/experiments/detection/trial_candidate.py
+@@ -1,5 +1,5 @@
+ """Research binding only; rejected trials never alter the production detector."""
+-CONFIG = {'hoop_conf': 0.08, 'margin': 16, 'max_gap': 2.5, 'min_descent': 20, 'dedupe': 0.8, 'sample_fps': 3, 'detector_conf': 0.15}
++CONFIG = {'hoop_conf': 0.08, 'margin': 16, 'max_gap': 2.5, 'min_descent': 20, 'dedupe': 0.8, 'sample_fps': 3, 'detector_conf': 0.15, 'track_all': True}
+ 
+ def propose(records,duration,ranges):
+  from engine import propose as research_propose

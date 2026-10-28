@@ -1,0 +1,892 @@
+{
+  "rounds": [
+    {
+      "round": 1,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-01/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-01/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-01/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-01/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-01/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-01/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-01/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-01/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-01/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-02/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-02/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-02/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-02/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-02/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-02/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-02/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-02/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-02/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-03/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-03/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-03/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-03/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-03/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-03/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-03/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-03/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-03/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-04/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-04/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-04/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-04/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-04/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-04/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-04/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-04/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-04/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-05/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-05/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-05/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-05/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-05/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-05/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-05/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-05/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-05/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-06/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-06/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-06/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-06/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-06/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-06/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-06/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-06/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-06/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-07/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-07/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-07/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-07/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-07/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-07/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-07/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-07/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-07/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-08/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-08/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-08/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-08/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-08/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-08/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-08/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-08/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-08/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-09/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-09/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-09/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-09/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-09/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-09/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-09/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-09/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-09/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-10/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-10/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-10/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-10/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-10/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-10/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-10/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-10/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-10/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 11,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-11/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-11/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-11/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-11/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-11/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-11/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-11/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-11/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-11/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 12,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-12/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-12/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-12/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-12/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-12/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-12/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-12/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-12/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-12/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 13,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-13/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-13/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-13/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-13/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-13/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-13/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-13/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-13/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-13/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 14,
+      "all_passed": true,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-14/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-14/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-14/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-14/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-14/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-14/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-14/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-14/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-14/gates/input-smoke.log"
+        }
+      ]
+    },
+    {
+      "round": 15,
+      "all_passed": false,
+      "unit_tests": {
+        "behavior": 25,
+        "evaluation": 49,
+        "robustness": 17,
+        "research": 19
+      },
+      "deferred_real_corpus_tests": 1,
+      "input_smoke_cases": 13,
+      "jobs": [
+        {
+          "name": "manifest",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-15/gates/manifest.log"
+        },
+        {
+          "name": "release",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-15/gates/release.log"
+        },
+        {
+          "name": "behavior",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-15/gates/behavior.log"
+        },
+        {
+          "name": "evaluation",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-15/gates/evaluation.log"
+        },
+        {
+          "name": "robustness",
+          "returncode": -15,
+          "log": "work/goal-3/run/round-15/gates/robustness.log"
+        },
+        {
+          "name": "research",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-15/gates/research.log"
+        },
+        {
+          "name": "review-form",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-15/gates/review-form.log"
+        },
+        {
+          "name": "replay",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-15/gates/replay.log"
+        },
+        {
+          "name": "input-smoke",
+          "returncode": 0,
+          "log": "work/goal-3/run/round-15/gates/input-smoke.log"
+        }
+      ]
+    }
+  ],
+  "all_15_gates_passed": false,
+  "passed_rounds": 14,
+  "unexpected_holdout_accesses": []
+}

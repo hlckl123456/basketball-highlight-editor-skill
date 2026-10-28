@@ -1,2 +1,17 @@
 round	name	hypothesis	recall	precision	f1	roi_accuracy	confirmed_made_shots	reviewed_seconds	prediction_events	gates	decision	reason
-0	production_baseline	Frozen production before experiments	NA	NA	NA	NA	0	0	20	prior goal-2 complete	baseline	No confirmed made-shot facts
+0	production_baseline	Frozen production predictions before any experiment	NA	NA	NA	NA	0	0.0	20	goal-2 already complete	baseline	No human-confirmed shot labels or reviewed intervals
+1	lower_hoop_conf	降低篮筐后处理阈值可能保留远处篮筐；检查原扫描置信度下限是否已截断这些框。	NA	NA	NA	NA	0	0.0	6	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+2	wider_corridor	放宽按篮筐宽度归一化的横向走廊，可能保留斜机位的穿框候选。	NA	NA	NA	NA	0	0.0	7	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+3	shorter_descent	减少最小下降距离，可能保留远机位的小尺度球迹。	NA	NA	NA	NA	0	0.0	6	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+4	longer_occlusion_gap	容许更长的短暂遮挡，可能连接缺失的过框采样。	NA	NA	NA	NA	0	0.0	6	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+5	interpolate_crossing_time	按球轨迹与筐平面的交点插值时间，比两个采样的中点更接近过框时刻。	NA	NA	NA	NA	0	0.0	6	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+6	less_aggressive_dedupe	缩短相邻事件去重距离，可能保留紧接着的补篮回合。	NA	NA	NA	NA	0	0.0	6	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+7	short_rim_windows	缩短局部篮筐窗口，可能减少移动机位使用全局中位数的定位偏差。	NA	NA	NA	NA	0	0.0	10	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+8	separate_neighbor_hoops	按检测框聚类并分别判断篮筐，避免相邻场地篮筐被平均到不存在的位置。	NA	NA	NA	NA	0	0.0	29	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+9	near_rim_recovery	将接近篮筐但轨迹不完整的球加入待复核候选，可能补回遮挡片段。	NA	NA	NA	NA	0	0.0	20	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+10	all_ball_tracks	关联多个球候选而非每帧只取最高置信球，可能避免邻场篮球抢占轨迹。	NA	NA	NA	NA	0	0.0	5	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+11	relative_hoop_coordinates	把球转换到同时刻篮筐的相对位置，可能降低手持镜头抖动造成的虚假位移。	NA	NA	NA	NA	0	0.0	7	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+12	six_fps_sampling	从3fps增加至6fps，可能看到原采样间隙中的快速过框过程。	NA	NA	NA	NA	0	0.0	9	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+13	lower_detector_conf	降低模型解码阈值并重新推理，才有机会找回早已在原扫描中丢掉的低分球和篮筐框。	NA	NA	NA	NA	0	0.0	12	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+14	twelve_fps_sampling	增加到12fps并保留两组错开的6fps采样，可能进一步覆盖短暂球迹。	NA	NA	NA	NA	0	0.0	13	passed	rejected	No confirmed made-shot truth/reviewed ranges: event metrics unavailable; cannot rank or promote
+15	motion_union_and_review_coverage	合并篮筐局部残余运动与球邻近信号，并单独生成连续查看窗口；覆盖窗口不能计成进球预测。	NA	NA	NA	NA	0	0.0	58	failed	rejected	Gate failure; score not run; restore previous code
