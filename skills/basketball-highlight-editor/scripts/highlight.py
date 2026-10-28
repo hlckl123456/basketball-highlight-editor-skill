@@ -458,6 +458,14 @@ def cmd_annotate(a):
         if item['certainty'] not in ('high', 'uncertain', 'other') or not item.get('reason'):
             raise ValueError('INVALID_ASSIGNMENT')
         evidence = item.get('evidence', [])
+        if item.get('verified_roles'):
+            ev=item.get('role_evidence') or {}
+            if (reviewer['kind'] not in ('user','test_operator') or
+                not set(item['verified_roles']).issubset({'scorer','handler','visible'}) or
+                ev.get('role') not in item['verified_roles'] or not ev.get('detail') or not ev.get('authorization_reference')):
+                raise ValueError('VERIFIED_ROLE_REQUIRES_EXPLICIT_REVIEW_EVIDENCE')
+        if item.get('absence_verified') and (reviewer['kind'] not in ('user','test_operator') or item.get('exclusion_for') not in ids):
+            raise ValueError('VERIFIED_ABSENCE_REQUIRES_EXPLICIT_TARGET_AND_REVIEWER')
         if item['certainty'] == 'high':
             # Require traceable frame evidence and a number or stable sample match;
             # jersey color alone cannot identify teammates.
@@ -496,6 +504,9 @@ def cmd_sample(a):
         raise ValueError('SAMPLE_BOX_OUT_OF_BOUNDS')
     if not re.fullmatch('[A-Za-z0-9_-]+',a.player):
         raise ValueError('INVALID_PLAYER_ID')
+    valid_from,valid_until=getattr(a,'valid_from',None),getattr(a,'valid_until',None)
+    if any(t is not None and (not math.isfinite(t) or not 0<=t<=p['source']['duration']) for t in (valid_from,valid_until)) or (valid_from is not None and valid_until is not None and valid_from>valid_until):
+        raise ValueError('INVALID_REFERENCE_VALIDITY_INTERVAL')
     cv2.setNumThreads(1)
     media_source=source_path(root,p)
     ref=media_io.frame_bgr(media_source,a.time,p['source'])
@@ -534,6 +545,7 @@ def cmd_sample(a):
     record={'id':sid,'player_id':a.player,'time':a.time,'bbox_xyxy':a.bbox,
             'description':a.description,'confirmed_by':a.confirmed_by,
             'reviewer_kind':a.reviewer_kind,'reference':'samples/'+path.name,
+            'appearance':getattr(a,'appearance','default'),'valid_from':valid_from,'valid_until':valid_until,
             'matching_method':'bidirectional sparse optical flow; no OCR; no automatic identity assignment',
             'track_proposals':sorted(samples,key=lambda s:s['time'])}
     p.setdefault('samples',[]).append(record)
@@ -559,21 +571,18 @@ def cmd_confirm_sample(a):
 
 
 def cmd_select(a):
+    from attribution_policy import route_assignment
     root, p = load(a.project)
     if a.player not in {x['id'] for x in p['players']}:
         raise ValueError('UNKNOWN_PLAYER')
+    role=getattr(a,'role',None) or p.get('attribution_role','visible')
     high, unsure, other = [], [], []
     for c in p['candidates']:
         q = c.get('assignment')
-        if q and q.get('needs_review') and q['player_id'] in (None,a.player):
-            unsure.append(c['id'])
-        elif q and q['certainty'] == 'high' and q['player_id'] == a.player:
-            high.append(c['id'])
-        elif q and (q['certainty'] == 'other' or (q['certainty'] == 'high' and q['player_id'] != a.player)):
-            other.append(c['id'])
-        else:
-            unsure.append(c['id'])
-    p['selection'] = {'player_id': a.player, 'high_confidence': high, 'uncertain': unsure,
+        group,reason=route_assignment(q,a.player,role)
+        {'high_confidence':high,'uncertain':unsure,'other':other}[group].append(c['id'])
+        c['selection_reason']=reason
+    p['selection'] = {'player_id': a.player, 'role':role,'high_confidence': high, 'uncertain': unsure,
                       'other': other, 'selected_by': a.selected_by}
     p['confirmation'] = None
     p['state'] = 'awaiting_clip_review'
@@ -721,7 +730,7 @@ def report(root, p):
                         (esc(o['crop']),esc(o['id']),esc(o['color']['dominant']),esc(str(o['number_ocr']))) for o in c['observations'])
         cards.append('<article><h2>%s · %.2f–%.2fs</h2><p>%s</p>%s<div class="row">%s</div><details><summary>Local feature proposals (%d)</summary><div class="row">%s</div></details><pre>%s</pre></article>' %
                      (c['id'],c['start'],c['end'],esc(c['reason']),video,images,len(c['observations']),crops,esc(json.dumps(c['assignment'],ensure_ascii=False,indent=2))))
-    text = ('<!doctype html><meta charset="utf-8"><title>篮球候选复核</title><style>body{font:16px system-ui;max-width:1200px;margin:30px auto;background:#f5f4ef;color:#18232b}article{background:white;padding:20px;margin:20px 0;border-radius:12px}.row{display:flex;flex-wrap:wrap;gap:10px}figure{margin:6px;max-width:210px}figcaption{font-size:12px}pre{white-space:pre-wrap}</style><h1>篮球候选复核</h1><p>状态：%s · 修订 %d。球衣颜色和 OCR 只是线索；逐段核验号码、稳定服饰及回合归属。</p><p>确认选片后停在 awaiting_edit_prompt；收到下一条剪辑指令才生成版本。</p><pre>%s</pre>%s' %
+    text = ('<!doctype html><meta charset="utf-8"><title>篮球候选复核</title><style>body{font:16px system-ui;max-width:1200px;margin:30px auto;background:#f5f4ef;color:#18232b}article{background:white;padding:20px;margin:20px 0;border-radius:12px}.row{display:flex;flex-wrap:wrap;gap:10px}figure{margin:6px;max-width:210px}figcaption{font-size:12px}pre{white-space:pre-wrap}</style><h1>篮球候选复核</h1><p>状态：%s · 修订 %d。球衣颜色和 OCR 只是线索。visible 高置信只表示人在场，不证明他得分或持球；scorer／handler 需独立回合证据。没有认出目标仍进入不确定组。</p><p>确认选片后停在 awaiting_edit_prompt；收到下一条剪辑指令才生成版本。</p><pre>%s</pre>%s' %
            (esc(p['state']),p['revision'],esc(json.dumps({'players':p['players'],'selection':p['selection'],'confirmation':p['confirmation']},ensure_ascii=False,indent=2)),''.join(cards)))
     if p['selection']:
         config={'revision':p['revision'],'player':p['selection']['player_id'],
@@ -736,14 +745,14 @@ document.getElementById('download').onclick=()=>{const reviewer=document.getElem
             if all(k in s for k in ('reference','player_id','time','reviewer_kind')))
         text=text.replace('<h1>篮球候选复核</h1>','<h1>篮球候选复核</h1><h2>已保存的参考球员</h2><div class="row">'+gallery+'</div>')
     (root/'review.html').write_text(text,encoding='utf-8')
-    fields = ['id','start','end','group','player_id','certainty','reason']
+    fields = ['id','start','end','group','player_id','certainty','role','presence_certainty','selection_reason','reason']
     with (root/'candidates.csv').open('w',newline='',encoding='utf-8') as f:
         w=csv.DictWriter(f,fieldnames=fields);w.writeheader()
         for c in p['candidates']:
             q=c.get('assignment') or {}
             group=next((k for k in ('high_confidence','uncertain','other') if p['selection'] and c['id'] in p['selection'][k]),'unassigned')
             w.writerow({**{k:c[k] for k in ('id','start','end')},'group':group,
-                        'player_id':q.get('player_id'),'certainty':q.get('certainty'),'reason':q.get('reason',c['reason'])})
+                        'player_id':q.get('player_id'),'certainty':q.get('certainty'),'role':(p.get('selection') or {}).get('role',q.get('role','visible')),'presence_certainty':q.get('presence_certainty'),'selection_reason':c.get('selection_reason'),'reason':q.get('reason',c['reason'])})
 
 
 def cmd_status(a):
@@ -778,6 +787,8 @@ def cmd_people(a):
 def cmd_match_people(a):
     """Match saved samples and propose clip presence; never infer shot ownership."""
     from person_match import predict
+    from attribution_policy import candidate_evidence,expansion_proposals
+    role=getattr(a,"role","scorer")
     root,p=load(a.project)
     samples=p.get('samples',[])
     if not any(s['player_id']==a.player for s in samples):
@@ -794,31 +805,34 @@ def cmd_match_people(a):
         ss=[s for s in samples if s['player_id']==pid]
         cal['people'].append({'id':pid,'description':ss[0]['description'],
             'samples':[{'time':s['time'],'box':s['bbox_xyxy'],'sample_id':s['id'],
-                        'reviewer_kind':s['reviewer_kind']} for s in ss]})
+                        'reviewer_kind':s['reviewer_kind'],**{k:s[k] for k in ('appearance','valid_from','valid_until','is_automatic','origin') if k in s}} for s in ss]})
     data['video']=str(source_path(root,p))
     result=predict(data,cal)
     result.update({'source_sha256':p['source']['sha256'],
                    'detections_sha256':meta['data_sha256'],
                    'meaning':'Model-supported clothing sample correspondence; presence only. Human clip review required.'})
     write(root/'people/matches.json',result)
-    target=[s for s in samples if s['player_id']==a.player]
     evidence=[]
     for c in p['candidates']:
-        hits=[(r['time'],o) for r in result['records'] if c['start']<=r['time']<=c['end']
-              for o in r['accepted'] if o['player_id']==a.player]
-        strong=len(hits)>=3 and max(t for t,o in hits)-min(t for t,o in hits)>=.5
-        item={'candidate_id':c['id'],'player_id':a.player if strong else None,
-              'certainty':'high' if strong else 'uncertain','role':'merely_visible',
-              'reason':'Repeated calibrated clothing and short-track evidence; presence only' if strong else 'Insufficient consistent sample matches; inspect original clip',
+        proposal=candidate_evidence(result,c,a.player)
+        strong=proposal['role_certainty'][role]=='high'
+        item={**proposal,'player_id':a.player if strong else None,
+              'certainty':'high' if strong else 'uncertain','role':role,
+              'reason':'Supported visible presence only; not scorer or handler proof' if strong else
+                       'Review required: '+(', '.join(proposal['reason_codes']) or proposal['role_reasons'].get(role,'identity unresolved')),
               'evidence':[{'kind':'confirmed_sample_match','time':t,
-                  'sample_id':target[0]['id'],'detail':'Local model proposal: clothing-v2 + short tracklet; compare all saved samples',
-                  'sample_ids':[s['id'] for s in target],
+                  'sample_id':o['confidence_evidence']['reference_ids'][0],
+                  'sample_ids':o['confidence_evidence']['reference_ids'],
+                  'detail':'Model presence proposal; compare manual references and competing people; not role verification',
                   'observation_id':o['observation_id'],'bbox_xyxy':o['box'],
-                  'track_id':o['track_id'],'model_distance':o['distance']} for t,o in hits]}
+                  'track_id':o['track_id'],'model_distance':o['distance']} for t,o in proposal['support']]}
         evidence.append(item)
+    write(root/'people/reference-proposals.json',{'status':'draft','reviewer_kind':'local_model',
+        'affects_high_confidence':False,'samples':expansion_proposals(result,data,a.player)})
     write(root/'people/candidate-proposals.json',{'player_id':a.player,'assignments':evidence,
         'applied':a.apply,'reviewer':{'kind':'local_model','name':'calibrated clothing + temporal consensus'}})
     if a.apply:
+        p['attribution_role']=role
         p['players']=[{'id':q['id'],'description':q['description'],
             'reference':next(s['reference'] for s in samples if s['player_id']==q['id'])} for q in cal['people']]
         byid={c['id']:c for c in p['candidates']}
@@ -842,12 +856,12 @@ def main():
     q=s.add_parser('import-candidates');q.add_argument('project');q.add_argument('--file',required=True);q.set_defaults(fn=cmd_import)
     q=s.add_parser('features');q.add_argument('project');q.add_argument('--interval',type=float,default=1.5);q.add_argument('--refresh',action='store_true');q.add_argument('--no-ocr',action='store_true',help='Skip number hints for unnumbered footage');q.set_defaults(fn=cmd_features)
     q=s.add_parser('people');q.add_argument('project');q.add_argument('--model');q.add_argument('--roi',nargs=4,type=int);q.add_argument('--tile',type=int,default=320);q.add_argument('--fps',type=float,default=3);q.add_argument('--start',type=float,default=0);q.add_argument('--end',type=float,default=1e9);q.set_defaults(fn=cmd_people)
-    q=s.add_parser('match-people');q.add_argument('project');q.add_argument('--player',required=True);q.add_argument('--apply',action='store_true',help='Apply model proposals, invalidate prior clip confirmation');q.set_defaults(fn=cmd_match_people)
+    q=s.add_parser('match-people');q.add_argument('project');q.add_argument('--player',required=True);q.add_argument('--role',choices=['scorer','handler','visible'],default='scorer');q.add_argument('--apply',action='store_true',help='Apply model proposals, invalidate prior clip confirmation');q.set_defaults(fn=cmd_match_people)
     q=s.add_parser('add');q.add_argument('project');q.add_argument('--start',required=True,type=float);q.add_argument('--end',required=True,type=float);q.add_argument('--reason',required=True);q.set_defaults(fn=cmd_add)
     q=s.add_parser('annotate');q.add_argument('project');q.add_argument('--file',required=True);q.set_defaults(fn=cmd_annotate)
-    q=s.add_parser('sample');q.add_argument('project');q.add_argument('--player',required=True);q.add_argument('--time',required=True,type=float);q.add_argument('--bbox',nargs=4,type=int,required=True);q.add_argument('--description',required=True);q.add_argument('--confirmed-by',required=True);q.add_argument('--reviewer-kind',choices=['user','test_operator'],required=True);q.set_defaults(fn=cmd_sample)
+    q=s.add_parser('sample');q.add_argument('project');q.add_argument('--player',required=True);q.add_argument('--time',required=True,type=float);q.add_argument('--bbox',nargs=4,type=int,required=True);q.add_argument('--description',required=True);q.add_argument('--confirmed-by',required=True);q.add_argument('--reviewer-kind',choices=['user','test_operator'],required=True);q.add_argument('--appearance',default='default');q.add_argument('--valid-from',type=float);q.add_argument('--valid-until',type=float);q.set_defaults(fn=cmd_sample)
     q=s.add_parser('confirm-sample');q.add_argument('project');q.add_argument('--sample-id',required=True);q.add_argument('--authorization-reference',required=True);q.set_defaults(fn=cmd_confirm_sample)
-    q=s.add_parser('select');q.add_argument('project');q.add_argument('--player',required=True);q.add_argument('--selected-by',required=True);q.set_defaults(fn=cmd_select)
+    q=s.add_parser('select');q.add_argument('project');q.add_argument('--player',required=True);q.add_argument('--selected-by',required=True);q.add_argument('--role',choices=['scorer','handler','visible']);q.set_defaults(fn=cmd_select)
     q=s.add_parser('rough');q.add_argument('project');q.set_defaults(fn=cmd_rough)
     q=s.add_parser('confirm');q.add_argument('project');q.add_argument('--file',required=True);q.set_defaults(fn=cmd_confirm)
     q=s.add_parser('version');q.add_argument('project');q.add_argument('--name',required=True);q.add_argument('--spec',required=True);q.add_argument('--render',action='store_true');q.set_defaults(fn=cmd_version)

@@ -36,3 +36,7 @@ Eight additional tests cover isolated-glimpse rejection, lookalike ambiguity, lo
 No measured full-game precision/recall or long-term tracking identity-switch rate. Unnumbered-player measurements above cover short, correlated samples only. No guarantee of all possessions, assists, steals or defensive involvement. No validated face recognition, person re-identification embedding model, smart portrait reframing, soundtrack/caption system, or native CapCut/Jianying project integration. A short clip with one selected player and manual evidence review cannot substantiate those claims.
 
 For similar uniforms without unique visible clothing, ask for additional confirmed samples and keep unresolved clips uncertain. If clothing remains indistinguishable, manual review is required. Never make an unsupported person match simply to fill the high-confidence group.
+
+## Current attribution policy
+
+The historical operator-derived measurements above describe the archived matcher, not the current stricter policy. Goal 4 keeps confirmed files and scoring formulas unchanged. Excluding its calibration clip leaves one confirmed positive visible-presence clip, one target and one reference. There are no confirmed scorer or handler events or independent negative identity labels. Current scorer/handler honesty, retrieval and coverage are not measurable. See [policy](attribution.md) and the repository goal-4 report for the conditional comparison and regression evidence.

@@ -1,0 +1,44 @@
+{
+  "fixed_scan_sha256": "f427d58bae3536dea74abde7d5927fcc4e6098927208cacd4dab38c80fd4b772",
+  "fixed_frame_count": 49,
+  "fixed_box_count": 3539,
+  "quality_enrichment_preserves_times_boxes_and_descriptors": true,
+  "baseline_code_sha256": {
+    "person_match.py": "84945dfb4aa693e469c6858348b3874f8bf0bd0b1c5685cad7e02db4c8c7d63d",
+    "person_temporal.py": "a760f46b23288cc87f481023b3aab8d67be4e6a81c2da136e8dd2dc549ce4653",
+    "person_engine.py": "cd393dedd82cbd9a947bfa6881f4601f47a4e4affb02b6c81fdba2a8ab6f3394"
+  },
+  "policy_version": "honest-attribution-v1",
+  "raw_accepted_observations": 41,
+  "filtered_accepted_observations": 31,
+  "quality_rejection_counts": {
+    "too_small": 730,
+    "partial_or_merged_geometry": 217,
+    "blur_or_uninformative_texture": 58,
+    "clipped_body": 115
+  },
+  "accepted_hypothesis_gate_rejections": {
+    "clothing_region_disagreement": 7,
+    "ambiguous_same_frame_person": 3,
+    "appearance_distance_too_large": 2,
+    "weak_person_detection": 1
+  },
+  "references": [
+    {
+      "sample_id": "s001",
+      "time": 9.5,
+      "reviewer_kind": "test_operator",
+      "appearance": "default",
+      "quality": {
+        "usable": true,
+        "reasons": [],
+        "width": 305,
+        "height": 610,
+        "sharpness": 6298.998,
+        "mean_luma": 132.077,
+        "scope": "crop quality only; geometry is not identity evidence"
+      }
+    }
+  ],
+  "meaning": "Engineering diagnostics over fixed detector proposals, NOT ground-truth accuracy or counts of real people"
+}

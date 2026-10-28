@@ -98,7 +98,8 @@ class Detector:
             if any(iou(box,k['box'])>.5 for k in kept):continue
             box=[max(0,box[0]),max(0,box[1]),min(frame.shape[1],box[2]),min(frame.shape[0],box[3])]
             if box[3]-box[1]<24 or box[2]-box[0]<7:continue
-            kept.append({'box':[round(v,2) for v in box],'person_score':round(float(scores[idx]),4),'descriptor':descriptor(frame,box)})
+            from attribution_policy import crop_quality
+            kept.append({'box':[round(v,2) for v in box],'person_score':round(float(scores[idx]),4),'descriptor':descriptor(frame,box),'quality':crop_quality(frame,box)})
         return sorted(kept,key=lambda o:o['box'][0])
 
 

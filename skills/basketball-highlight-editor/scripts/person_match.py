@@ -10,18 +10,28 @@ import media_io
 
 
 def predict(data,calibration,max_distance=.40,profile_margin=.035,person_margin=.025):
+    from attribution_policy import crop_quality,filter_matches,trusted,POLICY_VERSION
     cv2.setNumThreads(1)
-    meta=media_io.probe(data['video']);refs={}
+    meta=media_io.probe(data['video']);refs={};evidence={}
     for person in calibration['people']:
         samples=[]
         for sample in person['samples']:
+            if not trusted(sample):continue
             frame=media_io.frame_bgr(data['video'],sample['time'],meta)
-            samples.append(descriptor(frame,sample['box']))
-        refs[person['id']]=samples
+            desc=descriptor(frame,sample['box']);samples.append(desc)
+            evidence.setdefault(person['id'],[]).append({**sample,'descriptor':desc,'quality':crop_quality(frame,sample['box'])})
+        if samples:refs[person['id']]=samples
     from person_temporal import assign
-    results,tracks=assign(data,refs,calibration,max_distance,profile_margin,person_margin)
+    # Legacy tracklet votes are hypotheses only. In particular its anchor/one-
+    # profile margin of 1 is not evidence of a competing identity being ruled out.
+    usable_cal={**calibration,'people':[{**p,'samples':[s for s in p['samples'] if trusted(s)]} for p in calibration['people'] if p['id'] in refs]}
+    if refs:raw,tracks=assign(data,refs,usable_cal,max_distance,profile_margin,person_margin)
+    else:raw,tracks=[{'time':r['time'],'accepted':[],'uncertain':[]} for r in data['records']],[]
+    results,audit=filter_matches(data,raw,evidence)
     return {'parameters':{'max_distance':max_distance,'profile_margin':profile_margin,'person_margin':person_margin},
-            'calibration':calibration,'records':results,'tracks':tracks,'method':'clothing samples + mutual-nearest short tracklets; no OCR, face embedding or GT lookup'}
+            'calibration':calibration,'reference_evidence':evidence,'records':results,'tracks':tracks,
+            'raw_hypotheses':raw,'confidence_audit':audit,'policy_version':POLICY_VERSION,'is_probability':False,
+            'method':'clothing quality + region agreement + actual competing evidence + short tracklets; presence only, no scorer inference'}
 
 
 def evaluate(data,pred,truth):

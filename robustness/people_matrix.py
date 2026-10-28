@@ -30,15 +30,18 @@ def main():
             assert len(data['records'])==1 and data['records'][0]['time']==.5
             assert (data['width'],data['height'])==(meta['width'],meta['height'])
             assert abs(data['duration']-meta['duration'])<1e-6
+            assert all(isinstance(o['quality']['usable'],bool) and o['quality']['scope'].startswith('crop quality') for o in data['records'][0]['items'])
             # A fixed region exercises descriptor extraction, not a claim that
             # a particular person occupies it or has a confirmed identity.
-            cal={'kind':'test_operator mechanical calibration, not human truth','people':[{'id':'test_region','samples':[{'time':.5,'box':[0,0,data['width'],data['height']]}]}]}
+            cal={'kind':'test_operator mechanical calibration, not human truth','people':[{'id':'test_region','samples':[{'time':.5,'box':[0,0,data['width'],data['height']],'reviewer_kind':'test_operator','sample_id':'mechanical-region'}]}]}
             prediction=predict(data,cal)
             assert len(prediction['records'])==1
+            assert prediction['is_probability'] is False
+            assert all(not o['confidence_evidence']['eligible'] or o['confidence_evidence']['scope']=='visible_presence_only' for o in prediction['records'][0]['accepted'])
             rows.append({'id':c['id'],'status':'passed','seconds':time.perf_counter()-started,'detections':len(data['records'][0]['items'])})
         except Exception as exc:rows.append({'id':c['id'],'status':'failed','error':str(exc)})
         report={'schema_version':1,'scope':'one real YOLOX sample and clothing descriptor/matcher per valid input; no accuracy labels or confirmations',
-                'implementation':{f.name:engine.sha(f) for f in [Path(__file__),Path(engine.__file__),ROOT/'skills/basketball-highlight-editor/scripts/person_match.py',Path(media_io.__file__)]},
+                'implementation':{f.name:engine.sha(f) for f in [Path(__file__),Path(engine.__file__),ROOT/'skills/basketball-highlight-editor/scripts/person_match.py',ROOT/'skills/basketball-highlight-editor/scripts/attribution_policy.py',Path(media_io.__file__)]},
                 'model_sha256':engine.sha(a.model),'cases':rows}
         (a.output/'results.json').write_text(json.dumps(report,indent=2)+'\n')
         print(c['id'],rows[-1]['status'],rows[-1].get('error',''),flush=True)

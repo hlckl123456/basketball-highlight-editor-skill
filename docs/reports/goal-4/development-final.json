@@ -1,0 +1,1298 @@
+{
+  "label": "final",
+  "uses_event_detector": false,
+  "primary_role": "scorer",
+  "truth_scope": "legacy clip presence is not scorer, handler or verified event-time truth",
+  "holdout_evaluated": false,
+  "denied_holdout_accesses": [],
+  "tasks": [
+    {
+      "task": {
+        "video_id": "indiana",
+        "source_sha256": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845",
+        "confirmed_path": "eval/annotations/confirmed/indiana.json",
+        "confirmed_sha256": "eb41018020936f1f9be57d923db04855c2ac0bd1f5de4a65266a01500b065009",
+        "target_player_id": "p1",
+        "windows": [
+          {
+            "id": "c0001",
+            "start": 0.0,
+            "end": 4.63,
+            "time": 2.315,
+            "timing_basis": "legacy confirmed presence clip, NOT a true scoring event"
+          },
+          {
+            "id": "c0003",
+            "start": 8.57,
+            "end": 13.57,
+            "time": 11.07,
+            "timing_basis": "legacy confirmed presence clip, NOT a true scoring event"
+          }
+        ],
+        "evaluation_event_ids": [
+          "c0001"
+        ],
+        "calibration_event_ids": [
+          "c0003"
+        ],
+        "reference_samples": [
+          {
+            "time": 9.5,
+            "box": [
+              1355,
+              465,
+              1660,
+              1075
+            ],
+            "sample_id": "s001",
+            "appearance": "default",
+            "reviewer_kind": "test_operator",
+            "origin": "test_operator",
+            "is_automatic": false,
+            "description": "紫色球衣和短裤、白色短袖内搭、双膝外露、白灰鞋、白袜；无号码路径不使用 OCR。",
+            "source_sample": "examples/indiana/project/samples/s001.jpg",
+            "lineage": "unique legacy review target and actual user-confirmed source sample; simulation only",
+            "source_sample_sha256": "ed0d8eac0d6b178b73f2f67f02efaebbf8f62e1f103b226a1f0752608a8681fd"
+          }
+        ],
+        "reviewer_kind": "test_operator",
+        "uses_event_detector": false,
+        "event_time_policy": "Only confirmed times are event times; legacy windows are presence-only and never invented made shots"
+      },
+      "scores": {
+        "scorer": {
+          "counts": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "confirmed_positive_events": 0,
+            "confirmed_negative_events": 0,
+            "ignored_unreviewed_predictions": 1,
+            "ignored_unknown_predictions": 0,
+            "high_total_predictions": 0,
+            "high_evaluable_predictions": 0,
+            "high_correct": 0,
+            "target_events": 0,
+            "target_retrieved": 0,
+            "target_high": 0
+          },
+          "metrics": {
+            "event_precision": null,
+            "event_recall": null,
+            "event_f1": null,
+            "high_assignment_accuracy": null,
+            "target_event_retrieval_high_or_uncertain": null,
+            "high_confidence_coverage": null,
+            "unreviewed_high_predictions": 0
+          },
+          "details": {
+            "counts": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "confirmed_positive_events": 0,
+              "confirmed_negative_events": 0,
+              "ignored_unreviewed_predictions": 1,
+              "ignored_unknown_predictions": 0,
+              "high_total_predictions": 0,
+              "high_evaluable_predictions": 0,
+              "high_correct": 0,
+              "target_events": 0,
+              "target_retrieved": 0,
+              "target_high": 0
+            },
+            "detection_details": [
+              {
+                "prediction_id": "c0001",
+                "status": "ignored_unreviewed"
+              }
+            ],
+            "identity_details": [],
+            "confirmed_events": 1,
+            "draft_events_ignored": 0,
+            "reviewed_seconds": 0
+          },
+          "evaluation_event_ids": [
+            "c0001"
+          ],
+          "calibration_excluded_event_ids": [
+            "c0003"
+          ]
+        },
+        "handler": {
+          "counts": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "confirmed_positive_events": 0,
+            "confirmed_negative_events": 0,
+            "ignored_unreviewed_predictions": 1,
+            "ignored_unknown_predictions": 0,
+            "high_total_predictions": 0,
+            "high_evaluable_predictions": 0,
+            "high_correct": 0,
+            "target_events": 0,
+            "target_retrieved": 0,
+            "target_high": 0
+          },
+          "metrics": {
+            "event_precision": null,
+            "event_recall": null,
+            "event_f1": null,
+            "high_assignment_accuracy": null,
+            "target_event_retrieval_high_or_uncertain": null,
+            "high_confidence_coverage": null,
+            "unreviewed_high_predictions": 0
+          },
+          "details": {
+            "counts": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "confirmed_positive_events": 0,
+              "confirmed_negative_events": 0,
+              "ignored_unreviewed_predictions": 1,
+              "ignored_unknown_predictions": 0,
+              "high_total_predictions": 0,
+              "high_evaluable_predictions": 0,
+              "high_correct": 0,
+              "target_events": 0,
+              "target_retrieved": 0,
+              "target_high": 0
+            },
+            "detection_details": [
+              {
+                "prediction_id": "c0001",
+                "status": "ignored_unreviewed"
+              }
+            ],
+            "identity_details": [],
+            "confirmed_events": 1,
+            "draft_events_ignored": 0,
+            "reviewed_seconds": 0
+          },
+          "evaluation_event_ids": [
+            "c0001"
+          ],
+          "calibration_excluded_event_ids": [
+            "c0003"
+          ]
+        },
+        "visible": {
+          "counts": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "confirmed_positive_events": 0,
+            "confirmed_negative_events": 0,
+            "ignored_unreviewed_predictions": 1,
+            "ignored_unknown_predictions": 0,
+            "high_total_predictions": 0,
+            "high_evaluable_predictions": 0,
+            "high_correct": 0,
+            "target_events": 1,
+            "target_retrieved": 1,
+            "target_high": 0
+          },
+          "metrics": {
+            "event_precision": null,
+            "event_recall": null,
+            "event_f1": null,
+            "high_assignment_accuracy": null,
+            "target_event_retrieval_high_or_uncertain": 1.0,
+            "high_confidence_coverage": 0.0,
+            "unreviewed_high_predictions": 0
+          },
+          "details": {
+            "counts": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "confirmed_positive_events": 0,
+              "confirmed_negative_events": 0,
+              "ignored_unreviewed_predictions": 1,
+              "ignored_unknown_predictions": 0,
+              "high_total_predictions": 0,
+              "high_evaluable_predictions": 0,
+              "high_correct": 0,
+              "target_events": 1,
+              "target_retrieved": 1,
+              "target_high": 0
+            },
+            "detection_details": [
+              {
+                "prediction_id": "c0001",
+                "status": "ignored_unreviewed"
+              }
+            ],
+            "identity_details": [
+              {
+                "event_id": "c0001",
+                "target_player_id": "p1",
+                "actual_target_presence_or_role": true,
+                "predicted_group": "uncertain"
+              }
+            ],
+            "confirmed_events": 1,
+            "draft_events_ignored": 0,
+            "reviewed_seconds": 0
+          },
+          "evaluation_event_ids": [
+            "c0001"
+          ],
+          "calibration_excluded_event_ids": [
+            "c0003"
+          ]
+        }
+      },
+      "groups": {
+        "scorer": {
+          "c0001": "uncertain",
+          "c0003": "uncertain"
+        },
+        "handler": {
+          "c0001": "uncertain",
+          "c0003": "uncertain"
+        },
+        "visible": {
+          "c0001": "uncertain",
+          "c0003": "high"
+        }
+      },
+      "proposals": [
+        {
+          "candidate_id": "c0001",
+          "target_player_id": "p1",
+          "presence_player_id": null,
+          "presence_certainty": "uncertain",
+          "role_certainty": {
+            "visible": "uncertain",
+            "scorer": "uncertain",
+            "handler": "uncertain"
+          },
+          "role_reasons": {
+            "scorer": "clothing_presence_does_not_prove_scorer",
+            "handler": "clothing_presence_does_not_prove_ball_handler"
+          },
+          "confidence_scope": "visible_presence_only",
+          "policy_version": "honest-attribution-v1",
+          "is_probability": false,
+          "reason_codes": [
+            "ambiguous_same_frame_person",
+            "clothing_region_disagreement"
+          ],
+          "support_count": 7,
+          "support": [],
+          "never_auto_exclude": true
+        },
+        {
+          "candidate_id": "c0003",
+          "target_player_id": "p1",
+          "presence_player_id": "p1",
+          "presence_certainty": "high",
+          "role_certainty": {
+            "visible": "high",
+            "scorer": "uncertain",
+            "handler": "uncertain"
+          },
+          "role_reasons": {
+            "scorer": "clothing_presence_does_not_prove_scorer",
+            "handler": "clothing_presence_does_not_prove_ball_handler"
+          },
+          "confidence_scope": "visible_presence_only",
+          "policy_version": "honest-attribution-v1",
+          "is_probability": false,
+          "reason_codes": [],
+          "support_count": 24,
+          "support": [
+            [
+              8.57,
+              {
+                "observation_id": "window001_f00000_p39",
+                "player_id": "p1",
+                "box": [
+                  1480.24,
+                  495.56,
+                  1750.86,
+                  1021.66
+                ],
+                "distance": 0.13009,
+                "profile_margin": null,
+                "person_score": 0.9197,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.13949717109691742,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.130094426444026,
+                  "region_distances": [
+                    0.17192123456717953,
+                    0.14082172396764492,
+                    0.0604090780057199,
+                    0.15995556447053935
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.13949717109691742,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              8.77,
+              {
+                "observation_id": "window001_f00001_p44",
+                "player_id": "p1",
+                "box": [
+                  1481.75,
+                  499.51,
+                  1677.97,
+                  1026.4
+                ],
+                "distance": 0.14575,
+                "profile_margin": null,
+                "person_score": 0.919,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.13238626620165003,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.14575260690742162,
+                  "region_distances": [
+                    0.14210773710170108,
+                    0.1428560868490693,
+                    0.14591794976065314,
+                    0.18840210852555822
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.13238626620165003,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              8.97,
+              {
+                "observation_id": "window001_f00002_p50",
+                "player_id": "p1",
+                "box": [
+                  1432.26,
+                  492.93,
+                  1593.38,
+                  1045.47
+                ],
+                "distance": 0.19062,
+                "profile_margin": null,
+                "person_score": 0.8894,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.0972038596300683,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.19062208929295985,
+                  "region_distances": [
+                    0.26638560904393016,
+                    0.20987274459011096,
+                    0.08016780396048283,
+                    0.15098636679430394
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.0972038596300683,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              9.17,
+              {
+                "observation_id": "window001_f00003_p47",
+                "player_id": "p1",
+                "box": [
+                  1417.33,
+                  500.99,
+                  1629.11,
+                  1038.79
+                ],
+                "distance": 0.09521,
+                "profile_margin": null,
+                "person_score": 0.9113,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.19100087289008033,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.09520510288218846,
+                  "region_distances": [
+                    0.07468320656879926,
+                    0.10656233132978606,
+                    0.10427354680020726,
+                    0.1481834676432015
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.19100087289008033,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              9.37,
+              {
+                "observation_id": "window001_f00004_p46",
+                "player_id": "p1",
+                "box": [
+                  1396.75,
+                  476.37,
+                  1688.19,
+                  1052.03
+                ],
+                "distance": 0.05335,
+                "profile_margin": null,
+                "person_score": 0.9179,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.14122701124759063,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.053349545700701065,
+                  "region_distances": [
+                    0.034633375342011205,
+                    0.03116903559616953,
+                    0.09207039594629618,
+                    0.08165635761930692
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.14122701124759063,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              9.57,
+              {
+                "observation_id": "window001_f00005_p41",
+                "player_id": "p1",
+                "box": [
+                  1368.42,
+                  498.08,
+                  1617.22,
+                  1045.27
+                ],
+                "distance": 0.07781,
+                "profile_margin": null,
+                "person_score": 0.9235,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.17951379715231516,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.07780886969342668,
+                  "region_distances": [
+                    0.0682159056533702,
+                    0.061189497300638634,
+                    0.09076327718519982,
+                    0.15992299902718007
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.17951379715231516,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              9.77,
+              {
+                "observation_id": "window001_f00006_p41",
+                "player_id": "p1",
+                "box": [
+                  1344.79,
+                  485.55,
+                  1641.56,
+                  1060.65
+                ],
+                "distance": 0.07397,
+                "profile_margin": null,
+                "person_score": 0.9184,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.12000551101589876,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.07397345126809315,
+                  "region_distances": [
+                    0.08814184522943655,
+                    0.05381474690962662,
+                    0.06350226925675531,
+                    0.12424691343770589
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.12000551101589876,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              9.97,
+              {
+                "observation_id": "window001_f00007_p41",
+                "player_id": "p1",
+                "box": [
+                  1352.12,
+                  500.26,
+                  1606.51,
+                  1041.96
+                ],
+                "distance": 0.06305,
+                "profile_margin": null,
+                "person_score": 0.9349,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.22245256804620886,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.0630517304559666,
+                  "region_distances": [
+                    0.05886143373503415,
+                    0.0654552897648457,
+                    0.055813658955409226,
+                    0.12798473668237478
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.22245256804620886,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              10.17,
+              {
+                "observation_id": "window001_f00008_p36",
+                "player_id": "p1",
+                "box": [
+                  1357.76,
+                  508.7,
+                  1587.11,
+                  1042.67
+                ],
+                "distance": 0.07522,
+                "profile_margin": null,
+                "person_score": 0.93,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.23951729744685263,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.07521528736776162,
+                  "region_distances": [
+                    0.08597795899420602,
+                    0.06448303392624574,
+                    0.058783246000532356,
+                    0.14136742976716143
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.23951729744685263,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              10.37,
+              {
+                "observation_id": "window001_f00009_p38",
+                "player_id": "p1",
+                "box": [
+                  1357.48,
+                  489.82,
+                  1552.63,
+                  1041.93
+                ],
+                "distance": 0.10569,
+                "profile_margin": null,
+                "person_score": 0.9137,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.17440153445513543,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.10569032336520998,
+                  "region_distances": [
+                    0.10666441964280012,
+                    0.07933956306444648,
+                    0.10498985388013386,
+                    0.2338541715587629
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.17440153445513543,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              10.57,
+              {
+                "observation_id": "window001_f00010_p32",
+                "player_id": "p1",
+                "box": [
+                  1323.91,
+                  487.85,
+                  1526.34,
+                  975.24
+                ],
+                "distance": 0.08781,
+                "profile_margin": null,
+                "person_score": 0.9022,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.1481338166019755,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.08780687701691117,
+                  "region_distances": [
+                    0.0913207443769699,
+                    0.08290199821896806,
+                    0.08146115702902887,
+                    0.12229465205345062
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.1481338166019755,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              10.77,
+              {
+                "observation_id": "window001_f00011_p35",
+                "player_id": "p1",
+                "box": [
+                  1290.84,
+                  500.06,
+                  1472.47,
+                  947.47
+                ],
+                "distance": 0.0727,
+                "profile_margin": null,
+                "person_score": 0.9159,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.2010509478197793,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.07270033293750547,
+                  "region_distances": [
+                    0.029596108835672322,
+                    0.07059981146294454,
+                    0.11637783669263091,
+                    0.16597171059422264
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.2010509478197793,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              10.97,
+              {
+                "observation_id": "window001_f00012_p38",
+                "player_id": "p1",
+                "box": [
+                  1295.54,
+                  484.56,
+                  1454.82,
+                  934.33
+                ],
+                "distance": 0.1301,
+                "profile_margin": null,
+                "person_score": 0.9171,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.12973764746169394,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.1301017557713229,
+                  "region_distances": [
+                    0.15823671445339102,
+                    0.1176755716342969,
+                    0.10246304711928739,
+                    0.13298525891212093
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.12973764746169394,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              11.17,
+              {
+                "observation_id": "window001_f00013_p34",
+                "player_id": "p1",
+                "box": [
+                  1271.89,
+                  478.83,
+                  1468.13,
+                  927.39
+                ],
+                "distance": 0.07825,
+                "profile_margin": null,
+                "person_score": 0.9215,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.16919209686317532,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.0782488121187613,
+                  "region_distances": [
+                    0.08347528009444682,
+                    0.05320243485931306,
+                    0.08120948431504868,
+                    0.14390492143279404
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.16919209686317532,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              11.37,
+              {
+                "observation_id": "window001_f00014_p36",
+                "player_id": "p1",
+                "box": [
+                  1284.98,
+                  490.17,
+                  1471.14,
+                  918.26
+                ],
+                "distance": 0.07779,
+                "profile_margin": null,
+                "person_score": 0.9306,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.16039196325678673,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.07779134877730909,
+                  "region_distances": [
+                    0.08442875926019947,
+                    0.0554649268819695,
+                    0.06909058409439556,
+                    0.1885287624883654
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.16039196325678673,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              11.57,
+              {
+                "observation_id": "window001_f00015_p35",
+                "player_id": "p1",
+                "box": [
+                  1308.2,
+                  474.64,
+                  1442.42,
+                  885.97
+                ],
+                "distance": 0.13949,
+                "profile_margin": null,
+                "person_score": 0.9157,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.10238197001979019,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.1394886560400572,
+                  "region_distances": [
+                    0.18405507976635171,
+                    0.11881525823061333,
+                    0.09500794281482573,
+                    0.15320853462830897
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.10238197001979019,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              11.77,
+              {
+                "observation_id": "window001_f00016_p33",
+                "player_id": "p1",
+                "box": [
+                  1320.38,
+                  479.1,
+                  1443.25,
+                  880.52
+                ],
+                "distance": 0.13011,
+                "profile_margin": null,
+                "person_score": 0.8753,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.09944894500037421,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.13010977112406993,
+                  "region_distances": [
+                    0.17208216385384414,
+                    0.13221338205897484,
+                    0.06664786208909336,
+                    0.1645840288212109
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.09944894500037421,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              11.97,
+              {
+                "observation_id": "window001_f00017_p35",
+                "player_id": "p1",
+                "box": [
+                  1332.36,
+                  479.99,
+                  1462.92,
+                  844.12
+                ],
+                "distance": 0.1494,
+                "profile_margin": null,
+                "person_score": 0.9166,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.1221332053725967,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.14940355832518593,
+                  "region_distances": [
+                    0.17067139483851237,
+                    0.12373927353708111,
+                    0.13455938733912712,
+                    0.196647316075451
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.1221332053725967,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              12.17,
+              {
+                "observation_id": "window001_f00018_p39",
+                "player_id": "p1",
+                "box": [
+                  1349.84,
+                  461.22,
+                  1471.86,
+                  828.04
+                ],
+                "distance": 0.13854,
+                "profile_margin": null,
+                "person_score": 0.9057,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.13054922155070417,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.13854328423552084,
+                  "region_distances": [
+                    0.166810886857747,
+                    0.1393526317230415,
+                    0.08452381761066333,
+                    0.23247252556925332
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.13054922155070417,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              12.37,
+              {
+                "observation_id": "window001_f00019_p40",
+                "player_id": "p1",
+                "box": [
+                  1374.71,
+                  461.67,
+                  1471.62,
+                  793.13
+                ],
+                "distance": 0.17108,
+                "profile_margin": null,
+                "person_score": 0.8487,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.0898824222759268,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.17108492681705312,
+                  "region_distances": [
+                    0.1404902196117587,
+                    0.15860733219384568,
+                    0.20463738952145233,
+                    0.2769157813490504
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.0898824222759268,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              12.77,
+              {
+                "observation_id": "window001_f00021_p39",
+                "player_id": "p1",
+                "box": [
+                  1388.22,
+                  453.02,
+                  1471.88,
+                  809.16
+                ],
+                "distance": 0.13111,
+                "profile_margin": null,
+                "person_score": 0.7799,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.06894220544845556,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.13110644312651445,
+                  "region_distances": [
+                    0.12284562742887682,
+                    0.13889015725411452,
+                    0.09977679073442335,
+                    0.3462523124221615
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.06894220544845556,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              12.97,
+              {
+                "observation_id": "window001_f00022_p35",
+                "player_id": "p1",
+                "box": [
+                  1349.61,
+                  457.7,
+                  1471.8,
+                  766.8
+                ],
+                "distance": 0.14542,
+                "profile_margin": null,
+                "person_score": 0.8712,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.11565795552217803,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.1454182969496047,
+                  "region_distances": [
+                    0.16147339808784544,
+                    0.16929313245797226,
+                    0.09488416569301766,
+                    0.2008080978413632
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.11565795552217803,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              13.17,
+              {
+                "observation_id": "window001_f00023_p38",
+                "player_id": "p1",
+                "box": [
+                  1341.84,
+                  453.72,
+                  1443.26,
+                  778.75
+                ],
+                "distance": 0.13986,
+                "profile_margin": null,
+                "person_score": 0.8266,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.11524702446500948,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.1398611832224825,
+                  "region_distances": [
+                    0.16258921679704405,
+                    0.1540799640969283,
+                    0.08511915751784872,
+                    0.21539516448156398
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.11524702446500948,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ],
+            [
+              13.37,
+              {
+                "observation_id": "window001_f00024_p37",
+                "player_id": "p1",
+                "box": [
+                  1330.75,
+                  460.64,
+                  1437.35,
+                  750.16
+                ],
+                "distance": 0.15328,
+                "profile_margin": null,
+                "person_score": 0.7794,
+                "track_id": 628,
+                "track_anchored": false,
+                "legacy_profile_margin": 1.0,
+                "person_margin": 0.1689186755631797,
+                "confidence_evidence": {
+                  "policy_version": "honest-attribution-v1",
+                  "scope": "visible_presence_only",
+                  "is_probability": false,
+                  "eligible": true,
+                  "reference_ids": [
+                    "s001"
+                  ],
+                  "appearance_group": "default",
+                  "distance": 0.15327860510150942,
+                  "region_distances": [
+                    0.15526200217375966,
+                    0.18300739397748164,
+                    0.12519710670082937,
+                    0.1572564745477268
+                  ],
+                  "profile_margin": null,
+                  "person_margin": 0.1689186755631797,
+                  "ignored_reference_reasons": [],
+                  "reasons": []
+                }
+              }
+            ]
+          ],
+          "never_auto_exclude": true
+        }
+      ]
+    }
+  ]
+}

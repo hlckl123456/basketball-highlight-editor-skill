@@ -128,3 +128,5 @@ python3 "$CLI" detect work/new-game --backend bhe \
 ## CI 配置
 
 测试工作流作为 [ci/validate.yml](ci/validate.yml) 模板上传。当前发布凭据没有 GitHub `workflow` 写入权限，所以未启用自动 CI；通过结果均为本机实测。权限与启用方法见 [ci/README.md](ci/README.md)。
+
+球员归属现在按 `scorer`、`handler`、`visible` 分开处理。服饰证据只支持人在场，得分者和持球者证据不足时保留在不确定组。详见 [归属规则](skills/basketball-highlight-editor/references/attribution.md) 和 [goal-4 报告](docs/reports/goal-4.md)。

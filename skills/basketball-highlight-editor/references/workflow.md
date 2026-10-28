@@ -110,19 +110,21 @@ python3 scripts/highlight.py sample /path/to/project --player green \
 # Prefer a second clear view and add other known players as distractor profiles.
 
 # Preview model proposals without modifying candidate assignments:
-python3 scripts/highlight.py match-people /path/to/project --player green
+python3 scripts/highlight.py match-people /path/to/project --player green --role scorer
 # After inspecting evidence, explicitly apply model proposals:
-python3 scripts/highlight.py match-people /path/to/project --player green --apply
+python3 scripts/highlight.py match-people /path/to/project --player green --role scorer --apply
 python3 scripts/highlight.py select /path/to/project --player green --selected-by 'Actual user choice reference'
 python3 scripts/highlight.py rough /path/to/project
 ```
 
 Use the actual video's ROI and sample box; the example coordinates apply only to the public university case. The processing range can be limited with `people --start S --end E`; candidates outside it remain uncertain. Person scan parameters are validated, model input/output must match raw YOLOX-Nano 416, and matching checks the source SHA256, scan hash and descriptor version. It compares all saved profile samples, not a jersey number.
 
-`people/detections.json` contains raw boxes, descriptors, times, model hash and source hash. `people/matches.json` contains accepted/uncertain observations and tracklets. `people/candidate-proposals.json` records whether proposals were applied. Applying proposals never records a human confirmation. The role is `merely_visible`; the main review form still requires every high and uncertain clip to be decided before `confirm` can write the EDL. Adding samples, scanning again or applying new matches invalidates the previous clip confirmation.
+`people/detections.json` contains raw boxes, descriptors, times, model hash and source hash. `people/matches.json` contains accepted/uncertain observations and tracklets. `people/candidate-proposals.json` records whether proposals were applied. Applying proposals never records a human confirmation. The requested role defaults to `scorer`: clothing-only proposals stay uncertain for scorer/handler. Use `--role visible` explicitly for visible-presence selection. The persisted selection and CSV state the role; the main review form still requires every high and uncertain clip to be decided before `confirm` can write the EDL. Adding samples, scanning again or applying new matches invalidates the previous clip confirmation.
 
 Unknown or similar-clothing players require additional sample evidence and manual review. Distances and margins are model heuristics, not calibrated probability percentages. No-match clips stay uncertain because detection and matching can miss visible people.
 
 ## Input handling, caching and test clocks
 
 For supported formats, timing rules, cache controls and actionable media errors, read [media I/O](media.md). Production projects keep real audit timestamps. Only automated test projects may use `init --reproducible`; that mode rejects human or agent confirmations and requires `test_operator`.
+
+For reference quality, clothing changes, explicit role review and conservative exclusions, read [attribution](attribution.md).
