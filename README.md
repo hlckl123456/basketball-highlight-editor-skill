@@ -2,7 +2,7 @@
 
 把本地篮球录像整理成一个可复核、可继续编辑的个人集锦项目。先找候选回合，再展示人物特征让用户选人；粗剪与人工确认完成后，保存项目和 EDL，等待下一条剪辑指令。
 
-A local, review-first basketball highlight skill for Codex. Includes runnable scripts, tests, a licensed real-video case and evidence replay. Player identity is evidence-backed and reviewable, not an autonomous recognition guarantee.
+A local, review-first basketball highlight skill for Codex. Includes runnable scripts, tests, licensed real-video cases and evidence replay. Player identity is evidence-backed and reviewable, not an autonomous recognition guarantee.
 
 **已加入真实无号码场景测试：大学球场与公园航拍的随机留出时间点共认对 36/41 个可见目标帧，未发现误认。方法、全部样本和失败记录见[无号码实测案例](docs/UNNUMBERED_CASE_STUDY.zh-CN.md)。这是短片抽样结果，尚无整场比赛验证。**
 
@@ -90,7 +90,7 @@ python3 "$CLI" detect work/new-game --backend bhe \
 | 官方 YOLOX-Nano 模型、来源及 Apache 许可，推理参考源码 | `skills/.../assets/yolox/`、`third_party/yolox/` |
 | 实测依赖版本、第三方许可、模型哈希和明确的未打包说明 | `dependencies/`、`THIRD_PARTY_NOTICES.md` |
 
-完整清单和来源见 [第三方与依赖说明](THIRD_PARTY_NOTICES.md)。根目录 MIT 许可覆盖自有代码和原创说明；测试视频遵循作者 CC0，第三方内容保留各自许可。
+完整清单和来源见 [第三方与依赖说明](THIRD_PARTY_NOTICES.md)。根目录 MIT 许可覆盖自有代码和原创说明；测试视频分别遵循作者的 CC0、CC BY 或 CC BY-SA，派生帧与剪辑保留对应许可；第三方内容保留各自条款。
 
 **BHE 官方明确没有让其模型权重自动继承源码 MIT 许可。** 因此本仓库不转存授权不明确的 BHE `.pt`／`.onnx` 权重，也不把含模型的 DMG 换名重新发布。模型哈希、缺失原因与自备模型的接口都已公开。新增人体检测使用官方 Apache-2.0 YOLOX 项目的 Nano 模型，单独附有模型、许可与来源记录；它不代替 BHE 的篮球／篮筐模型。Python、FFmpeg 和第三方包作为外部依赖提供版本与官方来源，不镜像整套系统环境。
 
