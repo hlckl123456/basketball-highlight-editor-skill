@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_annotations",
+  "dataset_id": "basketball-eval-v1",
+  "video_id": "skills-basic",
+  "video_sha256": "ca6a6580616e2f0b3916c0ce6cd2a5a08807ee53708d8cd78af3eafe533a0ee9",
+  "duration": 6.865444,
+  "target_player_ids": [],
+  "players": [
+    {
+      "id": "p1",
+      "appearance_description": "自动服饰区域提议：black；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/skills-basic/c0001_f000.jpg",
+      "proposal_only": true
+    },
+    {
+      "id": "p2",
+      "appearance_description": "自动服饰区域提议：red；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/skills-basic/c0001_f000.jpg",
+      "proposal_only": true
+    },
+    {
+      "id": "p3",
+      "appearance_description": "自动服饰区域提议：blue；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/skills-basic/c0001_f000.jpg",
+      "proposal_only": true
+    }
+  ],
+  "events": [
+    {
+      "id": "c0001",
+      "time": 3.432722,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "coverage_fallback",
+        "candidate_id": "c0001",
+        "detector_failure": null
+      },
+      "clip_start": 0.43272200000000005,
+      "clip_end": 6.432722,
+      "feature_references": [
+        {
+          "time": 1.1442,
+          "path": "eval/data/previews/skills-basic/c0001_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    }
+  ],
+  "reviewed_ranges": [],
+  "generated_by": "BHE candidates + features; drafts only"
+}

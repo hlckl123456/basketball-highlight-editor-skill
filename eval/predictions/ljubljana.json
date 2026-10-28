@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_predictions",
+  "video_id": "ljubljana",
+  "video_sha256": "f3b68df29e1c9a64a80ab7980a92c3de823af9a222192d697af1f1ba787a51a7",
+  "provenance": {
+    "method": "bhe-public-source-cli",
+    "detector_failure": null,
+    "person_policy": "No new player attribution before user calibration; historical Indiana groups imported unchanged"
+  },
+  "events": [
+    {
+      "id": "c0002",
+      "candidate_id": "c0002",
+      "kind": "detected_event",
+      "time": 145.67,
+      "player_assignments": []
+    },
+    {
+      "id": "c0003",
+      "candidate_id": "c0003",
+      "kind": "detected_event",
+      "time": 147.5,
+      "player_assignments": []
+    },
+    {
+      "id": "c0004",
+      "candidate_id": "c0004",
+      "kind": "detected_event",
+      "time": 152.83,
+      "player_assignments": []
+    },
+    {
+      "id": "c0005",
+      "candidate_id": "c0005",
+      "kind": "detected_event",
+      "time": 153.67,
+      "player_assignments": []
+    },
+    {
+      "id": "c0006",
+      "candidate_id": "c0006",
+      "kind": "detected_event",
+      "time": 160.5,
+      "player_assignments": []
+    },
+    {
+      "id": "c0007",
+      "candidate_id": "c0007",
+      "kind": "detected_event",
+      "time": 161.83,
+      "player_assignments": []
+    },
+    {
+      "id": "c0008",
+      "candidate_id": "c0008",
+      "kind": "detected_event",
+      "time": 163.0,
+      "player_assignments": []
+    },
+    {
+      "id": "c0009",
+      "candidate_id": "c0009",
+      "kind": "detected_event",
+      "time": 164.5,
+      "player_assignments": []
+    },
+    {
+      "id": "c0010",
+      "candidate_id": "c0010",
+      "kind": "detected_event",
+      "time": 168.5,
+      "player_assignments": []
+    },
+    {
+      "id": "c0011",
+      "candidate_id": "c0011",
+      "kind": "detected_event",
+      "time": 175.17,
+      "player_assignments": []
+    },
+    {
+      "id": "c0012",
+      "candidate_id": "c0012",
+      "kind": "detected_event",
+      "time": 184.33,
+      "player_assignments": []
+    }
+  ]
+}

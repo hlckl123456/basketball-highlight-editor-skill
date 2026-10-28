@@ -1,0 +1,22 @@
+{
+  "video_id": "university",
+  "source_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+  "detector": {
+    "backend": "coverage-for-review",
+    "failure": "COMMAND_FAILED: [PosixPath('<BHE_RUNTIME>/python/bin/python3.11'), PosixPath('<BHE_RUNTIME>/scripts/generate_candidates.py'), '--detections', PosixPath('work/goal-1/projects/university/detection/detections.json'), '--output', PosixPath('work/goal-1/projects/university/detection/events.json')]\nTraceback (most recent call last):\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 177, in <module>\n    main(parse_args())\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 121, in main\n    rim, drift_windows = estimate_rims_windowed(\n                         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 99, in estimate_rims_windowed\n    global_rim = estimate_rim(records, confidence)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 70, in estimate_rim\n    raise ValueError(\nValueError: No hoop detections found; check the ROI or provide a manual rim calibration.\n",
+    "detected_events": 0
+  },
+  "detector_failure": "COMMAND_FAILED: [PosixPath('<BHE_RUNTIME>/python/bin/python3.11'), PosixPath('<BHE_RUNTIME>/scripts/generate_candidates.py'), '--detections', PosixPath('work/goal-1/projects/university/detection/detections.json'), '--output', PosixPath('work/goal-1/projects/university/detection/events.json')]\nTraceback (most recent call last):\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 177, in <module>\n    main(parse_args())\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 121, in main\n    rim, drift_windows = estimate_rims_windowed(\n                         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 99, in estimate_rims_windowed\n    global_rim = estimate_rim(records, confidence)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 70, in estimate_rim\n    raise ValueError(\nValueError: No hoop detections found; check the ROI or provide a manual rim calibration.\n",
+  "feature_failure": null,
+  "feature_extractor": {
+    "backend": "opencv-uniform-color-proposals-hsv-tesseract",
+    "opencv": "5.0.0",
+    "interval": 3,
+    "ocr_enabled": false,
+    "number_policy": "OCR hints only; require visual verification"
+  },
+  "predicted_events": 0,
+  "review_windows": 5,
+  "all_annotations_are_draft": true,
+  "holdout_not_scored": false
+}

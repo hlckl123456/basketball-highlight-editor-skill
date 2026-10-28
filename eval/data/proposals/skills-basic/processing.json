@@ -1,0 +1,22 @@
+{
+  "video_id": "skills-basic",
+  "source_sha256": "ca6a6580616e2f0b3916c0ce6cd2a5a08807ee53708d8cd78af3eafe533a0ee9",
+  "detector": {
+    "backend": "coverage-for-review",
+    "failure": null,
+    "detected_events": 0
+  },
+  "detector_failure": null,
+  "feature_failure": null,
+  "feature_extractor": {
+    "backend": "opencv-uniform-color-proposals-hsv-tesseract",
+    "opencv": "5.0.0",
+    "interval": 3,
+    "ocr_enabled": false,
+    "number_policy": "OCR hints only; require visual verification"
+  },
+  "predicted_events": 0,
+  "review_windows": 1,
+  "all_annotations_are_draft": true,
+  "holdout_not_scored": true
+}

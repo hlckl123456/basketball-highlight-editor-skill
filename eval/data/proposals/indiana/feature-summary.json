@@ -1,0 +1,64 @@
+{
+  "extractor": {
+    "backend": "opencv-uniform-color-proposals-hsv-tesseract",
+    "opencv": "5.0.0",
+    "interval": 3,
+    "ocr_enabled": false,
+    "number_policy": "OCR hints only; require visual verification"
+  },
+  "candidates": [
+    {
+      "id": "c0001",
+      "observations": 88,
+      "color_counts": {
+        "black": 17,
+        "blue": 18,
+        "gray": 3,
+        "orange": 5,
+        "red": 22,
+        "white": 23
+      },
+      "number_hints": []
+    },
+    {
+      "id": "c0002",
+      "observations": 90,
+      "color_counts": {
+        "black": 17,
+        "blue": 25,
+        "gray": 2,
+        "orange": 3,
+        "red": 16,
+        "white": 27
+      },
+      "number_hints": []
+    },
+    {
+      "id": "c0003",
+      "observations": 78,
+      "color_counts": {
+        "black": 12,
+        "blue": 16,
+        "gray": 4,
+        "orange": 6,
+        "red": 20,
+        "white": 20
+      },
+      "number_hints": []
+    },
+    {
+      "id": "c0004",
+      "observations": 77,
+      "color_counts": {
+        "black": 13,
+        "blue": 17,
+        "gray": 3,
+        "orange": 7,
+        "red": 22,
+        "white": 15
+      },
+      "number_hints": []
+    }
+  ],
+  "identity_verified": false
+}

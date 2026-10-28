@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_annotations",
+  "dataset_id": "basketball-eval-v1",
+  "video_id": "nabua",
+  "video_sha256": "7a9ef1c75dd7e4eeb7d4c10b507b72b5ea830abe53c5ac5777f499066c1c5415",
+  "duration": 17.387,
+  "target_player_ids": [],
+  "players": [
+    {
+      "id": "p1",
+      "appearance_description": "自动服饰区域提议：white；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/nabua/c0001_f000.jpg",
+      "proposal_only": true
+    },
+    {
+      "id": "p2",
+      "appearance_description": "自动服饰区域提议：orange；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/nabua/c0001_f000.jpg",
+      "proposal_only": true
+    },
+    {
+      "id": "p3",
+      "appearance_description": "自动服饰区域提议：black；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/nabua/c0001_f000.jpg",
+      "proposal_only": true
+    }
+  ],
+  "events": [
+    {
+      "id": "c0001",
+      "time": 4.0,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "coverage_fallback",
+        "candidate_id": "c0001",
+        "detector_failure": null
+      },
+      "clip_start": 1.0,
+      "clip_end": 7.0,
+      "feature_references": [
+        {
+          "time": 1.3333,
+          "path": "eval/data/previews/nabua/c0001_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0002",
+      "time": 12.6935,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "coverage_fallback",
+        "candidate_id": "c0002",
+        "detector_failure": null
+      },
+      "clip_start": 9.6935,
+      "clip_end": 15.6935,
+      "feature_references": [
+        {
+          "time": 10.0268,
+          "path": "eval/data/previews/nabua/c0002_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    }
+  ],
+  "reviewed_ranges": [],
+  "generated_by": "BHE candidates + features; drafts only"
+}

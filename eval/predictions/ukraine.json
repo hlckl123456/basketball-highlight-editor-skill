@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_predictions",
+  "video_id": "ukraine",
+  "video_sha256": "f7efe3225fe142bdecca3e6a0b6db20bffb34a95d47462fa0fb82db0c233a4f4",
+  "provenance": {
+    "method": "bhe-public-source-cli",
+    "detector_failure": null,
+    "person_policy": "No new player attribution before user calibration; historical Indiana groups imported unchanged"
+  },
+  "events": [
+    {
+      "id": "c0001",
+      "candidate_id": "c0001",
+      "kind": "detected_event",
+      "time": 18.33,
+      "player_assignments": []
+    }
+  ]
+}

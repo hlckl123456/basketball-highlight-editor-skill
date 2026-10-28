@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_annotations",
+  "dataset_id": "basketball-eval-v1",
+  "video_id": "ljubljana",
+  "video_sha256": "f3b68df29e1c9a64a80ab7980a92c3de823af9a222192d697af1f1ba787a51a7",
+  "duration": 199.753,
+  "target_player_ids": [],
+  "players": [
+    {
+      "id": "p1",
+      "appearance_description": "自动服饰区域提议：white；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/ljubljana/c0002_f000.jpg",
+      "proposal_only": true
+    },
+    {
+      "id": "p2",
+      "appearance_description": "自动服饰区域提议：blue；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/ljubljana/c0002_f000.jpg",
+      "proposal_only": true
+    },
+    {
+      "id": "p3",
+      "appearance_description": "自动服饰区域提议：gray；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/ljubljana/c0002_f000.jpg",
+      "proposal_only": true
+    }
+  ],
+  "events": [
+    {
+      "id": "c0002",
+      "time": 145.67,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0002",
+        "detector_failure": null
+      },
+      "clip_start": 142.67,
+      "clip_end": 148.67,
+      "feature_references": [
+        {
+          "time": 144.17,
+          "path": "eval/data/previews/ljubljana/c0002_f000.jpg"
+        },
+        {
+          "time": 146.0,
+          "path": "eval/data/previews/ljubljana/c0003_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0003",
+      "time": 147.5,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0003",
+        "detector_failure": null
+      },
+      "clip_start": 144.5,
+      "clip_end": 150.5,
+      "feature_references": [
+        {
+          "time": 146.0,
+          "path": "eval/data/previews/ljubljana/c0003_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0004",
+      "time": 152.83,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0004",
+        "detector_failure": null
+      },
+      "clip_start": 149.83,
+      "clip_end": 155.83,
+      "feature_references": [
+        {
+          "time": 151.33,
+          "path": "eval/data/previews/ljubljana/c0004_f000.jpg"
+        },
+        {
+          "time": 152.17,
+          "path": "eval/data/previews/ljubljana/c0005_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0005",
+      "time": 153.67,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0005",
+        "detector_failure": null
+      },
+      "clip_start": 150.67,
+      "clip_end": 156.67,
+      "feature_references": [
+        {
+          "time": 151.33,
+          "path": "eval/data/previews/ljubljana/c0004_f000.jpg"
+        },
+        {
+          "time": 152.17,
+          "path": "eval/data/previews/ljubljana/c0005_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0006",
+      "time": 160.5,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0006",
+        "detector_failure": null
+      },
+      "clip_start": 157.5,
+      "clip_end": 163.5,
+      "feature_references": [
+        {
+          "time": 159.0,
+          "path": "eval/data/previews/ljubljana/c0006_f000.jpg"
+        },
+        {
+          "time": 160.33,
+          "path": "eval/data/previews/ljubljana/c0007_f000.jpg"
+        },
+        {
+          "time": 161.5,
+          "path": "eval/data/previews/ljubljana/c0008_f000.jpg"
+        },
+        {
+          "time": 163.0,
+          "path": "eval/data/previews/ljubljana/c0009_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0007",
+      "time": 161.83,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0007",
+        "detector_failure": null
+      },
+      "clip_start": 158.83,
+      "clip_end": 164.83,
+      "feature_references": [
+        {
+          "time": 159.0,
+          "path": "eval/data/previews/ljubljana/c0006_f000.jpg"
+        },
+        {
+          "time": 160.33,
+          "path": "eval/data/previews/ljubljana/c0007_f000.jpg"
+        },
+        {
+          "time": 161.5,
+          "path": "eval/data/previews/ljubljana/c0008_f000.jpg"
+        },
+        {
+          "time": 163.0,
+          "path": "eval/data/previews/ljubljana/c0009_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0008",
+      "time": 163.0,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0008",
+        "detector_failure": null
+      },
+      "clip_start": 160.0,
+      "clip_end": 166.0,
+      "feature_references": [
+        {
+          "time": 160.33,
+          "path": "eval/data/previews/ljubljana/c0007_f000.jpg"
+        },
+        {
+          "time": 161.5,
+          "path": "eval/data/previews/ljubljana/c0008_f000.jpg"
+        },
+        {
+          "time": 163.0,
+          "path": "eval/data/previews/ljubljana/c0009_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0009",
+      "time": 164.5,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0009",
+        "detector_failure": null
+      },
+      "clip_start": 161.5,
+      "clip_end": 167.5,
+      "feature_references": [
+        {
+          "time": 161.5,
+          "path": "eval/data/previews/ljubljana/c0008_f000.jpg"
+        },
+        {
+          "time": 163.0,
+          "path": "eval/data/previews/ljubljana/c0009_f000.jpg"
+        },
+        {
+          "time": 167.0,
+          "path": "eval/data/previews/ljubljana/c0010_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0010",
+      "time": 168.5,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0010",
+        "detector_failure": null
+      },
+      "clip_start": 165.5,
+      "clip_end": 171.5,
+      "feature_references": [
+        {
+          "time": 167.0,
+          "path": "eval/data/previews/ljubljana/c0010_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0011",
+      "time": 175.17,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0011",
+        "detector_failure": null
+      },
+      "clip_start": 172.17,
+      "clip_end": 178.17,
+      "feature_references": [
+        {
+          "time": 173.67,
+          "path": "eval/data/previews/ljubljana/c0011_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0012",
+      "time": 184.33,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0012",
+        "detector_failure": null
+      },
+      "clip_start": 181.33,
+      "clip_end": 187.33,
+      "feature_references": [
+        {
+          "time": 182.83,
+          "path": "eval/data/previews/ljubljana/c0012_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    }
+  ],
+  "reviewed_ranges": [],
+  "generated_by": "BHE candidates + features; drafts only"
+}

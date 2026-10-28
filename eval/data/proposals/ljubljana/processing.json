@@ -1,0 +1,68 @@
+{
+  "video_id": "ljubljana",
+  "source_sha256": "f3b68df29e1c9a64a80ab7980a92c3de823af9a222192d697af1f1ba787a51a7",
+  "detector": {
+    "backend": "bhe-public-source-cli",
+    "roi": [
+      0,
+      0,
+      854,
+      480
+    ],
+    "fps": 3,
+    "device_requested": "cpu",
+    "runtime": "<BHE_RUNTIME>",
+    "commands": [
+      [
+        "<BHE_RUNTIME>/python/bin/python3.11",
+        "<BHE_RUNTIME>/scripts/scan_video.py",
+        "--video",
+        "examples/unnumbered/sources/ljubljana480.webm",
+        "--model",
+        "<BHE_RUNTIME>/models/bball_model.static.onnx",
+        "--roi",
+        "0",
+        "0",
+        "854",
+        "480",
+        "--sample-fps",
+        "3",
+        "--device",
+        "cpu",
+        "--batch",
+        "1",
+        "--scale",
+        "1",
+        "--output",
+        "work/goal-1/projects/ljubljana/detection/detections.json"
+      ],
+      [
+        "<BHE_RUNTIME>/python/bin/python3.11",
+        "<BHE_RUNTIME>/scripts/generate_candidates.py",
+        "--detections",
+        "work/goal-1/projects/ljubljana/detection/detections.json",
+        "--output",
+        "work/goal-1/projects/ljubljana/detection/events.json"
+      ]
+    ],
+    "hashes": {
+      "scripts/scan_video.py": "398b3efdfd09efb121b29e05418d7a0ddef153d755bc5338e517de2c1b523bcf",
+      "scripts/generate_candidates.py": "b2a33beb5a093a0e69cc4c8725b0af9b33fc36b9b7561b3a821582cf28ae1720",
+      "models/bball_model.static.onnx": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de"
+    },
+    "limitations": "Likely crossings only; no made-shot or player identity guarantee."
+  },
+  "detector_failure": null,
+  "feature_failure": null,
+  "feature_extractor": {
+    "backend": "opencv-uniform-color-proposals-hsv-tesseract",
+    "opencv": "5.0.0",
+    "interval": 3,
+    "ocr_enabled": false,
+    "number_policy": "OCR hints only; require visual verification"
+  },
+  "predicted_events": 11,
+  "review_windows": 11,
+  "all_annotations_are_draft": true,
+  "holdout_not_scored": false
+}

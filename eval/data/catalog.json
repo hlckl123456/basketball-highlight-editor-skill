@@ -30,7 +30,9 @@
           16.3
         ]
       ],
-      "holdout_policy": "Development source; previous experiments may have viewed this footage."
+      "holdout_policy": "Development source; previous experiments may have viewed this footage.",
+      "review_media_path": "eval/data/review-media/indiana.mp4",
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
     },
     {
       "id": "university",
@@ -58,7 +60,9 @@
           60.6
         ]
       ],
-      "holdout_policy": "Development source; previous experiments may have viewed this footage."
+      "holdout_policy": "Development source; previous experiments may have viewed this footage.",
+      "review_media_path": "eval/data/review-media/university.mp4",
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
     },
     {
       "id": "moscow1",
@@ -86,7 +90,9 @@
           9.394
         ]
       ],
-      "holdout_policy": "Development source; previous experiments may have viewed this footage."
+      "holdout_policy": "Development source; previous experiments may have viewed this footage.",
+      "review_media_path": "eval/data/review-media/moscow1.mp4",
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
     },
     {
       "id": "moscow2",
@@ -114,7 +120,9 @@
           17.637
         ]
       ],
-      "holdout_policy": "Development source; previous experiments may have viewed this footage."
+      "holdout_policy": "Development source; previous experiments may have viewed this footage.",
+      "review_media_path": "eval/data/review-media/moscow2.mp4",
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
     },
     {
       "id": "ljubljana",
@@ -142,7 +150,9 @@
           189
         ]
       ],
-      "holdout_policy": "Development source; previous experiments may have viewed this footage."
+      "holdout_policy": "Development source; previous experiments may have viewed this footage.",
+      "review_media_path": "eval/data/review-media/ljubljana.mp4",
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
     },
     {
       "id": "ukraine",
@@ -173,7 +183,9 @@
       "holdout_policy": "Development source; previous experiments may have viewed this footage.",
       "transform": "Clockwise 90 degree rotation, no audio, H264 CRF18; CC BY-SA 4.0 retained",
       "raw_source_path": "examples/unnumbered/sources/ukraine.ogv",
-      "raw_source_sha256": "1c28d65fd8d48bd68f683794c2b1edf8dd6c2cccfa359281447806c32c2ea98b"
+      "raw_source_sha256": "1c28d65fd8d48bd68f683794c2b1edf8dd6c2cccfa359281447806c32c2ea98b",
+      "review_media_path": "eval/data/review-media/ukraine.mp4",
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
     },
     {
       "id": "zhijiang",
@@ -201,7 +213,9 @@
           6.039
         ]
       ],
-      "holdout_policy": "Development source; previous experiments may have viewed this footage."
+      "holdout_policy": "Development source; previous experiments may have viewed this footage.",
+      "review_media_path": "eval/data/review-media/zhijiang.mp4",
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
     },
     {
       "id": "dribbling",
@@ -229,7 +243,9 @@
           58.658
         ]
       ],
-      "holdout_policy": "Reserved for explicit final evaluation; draft proposal generation is allowed, labels remain unconfirmed."
+      "holdout_policy": "Reserved for explicit final evaluation; draft proposal generation is allowed, labels remain unconfirmed.",
+      "review_media_path": "eval/data/review-media/dribbling.mp4",
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
     },
     {
       "id": "skills-basic",
@@ -257,7 +273,9 @@
           6.865444
         ]
       ],
-      "holdout_policy": "Reserved for explicit final evaluation; draft proposal generation is allowed, labels remain unconfirmed."
+      "holdout_policy": "Reserved for explicit final evaluation; draft proposal generation is allowed, labels remain unconfirmed.",
+      "review_media_path": "eval/data/review-media/skills-basic.mp4",
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
     },
     {
       "id": "nabua",
@@ -285,7 +303,9 @@
           17.387
         ]
       ],
-      "holdout_policy": "Reserved for explicit final evaluation; draft proposal generation is allowed, labels remain unconfirmed."
+      "holdout_policy": "Reserved for explicit final evaluation; draft proposal generation is allowed, labels remain unconfirmed.",
+      "review_media_path": "eval/data/review-media/nabua.mp4",
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
     }
   ]
 }

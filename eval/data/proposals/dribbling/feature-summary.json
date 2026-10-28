@@ -1,0 +1,86 @@
+{
+  "extractor": {
+    "backend": "opencv-uniform-color-proposals-hsv-tesseract",
+    "opencv": "5.0.0",
+    "interval": 3,
+    "ocr_enabled": false,
+    "number_policy": "OCR hints only; require visual verification"
+  },
+  "candidates": [
+    {
+      "id": "c0001",
+      "observations": 74,
+      "color_counts": {
+        "black": 1,
+        "gray": 1,
+        "orange": 7,
+        "red": 14,
+        "white": 51
+      },
+      "number_hints": []
+    },
+    {
+      "id": "c0002",
+      "observations": 65,
+      "color_counts": {
+        "black": 2,
+        "blue": 2,
+        "orange": 7,
+        "purple": 1,
+        "red": 17,
+        "white": 36
+      },
+      "number_hints": []
+    },
+    {
+      "id": "c0003",
+      "observations": 42,
+      "color_counts": {
+        "black": 2,
+        "blue": 2,
+        "orange": 9,
+        "red": 9,
+        "white": 20
+      },
+      "number_hints": []
+    },
+    {
+      "id": "c0004",
+      "observations": 96,
+      "color_counts": {
+        "black": 2,
+        "blue": 4,
+        "gray": 1,
+        "orange": 17,
+        "purple": 4,
+        "red": 10,
+        "white": 57,
+        "yellow": 1
+      },
+      "number_hints": []
+    },
+    {
+      "id": "c0005",
+      "observations": 25,
+      "color_counts": {
+        "black": 6,
+        "orange": 2,
+        "red": 6,
+        "white": 11
+      },
+      "number_hints": []
+    },
+    {
+      "id": "c0006",
+      "observations": 19,
+      "color_counts": {
+        "black": 3,
+        "orange": 4,
+        "red": 4,
+        "white": 8
+      },
+      "number_hints": []
+    }
+  ],
+  "identity_verified": false
+}

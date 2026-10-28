@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_annotations",
+  "dataset_id": "basketball-eval-v1",
+  "video_id": "university",
+  "video_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+  "duration": 60.6,
+  "target_player_ids": [],
+  "players": [
+    {
+      "id": "p1",
+      "appearance_description": "自动服饰区域提议：white；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/university/c0001_f000.jpg",
+      "proposal_only": true
+    },
+    {
+      "id": "p2",
+      "appearance_description": "自动服饰区域提议：red；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/university/c0001_f000.jpg",
+      "proposal_only": true
+    },
+    {
+      "id": "p3",
+      "appearance_description": "自动服饰区域提议：gray；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/university/c0001_f000.jpg",
+      "proposal_only": true
+    }
+  ],
+  "events": [
+    {
+      "id": "c0001",
+      "time": 4.0,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "coverage_fallback",
+        "candidate_id": "c0001",
+        "detector_failure": "COMMAND_FAILED: [PosixPath('<BHE_RUNTIME>/python/bin/python3.11'), PosixPath('<BHE_RUNTIME>/scripts/generate_candidates.py'), '--detections', PosixPath('work/goal-1/projects/university/detection/detections.json'), '--output', PosixPath('work/goal-1/projects/university/detection/events.json')]\nTraceback (most recent call last):\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 177, in <module>\n    main(parse_args())\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 121, in main\n    rim, drift_windows = estimate_rims_windowed(\n                         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 99, in estimate_rims_windowed\n    global_rim = estimate_rim(records, confidence)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 70, in estimate_rim\n    raise ValueError(\nValueError: No hoop detections found; check the ROI or provide a manual rim calibration.\n"
+      },
+      "clip_start": 1.0,
+      "clip_end": 7.0,
+      "feature_references": [
+        {
+          "time": 1.3333,
+          "path": "eval/data/previews/university/c0001_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0002",
+      "time": 16.12,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "coverage_fallback",
+        "candidate_id": "c0002",
+        "detector_failure": "COMMAND_FAILED: [PosixPath('<BHE_RUNTIME>/python/bin/python3.11'), PosixPath('<BHE_RUNTIME>/scripts/generate_candidates.py'), '--detections', PosixPath('work/goal-1/projects/university/detection/detections.json'), '--output', PosixPath('work/goal-1/projects/university/detection/events.json')]\nTraceback (most recent call last):\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 177, in <module>\n    main(parse_args())\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 121, in main\n    rim, drift_windows = estimate_rims_windowed(\n                         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 99, in estimate_rims_windowed\n    global_rim = estimate_rim(records, confidence)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 70, in estimate_rim\n    raise ValueError(\nValueError: No hoop detections found; check the ROI or provide a manual rim calibration.\n"
+      },
+      "clip_start": 13.120000000000001,
+      "clip_end": 19.12,
+      "feature_references": [
+        {
+          "time": 13.4533,
+          "path": "eval/data/previews/university/c0002_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0003",
+      "time": 28.240000000000002,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "coverage_fallback",
+        "candidate_id": "c0003",
+        "detector_failure": "COMMAND_FAILED: [PosixPath('<BHE_RUNTIME>/python/bin/python3.11'), PosixPath('<BHE_RUNTIME>/scripts/generate_candidates.py'), '--detections', PosixPath('work/goal-1/projects/university/detection/detections.json'), '--output', PosixPath('work/goal-1/projects/university/detection/events.json')]\nTraceback (most recent call last):\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 177, in <module>\n    main(parse_args())\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 121, in main\n    rim, drift_windows = estimate_rims_windowed(\n                         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 99, in estimate_rims_windowed\n    global_rim = estimate_rim(records, confidence)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 70, in estimate_rim\n    raise ValueError(\nValueError: No hoop detections found; check the ROI or provide a manual rim calibration.\n"
+      },
+      "clip_start": 25.240000000000002,
+      "clip_end": 31.240000000000002,
+      "feature_references": [
+        {
+          "time": 25.5733,
+          "path": "eval/data/previews/university/c0003_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0004",
+      "time": 40.36,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "coverage_fallback",
+        "candidate_id": "c0004",
+        "detector_failure": "COMMAND_FAILED: [PosixPath('<BHE_RUNTIME>/python/bin/python3.11'), PosixPath('<BHE_RUNTIME>/scripts/generate_candidates.py'), '--detections', PosixPath('work/goal-1/projects/university/detection/detections.json'), '--output', PosixPath('work/goal-1/projects/university/detection/events.json')]\nTraceback (most recent call last):\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 177, in <module>\n    main(parse_args())\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 121, in main\n    rim, drift_windows = estimate_rims_windowed(\n                         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 99, in estimate_rims_windowed\n    global_rim = estimate_rim(records, confidence)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 70, in estimate_rim\n    raise ValueError(\nValueError: No hoop detections found; check the ROI or provide a manual rim calibration.\n"
+      },
+      "clip_start": 37.36,
+      "clip_end": 43.36,
+      "feature_references": [
+        {
+          "time": 37.6933,
+          "path": "eval/data/previews/university/c0004_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0005",
+      "time": 52.480000000000004,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "coverage_fallback",
+        "candidate_id": "c0005",
+        "detector_failure": "COMMAND_FAILED: [PosixPath('<BHE_RUNTIME>/python/bin/python3.11'), PosixPath('<BHE_RUNTIME>/scripts/generate_candidates.py'), '--detections', PosixPath('work/goal-1/projects/university/detection/detections.json'), '--output', PosixPath('work/goal-1/projects/university/detection/events.json')]\nTraceback (most recent call last):\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 177, in <module>\n    main(parse_args())\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 121, in main\n    rim, drift_windows = estimate_rims_windowed(\n                         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 99, in estimate_rims_windowed\n    global_rim = estimate_rim(records, confidence)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<BHE_RUNTIME>/scripts/generate_candidates.py\", line 70, in estimate_rim\n    raise ValueError(\nValueError: No hoop detections found; check the ROI or provide a manual rim calibration.\n"
+      },
+      "clip_start": 49.480000000000004,
+      "clip_end": 55.480000000000004,
+      "feature_references": [
+        {
+          "time": 49.8133,
+          "path": "eval/data/previews/university/c0005_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    }
+  ],
+  "reviewed_ranges": [],
+  "generated_by": "BHE candidates + features; drafts only"
+}

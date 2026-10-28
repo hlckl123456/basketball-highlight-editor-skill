@@ -1,0 +1,24 @@
+{
+  "extractor": {
+    "backend": "opencv-uniform-color-proposals-hsv-tesseract",
+    "opencv": "5.0.0",
+    "interval": 3,
+    "ocr_enabled": false,
+    "number_policy": "OCR hints only; require visual verification"
+  },
+  "candidates": [
+    {
+      "id": "c0001",
+      "observations": 40,
+      "color_counts": {
+        "black": 12,
+        "blue": 15,
+        "purple": 1,
+        "red": 5,
+        "white": 7
+      },
+      "number_hints": []
+    }
+  ],
+  "identity_verified": false
+}

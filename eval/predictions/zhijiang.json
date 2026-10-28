@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_predictions",
+  "video_id": "zhijiang",
+  "video_sha256": "e2ffca2d0dac0f8d974fe005292b5e31ffebc0949288e3b7231039fccaeebe92",
+  "provenance": {
+    "method": "bhe-public-source-cli",
+    "detector_failure": null,
+    "person_policy": "No new player attribution before user calibration; historical Indiana groups imported unchanged"
+  },
+  "events": [
+    {
+      "id": "c0001",
+      "candidate_id": "c0001",
+      "kind": "detected_event",
+      "time": 5.17,
+      "player_assignments": []
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_predictions",
+  "video_id": "indiana",
+  "video_sha256": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845",
+  "provenance": {
+    "method": "bhe-public-source-cli",
+    "detector_failure": null,
+    "person_policy": "No new player attribution before user calibration; historical Indiana groups imported unchanged"
+  },
+  "events": [
+    {
+      "id": "c0001",
+      "candidate_id": "c0001",
+      "kind": "detected_event",
+      "time": 2.63,
+      "player_assignments": [
+        {
+          "target_player_id": "p1",
+          "group": "high",
+          "assigned_player_id": "p1"
+        }
+      ]
+    },
+    {
+      "id": "c0002",
+      "candidate_id": "c0002",
+      "kind": "detected_event",
+      "time": 4.57,
+      "player_assignments": [
+        {
+          "target_player_id": "p1",
+          "group": "uncertain",
+          "assigned_player_id": null
+        }
+      ]
+    },
+    {
+      "id": "c0003",
+      "candidate_id": "c0003",
+      "kind": "detected_event",
+      "time": 11.57,
+      "player_assignments": [
+        {
+          "target_player_id": "p1",
+          "group": "high",
+          "assigned_player_id": "p1"
+        }
+      ]
+    },
+    {
+      "id": "c0004",
+      "candidate_id": "c0004",
+      "kind": "detected_event",
+      "time": 12.43,
+      "player_assignments": [
+        {
+          "target_player_id": "p1",
+          "group": "uncertain",
+          "assigned_player_id": null
+        }
+      ]
+    }
+  ]
+}

@@ -80,7 +80,7 @@ def validate_catalog(data):
             'INVALID_CATALOG_VERSION')
     videos = data.get('videos')
     require(isinstance(videos, list) and videos, 'EMPTY_VIDEO_CATALOG')
-    ids, groups = set(), {}
+    ids, groups, source_splits = set(), {}, {}
     for v in videos:
         vid = v.get('id', '')
         require(ID.fullmatch(vid) is not None and vid not in ids, 'INVALID_OR_DUPLICATE_VIDEO_ID')
@@ -98,6 +98,8 @@ def validate_catalog(data):
             require(v['source_path'].startswith('eval/local-media/'), 'PRIVATE_MEDIA_MUST_STAY_LOCAL')
         prior = groups.setdefault(v['group_id'], v['split'])
         require(prior == v['split'], 'FILMING_GROUP_SPLIT_LEAKAGE')
+        source_prior = source_splits.setdefault(v['sha256'], v['split'])
+        require(source_prior == v['split'], 'SOURCE_HASH_SPLIT_LEAKAGE')
     return data
 
 
@@ -126,6 +128,7 @@ def validate_annotations(doc, video, allow_legacy=False, require_all_draft=False
         require(ID.fullmatch(e.get('id', '')) is not None and e['id'] not in ids,
                 'INVALID_OR_DUPLICATE_EVENT_ID')
         ids.add(e['id'])
+        require(all(k in e for k in ('is_score', 'scorer_id', 'ball_handler_id', 'visible_player_ids', 'visibility_complete', 'confirmed_fields', 'confirmation')), 'MISSING_EVENT_FIELD')
         require(number(e.get('time')) and 0 <= e['time'] <= video['duration'], 'EVENT_TIME_OUT_OF_RANGE')
         require(e.get('is_score') is None or type(e['is_score']) is bool, 'IS_SCORE_MUST_BE_BOOLEAN_OR_NULL')
         for key in ('scorer_id', 'ball_handler_id'):

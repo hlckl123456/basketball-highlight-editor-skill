@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_annotations",
+  "dataset_id": "basketball-eval-v1",
+  "video_id": "dribbling",
+  "video_sha256": "1a592d92d8359729b679067977b295526fa376a9b15f92d3d7be3671941aa023",
+  "duration": 58.658,
+  "target_player_ids": [],
+  "players": [
+    {
+      "id": "p1",
+      "appearance_description": "自动服饰区域提议：white；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/dribbling/c0001_f000.jpg",
+      "proposal_only": true
+    },
+    {
+      "id": "p2",
+      "appearance_description": "自动服饰区域提议：red；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/dribbling/c0001_f000.jpg",
+      "proposal_only": true
+    },
+    {
+      "id": "p3",
+      "appearance_description": "自动服饰区域提议：orange；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/dribbling/c0001_f000.jpg",
+      "proposal_only": true
+    }
+  ],
+  "events": [
+    {
+      "id": "c0001",
+      "time": 6.83,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0001",
+        "detector_failure": null
+      },
+      "clip_start": 3.83,
+      "clip_end": 9.83,
+      "feature_references": [
+        {
+          "time": 5.33,
+          "path": "eval/data/previews/dribbling/c0001_f000.jpg"
+        },
+        {
+          "time": 6.5,
+          "path": "eval/data/previews/dribbling/c0002_f000.jpg"
+        },
+        {
+          "time": 8.5,
+          "path": "eval/data/previews/dribbling/c0003_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0002",
+      "time": 8.0,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0002",
+        "detector_failure": null
+      },
+      "clip_start": 5.0,
+      "clip_end": 11.0,
+      "feature_references": [
+        {
+          "time": 5.33,
+          "path": "eval/data/previews/dribbling/c0001_f000.jpg"
+        },
+        {
+          "time": 6.5,
+          "path": "eval/data/previews/dribbling/c0002_f000.jpg"
+        },
+        {
+          "time": 8.5,
+          "path": "eval/data/previews/dribbling/c0003_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0003",
+      "time": 10.0,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0003",
+        "detector_failure": null
+      },
+      "clip_start": 7.0,
+      "clip_end": 13.0,
+      "feature_references": [
+        {
+          "time": 8.5,
+          "path": "eval/data/previews/dribbling/c0003_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0004",
+      "time": 17.67,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0004",
+        "detector_failure": null
+      },
+      "clip_start": 14.670000000000002,
+      "clip_end": 20.67,
+      "feature_references": [
+        {
+          "time": 15.67,
+          "path": "eval/data/previews/dribbling/c0004_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0005",
+      "time": 32.5,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0005",
+        "detector_failure": null
+      },
+      "clip_start": 29.5,
+      "clip_end": 35.5,
+      "feature_references": [
+        {
+          "time": 31.0,
+          "path": "eval/data/previews/dribbling/c0005_f000.jpg"
+        },
+        {
+          "time": 32.83,
+          "path": "eval/data/previews/dribbling/c0006_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0006",
+      "time": 34.33,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0006",
+        "detector_failure": null
+      },
+      "clip_start": 31.33,
+      "clip_end": 37.33,
+      "feature_references": [
+        {
+          "time": 32.83,
+          "path": "eval/data/previews/dribbling/c0006_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    }
+  ],
+  "reviewed_ranges": [],
+  "generated_by": "BHE candidates + features; drafts only"
+}

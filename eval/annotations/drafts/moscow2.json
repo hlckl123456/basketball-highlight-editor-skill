@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_annotations",
+  "dataset_id": "basketball-eval-v1",
+  "video_id": "moscow2",
+  "video_sha256": "bc56bdd6e458dc2d4b26275297b44b565f8e26517daaa17b7c3f3610aac0e469",
+  "duration": 17.637,
+  "target_player_ids": [],
+  "players": [
+    {
+      "id": "p1",
+      "appearance_description": "自动服饰区域提议：white；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/moscow2/c0001_f000.jpg",
+      "proposal_only": true
+    },
+    {
+      "id": "p2",
+      "appearance_description": "自动服饰区域提议：blue；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/moscow2/c0001_f000.jpg",
+      "proposal_only": true
+    },
+    {
+      "id": "p3",
+      "appearance_description": "自动服饰区域提议：red；待你确认是否为球员并改写描述",
+      "reference": "eval/data/previews/moscow2/c0001_f000.jpg",
+      "proposal_only": true
+    }
+  ],
+  "events": [
+    {
+      "id": "c0001",
+      "time": 5.17,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0001",
+        "detector_failure": null
+      },
+      "clip_start": 2.17,
+      "clip_end": 8.17,
+      "feature_references": [
+        {
+          "time": 3.67,
+          "path": "eval/data/previews/moscow2/c0001_f000.jpg"
+        },
+        {
+          "time": 5.33,
+          "path": "eval/data/previews/moscow2/c0002_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0002",
+      "time": 6.83,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0002",
+        "detector_failure": null
+      },
+      "clip_start": 3.83,
+      "clip_end": 9.83,
+      "feature_references": [
+        {
+          "time": 5.33,
+          "path": "eval/data/previews/moscow2/c0002_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0003",
+      "time": 11.67,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0003",
+        "detector_failure": null
+      },
+      "clip_start": 8.67,
+      "clip_end": 14.67,
+      "feature_references": [
+        {
+          "time": 10.17,
+          "path": "eval/data/previews/moscow2/c0003_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    }
+  ],
+  "reviewed_ranges": [],
+  "generated_by": "BHE candidates + features; drafts only"
+}

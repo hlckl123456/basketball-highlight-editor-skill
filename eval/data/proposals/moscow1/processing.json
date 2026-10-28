@@ -1,0 +1,22 @@
+{
+  "video_id": "moscow1",
+  "source_sha256": "18e8ee2cd6313ca14123efb6c7dfcd8b29bacd6102727d0ab27d997925b4cbb3",
+  "detector": {
+    "backend": "coverage-for-review",
+    "failure": null,
+    "detected_events": 0
+  },
+  "detector_failure": null,
+  "feature_failure": null,
+  "feature_extractor": {
+    "backend": "opencv-uniform-color-proposals-hsv-tesseract",
+    "opencv": "5.0.0",
+    "interval": 3,
+    "ocr_enabled": false,
+    "number_policy": "OCR hints only; require visual verification"
+  },
+  "predicted_events": 0,
+  "review_windows": 1,
+  "all_annotations_are_draft": true,
+  "holdout_not_scored": false
+}

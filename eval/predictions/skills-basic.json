@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_predictions",
+  "video_id": "skills-basic",
+  "video_sha256": "ca6a6580616e2f0b3916c0ce6cd2a5a08807ee53708d8cd78af3eafe533a0ee9",
+  "provenance": {
+    "method": "bhe-public-source-cli",
+    "detector_failure": null,
+    "person_policy": "No new player attribution before user calibration; historical Indiana groups imported unchanged"
+  },
+  "events": []
+}

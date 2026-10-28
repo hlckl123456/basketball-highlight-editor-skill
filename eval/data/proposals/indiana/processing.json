@@ -1,0 +1,68 @@
+{
+  "video_id": "indiana",
+  "source_sha256": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845",
+  "detector": {
+    "backend": "bhe-public-source-cli",
+    "roi": [
+      0,
+      0,
+      700,
+      700
+    ],
+    "fps": 15.0,
+    "device_requested": "cpu",
+    "runtime": "<BHE_RUNTIME>",
+    "commands": [
+      [
+        "<BHE_RUNTIME>/python/bin/python3.11",
+        "<BHE_RUNTIME>/scripts/scan_video.py",
+        "--video",
+        "<original-workspace>/work/indiana-cc0.webm",
+        "--model",
+        "<BHE_RUNTIME>/models/bball_model.static.onnx",
+        "--roi",
+        "0",
+        "0",
+        "700",
+        "700",
+        "--sample-fps",
+        "15.0",
+        "--device",
+        "cpu",
+        "--batch",
+        "1",
+        "--scale",
+        "1",
+        "--output",
+        "<original-workspace>/work/indiana-roi/detection/detections.json"
+      ],
+      [
+        "<BHE_RUNTIME>/python/bin/python3.11",
+        "<BHE_RUNTIME>/scripts/generate_candidates.py",
+        "--detections",
+        "<original-workspace>/work/indiana-roi/detection/detections.json",
+        "--output",
+        "<original-workspace>/work/indiana-roi/detection/events.json"
+      ]
+    ],
+    "hashes": {
+      "scripts/scan_video.py": "398b3efdfd09efb121b29e05418d7a0ddef153d755bc5338e517de2c1b523bcf",
+      "scripts/generate_candidates.py": "b2a33beb5a093a0e69cc4c8725b0af9b33fc36b9b7561b3a821582cf28ae1720",
+      "models/bball_model.static.onnx": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de"
+    },
+    "limitations": "Likely crossings only; no made-shot or player identity guarantee."
+  },
+  "detector_failure": null,
+  "feature_failure": null,
+  "feature_extractor": {
+    "backend": "opencv-uniform-color-proposals-hsv-tesseract",
+    "opencv": "5.0.0",
+    "interval": 3,
+    "ocr_enabled": false,
+    "number_policy": "OCR hints only; require visual verification"
+  },
+  "predicted_events": 4,
+  "review_windows": 4,
+  "all_annotations_are_draft": true,
+  "holdout_not_scored": false
+}

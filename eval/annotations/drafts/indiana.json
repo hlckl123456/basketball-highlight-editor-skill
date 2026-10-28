@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_annotations",
+  "dataset_id": "basketball-eval-v1",
+  "video_id": "indiana",
+  "video_sha256": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845",
+  "duration": 16.3,
+  "target_player_ids": [
+    "p1"
+  ],
+  "players": [
+    {
+      "id": "p1",
+      "appearance_description": "紫色球衣2号，白色短袖、裸露膝部、浅色鞋；既有用户选人",
+      "reference": null
+    }
+  ],
+  "events": [
+    {
+      "id": "c0001",
+      "time": 2.63,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0001",
+        "detector_failure": null
+      },
+      "clip_start": 0,
+      "clip_end": 5.63,
+      "feature_references": [
+        {
+          "time": 1.1575,
+          "path": "eval/data/previews/indiana/c0001_f000.jpg"
+        },
+        {
+          "time": 2.82,
+          "path": "eval/data/previews/indiana/c0002_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0002",
+      "time": 4.57,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0002",
+        "detector_failure": null
+      },
+      "clip_start": 1.5700000000000003,
+      "clip_end": 7.57,
+      "feature_references": [
+        {
+          "time": 2.82,
+          "path": "eval/data/previews/indiana/c0002_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0003",
+      "time": 11.57,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0003",
+        "detector_failure": null
+      },
+      "clip_start": 8.57,
+      "clip_end": 14.57,
+      "feature_references": [
+        {
+          "time": 9.82,
+          "path": "eval/data/previews/indiana/c0003_f000.jpg"
+        },
+        {
+          "time": 10.68,
+          "path": "eval/data/previews/indiana/c0004_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    },
+    {
+      "id": "c0004",
+      "time": 12.43,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": null,
+      "visibility_complete": false,
+      "status": "draft",
+      "deleted": false,
+      "confirmed_fields": [],
+      "confirmation": null,
+      "origin": {
+        "kind": "bhe_candidate",
+        "candidate_id": "c0004",
+        "detector_failure": null
+      },
+      "clip_start": 9.43,
+      "clip_end": 15.43,
+      "feature_references": [
+        {
+          "time": 9.82,
+          "path": "eval/data/previews/indiana/c0003_f000.jpg"
+        },
+        {
+          "time": 10.68,
+          "path": "eval/data/previews/indiana/c0004_f000.jpg"
+        }
+      ],
+      "notes": "自动草稿，进球、得分者、持球者、可见球员均未确认"
+    }
+  ],
+  "reviewed_ranges": [],
+  "generated_by": "BHE candidates + features; drafts only"
+}

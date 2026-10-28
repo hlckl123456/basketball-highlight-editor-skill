@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_predictions",
+  "video_id": "dribbling",
+  "video_sha256": "1a592d92d8359729b679067977b295526fa376a9b15f92d3d7be3671941aa023",
+  "provenance": {
+    "method": "bhe-public-source-cli",
+    "detector_failure": null,
+    "person_policy": "No new player attribution before user calibration; historical Indiana groups imported unchanged"
+  },
+  "events": [
+    {
+      "id": "c0001",
+      "candidate_id": "c0001",
+      "kind": "detected_event",
+      "time": 6.83,
+      "player_assignments": []
+    },
+    {
+      "id": "c0002",
+      "candidate_id": "c0002",
+      "kind": "detected_event",
+      "time": 8.0,
+      "player_assignments": []
+    },
+    {
+      "id": "c0003",
+      "candidate_id": "c0003",
+      "kind": "detected_event",
+      "time": 10.0,
+      "player_assignments": []
+    },
+    {
+      "id": "c0004",
+      "candidate_id": "c0004",
+      "kind": "detected_event",
+      "time": 17.67,
+      "player_assignments": []
+    },
+    {
+      "id": "c0005",
+      "candidate_id": "c0005",
+      "kind": "detected_event",
+      "time": 32.5,
+      "player_assignments": []
+    },
+    {
+      "id": "c0006",
+      "candidate_id": "c0006",
+      "kind": "detected_event",
+      "time": 34.33,
+      "player_assignments": []
+    }
+  ]
+}

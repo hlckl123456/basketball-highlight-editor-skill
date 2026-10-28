@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_predictions",
+  "video_id": "nabua",
+  "video_sha256": "7a9ef1c75dd7e4eeb7d4c10b507b72b5ea830abe53c5ac5777f499066c1c5415",
+  "provenance": {
+    "method": "bhe-public-source-cli",
+    "detector_failure": null,
+    "person_policy": "No new player attribution before user calibration; historical Indiana groups imported unchanged"
+  },
+  "events": []
+}
