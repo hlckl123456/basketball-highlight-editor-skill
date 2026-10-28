@@ -16,7 +16,7 @@ A local, review-first basketball highlight skill for Codex. Includes runnable sc
 
 [本地交互结果回放](examples/fixed-camera-automatic/recognition.html) · [完整案例与新旧对照](docs/AUTOMATIC_FIXED_CASE.zh-CN.md) · [全部粗剪复核页](examples/fixed-camera-automatic/project/review-before-confirm.html) · [算法与验证报告](docs/reports/automatic-appearance.md)
 
-视频链接可直接打开。交互回放和粗剪复核页需要先下载完整仓库，再在本地打开 HTML；GitHub 网页只展示这些 HTML 的源码。
+GitHub 首页展示演示封面；点击视频链接可下载 MP4 后播放。交互回放和粗剪复核页需要先下载完整仓库，再在本地打开 HTML；GitHub 网页只展示这些 HTML 的源码。
 
 同一原片、同一张参考、同一批 21 个覆盖窗口：旧颜色策略 0 个高置信，新服饰纹理与连续证据策略 **2 个高置信、19 个不确定**。两个高置信窗口均远离参考，程序自动接成六秒草稿；它们相邻，属于同一次后段重新出现，不能当成两个独立成功实验。绿色框来自实际本地推理输出，回放页不做实时推理。
 
