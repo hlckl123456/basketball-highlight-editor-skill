@@ -1,6 +1,6 @@
 # 篮球评测与人工标注
 
-先打开 [review.html](review.html)。应用只有这一个 HTML 文件，CSS、脚本和初始标注都在其中；视频和参考帧是仓库内的本地文件，不需要服务器、联网或 API key。请保持目录结构完整，用新版 Chrome 或 Edge 双击打开。
+先打开 [review.html](review.html)。应用只有这一个 HTML 文件，CSS、脚本和初始标注都在其中；视频和参考帧是仓库内的本地文件，不需要服务器、联网或 API key。请保持目录结构完整，用新版 Chrome 或 Edge 双击打开。在 macOS 仓库根目录也可运行 `open -a "Google Chrome" eval/review.html`。
 
 语料为 10 段，其中 development 7 段、hold-out 3 段。8 段在户外；有室内比赛和运球示范各 1 段。所有来源、作者、许可、SHA256、日期和拍摄条件在 [catalog.json](data/catalog.json)；媒体许可与派生说明在 [RIGHTS.md](data/RIGHTS.md)。同一拍摄组不会跨 split。hold-out 仅预留作后续评测，本轮生成草稿和测试播放，没有对它计算识别指标或调参。
 
@@ -27,7 +27,7 @@ python3 eval/build_review.py
 python3 eval/score.py --output work/development-scores.json
 ```
 
-导入器验证应用来源、导出校验、数据集与视频 SHA256、时间范围、球员 ID 和确认来源。它只复制页面上已有的确认，不把 draft 升级。剩余草稿和页面状态进入 `eval/annotations/review-state/`，可评分事实进入 `eval/annotations/confirmed/`，同时更新 `confirmed.lock.json`。本地回滚备份在被忽略的 `eval/.local/import-backups/`。
+导入器验证应用来源、导出校验、数据集与视频 SHA256、时间范围、球员 ID 和确认来源。构建和导入还会核对播放副本的 SHA256，避免错配预览文件；手动选本地视频时，页面也会核对其原片或预览哈希。它只复制页面上已有的确认，不把 draft 升级。剩余草稿和页面状态进入 `eval/annotations/review-state/`，可评分事实进入 `eval/annotations/confirmed/`，同时更新 `confirmed.lock.json`。本地回滚备份在被忽略的 `eval/.local/import-backups/`。
 
 确认文件被手改、缺失、出现未登记文件或视频原片改变，评分会以非零退出码拒绝运行。评分本身不创建或刷新锁。应先从 Git 或本地备份恢复正确的文件，再回到页面修改、重审、导出和导入；不要为了让报错消失而手工改哈希。
 

@@ -1,0 +1,32 @@
+2026-10-28 01:43:44.045 python3.11[19273:3113327] 2026-10-28 01:43:44.045852 [W:onnxruntime:Default, telemetry_1ds.cc:600 operator()] Failed to persist telemetry device ID; using an in-memory identifier
+test_conflicting_anchors_cannot_establish_identity (test_people.People.test_conflicting_anchors_cannot_establish_identity) ... ok
+test_crossing_box_is_not_credited_for_wrong_identity (test_people.People.test_crossing_box_is_not_credited_for_wrong_identity) ... ok
+test_discontinuous_time_breaks_tracks (test_people.People.test_discontinuous_time_breaks_tracks) ... ok
+test_finite_color_distance_is_stable_under_small_exposure_change (test_people.People.test_finite_color_distance_is_stable_under_small_exposure_change) ... ok
+test_incompatible_clothing_breaks_link (test_people.People.test_incompatible_clothing_breaks_link) ... ok
+test_lookalike_profiles_remain_unassigned (test_people.People.test_lookalike_profiles_remain_unassigned) ... ok
+test_repeated_clothing_supports_a_short_track (test_people.People.test_repeated_clothing_supports_a_short_track) ... ok
+test_single_unanchored_glimpse_is_uncertain (test_people.People.test_single_unanchored_glimpse_is_uncertain) ... ok
+test_changed_source_detected (test_workflow.Workflow.test_changed_source_detected) ... ok
+test_color_alone_cannot_be_high (test_workflow.Workflow.test_color_alone_cannot_be_high) ... ok
+test_confirm_saves_edl_without_render (test_workflow.Workflow.test_confirm_saves_edl_without_render) ... ok
+test_duplicate_review_priority_stays_uncertain (test_workflow.Workflow.test_duplicate_review_priority_stays_uncertain) ... ok
+test_excluded_clip_cannot_reenter_version (test_workflow.Workflow.test_excluded_clip_cannot_reenter_version) ... ok
+test_model_matching_invalidates_confirmation_and_preserves_review_kind (test_workflow.Workflow.test_model_matching_invalidates_confirmation_and_preserves_review_kind) ... ok
+test_no_version_before_confirmation (test_workflow.Workflow.test_no_version_before_confirmation) ... ok
+test_out_of_range_candidates_rejected (test_workflow.Workflow.test_out_of_range_candidates_rejected) ... ok
+test_person_scan_tampering_is_rejected (test_workflow.Workflow.test_person_scan_tampering_is_rejected) ... ok
+test_portable_relative_source_can_render (test_workflow.Workflow.test_portable_relative_source_can_render) ... ok
+test_review_must_include_uncertain (test_workflow.Workflow.test_review_must_include_uncertain) ... ok
+test_stale_review_rejected (test_workflow.Workflow.test_stale_review_rejected) ... ok
+test_two_versions_keep_master_and_render_silent_source (test_workflow.Workflow.test_two_versions_keep_master_and_render_silent_source) ... ok
+test_uncertainty_stays_separate (test_workflow.Workflow.test_uncertainty_stays_separate) ... ok
+test_unnumbered_requires_saved_sample (test_workflow.Workflow.test_unnumbered_requires_saved_sample) ... ok
+test_user_confirmation_needs_authorization (test_workflow.Workflow.test_user_confirmation_needs_authorization) ... ok
+test_wrong_player_review_rejected (test_workflow.Workflow.test_wrong_player_review_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 3.800s
+
+OK
+{"applied": true, "high": 1, "uncertain": 1}

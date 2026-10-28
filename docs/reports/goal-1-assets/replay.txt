@@ -1,0 +1,2 @@
+PASS: recorded candidate -> feature evidence -> selected player -> regenerated rough clips -> test-operator confirmation -> resumable project
+This was a fixture replay, not a fresh detection/identity accuracy evaluation. Output: <repo>/work/goal-1/indiana-replay

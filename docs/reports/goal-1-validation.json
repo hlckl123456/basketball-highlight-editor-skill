@@ -1,0 +1,125 @@
+{
+  "previous_goal_release_verified": {
+    "tag": "v1.1.0",
+    "draft": false,
+    "commit": "93fc9063787ec5b9f09b0977d7e3bfc71cd62fbe",
+    "zip_sha256": "37b096ec7a06f1d286280be8052d61eaa25fae695d88ff0eca455638386a6a48",
+    "zip_bytes": 197257830
+  },
+  "branch": "goal-1-eval",
+  "main_unchanged_at": "93fc9063787ec5b9f09b0977d7e3bfc71cd62fbe",
+  "remote_mutations_performed": false,
+  "protected_indiana_files": 671,
+  "protected_indiana_hashes_match": true,
+  "new_or_modified_model_weights": [],
+  "new_human_confirmations_created": 0,
+  "real_automatic_events_all_draft": true,
+  "legacy_confirmed_presence_facts": 2,
+  "video_count": 10,
+  "holdout_videos": 3,
+  "outdoor_videos": 8,
+  "eval_unit_tests_passed": 50,
+  "original_unit_tests_passed": 25,
+  "videos": [
+    {
+      "video_id": "indiana",
+      "split": "development",
+      "duration": 16.3,
+      "source_sha256": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845",
+      "review_media_sha256": "2d92130cdf258d4368dab13012179ac2fc22f95da6608c75618452751eb8b378",
+      "source_license": "CC0 1.0",
+      "draft_events": 4,
+      "detector_predictions": 4
+    },
+    {
+      "video_id": "university",
+      "split": "development",
+      "duration": 60.6,
+      "source_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+      "review_media_sha256": "be4ba96f7a14c79e674bf2de90b7d218cedd74a489dbec1d4f3bd5f03aeaa1af",
+      "source_license": "CC0",
+      "draft_events": 5,
+      "detector_predictions": 0
+    },
+    {
+      "video_id": "moscow1",
+      "split": "development",
+      "duration": 9.394,
+      "source_sha256": "18e8ee2cd6313ca14123efb6c7dfcd8b29bacd6102727d0ab27d997925b4cbb3",
+      "review_media_sha256": "35b6fbae0ddbf6ce77d6e83c18fe46e3cdf7a186e7cff5f5df039491df86fdc0",
+      "source_license": "CC BY 4.0",
+      "draft_events": 1,
+      "detector_predictions": 0
+    },
+    {
+      "video_id": "moscow2",
+      "split": "development",
+      "duration": 17.637,
+      "source_sha256": "bc56bdd6e458dc2d4b26275297b44b565f8e26517daaa17b7c3f3610aac0e469",
+      "review_media_sha256": "d968b6266dd40e51f88ed883d1a4ff55235c2413feff0f0ee66fe378907a56e8",
+      "source_license": "CC BY 4.0",
+      "draft_events": 3,
+      "detector_predictions": 3
+    },
+    {
+      "video_id": "ljubljana",
+      "split": "development",
+      "duration": 199.753,
+      "source_sha256": "f3b68df29e1c9a64a80ab7980a92c3de823af9a222192d697af1f1ba787a51a7",
+      "review_media_sha256": "876602ab1e8c8f39c84a0d4ba69e33d968570b92868b2a6725be62c5cfdafc37",
+      "source_license": "CC BY 3.0",
+      "draft_events": 11,
+      "detector_predictions": 11
+    },
+    {
+      "video_id": "ukraine",
+      "split": "development",
+      "duration": 20.612978,
+      "source_sha256": "f7efe3225fe142bdecca3e6a0b6db20bffb34a95d47462fa0fb82db0c233a4f4",
+      "review_media_sha256": "851755ea7414b7c216e169ac610b5afab4c82d43bbd23f755bb3d520c50079bd",
+      "source_license": "CC BY-SA 4.0",
+      "draft_events": 1,
+      "detector_predictions": 1
+    },
+    {
+      "video_id": "zhijiang",
+      "split": "development",
+      "duration": 6.039,
+      "source_sha256": "e2ffca2d0dac0f8d974fe005292b5e31ffebc0949288e3b7231039fccaeebe92",
+      "review_media_sha256": "33d60bd27c994913794ccd3191e5f97ef676905215bec4a213c9db86f41d2a4c",
+      "source_license": "Public domain",
+      "draft_events": 1,
+      "detector_predictions": 1
+    },
+    {
+      "video_id": "dribbling",
+      "split": "holdout",
+      "duration": 58.658,
+      "source_sha256": "1a592d92d8359729b679067977b295526fa376a9b15f92d3d7be3671941aa023",
+      "review_media_sha256": "118d36c5eac6ed897c36f6749d5083ec5aeb98883c69f3cba3982472c58cb3cd",
+      "source_license": "CC BY-SA 3.0",
+      "draft_events": 6,
+      "detector_predictions": 6
+    },
+    {
+      "video_id": "skills-basic",
+      "split": "holdout",
+      "duration": 6.865444,
+      "source_sha256": "ca6a6580616e2f0b3916c0ce6cd2a5a08807ee53708d8cd78af3eafe533a0ee9",
+      "review_media_sha256": "140c39d8f2b054d6453818c2be1f5d35d5fc7ffdc251eafa5072d8e127d98339",
+      "source_license": "CC BY-SA 4.0",
+      "draft_events": 1,
+      "detector_predictions": 0
+    },
+    {
+      "video_id": "nabua",
+      "split": "holdout",
+      "duration": 17.387,
+      "source_sha256": "7a9ef1c75dd7e4eeb7d4c10b507b72b5ea830abe53c5ac5777f499066c1c5415",
+      "review_media_sha256": "450f4c87127dae9dddde4d2c9d0268e023ba4d0aec50e7a790d58733de8cd2d2",
+      "source_license": "CC BY-SA 4.0",
+      "draft_events": 2,
+      "detector_predictions": 0
+    }
+  ]
+}

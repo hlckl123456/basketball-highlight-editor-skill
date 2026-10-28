@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "browser": "Chrome via existing Playwright; Browser plugin absent",
+  "viewports": [
+    "1440x1000",
+    "390x844"
+  ],
+  "real_corpus_confirmations_created": 0,
+  "real_video_playback_checks": [
+    {
+      "video": "indiana",
+      "playback": {
+        "start": 0,
+        "end": 0.108004,
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "video": "university",
+      "playback": {
+        "start": 1,
+        "end": 1.3011,
+        "width": 404,
+        "height": 720
+      }
+    },
+    {
+      "video": "moscow1",
+      "playback": {
+        "start": 1,
+        "end": 1.23616,
+        "width": 404,
+        "height": 720
+      }
+    },
+    {
+      "video": "moscow2",
+      "playback": {
+        "start": 2.17,
+        "end": 2.36724,
+        "width": 404,
+        "height": 720
+      }
+    },
+    {
+      "video": "ljubljana",
+      "playback": {
+        "start": 142.67,
+        "end": 142.915093,
+        "width": 854,
+        "height": 480
+      }
+    },
+    {
+      "video": "ukraine",
+      "playback": {
+        "start": 15.329999,
+        "end": 15.6316,
+        "width": 480,
+        "height": 720
+      }
+    },
+    {
+      "video": "zhijiang",
+      "playback": {
+        "start": 2.17,
+        "end": 2.399655,
+        "width": 960,
+        "height": 628
+      }
+    },
+    {
+      "video": "dribbling",
+      "playback": {
+        "start": 3.83,
+        "end": 4.042831,
+        "width": 960,
+        "height": 540
+      }
+    },
+    {
+      "video": "skills-basic",
+      "playback": {
+        "start": 0.432722,
+        "end": 0.7351,
+        "width": 640,
+        "height": 368
+      }
+    },
+    {
+      "video": "nabua",
+      "playback": {
+        "start": 1,
+        "end": 1.252816,
+        "width": 960,
+        "height": 540
+      }
+    }
+  ],
+  "synthetic_checks": [
+    "edit time and players",
+    "keyboard confirm",
+    "delete false positive",
+    "add missed event",
+    "confirm interval",
+    "edit invalidates fact and interval",
+    "autosave without blur",
+    "wrong local media hash refusal",
+    "correct local media hash acceptance",
+    "focused-field Ctrl+S",
+    "JSON import",
+    "localStorage reload",
+    "tamper refusal"
+  ],
+  "page_errors": [],
+  "external_network_requests": []
+}

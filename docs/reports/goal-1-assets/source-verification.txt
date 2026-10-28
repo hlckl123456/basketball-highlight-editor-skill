@@ -1,0 +1,10 @@
+indiana: verified CC0 1.0
+university: verified CC0
+moscow1: verified CC BY 4.0
+moscow2: verified CC BY 4.0
+ljubljana: verified CC BY 3.0
+ukraine: verified CC BY-SA 4.0
+zhijiang: verified Public domain
+dribbling: verified CC BY-SA 3.0
+skills-basic: verified CC BY-SA 4.0
+nabua: verified CC BY-SA 4.0
