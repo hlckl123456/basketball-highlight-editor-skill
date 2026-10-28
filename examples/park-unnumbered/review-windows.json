@@ -1,0 +1,55 @@
+{
+  "status": "draft",
+  "reviewer_kind": "test_operator",
+  "provenance": "Operator shortlist after systematic full-source visual coverage. Editorial ranges, NOT automatic made-shot detections. Includes three negative selection examples.",
+  "candidates": [
+    {
+      "start": 25,
+      "end": 32,
+      "reason": "Dribbling sequence",
+      "event_time": null
+    },
+    {
+      "start": 99,
+      "end": 109,
+      "reason": "Dribble and shot attempt",
+      "event_time": null
+    },
+    {
+      "start": 197,
+      "end": 207,
+      "reason": "Receive pass and drive",
+      "event_time": null
+    },
+    {
+      "start": 277.5,
+      "end": 281.5,
+      "reason": "Rebound and turn",
+      "event_time": null
+    },
+    {
+      "start": 289,
+      "end": 294,
+      "reason": "Shot attempt",
+      "event_time": null
+    },
+    {
+      "start": 44,
+      "end": 49,
+      "reason": "Contrast: shirtless ball handler",
+      "event_time": null
+    },
+    {
+      "start": 90,
+      "end": 95,
+      "reason": "Contrast: shirtless ball handler",
+      "event_time": null
+    },
+    {
+      "start": 348,
+      "end": 354,
+      "reason": "Contrast: shirtless ball handler",
+      "event_time": null
+    }
+  ]
+}

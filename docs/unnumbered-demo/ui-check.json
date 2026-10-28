@@ -1,0 +1,64 @@
+{
+  "errors": [],
+  "review_clips": [
+    {
+      "src": "rough/uncertain/c0001.mp4",
+      "duration": 7.007,
+      "played": true,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "src": "rough/uncertain/c0002.mp4",
+      "duration": 10.01,
+      "played": true,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "src": "rough/uncertain/c0003.mp4",
+      "duration": 10.01,
+      "played": true,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "src": "rough/uncertain/c0004.mp4",
+      "duration": 4.004,
+      "played": true,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "src": "rough/uncertain/c0005.mp4",
+      "duration": 5.005,
+      "played": true,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "src": "rough/uncertain/c0006.mp4",
+      "duration": 5.005,
+      "played": true,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "src": "rough/uncertain/c0007.mp4",
+      "duration": 5.005,
+      "played": true,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "src": "rough/uncertain/c0008.mp4",
+      "duration": 6.006,
+      "played": true,
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "actual_html": true,
+  "confirmation_submitted": false,
+  "browser": "Existing isolated local Chrome via Playwright; Browser plugin not available"
+}

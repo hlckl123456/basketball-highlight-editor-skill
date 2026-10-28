@@ -1,0 +1,11 @@
+{
+  "prompt": "Current user request: redo selection and edit from a genuinely unnumbered casual game, then put the finished video in root README. test_operator demo: chronological five reviewed plays, original ambient sound, no music, no inferred made-shot labels.",
+  "clip_ids": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0004",
+    "c0005"
+  ],
+  "max_duration": 36
+}

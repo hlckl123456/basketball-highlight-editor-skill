@@ -1,0 +1,20 @@
+{
+  "id": "s002",
+  "player_id": "target",
+  "time": 210,
+  "bbox_xyxy": [
+    172,
+    178,
+    330,
+    411
+  ],
+  "description": "白色宽松 T 恤、深红色齐膝短裤、白袜白鞋；无号码",
+  "confirmed_by": "Operator-selected visual reference for requested demo; not a human evaluation label",
+  "reviewer_kind": "test_operator",
+  "reference": "samples/s002.jpg",
+  "appearance": "default",
+  "valid_from": null,
+  "valid_until": null,
+  "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+  "track_proposals": []
+}

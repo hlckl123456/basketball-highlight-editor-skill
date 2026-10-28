@@ -1,0 +1,95 @@
+{
+  "status": "draft",
+  "reviewer_kind": "test_operator",
+  "new_case_replay": "pass including render",
+  "existing_indiana_replay": "pass; no real records mutated",
+  "unit_suites": [
+    {
+      "suite": "unit-tests",
+      "tests": 25,
+      "result": "pass"
+    },
+    {
+      "suite": "eval-tests",
+      "tests": 50,
+      "result": "pass"
+    },
+    {
+      "suite": "robustness-tests",
+      "tests": 17,
+      "result": "pass"
+    },
+    {
+      "suite": "experiments-detection-tests",
+      "tests": 19,
+      "result": "pass"
+    },
+    {
+      "suite": "experiments-attribution-tests",
+      "tests": 52,
+      "result": "pass"
+    }
+  ],
+  "total_tests": 163,
+  "media_full_decode": "pass for both MP4s",
+  "video_clip_frame_counts": [
+    {
+      "id": "c0001",
+      "start": 25.0,
+      "end": 32.0,
+      "render_frames": 210,
+      "fps": "30000/1001"
+    },
+    {
+      "id": "c0002",
+      "start": 99.0,
+      "end": 109.0,
+      "render_frames": 299,
+      "fps": "30000/1001"
+    },
+    {
+      "id": "c0003",
+      "start": 197.0,
+      "end": 207.0,
+      "render_frames": 300,
+      "fps": "30000/1001"
+    },
+    {
+      "id": "c0004",
+      "start": 277.5,
+      "end": 281.5,
+      "render_frames": 120,
+      "fps": "30000/1001"
+    },
+    {
+      "id": "c0005",
+      "start": 289.0,
+      "end": 294.0,
+      "render_frames": 150,
+      "fps": "30000/1001"
+    }
+  ],
+  "same_case_replay_ranges_match": true,
+  "replay_reel_sha256": "06138b90d1b31536559b27f9e4d28d92962e0ed7a4980df102115c51e9efca41",
+  "media": {
+    "reel": {
+      "sha256": "06138b90d1b31536559b27f9e4d28d92962e0ed7a4980df102115c51e9efca41",
+      "bytes": 10062635
+    },
+    "workflow": {
+      "sha256": "3d2be6087f454e5a603e4214a5a163422b2559bc4ee25fd2e4ad360f12db27c2",
+      "bytes": 18744722
+    }
+  },
+  "audio_max_dbfs": {
+    "audio-check": -3.8,
+    "reel-audio-check": -0.2
+  },
+  "visual_checks": "Five rendered demo scenes inspected; all eight decisions remain above caption band",
+  "protected_files_changed": false,
+  "automatic_high_count": 0,
+  "automatic_uncertain_count": 8,
+  "automatic_identity_accuracy_claimed": false,
+  "human_confirmation_created": false,
+  "holdout_scored_for_demo": false
+}

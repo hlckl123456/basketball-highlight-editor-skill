@@ -1,0 +1,55 @@
+{
+  "browserPlugin": "not available; used existing Playwright and Chrome in isolated local context",
+  "viewport": [
+    1600,
+    900
+  ],
+  "actualReviewPage": true,
+  "proofs": [
+    {
+      "scene": "decide",
+      "decisions": [
+        {
+          "id": "decision-c0001",
+          "value": "keep"
+        },
+        {
+          "id": "decision-c0002",
+          "value": "keep"
+        },
+        {
+          "id": "decision-c0003",
+          "value": "keep"
+        },
+        {
+          "id": "decision-c0004",
+          "value": "keep"
+        },
+        {
+          "id": "decision-c0005",
+          "value": "keep"
+        },
+        {
+          "id": "decision-c0006",
+          "value": "reject"
+        },
+        {
+          "id": "decision-c0007",
+          "value": "reject"
+        },
+        {
+          "id": "decision-c0008",
+          "value": "reject"
+        }
+      ],
+      "user_confirmation_submitted": false
+    },
+    {
+      "scene": "decide",
+      "url": "http://127.0.0.1:8768/case/project/review-before-confirm.html",
+      "title": "篮球候选复核",
+      "errors": [],
+      "recording": "work/unnumbered-demo/captures/decide.webm"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "s004",
+  "player_id": "shirtless",
+  "time": 90,
+  "bbox_xyxy": [
+    439,
+    107,
+    495,
+    230
+  ],
+  "description": "光膀子、浅色短裤；对照人物，无球衣号码",
+  "confirmed_by": "Operator-selected visual reference for requested demo; not a human evaluation label",
+  "reviewer_kind": "test_operator",
+  "reference": "samples/s004.jpg",
+  "appearance": "default",
+  "valid_from": null,
+  "valid_until": null,
+  "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+  "track_proposals": []
+}

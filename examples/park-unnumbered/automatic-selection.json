@@ -1,0 +1,22 @@
+{
+  "status": "draft",
+  "selection": {
+    "high_confidence": [],
+    "other": [],
+    "player_id": "target",
+    "role": "visible",
+    "selected_by": "test_operator: requested no-number demo; not human GT",
+    "uncertain": [
+      "c0001",
+      "c0002",
+      "c0003",
+      "c0004",
+      "c0005",
+      "c0006",
+      "c0007",
+      "c0008"
+    ]
+  },
+  "role": "visible",
+  "note": "Unmodified production policy; no scorer/handler conclusions"
+}

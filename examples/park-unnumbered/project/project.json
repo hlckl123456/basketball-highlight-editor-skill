@@ -1,0 +1,1022 @@
+{
+  "attribution_role": "visible",
+  "candidates": [
+    {
+      "assignment": {
+        "at": "2026-10-28T16:00:07+00:00",
+        "candidate_id": "c0001",
+        "certainty": "uncertain",
+        "confidence_scope": "visible_presence_only",
+        "evidence": [],
+        "is_probability": false,
+        "never_auto_exclude": true,
+        "player_id": null,
+        "policy_version": "honest-attribution-v1",
+        "presence_certainty": "uncertain",
+        "presence_player_id": null,
+        "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support",
+        "reason_codes": [
+          "ambiguous_player_profiles",
+          "ambiguous_same_frame_person",
+          "clothing_region_disagreement",
+          "insufficient_contiguous_support"
+        ],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "role": "visible",
+        "role_certainty": {
+          "handler": "uncertain",
+          "scorer": "uncertain",
+          "visible": "uncertain"
+        },
+        "role_reasons": {
+          "handler": "clothing_presence_does_not_prove_ball_handler",
+          "scorer": "clothing_presence_does_not_prove_scorer"
+        },
+        "support": [],
+        "support_count": 0,
+        "target_player_id": "target"
+      },
+      "end": 32.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "frames": [
+        {
+          "path": "frames/c0001_0.jpg",
+          "time": 25.5
+        },
+        {
+          "path": "frames/c0001_1.jpg",
+          "time": 28.5
+        },
+        {
+          "path": "frames/c0001_2.jpg",
+          "time": 31.5
+        }
+      ],
+      "id": "c0001",
+      "labels": [],
+      "observations": [],
+      "preview": "rough/uncertain/c0001.mp4",
+      "preview_sha256": "2e904de5ae601ccc6f2de78fb97021d17ff64063ec23dcdf6693774e198e9bc7",
+      "preview_spec": {
+        "duration": 7.007,
+        "end": 32.0,
+        "fps": "30000/1001",
+        "frames": 210,
+        "render_schema": 4,
+        "source_sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+        "start": 25.0
+      },
+      "reason": "Dribbling sequence",
+      "selection_reason": "identity_unresolved",
+      "start": 25.0
+    },
+    {
+      "assignment": {
+        "at": "2026-10-28T16:00:07+00:00",
+        "candidate_id": "c0002",
+        "certainty": "uncertain",
+        "confidence_scope": "visible_presence_only",
+        "evidence": [],
+        "is_probability": false,
+        "never_auto_exclude": true,
+        "player_id": null,
+        "policy_version": "honest-attribution-v1",
+        "presence_certainty": "uncertain",
+        "presence_player_id": null,
+        "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support",
+        "reason_codes": [
+          "ambiguous_player_profiles",
+          "ambiguous_same_frame_person",
+          "clothing_region_disagreement",
+          "insufficient_contiguous_support"
+        ],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "role": "visible",
+        "role_certainty": {
+          "handler": "uncertain",
+          "scorer": "uncertain",
+          "visible": "uncertain"
+        },
+        "role_reasons": {
+          "handler": "clothing_presence_does_not_prove_ball_handler",
+          "scorer": "clothing_presence_does_not_prove_scorer"
+        },
+        "support": [],
+        "support_count": 0,
+        "target_player_id": "target"
+      },
+      "end": 109.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "frames": [
+        {
+          "path": "frames/c0002_0.jpg",
+          "time": 99.5
+        },
+        {
+          "path": "frames/c0002_1.jpg",
+          "time": 104.0
+        },
+        {
+          "path": "frames/c0002_2.jpg",
+          "time": 108.5
+        }
+      ],
+      "id": "c0002",
+      "labels": [],
+      "observations": [],
+      "preview": "rough/uncertain/c0002.mp4",
+      "preview_sha256": "a66b600dbb345e31e96459a556a0f987345612583b0a3cb1ab3198f45a0bc2c9",
+      "preview_spec": {
+        "duration": 10.01,
+        "end": 109.0,
+        "fps": "30000/1001",
+        "frames": 300,
+        "render_schema": 4,
+        "source_sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+        "start": 99.0
+      },
+      "reason": "Dribble and shot attempt",
+      "selection_reason": "identity_unresolved",
+      "start": 99.0
+    },
+    {
+      "assignment": {
+        "at": "2026-10-28T16:00:07+00:00",
+        "candidate_id": "c0003",
+        "certainty": "uncertain",
+        "confidence_scope": "visible_presence_only",
+        "evidence": [],
+        "is_probability": false,
+        "never_auto_exclude": true,
+        "player_id": null,
+        "policy_version": "honest-attribution-v1",
+        "presence_certainty": "uncertain",
+        "presence_player_id": null,
+        "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support",
+        "reason_codes": [
+          "ambiguous_player_profiles",
+          "ambiguous_same_frame_person",
+          "clothing_region_disagreement",
+          "insufficient_contiguous_support"
+        ],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "role": "visible",
+        "role_certainty": {
+          "handler": "uncertain",
+          "scorer": "uncertain",
+          "visible": "uncertain"
+        },
+        "role_reasons": {
+          "handler": "clothing_presence_does_not_prove_ball_handler",
+          "scorer": "clothing_presence_does_not_prove_scorer"
+        },
+        "support": [],
+        "support_count": 0,
+        "target_player_id": "target"
+      },
+      "end": 207.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "frames": [
+        {
+          "path": "frames/c0003_0.jpg",
+          "time": 197.5
+        },
+        {
+          "path": "frames/c0003_1.jpg",
+          "time": 202.0
+        },
+        {
+          "path": "frames/c0003_2.jpg",
+          "time": 206.5
+        }
+      ],
+      "id": "c0003",
+      "labels": [],
+      "observations": [],
+      "preview": "rough/uncertain/c0003.mp4",
+      "preview_sha256": "a18c214557c0bd04d37756ad03418d9d102ea97c17c595e4b21f0fc30fd59e6f",
+      "preview_spec": {
+        "duration": 10.01,
+        "end": 207.0,
+        "fps": "30000/1001",
+        "frames": 300,
+        "render_schema": 4,
+        "source_sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+        "start": 197.0
+      },
+      "reason": "Receive pass and drive",
+      "selection_reason": "identity_unresolved",
+      "start": 197.0
+    },
+    {
+      "assignment": {
+        "at": "2026-10-28T16:00:07+00:00",
+        "candidate_id": "c0004",
+        "certainty": "uncertain",
+        "confidence_scope": "visible_presence_only",
+        "evidence": [],
+        "is_probability": false,
+        "never_auto_exclude": true,
+        "player_id": null,
+        "policy_version": "honest-attribution-v1",
+        "presence_certainty": "uncertain",
+        "presence_player_id": null,
+        "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement",
+        "reason_codes": [
+          "ambiguous_player_profiles",
+          "ambiguous_same_frame_person",
+          "clothing_region_disagreement"
+        ],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "role": "visible",
+        "role_certainty": {
+          "handler": "uncertain",
+          "scorer": "uncertain",
+          "visible": "uncertain"
+        },
+        "role_reasons": {
+          "handler": "clothing_presence_does_not_prove_ball_handler",
+          "scorer": "clothing_presence_does_not_prove_scorer"
+        },
+        "support": [],
+        "support_count": 3,
+        "target_player_id": "target"
+      },
+      "end": 281.5,
+      "event_confirmed": false,
+      "event_time": null,
+      "frames": [
+        {
+          "path": "frames/c0004_0.jpg",
+          "time": 278.0
+        },
+        {
+          "path": "frames/c0004_1.jpg",
+          "time": 279.5
+        },
+        {
+          "path": "frames/c0004_2.jpg",
+          "time": 281.0
+        }
+      ],
+      "id": "c0004",
+      "labels": [],
+      "observations": [],
+      "preview": "rough/uncertain/c0004.mp4",
+      "preview_sha256": "18b93130cfa8d50c40cdacff49b7517ab012255f459e005d7f7afa6abcd87f6e",
+      "preview_spec": {
+        "duration": 4.004,
+        "end": 281.5,
+        "fps": "30000/1001",
+        "frames": 120,
+        "render_schema": 4,
+        "source_sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+        "start": 277.5
+      },
+      "reason": "Rebound and turn",
+      "selection_reason": "identity_unresolved",
+      "start": 277.5
+    },
+    {
+      "assignment": {
+        "at": "2026-10-28T16:00:07+00:00",
+        "candidate_id": "c0005",
+        "certainty": "uncertain",
+        "confidence_scope": "visible_presence_only",
+        "evidence": [],
+        "is_probability": false,
+        "never_auto_exclude": true,
+        "player_id": null,
+        "policy_version": "honest-attribution-v1",
+        "presence_certainty": "uncertain",
+        "presence_player_id": null,
+        "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support",
+        "reason_codes": [
+          "ambiguous_player_profiles",
+          "ambiguous_same_frame_person",
+          "clothing_region_disagreement",
+          "insufficient_contiguous_support"
+        ],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "role": "visible",
+        "role_certainty": {
+          "handler": "uncertain",
+          "scorer": "uncertain",
+          "visible": "uncertain"
+        },
+        "role_reasons": {
+          "handler": "clothing_presence_does_not_prove_ball_handler",
+          "scorer": "clothing_presence_does_not_prove_scorer"
+        },
+        "support": [],
+        "support_count": 0,
+        "target_player_id": "target"
+      },
+      "end": 294.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "frames": [
+        {
+          "path": "frames/c0005_0.jpg",
+          "time": 289.5
+        },
+        {
+          "path": "frames/c0005_1.jpg",
+          "time": 291.5
+        },
+        {
+          "path": "frames/c0005_2.jpg",
+          "time": 293.5
+        }
+      ],
+      "id": "c0005",
+      "labels": [],
+      "observations": [],
+      "preview": "rough/uncertain/c0005.mp4",
+      "preview_sha256": "0e9e6a648fc7b924035c2754e0b3dcd87e2e4f8524ec73fc6a26f52db60b5fef",
+      "preview_spec": {
+        "duration": 5.005,
+        "end": 294.0,
+        "fps": "30000/1001",
+        "frames": 150,
+        "render_schema": 4,
+        "source_sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+        "start": 289.0
+      },
+      "reason": "Shot attempt",
+      "selection_reason": "identity_unresolved",
+      "start": 289.0
+    },
+    {
+      "assignment": {
+        "at": "2026-10-28T16:00:07+00:00",
+        "candidate_id": "c0006",
+        "certainty": "uncertain",
+        "confidence_scope": "visible_presence_only",
+        "evidence": [],
+        "is_probability": false,
+        "never_auto_exclude": true,
+        "player_id": null,
+        "policy_version": "honest-attribution-v1",
+        "presence_certainty": "uncertain",
+        "presence_player_id": null,
+        "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support",
+        "reason_codes": [
+          "ambiguous_player_profiles",
+          "ambiguous_same_frame_person",
+          "clothing_region_disagreement",
+          "insufficient_contiguous_support"
+        ],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "role": "visible",
+        "role_certainty": {
+          "handler": "uncertain",
+          "scorer": "uncertain",
+          "visible": "uncertain"
+        },
+        "role_reasons": {
+          "handler": "clothing_presence_does_not_prove_ball_handler",
+          "scorer": "clothing_presence_does_not_prove_scorer"
+        },
+        "support": [],
+        "support_count": 0,
+        "target_player_id": "target"
+      },
+      "end": 49.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "frames": [
+        {
+          "path": "frames/c0006_0.jpg",
+          "time": 44.5
+        },
+        {
+          "path": "frames/c0006_1.jpg",
+          "time": 46.5
+        },
+        {
+          "path": "frames/c0006_2.jpg",
+          "time": 48.5
+        }
+      ],
+      "id": "c0006",
+      "labels": [],
+      "observations": [],
+      "preview": "rough/uncertain/c0006.mp4",
+      "preview_sha256": "bb2f0cf1c5055ef3f12322ad06a6ddd9ff3ea19f380876f227c4ab24d2168691",
+      "preview_spec": {
+        "duration": 5.005,
+        "end": 49.0,
+        "fps": "30000/1001",
+        "frames": 150,
+        "render_schema": 4,
+        "source_sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+        "start": 44.0
+      },
+      "reason": "Contrast: shirtless ball handler",
+      "selection_reason": "identity_unresolved",
+      "start": 44.0
+    },
+    {
+      "assignment": {
+        "at": "2026-10-28T16:00:07+00:00",
+        "candidate_id": "c0007",
+        "certainty": "uncertain",
+        "confidence_scope": "visible_presence_only",
+        "evidence": [],
+        "is_probability": false,
+        "never_auto_exclude": true,
+        "player_id": null,
+        "policy_version": "honest-attribution-v1",
+        "presence_certainty": "uncertain",
+        "presence_player_id": null,
+        "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support",
+        "reason_codes": [
+          "ambiguous_player_profiles",
+          "ambiguous_same_frame_person",
+          "clothing_region_disagreement",
+          "insufficient_contiguous_support"
+        ],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "role": "visible",
+        "role_certainty": {
+          "handler": "uncertain",
+          "scorer": "uncertain",
+          "visible": "uncertain"
+        },
+        "role_reasons": {
+          "handler": "clothing_presence_does_not_prove_ball_handler",
+          "scorer": "clothing_presence_does_not_prove_scorer"
+        },
+        "support": [],
+        "support_count": 0,
+        "target_player_id": "target"
+      },
+      "end": 95.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "frames": [
+        {
+          "path": "frames/c0007_0.jpg",
+          "time": 90.5
+        },
+        {
+          "path": "frames/c0007_1.jpg",
+          "time": 92.5
+        },
+        {
+          "path": "frames/c0007_2.jpg",
+          "time": 94.5
+        }
+      ],
+      "id": "c0007",
+      "labels": [],
+      "observations": [],
+      "preview": "rough/uncertain/c0007.mp4",
+      "preview_sha256": "325ebb1a1ece6b4180c822e98cbcb42934f7de5a5b22d855ba4b547c3ff4459c",
+      "preview_spec": {
+        "duration": 5.005,
+        "end": 95.0,
+        "fps": "30000/1001",
+        "frames": 150,
+        "render_schema": 4,
+        "source_sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+        "start": 90.0
+      },
+      "reason": "Contrast: shirtless ball handler",
+      "selection_reason": "identity_unresolved",
+      "start": 90.0
+    },
+    {
+      "assignment": {
+        "at": "2026-10-28T16:00:07+00:00",
+        "candidate_id": "c0008",
+        "certainty": "uncertain",
+        "confidence_scope": "visible_presence_only",
+        "evidence": [],
+        "is_probability": false,
+        "never_auto_exclude": true,
+        "player_id": null,
+        "policy_version": "honest-attribution-v1",
+        "presence_certainty": "uncertain",
+        "presence_player_id": null,
+        "reason": "Review required: insufficient_contiguous_support",
+        "reason_codes": [
+          "insufficient_contiguous_support"
+        ],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "role": "visible",
+        "role_certainty": {
+          "handler": "uncertain",
+          "scorer": "uncertain",
+          "visible": "uncertain"
+        },
+        "role_reasons": {
+          "handler": "clothing_presence_does_not_prove_ball_handler",
+          "scorer": "clothing_presence_does_not_prove_scorer"
+        },
+        "support": [],
+        "support_count": 0,
+        "target_player_id": "target"
+      },
+      "end": 354.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "frames": [
+        {
+          "path": "frames/c0008_0.jpg",
+          "time": 348.5
+        },
+        {
+          "path": "frames/c0008_1.jpg",
+          "time": 351.0
+        },
+        {
+          "path": "frames/c0008_2.jpg",
+          "time": 353.5
+        }
+      ],
+      "id": "c0008",
+      "labels": [],
+      "observations": [],
+      "preview": "rough/uncertain/c0008.mp4",
+      "preview_sha256": "420cb021dd32be4d6ce5287c90b6f6f9781b331e055de4ed910bed225214af5f",
+      "preview_spec": {
+        "duration": 6.006,
+        "end": 354.0,
+        "fps": "30000/1001",
+        "frames": 180,
+        "render_schema": 4,
+        "source_sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+        "start": 348.0
+      },
+      "reason": "Contrast: shirtless ball handler",
+      "selection_reason": "identity_unresolved",
+      "start": 348.0
+    }
+  ],
+  "confirmation": {
+    "at": "2026-10-28T16:00:10+00:00",
+    "decision_sha256": "08b783230d84f5631c74030aa7c74c0fd536f2d33591de0a9a2f586469325bf9",
+    "decisions": {
+      "c0001": "keep",
+      "c0002": "keep",
+      "c0003": "keep",
+      "c0004": "keep",
+      "c0005": "keep",
+      "c0006": "reject",
+      "c0007": "reject",
+      "c0008": "reject"
+    },
+    "kept": [
+      "c0001",
+      "c0002",
+      "c0003",
+      "c0004",
+      "c0005"
+    ],
+    "player_id": "target",
+    "project_revision": 10,
+    "reviewer": "Operator visual comparison of ordinary clothing across source; demo editorial choices, not human ground truth",
+    "reviewer_kind": "test_operator"
+  },
+  "created_at": "2026-10-28T16:00:00+00:00",
+  "detector": {
+    "backend": "portable-manifest",
+    "provenance": "Operator shortlist after systematic full-source visual coverage. Editorial ranges, NOT automatic made-shot detections. Includes three negative selection examples."
+  },
+  "feature_extractor": {
+    "method": "Fresh full-source YOLOX-Nano CPU person scan and clothing-v2; full frames saved for operator inspection",
+    "ocr_enabled": false,
+    "status": "draft"
+  },
+  "history": [
+    {
+      "action": "init",
+      "at": "2026-10-28T16:00:01+00:00",
+      "detail": "local source reference; no upload",
+      "revision": 1
+    },
+    {
+      "action": "import_candidates",
+      "at": "2026-10-28T16:00:02+00:00",
+      "detail": "b7922755fcafe92e8d768a19bd6095a7dd80d4f5551fe2aedf058a5fe325f19d",
+      "revision": 2
+    },
+    {
+      "action": "calibration_sample",
+      "at": "2026-10-28T16:00:03+00:00",
+      "detail": {
+        "id": "s001",
+        "track_samples": 3
+      },
+      "revision": 3
+    },
+    {
+      "action": "calibration_sample",
+      "at": "2026-10-28T16:00:04+00:00",
+      "detail": {
+        "id": "s002",
+        "track_samples": 0
+      },
+      "revision": 4
+    },
+    {
+      "action": "calibration_sample",
+      "at": "2026-10-28T16:00:05+00:00",
+      "detail": {
+        "id": "s003",
+        "track_samples": 6
+      },
+      "revision": 5
+    },
+    {
+      "action": "calibration_sample",
+      "at": "2026-10-28T16:00:06+00:00",
+      "detail": {
+        "id": "s004",
+        "track_samples": 0
+      },
+      "revision": 6
+    },
+    {
+      "action": "attach_fresh_people",
+      "at": "2026-10-28T16:00:07+00:00",
+      "detail": "Same-case full scan; no old case detections or annotation truth reused",
+      "revision": 7
+    },
+    {
+      "action": "match_people",
+      "at": "2026-10-28T16:00:08+00:00",
+      "detail": {
+        "high": 0,
+        "player_id": "target",
+        "proposals": "people/candidate-proposals.json"
+      },
+      "revision": 8
+    },
+    {
+      "action": "select_player",
+      "at": "2026-10-28T16:00:09+00:00",
+      "detail": {
+        "high_confidence": [],
+        "other": [],
+        "player_id": "target",
+        "role": "visible",
+        "selected_by": "test_operator: requested no-number demo; not human GT",
+        "uncertain": [
+          "c0001",
+          "c0002",
+          "c0003",
+          "c0004",
+          "c0005",
+          "c0006",
+          "c0007",
+          "c0008"
+        ]
+      },
+      "revision": 9
+    },
+    {
+      "action": "rough_previews",
+      "at": "2026-10-28T16:00:10+00:00",
+      "detail": "separate review clips only; no merged reel",
+      "revision": 10
+    },
+    {
+      "action": "confirm_selection",
+      "at": "2026-10-28T16:00:11+00:00",
+      "detail": {
+        "kept": [
+          "c0001",
+          "c0002",
+          "c0003",
+          "c0004",
+          "c0005"
+        ],
+        "reviewer_kind": "test_operator"
+      },
+      "revision": 11
+    },
+    {
+      "action": "new_version",
+      "at": "2026-10-28T16:00:12+00:00",
+      "detail": {
+        "confirmation_sha256": "08b783230d84f5631c74030aa7c74c0fd536f2d33591de0a9a2f586469325bf9",
+        "edl": "versions/unnumbered-chronological/edl.json",
+        "name": "unnumbered-chronological",
+        "prompt": "Current user request: redo selection and edit from a genuinely unnumbered casual game, then put the finished video in root README. test_operator demo: chronological five reviewed plays, original ambient sound, no music, no inferred made-shot labels.",
+        "rendered": true
+      },
+      "revision": 12
+    }
+  ],
+  "person_detector": {
+    "data": "../analysis/people/detections.json",
+    "data_sha256": "ad29932b8481baf08299bd9da42242ec425b4d3874ef31de4cb2608d3031982c",
+    "method": "YOLOX-Nano 416 CPU + clothing-v2",
+    "model_sha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d",
+    "ocr_enabled": false
+  },
+  "players": [
+    {
+      "description": "黑色长袖上衣、深色长裤；对照人物，无球衣号码",
+      "id": "dark",
+      "reference": "samples/s003.jpg"
+    },
+    {
+      "description": "光膀子、浅色短裤；对照人物，无球衣号码",
+      "id": "shirtless",
+      "reference": "samples/s004.jpg"
+    },
+    {
+      "description": "白色宽松 T 恤、深红色齐膝短裤、白袜白鞋；无号码",
+      "id": "target",
+      "reference": "samples/s001.jpg"
+    }
+  ],
+  "reproducibility": {
+    "clock_kind": "fixed_test_clock",
+    "epoch": 1793203200,
+    "reviewer_policy": "test_operator only; never a human timestamp"
+  },
+  "revision": 12,
+  "samples": [
+    {
+      "appearance": "default",
+      "bbox_xyxy": [
+        519,
+        191,
+        616,
+        375
+      ],
+      "confirmed_by": "Operator-selected visual reference for requested demo; not a human evaluation label",
+      "description": "白色宽松 T 恤、深红色齐膝短裤、白袜白鞋；无号码",
+      "id": "s001",
+      "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+      "player_id": "target",
+      "reference": "samples/s001.jpg",
+      "reviewer_kind": "test_operator",
+      "time": 30,
+      "track_proposals": [
+        {
+          "bbox_xyxy": [
+            561.7,
+            204.3,
+            658.7,
+            388.3
+          ],
+          "identity_verified": false,
+          "initial_points": 30,
+          "surviving_points": 16,
+          "time": 29.8
+        },
+        {
+          "bbox_xyxy": [
+            503.7,
+            194.2,
+            600.7,
+            378.2
+          ],
+          "identity_verified": false,
+          "initial_points": 30,
+          "surviving_points": 16,
+          "time": 30.2
+        },
+        {
+          "bbox_xyxy": [
+            496.6,
+            214.9,
+            593.6,
+            398.9
+          ],
+          "identity_verified": false,
+          "initial_points": 30,
+          "surviving_points": 14,
+          "time": 30.4
+        }
+      ],
+      "valid_from": null,
+      "valid_until": null
+    },
+    {
+      "appearance": "default",
+      "bbox_xyxy": [
+        172,
+        178,
+        330,
+        411
+      ],
+      "confirmed_by": "Operator-selected visual reference for requested demo; not a human evaluation label",
+      "description": "白色宽松 T 恤、深红色齐膝短裤、白袜白鞋；无号码",
+      "id": "s002",
+      "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+      "player_id": "target",
+      "reference": "samples/s002.jpg",
+      "reviewer_kind": "test_operator",
+      "time": 210,
+      "track_proposals": [],
+      "valid_from": null,
+      "valid_until": null
+    },
+    {
+      "appearance": "default",
+      "bbox_xyxy": [
+        129,
+        158,
+        200,
+        414
+      ],
+      "confirmed_by": "Operator-selected visual reference for requested demo; not a human evaluation label",
+      "description": "黑色长袖上衣、深色长裤；对照人物，无球衣号码",
+      "id": "s003",
+      "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+      "player_id": "dark",
+      "reference": "samples/s003.jpg",
+      "reviewer_kind": "test_operator",
+      "time": 10,
+      "track_proposals": [
+        {
+          "bbox_xyxy": [
+            113.2,
+            103.2,
+            184.2,
+            359.2
+          ],
+          "identity_verified": false,
+          "initial_points": 34,
+          "surviving_points": 8,
+          "time": 9.0
+        },
+        {
+          "bbox_xyxy": [
+            102.4,
+            115.3,
+            173.4,
+            371.3
+          ],
+          "identity_verified": false,
+          "initial_points": 34,
+          "surviving_points": 8,
+          "time": 9.2
+        },
+        {
+          "bbox_xyxy": [
+            115.6,
+            128.2,
+            186.6,
+            384.2
+          ],
+          "identity_verified": false,
+          "initial_points": 34,
+          "surviving_points": 12,
+          "time": 9.4
+        },
+        {
+          "bbox_xyxy": [
+            117.8,
+            126.5,
+            188.8,
+            382.5
+          ],
+          "identity_verified": false,
+          "initial_points": 34,
+          "surviving_points": 16,
+          "time": 9.6
+        },
+        {
+          "bbox_xyxy": [
+            117.2,
+            133.1,
+            188.2,
+            389.1
+          ],
+          "identity_verified": false,
+          "initial_points": 34,
+          "surviving_points": 26,
+          "time": 9.8
+        },
+        {
+          "bbox_xyxy": [
+            141.1,
+            180.3,
+            212.1,
+            436.3
+          ],
+          "identity_verified": false,
+          "initial_points": 34,
+          "surviving_points": 17,
+          "time": 10.2
+        }
+      ],
+      "valid_from": null,
+      "valid_until": null
+    },
+    {
+      "appearance": "default",
+      "bbox_xyxy": [
+        439,
+        107,
+        495,
+        230
+      ],
+      "confirmed_by": "Operator-selected visual reference for requested demo; not a human evaluation label",
+      "description": "光膀子、浅色短裤；对照人物，无球衣号码",
+      "id": "s004",
+      "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+      "player_id": "shirtless",
+      "reference": "samples/s004.jpg",
+      "reviewer_kind": "test_operator",
+      "time": 90,
+      "track_proposals": [],
+      "valid_from": null,
+      "valid_until": null
+    }
+  ],
+  "schema_version": 1,
+  "selection": {
+    "high_confidence": [],
+    "other": [],
+    "player_id": "target",
+    "role": "visible",
+    "selected_by": "test_operator: requested no-number demo; not human GT",
+    "uncertain": [
+      "c0001",
+      "c0002",
+      "c0003",
+      "c0004",
+      "c0005",
+      "c0006",
+      "c0007",
+      "c0008"
+    ]
+  },
+  "source": {
+    "codec": "vp9",
+    "coded_height": 480,
+    "coded_width": 854,
+    "duration": 391.711,
+    "fps": "30000/1001",
+    "has_audio": true,
+    "height": 480,
+    "path": "../source/park-bodycam.webm",
+    "presentation_start": 0.007,
+    "render_fps": "30000/1001",
+    "rights": {
+      "bytes": 62147568,
+      "court": "Outdoor park court at night; moving body camera, ordinary clothing, no numbered basketball uniforms",
+      "creator": "Cocoa PD",
+      "download_date": "2026-10-28",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/99/Bodycam-_Florida_Police_Officers_Joins_Kids_in_Basketball_Game.webm/Bodycam-_Florida_Police_Officers_Joins_Kids_in_Basketball_Game.webm.480p.vp9.webm",
+      "license": "Public domain in the United States (PD Florida)",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Bodycam-_Florida_Police_Officers_Joins_Kids_in_Basketball_Game.webm#Licensing",
+      "processing_basis": "Commons file page explicitly identifies this Cocoa PD government recording as PD Florida; downloaded for the requested unnumbered basketball case.",
+      "restrictions": "No endorsement or identity claim. Existing source watermark retained.",
+      "sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bodycam-_Florida_Police_Officers_Joins_Kids_in_Basketball_Game.webm"
+    },
+    "rotation": 0,
+    "sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+    "time_base": "1/1000",
+    "width": 854
+  },
+  "state": "awaiting_edit_prompt",
+  "tool_version": "1.2.0",
+  "updated_at": "2026-10-28T16:00:12+00:00",
+  "versions": [
+    {
+      "confirmation_sha256": "08b783230d84f5631c74030aa7c74c0fd536f2d33591de0a9a2f586469325bf9",
+      "edl": "versions/unnumbered-chronological/edl.json",
+      "name": "unnumbered-chronological",
+      "prompt": "Current user request: redo selection and edit from a genuinely unnumbered casual game, then put the finished video in root README. test_operator demo: chronological five reviewed plays, original ambient sound, no music, no inferred made-shot labels.",
+      "rendered": true
+    }
+  ]
+}

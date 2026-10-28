@@ -4,21 +4,19 @@
 
 A local, review-first basketball highlight skill for Codex. Includes runnable scripts, tests, licensed real-video cases and evidence replay. Player identity is evidence-backed and reviewable, not an autonomous recognition guarantee.
 
-## 两分钟使用演示
+## 没穿号码球衣，也能从参考图开始选人
 
-<video controls preload="metadata" width="960" poster="docs/demo/cover.png" src="docs/demo/basketball-skill-demo.mp4">
-  <a href="docs/demo/basketball-skill-demo.mp4">播放或下载使用演示</a>
-</video>
+这次用公园里的便装篮球录像重做：选中**白 T 恤、深红短裤、白鞋**的球员，保存两张相隔三分钟的参考图，重新提取人形与服饰特征，逐段复核，再剪成下面这版。没有使用球衣号码。
 
-[播放／下载 Demo（MP4）](docs/demo/basketball-skill-demo.mp4) · [口播稿](docs/demo/口播稿.md) · [字幕](docs/demo/demo.srt) · [演示来源与说明](docs/demo/README.md)
+[![点击看白衣球员的 36 秒成片](docs/unnumbered-demo/cover.png)](examples/park-unnumbered/project/versions/unnumbered-chronological/reel.mp4)
 
-1 分 52 秒，1080p，中文 AI 配音。按“交本地录像 → 选参考球员 → 复核保留／删除 → 另提剪辑要求 → 看实际导出”展示用法。
+**[▶ 看实际剪出来的 36 秒成片（MP4）](examples/park-unnumbered/project/versions/unnumbered-chronological/reel.mp4)**
 
-视频使用公开案例重放，模拟操作均记为 `test_operator`，没有新增人工确认；在场证据不等于得分归属，也不代表整场无号码识别已验证。
+<video controls preload="metadata" width="960" poster="docs/unnumbered-demo/cover.png" src="examples/park-unnumbered/project/versions/unnumbered-chronological/reel.mp4"><a href="examples/park-unnumbered/project/versions/unnumbered-chronological/reel.mp4">播放或下载成片</a></video>
 
-**已加入真实无号码场景测试：大学球场与公园航拍的随机留出时间点共认对 36/41 个可见目标帧，未发现误认。方法、全部样本和失败记录见[无号码实测案例](docs/UNNUMBERED_CASE_STUDY.zh-CN.md)。这是短片抽样结果，尚无整场比赛验证。**
+**[▶ 看选人、复核、导出的使用演示（MP4）](docs/unnumbered-demo/unnumbered-workflow.mp4)** · [完整案例与原片时间表](docs/PARK_UNNUMBERED_CASE.zh-CN.md) · [实际复核页](examples/park-unnumbered/project/review-before-confirm.html) · [口播稿与字幕](docs/unnumbered-demo/README.md)
 
-![公开测试视频的候选画面](examples/indiana/project/frames/c0003_f001.jpg)
+操作演示约 1 分 14 秒，中文 AI 配音。原片、参考图、八段粗剪、五段保留／三段删除的决定、EDL 和实际成片都在仓库里。本次自动分组为高置信 0 段、不确定 8 段，随后由测试操作员对照参考图完成选片。模拟操作记为 `test_operator`；这是服饰选人后复核的参与回合剪辑，覆盖窗口不等于自动识别进球，人物在场也不等于他得分。
 
 ## 人工标注与评测（goal-1-eval）
 

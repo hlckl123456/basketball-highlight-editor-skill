@@ -1,0 +1,86 @@
+{
+  "status": "draft",
+  "reviewer_kind": "test_operator",
+  "source_sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+  "person_model_sha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d",
+  "new_inference": true,
+  "source_analysis_range": [
+    0,
+    391
+  ],
+  "sampled_frames": 1173,
+  "person_proposals": 2392,
+  "ocr_enabled": false,
+  "face_embeddings": false,
+  "policy_version": "honest-attribution-v1",
+  "target_observation_hypotheses": 43,
+  "observation_count_is_accuracy": false,
+  "automatic_high_confidence": [],
+  "automatic_uncertain": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0004",
+    "c0005",
+    "c0006",
+    "c0007",
+    "c0008"
+  ],
+  "operator_kept": [
+    "c0001",
+    "c0002",
+    "c0003",
+    "c0004",
+    "c0005"
+  ],
+  "operator_rejected": [
+    "c0006",
+    "c0007",
+    "c0008"
+  ],
+  "source_ranges": [
+    [
+      "c0001",
+      25.0,
+      32.0
+    ],
+    [
+      "c0002",
+      99.0,
+      109.0
+    ],
+    [
+      "c0003",
+      197.0,
+      207.0
+    ],
+    [
+      "c0004",
+      277.5,
+      281.5
+    ],
+    [
+      "c0005",
+      289.0,
+      294.0
+    ],
+    [
+      "c0006",
+      44.0,
+      49.0
+    ],
+    [
+      "c0007",
+      90.0,
+      95.0
+    ],
+    [
+      "c0008",
+      348.0,
+      354.0
+    ]
+  ],
+  "render_edl": "project/versions/unnumbered-chronological/edl.json",
+  "human_confirmed_eval_facts_created": 0,
+  "note": "The entire eight-candidate automatic classification remained uncertain. The final editorial selection is a test_operator visual review. No automatic identity accuracy claim."
+}

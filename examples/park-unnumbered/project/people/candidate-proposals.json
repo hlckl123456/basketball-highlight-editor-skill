@@ -1,0 +1,262 @@
+{
+  "player_id": "target",
+  "assignments": [
+    {
+      "candidate_id": "c0001",
+      "target_player_id": "target",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "honest-attribution-v1",
+      "is_probability": false,
+      "reason_codes": [
+        "ambiguous_player_profiles",
+        "ambiguous_same_frame_person",
+        "clothing_region_disagreement",
+        "insufficient_contiguous_support"
+      ],
+      "support_count": 0,
+      "support": [],
+      "never_auto_exclude": true,
+      "player_id": null,
+      "certainty": "uncertain",
+      "role": "visible",
+      "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support",
+      "evidence": []
+    },
+    {
+      "candidate_id": "c0002",
+      "target_player_id": "target",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "honest-attribution-v1",
+      "is_probability": false,
+      "reason_codes": [
+        "ambiguous_player_profiles",
+        "ambiguous_same_frame_person",
+        "clothing_region_disagreement",
+        "insufficient_contiguous_support"
+      ],
+      "support_count": 0,
+      "support": [],
+      "never_auto_exclude": true,
+      "player_id": null,
+      "certainty": "uncertain",
+      "role": "visible",
+      "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support",
+      "evidence": []
+    },
+    {
+      "candidate_id": "c0003",
+      "target_player_id": "target",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "honest-attribution-v1",
+      "is_probability": false,
+      "reason_codes": [
+        "ambiguous_player_profiles",
+        "ambiguous_same_frame_person",
+        "clothing_region_disagreement",
+        "insufficient_contiguous_support"
+      ],
+      "support_count": 0,
+      "support": [],
+      "never_auto_exclude": true,
+      "player_id": null,
+      "certainty": "uncertain",
+      "role": "visible",
+      "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support",
+      "evidence": []
+    },
+    {
+      "candidate_id": "c0004",
+      "target_player_id": "target",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "honest-attribution-v1",
+      "is_probability": false,
+      "reason_codes": [
+        "ambiguous_player_profiles",
+        "ambiguous_same_frame_person",
+        "clothing_region_disagreement"
+      ],
+      "support_count": 3,
+      "support": [],
+      "never_auto_exclude": true,
+      "player_id": null,
+      "certainty": "uncertain",
+      "role": "visible",
+      "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement",
+      "evidence": []
+    },
+    {
+      "candidate_id": "c0005",
+      "target_player_id": "target",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "honest-attribution-v1",
+      "is_probability": false,
+      "reason_codes": [
+        "ambiguous_player_profiles",
+        "ambiguous_same_frame_person",
+        "clothing_region_disagreement",
+        "insufficient_contiguous_support"
+      ],
+      "support_count": 0,
+      "support": [],
+      "never_auto_exclude": true,
+      "player_id": null,
+      "certainty": "uncertain",
+      "role": "visible",
+      "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support",
+      "evidence": []
+    },
+    {
+      "candidate_id": "c0006",
+      "target_player_id": "target",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "honest-attribution-v1",
+      "is_probability": false,
+      "reason_codes": [
+        "ambiguous_player_profiles",
+        "ambiguous_same_frame_person",
+        "clothing_region_disagreement",
+        "insufficient_contiguous_support"
+      ],
+      "support_count": 0,
+      "support": [],
+      "never_auto_exclude": true,
+      "player_id": null,
+      "certainty": "uncertain",
+      "role": "visible",
+      "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support",
+      "evidence": []
+    },
+    {
+      "candidate_id": "c0007",
+      "target_player_id": "target",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "honest-attribution-v1",
+      "is_probability": false,
+      "reason_codes": [
+        "ambiguous_player_profiles",
+        "ambiguous_same_frame_person",
+        "clothing_region_disagreement",
+        "insufficient_contiguous_support"
+      ],
+      "support_count": 0,
+      "support": [],
+      "never_auto_exclude": true,
+      "player_id": null,
+      "certainty": "uncertain",
+      "role": "visible",
+      "reason": "Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support",
+      "evidence": []
+    },
+    {
+      "candidate_id": "c0008",
+      "target_player_id": "target",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "honest-attribution-v1",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_contiguous_support"
+      ],
+      "support_count": 0,
+      "support": [],
+      "never_auto_exclude": true,
+      "player_id": null,
+      "certainty": "uncertain",
+      "role": "visible",
+      "reason": "Review required: insufficient_contiguous_support",
+      "evidence": []
+    }
+  ],
+  "applied": true,
+  "reviewer": {
+    "kind": "local_model",
+    "name": "calibrated clothing + temporal consensus"
+  }
+}

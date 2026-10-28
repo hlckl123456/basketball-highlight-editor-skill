@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "source": {
+    "codec": "vp9",
+    "coded_height": 480,
+    "coded_width": 854,
+    "duration": 391.711,
+    "fps": "30000/1001",
+    "has_audio": true,
+    "height": 480,
+    "path": "../source/park-bodycam.webm",
+    "presentation_start": 0.007,
+    "render_fps": "30000/1001",
+    "rights": {
+      "bytes": 62147568,
+      "court": "Outdoor park court at night; moving body camera, ordinary clothing, no numbered basketball uniforms",
+      "creator": "Cocoa PD",
+      "download_date": "2026-10-28",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/99/Bodycam-_Florida_Police_Officers_Joins_Kids_in_Basketball_Game.webm/Bodycam-_Florida_Police_Officers_Joins_Kids_in_Basketball_Game.webm.480p.vp9.webm",
+      "license": "Public domain in the United States (PD Florida)",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Bodycam-_Florida_Police_Officers_Joins_Kids_in_Basketball_Game.webm#Licensing",
+      "processing_basis": "Commons file page explicitly identifies this Cocoa PD government recording as PD Florida; downloaded for the requested unnumbered basketball case.",
+      "restrictions": "No endorsement or identity claim. Existing source watermark retained.",
+      "sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bodycam-_Florida_Police_Officers_Joins_Kids_in_Basketball_Game.webm"
+    },
+    "rotation": 0,
+    "sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+    "time_base": "1/1000",
+    "width": 854
+  },
+  "project_revision": 11,
+  "player_id": "target",
+  "clips": [
+    {
+      "id": "c0001",
+      "start": 25.0,
+      "end": 32.0,
+      "labels": []
+    },
+    {
+      "id": "c0002",
+      "start": 99.0,
+      "end": 109.0,
+      "labels": []
+    },
+    {
+      "id": "c0003",
+      "start": 197.0,
+      "end": 207.0,
+      "labels": []
+    },
+    {
+      "id": "c0004",
+      "start": 277.5,
+      "end": 281.5,
+      "labels": []
+    },
+    {
+      "id": "c0005",
+      "start": 289.0,
+      "end": 294.0,
+      "labels": []
+    }
+  ]
+}

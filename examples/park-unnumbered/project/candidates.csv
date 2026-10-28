@@ -1,0 +1,9 @@
+id,start,end,group,player_id,certainty,role,presence_certainty,selection_reason,reason
+c0001,25.0,32.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,"Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support"
+c0002,99.0,109.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,"Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support"
+c0003,197.0,207.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,"Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support"
+c0004,277.5,281.5,uncertain,,uncertain,visible,uncertain,identity_unresolved,"Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement"
+c0005,289.0,294.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,"Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support"
+c0006,44.0,49.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,"Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support"
+c0007,90.0,95.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,"Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support"
+c0008,348.0,354.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_contiguous_support

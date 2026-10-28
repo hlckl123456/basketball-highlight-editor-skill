@@ -1,0 +1,58 @@
+{
+  "status": "draft",
+  "reviewer_kind": "local_model",
+  "affects_high_confidence": false,
+  "samples": [
+    {
+      "time": 210.0,
+      "bbox_xyxy": [
+        168.62,
+        177.52,
+        329.94,
+        413.33
+      ],
+      "source_observation_id": "f00630_p00",
+      "player_id": "target",
+      "status": "draft",
+      "origin": "local_model",
+      "is_automatic": true,
+      "requires_user_review": true,
+      "affects_high_confidence": false,
+      "not_a_confirmed_reference": true
+    },
+    {
+      "time": 141.0,
+      "bbox_xyxy": [
+        606.4,
+        142.52,
+        697.34,
+        313.33
+      ],
+      "source_observation_id": "f00423_p01",
+      "player_id": "target",
+      "status": "draft",
+      "origin": "local_model",
+      "is_automatic": true,
+      "requires_user_review": true,
+      "affects_high_confidence": false,
+      "not_a_confirmed_reference": true
+    },
+    {
+      "time": 30.0,
+      "bbox_xyxy": [
+        537.17,
+        195.53,
+        605.66,
+        364.73
+      ],
+      "source_observation_id": "f00090_p02",
+      "player_id": "target",
+      "status": "draft",
+      "origin": "local_model",
+      "is_automatic": true,
+      "requires_user_review": true,
+      "affects_high_confidence": false,
+      "not_a_confirmed_reference": true
+    }
+  ]
+}

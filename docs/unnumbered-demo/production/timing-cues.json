@@ -1,0 +1,223 @@
+{
+  "voice": "macOS Tingting / AI narration / not the user voice",
+  "duration": 73.568,
+  "scenes": [
+    {
+      "id": "intro",
+      "label": "没有号码，怎么选人？",
+      "text": "如果打球的人都没穿号码球衣，我会怎么剪？这次换成公园里的一段夜场录像。有人穿便装，也有人光膀子，画面还会跟着人晃。",
+      "start": 0,
+      "duration": 12.363,
+      "cues": [
+        "intro-00",
+        "intro-01",
+        "intro-02"
+      ]
+    },
+    {
+      "id": "player",
+      "label": "先认准这个人",
+      "text": "我选白色宽松上衣、深红色短裤、白鞋的这位。保存两张相隔三分钟的参考图，让系统比较上衣、短裤和鞋袜，全程不用号码。这里的选人由测试操作员代做。",
+      "start": 12.363,
+      "duration": 15.529,
+      "cues": [
+        "player-00",
+        "player-01",
+        "player-02",
+        "player-03"
+      ]
+    },
+    {
+      "id": "review",
+      "label": "打开真实的复核页",
+      "text": "整段录像重新提取了人形和服饰特征。这次先用覆盖窗口找回合，再整理成八段待选片段。这一轮自动结果全是不确定，我再对照参考图逐段看，不把它们当成已经认出的进球。",
+      "start": 27.892,
+      "duration": 17.271,
+      "cues": [
+        "review-00",
+        "review-01",
+        "review-02",
+        "review-03"
+      ]
+    },
+    {
+      "id": "decide",
+      "label": "看过以后，再留片段",
+      "text": "这五段里能对照参考图认出他，留下。另三段主要是光膀子球员持球，删掉。演示里的决定都记为测试操作员，不会冒充你已经确认过。",
+      "start": 45.163,
+      "duration": 13.407,
+      "cues": [
+        "decide-00",
+        "decide-01",
+        "decide-02"
+      ]
+    },
+    {
+      "id": "result",
+      "label": "这次实际剪出来的片段",
+      "text": "接着按时间顺序合成，保留现场声音。这就是刚才这位白衣球员的片段。原片时间、参考图、选片记录和成片，都放在仓库首页，点开就能看。",
+      "start": 58.57,
+      "duration": 14.998,
+      "cues": [
+        "result-00",
+        "result-01",
+        "result-02"
+      ]
+    }
+  ],
+  "cues": [
+    {
+      "id": "intro-00",
+      "scene": "intro",
+      "text": "如果打球的人都没穿号码球衣，我会怎么剪？",
+      "audio": "work/unnumbered-demo/cues/intro-00.aiff",
+      "start": 0,
+      "speech_duration": 3.781406,
+      "duration": 3.981
+    },
+    {
+      "id": "intro-01",
+      "scene": "intro",
+      "text": "这次换成公园里的一段夜场录像。",
+      "audio": "work/unnumbered-demo/cues/intro-01.aiff",
+      "start": 3.981,
+      "speech_duration": 2.63678,
+      "duration": 2.837
+    },
+    {
+      "id": "intro-02",
+      "scene": "intro",
+      "text": "有人穿便装，也有人光膀子，画面还会跟着人晃。",
+      "audio": "work/unnumbered-demo/cues/intro-02.aiff",
+      "start": 6.818,
+      "speech_duration": 4.545488,
+      "duration": 5.545
+    },
+    {
+      "id": "player-00",
+      "scene": "player",
+      "text": "我选白色宽松上衣、深红色短裤、白鞋的这位。",
+      "audio": "work/unnumbered-demo/cues/player-00.aiff",
+      "start": 12.363,
+      "speech_duration": 4.336599,
+      "duration": 4.537
+    },
+    {
+      "id": "player-01",
+      "scene": "player",
+      "text": "保存两张相隔三分钟的参考图，让系统比较上衣、短裤和鞋袜，",
+      "audio": "work/unnumbered-demo/cues/player-01.aiff",
+      "start": 16.9,
+      "speech_duration": 5.774376,
+      "duration": 5.974
+    },
+    {
+      "id": "player-02",
+      "scene": "player",
+      "text": "全程不用号码。",
+      "audio": "work/unnumbered-demo/cues/player-02.aiff",
+      "start": 22.874,
+      "speech_duration": 1.285805,
+      "duration": 1.486
+    },
+    {
+      "id": "player-03",
+      "scene": "player",
+      "text": "这里的选人由测试操作员代做。",
+      "audio": "work/unnumbered-demo/cues/player-03.aiff",
+      "start": 24.36,
+      "speech_duration": 2.53229,
+      "duration": 3.532
+    },
+    {
+      "id": "review-00",
+      "scene": "review",
+      "text": "整段录像重新提取了人形和服饰特征。",
+      "audio": "work/unnumbered-demo/cues/review-00.aiff",
+      "start": 27.892,
+      "speech_duration": 3.356599,
+      "duration": 3.557
+    },
+    {
+      "id": "review-01",
+      "scene": "review",
+      "text": "这次先用覆盖窗口找回合，再整理成八段待选片段。",
+      "audio": "work/unnumbered-demo/cues/review-01.aiff",
+      "start": 31.449,
+      "speech_duration": 4.935556,
+      "duration": 5.136
+    },
+    {
+      "id": "review-02",
+      "scene": "review",
+      "text": "这一轮自动结果全是不确定，我再对照参考图逐段看，",
+      "audio": "work/unnumbered-demo/cues/review-02.aiff",
+      "start": 36.585,
+      "speech_duration": 4.865896,
+      "duration": 5.066
+    },
+    {
+      "id": "review-03",
+      "scene": "review",
+      "text": "不把它们当成已经认出的进球。",
+      "audio": "work/unnumbered-demo/cues/review-03.aiff",
+      "start": 41.651,
+      "speech_duration": 2.511837,
+      "duration": 3.512
+    },
+    {
+      "id": "decide-00",
+      "scene": "decide",
+      "text": "这五段里能对照参考图认出他，留下。",
+      "audio": "work/unnumbered-demo/cues/decide-00.aiff",
+      "start": 45.163,
+      "speech_duration": 3.426259,
+      "duration": 3.626
+    },
+    {
+      "id": "decide-01",
+      "scene": "decide",
+      "text": "另三段主要是光膀子球员持球，删掉。",
+      "audio": "work/unnumbered-demo/cues/decide-01.aiff",
+      "start": 48.789,
+      "speech_duration": 3.605986,
+      "duration": 3.806
+    },
+    {
+      "id": "decide-02",
+      "scene": "decide",
+      "text": "演示里的决定都记为测试操作员，不会冒充你已经确认过。",
+      "audio": "work/unnumbered-demo/cues/decide-02.aiff",
+      "start": 52.595,
+      "speech_duration": 4.975011,
+      "duration": 5.975
+    },
+    {
+      "id": "result-00",
+      "scene": "result",
+      "text": "接着按时间顺序合成，保留现场声音。",
+      "audio": "work/unnumbered-demo/cues/result-00.aiff",
+      "start": 58.57,
+      "speech_duration": 3.60644,
+      "duration": 3.806
+    },
+    {
+      "id": "result-01",
+      "scene": "result",
+      "text": "这就是刚才这位白衣球员的片段。",
+      "audio": "work/unnumbered-demo/cues/result-01.aiff",
+      "start": 62.376,
+      "speech_duration": 2.82254,
+      "duration": 3.023
+    },
+    {
+      "id": "result-02",
+      "scene": "result",
+      "text": "原片时间、参考图、选片记录和成片，都放在仓库首页，点开就能看。",
+      "audio": "work/unnumbered-demo/cues/result-02.aiff",
+      "start": 65.399,
+      "speech_duration": 7.169116,
+      "duration": 8.169
+    }
+  ]
+}

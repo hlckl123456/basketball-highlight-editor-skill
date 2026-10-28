@@ -1,0 +1,73 @@
+{
+  "status": "draft",
+  "reviewer_kind": "test_operator",
+  "scope": "Operator fixture; not human-confirmed annotation or evaluation truth",
+  "people": [
+    {
+      "id": "target",
+      "description": "白色宽松 T 恤、深红色齐膝短裤、白袜白鞋；无号码",
+      "samples": [
+        {
+          "time": 30,
+          "box": [
+            519,
+            191,
+            616,
+            375
+          ],
+          "status": "draft",
+          "reviewer_kind": "test_operator",
+          "sample_id": "s001"
+        },
+        {
+          "time": 210,
+          "box": [
+            172,
+            178,
+            330,
+            411
+          ],
+          "status": "draft",
+          "reviewer_kind": "test_operator",
+          "sample_id": "s002"
+        }
+      ]
+    },
+    {
+      "id": "dark",
+      "description": "黑色长袖上衣、深色长裤；对照人物，无球衣号码",
+      "samples": [
+        {
+          "time": 10,
+          "box": [
+            129,
+            158,
+            200,
+            414
+          ],
+          "status": "draft",
+          "reviewer_kind": "test_operator",
+          "sample_id": "s003"
+        }
+      ]
+    },
+    {
+      "id": "shirtless",
+      "description": "光膀子、浅色短裤；对照人物，无球衣号码",
+      "samples": [
+        {
+          "time": 90,
+          "box": [
+            439,
+            107,
+            495,
+            230
+          ],
+          "status": "draft",
+          "reviewer_kind": "test_operator",
+          "sample_id": "s004"
+        }
+      ]
+    }
+  ]
+}

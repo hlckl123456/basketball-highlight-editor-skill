@@ -1,0 +1,324 @@
+<!doctype html><meta charset="utf-8"><title>篮球候选复核</title><style>body{font:16px system-ui;max-width:1200px;margin:30px auto;background:#f5f4ef;color:#18232b}article{background:white;padding:20px;margin:20px 0;border-radius:12px}.row{display:flex;flex-wrap:wrap;gap:10px}figure{margin:6px;max-width:210px}figcaption{font-size:12px}pre{white-space:pre-wrap}</style><h1>篮球候选复核</h1><h2>已保存的参考球员</h2><div class="row"><figure><img src="samples/s001.jpg" width="100"><figcaption>target · 30.00s · test_operator</figcaption></figure><figure><img src="samples/s002.jpg" width="100"><figcaption>target · 210.00s · test_operator</figcaption></figure><figure><img src="samples/s003.jpg" width="100"><figcaption>dark · 10.00s · test_operator</figcaption></figure><figure><img src="samples/s004.jpg" width="100"><figcaption>shirtless · 90.00s · test_operator</figcaption></figure></div><p>状态：awaiting_clip_review · 修订 10。球衣颜色和 OCR 只是线索。visible 高置信只表示人在场，不证明他得分或持球；scorer／handler 需独立回合证据。没有认出目标仍进入不确定组。</p><p>确认选片后停在 awaiting_edit_prompt；收到下一条剪辑指令才生成版本。</p><pre>{
+  &quot;players&quot;: [
+    {
+      &quot;description&quot;: &quot;黑色长袖上衣、深色长裤；对照人物，无球衣号码&quot;,
+      &quot;id&quot;: &quot;dark&quot;,
+      &quot;reference&quot;: &quot;samples/s003.jpg&quot;
+    },
+    {
+      &quot;description&quot;: &quot;光膀子、浅色短裤；对照人物，无球衣号码&quot;,
+      &quot;id&quot;: &quot;shirtless&quot;,
+      &quot;reference&quot;: &quot;samples/s004.jpg&quot;
+    },
+    {
+      &quot;description&quot;: &quot;白色宽松 T 恤、深红色齐膝短裤、白袜白鞋；无号码&quot;,
+      &quot;id&quot;: &quot;target&quot;,
+      &quot;reference&quot;: &quot;samples/s001.jpg&quot;
+    }
+  ],
+  &quot;selection&quot;: {
+    &quot;high_confidence&quot;: [],
+    &quot;other&quot;: [],
+    &quot;player_id&quot;: &quot;target&quot;,
+    &quot;role&quot;: &quot;visible&quot;,
+    &quot;selected_by&quot;: &quot;test_operator: requested no-number demo; not human GT&quot;,
+    &quot;uncertain&quot;: [
+      &quot;c0001&quot;,
+      &quot;c0002&quot;,
+      &quot;c0003&quot;,
+      &quot;c0004&quot;,
+      &quot;c0005&quot;,
+      &quot;c0006&quot;,
+      &quot;c0007&quot;,
+      &quot;c0008&quot;
+    ]
+  },
+  &quot;confirmation&quot;: null
+}</pre><article><h2>c0001 · 25.00–32.00s</h2><p>Dribbling sequence</p><video controls preload="none" width="600" src="rough/uncertain/c0001.mp4"></video><div class="row"><a href="frames/c0001_0.jpg"><img loading="lazy" src="frames/c0001_0.jpg" width="300"><br>25.50s</a><a href="frames/c0001_1.jpg"><img loading="lazy" src="frames/c0001_1.jpg" width="300"><br>28.50s</a><a href="frames/c0001_2.jpg"><img loading="lazy" src="frames/c0001_2.jpg" width="300"><br>31.50s</a></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:07+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0001&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;honest-attribution-v1&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;ambiguous_player_profiles&quot;,
+    &quot;ambiguous_same_frame_person&quot;,
+    &quot;clothing_region_disagreement&quot;,
+    &quot;insufficient_contiguous_support&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;target_player_id&quot;: &quot;target&quot;
+}</pre></article><article><h2>c0002 · 99.00–109.00s</h2><p>Dribble and shot attempt</p><video controls preload="none" width="600" src="rough/uncertain/c0002.mp4"></video><div class="row"><a href="frames/c0002_0.jpg"><img loading="lazy" src="frames/c0002_0.jpg" width="300"><br>99.50s</a><a href="frames/c0002_1.jpg"><img loading="lazy" src="frames/c0002_1.jpg" width="300"><br>104.00s</a><a href="frames/c0002_2.jpg"><img loading="lazy" src="frames/c0002_2.jpg" width="300"><br>108.50s</a></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:07+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0002&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;honest-attribution-v1&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;ambiguous_player_profiles&quot;,
+    &quot;ambiguous_same_frame_person&quot;,
+    &quot;clothing_region_disagreement&quot;,
+    &quot;insufficient_contiguous_support&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;target_player_id&quot;: &quot;target&quot;
+}</pre></article><article><h2>c0003 · 197.00–207.00s</h2><p>Receive pass and drive</p><video controls preload="none" width="600" src="rough/uncertain/c0003.mp4"></video><div class="row"><a href="frames/c0003_0.jpg"><img loading="lazy" src="frames/c0003_0.jpg" width="300"><br>197.50s</a><a href="frames/c0003_1.jpg"><img loading="lazy" src="frames/c0003_1.jpg" width="300"><br>202.00s</a><a href="frames/c0003_2.jpg"><img loading="lazy" src="frames/c0003_2.jpg" width="300"><br>206.50s</a></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:07+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0003&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;honest-attribution-v1&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;ambiguous_player_profiles&quot;,
+    &quot;ambiguous_same_frame_person&quot;,
+    &quot;clothing_region_disagreement&quot;,
+    &quot;insufficient_contiguous_support&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;target_player_id&quot;: &quot;target&quot;
+}</pre></article><article><h2>c0004 · 277.50–281.50s</h2><p>Rebound and turn</p><video controls preload="none" width="600" src="rough/uncertain/c0004.mp4"></video><div class="row"><a href="frames/c0004_0.jpg"><img loading="lazy" src="frames/c0004_0.jpg" width="300"><br>278.00s</a><a href="frames/c0004_1.jpg"><img loading="lazy" src="frames/c0004_1.jpg" width="300"><br>279.50s</a><a href="frames/c0004_2.jpg"><img loading="lazy" src="frames/c0004_2.jpg" width="300"><br>281.00s</a></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:07+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0004&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;honest-attribution-v1&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;ambiguous_player_profiles&quot;,
+    &quot;ambiguous_same_frame_person&quot;,
+    &quot;clothing_region_disagreement&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 3,
+  &quot;target_player_id&quot;: &quot;target&quot;
+}</pre></article><article><h2>c0005 · 289.00–294.00s</h2><p>Shot attempt</p><video controls preload="none" width="600" src="rough/uncertain/c0005.mp4"></video><div class="row"><a href="frames/c0005_0.jpg"><img loading="lazy" src="frames/c0005_0.jpg" width="300"><br>289.50s</a><a href="frames/c0005_1.jpg"><img loading="lazy" src="frames/c0005_1.jpg" width="300"><br>291.50s</a><a href="frames/c0005_2.jpg"><img loading="lazy" src="frames/c0005_2.jpg" width="300"><br>293.50s</a></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:07+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0005&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;honest-attribution-v1&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;ambiguous_player_profiles&quot;,
+    &quot;ambiguous_same_frame_person&quot;,
+    &quot;clothing_region_disagreement&quot;,
+    &quot;insufficient_contiguous_support&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;target_player_id&quot;: &quot;target&quot;
+}</pre></article><article><h2>c0006 · 44.00–49.00s</h2><p>Contrast: shirtless ball handler</p><video controls preload="none" width="600" src="rough/uncertain/c0006.mp4"></video><div class="row"><a href="frames/c0006_0.jpg"><img loading="lazy" src="frames/c0006_0.jpg" width="300"><br>44.50s</a><a href="frames/c0006_1.jpg"><img loading="lazy" src="frames/c0006_1.jpg" width="300"><br>46.50s</a><a href="frames/c0006_2.jpg"><img loading="lazy" src="frames/c0006_2.jpg" width="300"><br>48.50s</a></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:07+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0006&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;honest-attribution-v1&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;ambiguous_player_profiles&quot;,
+    &quot;ambiguous_same_frame_person&quot;,
+    &quot;clothing_region_disagreement&quot;,
+    &quot;insufficient_contiguous_support&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;target_player_id&quot;: &quot;target&quot;
+}</pre></article><article><h2>c0007 · 90.00–95.00s</h2><p>Contrast: shirtless ball handler</p><video controls preload="none" width="600" src="rough/uncertain/c0007.mp4"></video><div class="row"><a href="frames/c0007_0.jpg"><img loading="lazy" src="frames/c0007_0.jpg" width="300"><br>90.50s</a><a href="frames/c0007_1.jpg"><img loading="lazy" src="frames/c0007_1.jpg" width="300"><br>92.50s</a><a href="frames/c0007_2.jpg"><img loading="lazy" src="frames/c0007_2.jpg" width="300"><br>94.50s</a></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:07+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0007&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;honest-attribution-v1&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: ambiguous_player_profiles, ambiguous_same_frame_person, clothing_region_disagreement, insufficient_contiguous_support&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;ambiguous_player_profiles&quot;,
+    &quot;ambiguous_same_frame_person&quot;,
+    &quot;clothing_region_disagreement&quot;,
+    &quot;insufficient_contiguous_support&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;target_player_id&quot;: &quot;target&quot;
+}</pre></article><article><h2>c0008 · 348.00–354.00s</h2><p>Contrast: shirtless ball handler</p><video controls preload="none" width="600" src="rough/uncertain/c0008.mp4"></video><div class="row"><a href="frames/c0008_0.jpg"><img loading="lazy" src="frames/c0008_0.jpg" width="300"><br>348.50s</a><a href="frames/c0008_1.jpg"><img loading="lazy" src="frames/c0008_1.jpg" width="300"><br>351.00s</a><a href="frames/c0008_2.jpg"><img loading="lazy" src="frames/c0008_2.jpg" width="300"><br>353.50s</a></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:07+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0008&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;honest-attribution-v1&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_contiguous_support&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_contiguous_support&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;target_player_id&quot;: &quot;target&quot;
+}</pre></article><section style="background:#e3eee9;padding:20px"><h2>逐段决定</h2><p>填写后下载复核 JSON，交给 Codex 保存项目。此页不会合并成片或联网。</p><label>复核人 <input id="reviewer" placeholder="你的称呼"></label><div id="choices"></div><button id="download">下载选片决定 JSON</button><p id="message"></p></section><script>const config={"revision": 10, "player": "target", "ids": ["c0001", "c0002", "c0003", "c0004", "c0005", "c0006", "c0007", "c0008"]};
+const choices=document.getElementById('choices');
+for(const id of config.ids){const label=document.createElement('label');label.style.display='block';label.append(id+' ');const s=document.createElement('select');s.id='decision-'+id;for(const [v,t] of [['','请选择'],['keep','保留'],['reject','删除']]){const o=document.createElement('option');o.value=v;o.textContent=t;s.append(o)}label.append(s);choices.append(label)}
+document.getElementById('download').onclick=()=>{const reviewer=document.getElementById('reviewer').value.trim();const decisions={};for(const id of config.ids){decisions[id]=document.getElementById('decision-'+id).value}if(!reviewer||Object.values(decisions).some(v=>!v)){document.getElementById('message').textContent='请填写复核人并决定每一段。';return}const data={project_revision:config.revision,player_id:config.player,reviewer_kind:'user',reviewer,authorization_reference:'Manual local review.html submission at revision '+config.revision,decisions};const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='review-decisions.json';a.click();URL.revokeObjectURL(a.href);document.getElementById('message').textContent='已下载。请把决定文件交给 Codex，保存后会等待下一条剪辑指令。'};</script>

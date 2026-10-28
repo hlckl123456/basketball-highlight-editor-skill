@@ -1,0 +1,98 @@
+{
+  "browserPlugin": "not available; used existing Playwright and Chrome in isolated local context",
+  "viewport": [
+    1600,
+    900
+  ],
+  "actualReviewPage": true,
+  "proofs": [
+    {
+      "scene": "intro",
+      "title": "没有号码，怎么选人和剪辑",
+      "heading": "没穿号码球衣，这次怎么选人、剪片？"
+    },
+    {
+      "scene": "intro",
+      "url": "http://127.0.0.1:8768/presentation.html?scene=intro",
+      "title": "篮球集锦 Skill · 使用演示",
+      "errors": [],
+      "recording": "work/unnumbered-demo/captures/intro.webm"
+    },
+    {
+      "scene": "player",
+      "title": "没有号码，怎么选人和剪辑",
+      "heading": "先认准这个人"
+    },
+    {
+      "scene": "player",
+      "url": "http://127.0.0.1:8768/presentation.html?scene=player",
+      "title": "篮球集锦 Skill · 使用演示",
+      "errors": [],
+      "recording": "work/unnumbered-demo/captures/player.webm"
+    },
+    {
+      "scene": "review",
+      "url": "http://127.0.0.1:8768/case/project/review-before-confirm.html",
+      "title": "篮球候选复核",
+      "errors": [],
+      "recording": "work/unnumbered-demo/captures/review.webm"
+    },
+    {
+      "scene": "decide",
+      "decisions": [
+        {
+          "id": "decision-c0001",
+          "value": "keep"
+        },
+        {
+          "id": "decision-c0002",
+          "value": "keep"
+        },
+        {
+          "id": "decision-c0003",
+          "value": "keep"
+        },
+        {
+          "id": "decision-c0004",
+          "value": "keep"
+        },
+        {
+          "id": "decision-c0005",
+          "value": "keep"
+        },
+        {
+          "id": "decision-c0006",
+          "value": "reject"
+        },
+        {
+          "id": "decision-c0007",
+          "value": "reject"
+        },
+        {
+          "id": "decision-c0008",
+          "value": "reject"
+        }
+      ],
+      "user_confirmation_submitted": false
+    },
+    {
+      "scene": "decide",
+      "url": "http://127.0.0.1:8768/case/project/review-before-confirm.html",
+      "title": "篮球候选复核",
+      "errors": [],
+      "recording": "work/unnumbered-demo/captures/decide.webm"
+    },
+    {
+      "scene": "result",
+      "title": "没有号码，怎么选人和剪辑",
+      "heading": "这次实际剪出来的片段"
+    },
+    {
+      "scene": "result",
+      "url": "http://127.0.0.1:8768/presentation.html?scene=result",
+      "title": "篮球集锦 Skill · 使用演示",
+      "errors": [],
+      "recording": "work/unnumbered-demo/captures/result.webm"
+    }
+  ]
+}

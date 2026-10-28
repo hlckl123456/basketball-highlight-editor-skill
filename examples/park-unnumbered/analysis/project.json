@@ -1,0 +1,448 @@
+{
+  "candidates": [
+    {
+      "assignment": null,
+      "end": 12.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0001",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 0.0
+    },
+    {
+      "assignment": null,
+      "end": 24.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0002",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 12.0
+    },
+    {
+      "assignment": null,
+      "end": 36.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0003",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 24.0
+    },
+    {
+      "assignment": null,
+      "end": 48.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0004",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 36.0
+    },
+    {
+      "assignment": null,
+      "end": 60.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0005",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 48.0
+    },
+    {
+      "assignment": null,
+      "end": 72.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0006",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 60.0
+    },
+    {
+      "assignment": null,
+      "end": 84.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0007",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 72.0
+    },
+    {
+      "assignment": null,
+      "end": 96.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0008",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 84.0
+    },
+    {
+      "assignment": null,
+      "end": 108.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0009",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 96.0
+    },
+    {
+      "assignment": null,
+      "end": 120.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0010",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 108.0
+    },
+    {
+      "assignment": null,
+      "end": 132.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0011",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 120.0
+    },
+    {
+      "assignment": null,
+      "end": 144.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0012",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 132.0
+    },
+    {
+      "assignment": null,
+      "end": 156.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0013",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 144.0
+    },
+    {
+      "assignment": null,
+      "end": 168.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0014",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 156.0
+    },
+    {
+      "assignment": null,
+      "end": 180.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0015",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 168.0
+    },
+    {
+      "assignment": null,
+      "end": 192.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0016",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 180.0
+    },
+    {
+      "assignment": null,
+      "end": 204.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0017",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 192.0
+    },
+    {
+      "assignment": null,
+      "end": 216.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0018",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 204.0
+    },
+    {
+      "assignment": null,
+      "end": 228.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0019",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 216.0
+    },
+    {
+      "assignment": null,
+      "end": 240.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0020",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 228.0
+    },
+    {
+      "assignment": null,
+      "end": 252.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0021",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 240.0
+    },
+    {
+      "assignment": null,
+      "end": 264.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0022",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 252.0
+    },
+    {
+      "assignment": null,
+      "end": 276.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0023",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 264.0
+    },
+    {
+      "assignment": null,
+      "end": 288.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0024",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 276.0
+    },
+    {
+      "assignment": null,
+      "end": 300.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0025",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 288.0
+    },
+    {
+      "assignment": null,
+      "end": 312.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0026",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 300.0
+    },
+    {
+      "assignment": null,
+      "end": 324.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0027",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 312.0
+    },
+    {
+      "assignment": null,
+      "end": 336.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0028",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 324.0
+    },
+    {
+      "assignment": null,
+      "end": 348.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0029",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 336.0
+    },
+    {
+      "assignment": null,
+      "end": 360.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0030",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 348.0
+    },
+    {
+      "assignment": null,
+      "end": 372.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0031",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 360.0
+    },
+    {
+      "assignment": null,
+      "end": 384.0,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0032",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 372.0
+    },
+    {
+      "assignment": null,
+      "end": 391.711,
+      "event_confirmed": false,
+      "event_time": null,
+      "id": "c0033",
+      "labels": [],
+      "observations": [],
+      "reason": "Systematic 12-second review coverage; not an inferred made basket",
+      "start": 384.0
+    }
+  ],
+  "confirmation": null,
+  "created_at": "2026-10-28T16:00:00+00:00",
+  "detector": {
+    "backend": "portable-manifest",
+    "provenance": "Exhaustive coverage windows for unnumbered person selection; not automatic made-shot detection"
+  },
+  "history": [
+    {
+      "action": "init",
+      "at": "2026-10-28T16:00:01+00:00",
+      "detail": "local source reference; no upload",
+      "revision": 1
+    },
+    {
+      "action": "import_candidates",
+      "at": "2026-10-28T16:00:02+00:00",
+      "detail": "ba6efdb6db4564a5f29dc93593902acd96486f77861fe6f5053a0d1e55bace2f",
+      "revision": 2
+    },
+    {
+      "action": "scan_people",
+      "at": "2026-10-28T16:00:03+00:00",
+      "detail": {
+        "data": "people/detections.json",
+        "data_sha256": "560e66e1bbbd1499661bf267d8c81f86a66dd43420f95ca43d99e5a38481f385",
+        "method": "YOLOX-Nano 416 CPU + clothing-v2",
+        "model_sha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d",
+        "ocr_enabled": false
+      },
+      "revision": 3
+    }
+  ],
+  "person_detector": {
+    "data": "people/detections.json",
+    "data_sha256": "ad29932b8481baf08299bd9da42242ec425b4d3874ef31de4cb2608d3031982c",
+    "method": "YOLOX-Nano 416 CPU + clothing-v2",
+    "model_sha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d",
+    "ocr_enabled": false
+  },
+  "players": [],
+  "reproducibility": {
+    "clock_kind": "fixed_test_clock",
+    "epoch": 1793203200,
+    "reviewer_policy": "test_operator only; never a human timestamp"
+  },
+  "revision": 3,
+  "schema_version": 1,
+  "selection": null,
+  "source": {
+    "codec": "vp9",
+    "coded_height": 480,
+    "coded_width": 854,
+    "duration": 391.711,
+    "fps": "30000/1001",
+    "has_audio": true,
+    "height": 480,
+    "path": "../source/park-bodycam.webm",
+    "presentation_start": 0.007,
+    "render_fps": "30000/1001",
+    "rights": {
+      "bytes": 62147568,
+      "court": "Outdoor park court at night; moving body camera, ordinary clothing, no numbered basketball uniforms",
+      "creator": "Cocoa PD",
+      "download_date": "2026-10-28",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/99/Bodycam-_Florida_Police_Officers_Joins_Kids_in_Basketball_Game.webm/Bodycam-_Florida_Police_Officers_Joins_Kids_in_Basketball_Game.webm.480p.vp9.webm",
+      "license": "Public domain in the United States (PD Florida)",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Bodycam-_Florida_Police_Officers_Joins_Kids_in_Basketball_Game.webm#Licensing",
+      "processing_basis": "Commons file page explicitly identifies this Cocoa PD government recording as PD Florida; downloaded for the requested unnumbered basketball case.",
+      "restrictions": "No endorsement or identity claim. Existing source watermark retained.",
+      "sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bodycam-_Florida_Police_Officers_Joins_Kids_in_Basketball_Game.webm"
+    },
+    "rotation": 0,
+    "sha256": "e90c8974b1cf2651065b27d5b37393337bdb84cc33d5e40b5b65f48e94995f81",
+    "time_base": "1/1000",
+    "width": 854
+  },
+  "state": "candidates_ready",
+  "tool_version": "1.2.0",
+  "updated_at": "2026-10-28T16:00:03+00:00",
+  "versions": []
+}

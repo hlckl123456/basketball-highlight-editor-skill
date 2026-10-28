@@ -1,0 +1,16 @@
+{
+  "project_revision": 10,
+  "player_id": "target",
+  "reviewer_kind": "test_operator",
+  "reviewer": "Operator visual comparison of ordinary clothing across source; demo editorial choices, not human ground truth",
+  "decisions": {
+    "c0001": "keep",
+    "c0002": "keep",
+    "c0003": "keep",
+    "c0004": "keep",
+    "c0005": "keep",
+    "c0006": "reject",
+    "c0007": "reject",
+    "c0008": "reject"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "id": "s003",
+  "player_id": "dark",
+  "time": 10,
+  "bbox_xyxy": [
+    129,
+    158,
+    200,
+    414
+  ],
+  "description": "黑色长袖上衣、深色长裤；对照人物，无球衣号码",
+  "confirmed_by": "Operator-selected visual reference for requested demo; not a human evaluation label",
+  "reviewer_kind": "test_operator",
+  "reference": "samples/s003.jpg",
+  "appearance": "default",
+  "valid_from": null,
+  "valid_until": null,
+  "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+  "track_proposals": [
+    {
+      "time": 9.0,
+      "bbox_xyxy": [
+        113.2,
+        103.2,
+        184.2,
+        359.2
+      ],
+      "surviving_points": 8,
+      "initial_points": 34,
+      "identity_verified": false
+    },
+    {
+      "time": 9.2,
+      "bbox_xyxy": [
+        102.4,
+        115.3,
+        173.4,
+        371.3
+      ],
+      "surviving_points": 8,
+      "initial_points": 34,
+      "identity_verified": false
+    },
+    {
+      "time": 9.4,
+      "bbox_xyxy": [
+        115.6,
+        128.2,
+        186.6,
+        384.2
+      ],
+      "surviving_points": 12,
+      "initial_points": 34,
+      "identity_verified": false
+    },
+    {
+      "time": 9.6,
+      "bbox_xyxy": [
+        117.8,
+        126.5,
+        188.8,
+        382.5
+      ],
+      "surviving_points": 16,
+      "initial_points": 34,
+      "identity_verified": false
+    },
+    {
+      "time": 9.8,
+      "bbox_xyxy": [
+        117.2,
+        133.1,
+        188.2,
+        389.1
+      ],
+      "surviving_points": 26,
+      "initial_points": 34,
+      "identity_verified": false
+    },
+    {
+      "time": 10.2,
+      "bbox_xyxy": [
+        141.1,
+        180.3,
+        212.1,
+        436.3
+      ],
+      "surviving_points": 17,
+      "initial_points": 34,
+      "identity_verified": false
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "s001",
+  "player_id": "target",
+  "time": 30,
+  "bbox_xyxy": [
+    519,
+    191,
+    616,
+    375
+  ],
+  "description": "白色宽松 T 恤、深红色齐膝短裤、白袜白鞋；无号码",
+  "confirmed_by": "Operator-selected visual reference for requested demo; not a human evaluation label",
+  "reviewer_kind": "test_operator",
+  "reference": "samples/s001.jpg",
+  "appearance": "default",
+  "valid_from": null,
+  "valid_until": null,
+  "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+  "track_proposals": [
+    {
+      "time": 29.8,
+      "bbox_xyxy": [
+        561.7,
+        204.3,
+        658.7,
+        388.3
+      ],
+      "surviving_points": 16,
+      "initial_points": 30,
+      "identity_verified": false
+    },
+    {
+      "time": 30.2,
+      "bbox_xyxy": [
+        503.7,
+        194.2,
+        600.7,
+        378.2
+      ],
+      "surviving_points": 16,
+      "initial_points": 30,
+      "identity_verified": false
+    },
+    {
+      "time": 30.4,
+      "bbox_xyxy": [
+        496.6,
+        214.9,
+        593.6,
+        398.9
+      ],
+      "surviving_points": 14,
+      "initial_points": 30,
+      "identity_verified": false
+    }
+  ]
+}

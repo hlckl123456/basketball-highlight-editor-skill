@@ -1,8 +1,10 @@
 # 真实案例：从公开视频到等待下一条剪辑指令的项目
 
+**当前首页演示已改为[无号码公园夜场的完整选人和剪辑](PARK_UNNUMBERED_CASE.zh-CN.md)。下文保留历史 Indiana 记录。**
+
 这份案例记录了一次实际执行，包括失败、人工选择和最终状态。所有链接对应仓库内的真实文件，不用虚构的高光结果代替测试。原始实验日期为 2026 年 10 月 27 日，时区为 America/Los_Angeles。
 
-## 使用流程视频
+## 历史号码球衣案例的使用流程视频
 
 <video controls preload="metadata" width="960" poster="demo/cover.png" src="demo/basketball-skill-demo.mp4">
   <a href="demo/basketball-skill-demo.mp4">播放或下载 Demo</a>
