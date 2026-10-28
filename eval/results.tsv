@@ -1,0 +1,2 @@
+round	name	hypothesis	recall	precision	f1	roi_accuracy	confirmed_made_shots	reviewed_seconds	prediction_events	gates	decision	reason
+0	production_baseline	Frozen production before experiments	NA	NA	NA	NA	0	0	20	prior goal-2 complete	baseline	No confirmed made-shot facts

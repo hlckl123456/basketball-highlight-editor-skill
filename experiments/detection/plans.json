@@ -1,0 +1,17 @@
+[
+ {"id":1,"name":"lower_hoop_conf","change":{"hoop_conf":0.04},"hypothesis":"降低篮筐后处理阈值可能保留远处篮筐；检查原扫描置信度下限是否已截断这些框。"},
+ {"id":2,"name":"wider_corridor","change":{"margin":24},"hypothesis":"放宽按篮筐宽度归一化的横向走廊，可能保留斜机位的穿框候选。"},
+ {"id":3,"name":"shorter_descent","change":{"min_descent":8},"hypothesis":"减少最小下降距离，可能保留远机位的小尺度球迹。"},
+ {"id":4,"name":"longer_occlusion_gap","change":{"max_gap":3.5},"hypothesis":"容许更长的短暂遮挡，可能连接缺失的过框采样。"},
+ {"id":5,"name":"interpolate_crossing_time","change":{"interpolate":true},"hypothesis":"按球轨迹与筐平面的交点插值时间，比两个采样的中点更接近过框时刻。"},
+ {"id":6,"name":"less_aggressive_dedupe","change":{"dedupe":0.4},"hypothesis":"缩短相邻事件去重距离，可能保留紧接着的补篮回合。"},
+ {"id":7,"name":"short_rim_windows","change":{"rim_window":5},"hypothesis":"缩短局部篮筐窗口，可能减少移动机位使用全局中位数的定位偏差。"},
+ {"id":8,"name":"separate_neighbor_hoops","change":{"multi_rim":true},"hypothesis":"按检测框聚类并分别判断篮筐，避免相邻场地篮筐被平均到不存在的位置。"},
+ {"id":9,"name":"near_rim_recovery","change":{"proximity":true},"hypothesis":"将接近篮筐但轨迹不完整的球加入待复核候选，可能补回遮挡片段。"},
+ {"id":10,"name":"all_ball_tracks","change":{"track_all":true},"hypothesis":"关联多个球候选而非每帧只取最高置信球，可能避免邻场篮球抢占轨迹。"},
+ {"id":11,"name":"relative_hoop_coordinates","change":{"stabilize":true},"hypothesis":"把球转换到同时刻篮筐的相对位置，可能降低手持镜头抖动造成的虚假位移。"},
+ {"id":12,"name":"six_fps_sampling","change":{"sample_fps":6},"hypothesis":"从3fps增加至6fps，可能看到原采样间隙中的快速过框过程。"},
+ {"id":13,"name":"lower_detector_conf","change":{"detector_conf":0.05},"hypothesis":"降低模型解码阈值并重新推理，才有机会找回早已在原扫描中丢掉的低分球和篮筐框。"},
+ {"id":14,"name":"twelve_fps_sampling","change":{"sample_fps":12},"hypothesis":"增加到12fps并保留两组错开的6fps采样，可能进一步覆盖短暂球迹。"},
+ {"id":15,"name":"motion_union_and_review_coverage","change":{"motion_union":true,"review_coverage":true,"multi_rim":true},"hypothesis":"合并篮筐局部残余运动与球邻近信号，并单独生成连续查看窗口；覆盖窗口不能计成进球预测。"}
+]
