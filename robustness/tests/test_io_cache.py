@@ -92,6 +92,16 @@ class IOAndCache(unittest.TestCase):
    h.cmd_detect(self.args(second,f))
   self.assertTrue(h.read(second/'detection/cache-status.json')['hit'])
   self.assertEqual((first/'project.json').read_bytes(),(second/'project.json').read_bytes())
+ def test_streaming_motion_coverage_and_hot_cache(self):
+  first=self.project('first');second=self.project('second')
+  a=self.args(first,None);a.backend='motion-coverage';h.cmd_detect(a)
+  _,p=h.load(first);self.assertEqual(len(p['candidates']),1)
+  self.assertEqual((p['candidates'][0]['start'],p['candidates'][0]['end']),(0,2))
+  self.assertEqual(len(h.read(first/'detection/motion.json')['mean_abs_difference']),3)
+  a=self.args(second,None);a.backend='motion-coverage'
+  with patch.object(h,'_detect_uncached',side_effect=AssertionError('coverage decoded on hot cache')):h.cmd_detect(a)
+  self.assertTrue(h.read(second/'detection/cache-status.json')['hit'])
+  self.assertEqual((first/'project.json').read_bytes(),(second/'project.json').read_bytes())
  def test_parameter_change_invalidates_detection_cache(self):
   f=self.base/'ranges-parameters.json';h.write(f,{'provenance':'test_operator fixture','candidates':[{'start':0,'end':1}]})
   first=self.project('first');second=self.project('second');h.cmd_detect(self.args(first,f))

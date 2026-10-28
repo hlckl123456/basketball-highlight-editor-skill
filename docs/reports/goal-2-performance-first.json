@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "machine": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "logical_cpus": 10
+  },
+  "source": {
+    "duration": 3600.026667,
+    "width": 1920,
+    "height": 1080,
+    "coded_width": 1920,
+    "coded_height": 1080,
+    "rotation": 0,
+    "fps": "30",
+    "render_fps": "30",
+    "has_audio": true,
+    "codec": "h264",
+    "time_base": "1/60000",
+    "presentation_start": 0.0,
+    "sha256": "9e6e5f4ee7eee82c7ccb628d6101a15e4f27f4b93b1b56df71d97af21b5256af",
+    "bytes": 6692911233,
+    "generator": "4-second CC0 derivative looped to 60 minutes; 1080p/30 with audio"
+  },
+  "scope": "No inference cost. 120 cached 6-second windows, all rough clips, 60s retained/rendered. Same 30fps output before/after. Peak RSS includes owned child processes, not unrelated apps.",
+  "profiles": [
+    {
+      "profile": "before",
+      "timings_seconds": {
+        "init": 3.9379217909881845,
+        "cached_candidates": 3.732222249993356,
+        "features": 22.937487415998476,
+        "annotate_select": 8.351847583020572,
+        "rough": 229.7257230829855,
+        "confirm": 4.206450708996272,
+        "render": 23.806107708980562
+      },
+      "candidate_count": 120,
+      "rough_seconds": 720.0,
+      "render_seconds": 60.0,
+      "reviewer_kind": "test_operator",
+      "output_fps": "30/1",
+      "wall_seconds": 308.730756459001,
+      "peak_process_tree_rss_bytes": 531845120,
+      "sample_count": 9584,
+      "sampling_interval_seconds": 0.02
+    },
+    {
+      "profile": "after",
+      "timings_seconds": {
+        "init": 4.278465958981542,
+        "cached_candidates": 0.13903162500355393,
+        "features": 83.04000558299595,
+        "annotate_select": 0.7872581669944339,
+        "rough": 208.62234491697745,
+        "confirm": 0.4182588330004364,
+        "render": 3.93689241699758
+      },
+      "candidate_count": 120,
+      "rough_seconds": 720.0,
+      "render_seconds": 60.0,
+      "reviewer_kind": "test_operator",
+      "output_fps": "30",
+      "detection_cache_hit": true,
+      "wall_seconds": 302.2867664590012,
+      "peak_process_tree_rss_bytes": 457461760,
+      "sample_count": 9535,
+      "sampling_interval_seconds": 0.02
+    }
+  ],
+  "meets_300_seconds": false,
+  "meets_2_gib": true,
+  "speedup": 1.021317473058728
+}

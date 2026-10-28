@@ -12,7 +12,9 @@ from fractions import Fraction
 from pathlib import Path
 
 THREADS = 2
-RENDER_SCHEMA = 3
+ENCODE_THREADS = 6
+RENDER_FILTER_THREADS = 2
+RENDER_SCHEMA = 4
 
 
 def command(args, timeout=180, binary=False):
@@ -131,8 +133,8 @@ def render(source, meta, start, end, out, frame_count=None):
           'scale=1280:720:force_original_aspect_ratio=decrease:force_divisible_by=2,'
           'pad=1280:720:(ow-iw)/2:(oh-ih)/2,setsar=1')
     cmd = ['ffmpeg', '-v', 'error', '-threads', THREADS, '-seek_timestamp', '1', '-ss', f'{start + meta.get("presentation_start", 0):.9f}', '-i', source,
-           '-map', '0:v:0', '-map', '0:a:0?', '-vf', vf, '-filter_threads', 1,
-           '-frames:v', count, '-t', f'{duration:.9f}', '-c:v', 'libx264', '-threads', THREADS,
+           '-map', '0:v:0', '-map', '0:a:0?', '-vf', vf, '-filter_threads', RENDER_FILTER_THREADS,
+           '-frames:v', count, '-t', f'{duration:.9f}', '-c:v', 'libx264', '-threads', ENCODE_THREADS,
            '-preset', 'veryfast', '-crf', '22', '-pix_fmt', 'yuv420p']
     if meta.get('has_audio'):
         cmd += ['-af', f'aresample=48000:async=1:first_pts=0,apad,atrim=duration={duration:.9f}',

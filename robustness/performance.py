@@ -7,6 +7,7 @@ process tree, sampled every 20 ms; the source is never loaded whole into RAM.
 """
 import argparse
 import importlib.util
+import importlib.metadata
 import json
 import os
 import platform
@@ -43,22 +44,27 @@ def worker(args):
     stages={}
     def stage(name,fn):
         begin=time.perf_counter();out=fn();stages[name]=time.perf_counter()-begin;return out
-    stage('init',lambda:module.cmd_init(A(project=project,video=source,rights=rights,reproducible=True,epoch=946684800)))
+    def invoke(command,fn,flags):
+        if args.execution=='in-process':return fn()
+        return subprocess.run([sys.executable,str(args.script),command,str(project),*[str(v) for v in flags]],check=True)
+    init_flags=['--video',source,'--rights',rights]
+    if args.worker!='before':init_flags+=['--reproducible','--epoch','946684800']
+    stage('init',lambda:invoke('init',lambda:module.cmd_init(A(project=project,video=source,rights=rights,reproducible=True,epoch=946684800)),init_flags))
     if args.worker=='before':
-        stage('cached_candidates',lambda:module.cmd_import(A(project=project,file=args.manifest)))
+        stage('cached_candidates',lambda:invoke('import-candidates',lambda:module.cmd_import(A(project=project,file=args.manifest)),['--file',args.manifest]))
     else:
-        stage('cached_candidates',lambda:module.cmd_detect(A(project=project,backend='manifest',manifest=args.manifest,runtime=None,python=sys.executable,model=None,roi=None,fps=3,before=3,after=3,device='cpu',timeout=300,cache_dir=args.cache,no_cache=False,refresh_cache=False)))
-    stage('features',lambda:module.cmd_features(A(project=project,interval=2,refresh=False,no_ocr=True)))
+        stage('cached_candidates',lambda:invoke('detect',lambda:module.cmd_detect(A(project=project,backend='manifest',manifest=args.manifest,runtime=None,python=sys.executable,model=None,roi=None,fps=3,before=3,after=3,device='cpu',timeout=300,cache_dir=args.cache,no_cache=False,refresh_cache=False)),['--backend','manifest','--manifest',args.manifest,'--cache-dir',args.cache,'--fps','3','--before','3','--after','3','--timeout','300']))
+    stage('features',lambda:invoke('features',lambda:module.cmd_features(A(project=project,interval=2,refresh=False,no_ocr=True)),['--interval','2','--no-ocr']))
     _,p=module.load(project);annotation=project/'annotations.json'
     module.write(annotation,{'reviewer':{'kind':'test_operator','name':'performance fixture; not a human identity claim'},'players':[{'id':'test','description':'mechanical benchmark placeholder','reference':p['candidates'][0]['frames'][0]['path']}],'assignments':[{'candidate_id':c['id'],'player_id':'test','certainty':'uncertain','reason':'Performance coverage fixture, not recognition evidence','evidence':[]} for c in p['candidates']]})
-    stage('annotate_select',lambda:(module.cmd_annotate(A(project=project,file=annotation)),module.cmd_select(A(project=project,player='test',selected_by='test_operator'))))
-    stage('rough',lambda:module.cmd_rough(A(project=project)))
+    stage('annotate_select',lambda:(invoke('annotate',lambda:module.cmd_annotate(A(project=project,file=annotation)),['--file',annotation]),invoke('select',lambda:module.cmd_select(A(project=project,player='test',selected_by='test_operator')),['--player','test','--selected-by','test_operator'])))
+    stage('rough',lambda:invoke('rough',lambda:module.cmd_rough(A(project=project)),[]))
     _,p=module.load(project);decision=project/'decisions.json';module.write(decision,{'project_revision':p['revision'],'player_id':'test','reviewer_kind':'test_operator','reviewer':'automated performance fixture','decisions':{c['id']:'keep' for c in p['candidates']}})
-    stage('confirm',lambda:module.cmd_confirm(A(project=project,file=decision)))
+    stage('confirm',lambda:invoke('confirm',lambda:module.cmd_confirm(A(project=project,file=decision)),['--file',decision]))
     prompt=project/'later-test-prompt.json';module.write(prompt,{'prompt':'test_operator explicit later render prompt','clip_ids':[c['id'] for c in p['candidates']],'max_duration':args.keep_seconds})
-    stage('render',lambda:module.cmd_version(A(project=project,name='test',spec=prompt,render=True)))
+    stage('render',lambda:invoke('version',lambda:module.cmd_version(A(project=project,name='test',spec=prompt,render=True)),['--name','test','--spec',prompt,'--render']))
     _,p=module.load(project)
-    result={'profile':args.worker,'timings_seconds':stages,'candidate_count':len(p['candidates']),
+    result={'profile':args.worker,'execution':args.execution,'timings_seconds':stages,'candidate_count':len(p['candidates']),
             'rough_seconds':sum(c['end']-c['start'] for c in p['candidates']),
             'render_seconds':args.keep_seconds,'reviewer_kind':p['confirmation']['reviewer_kind'],
             'output_fps':module.probe(project/'versions/test/reel.mp4')['fps']}
@@ -93,13 +99,16 @@ def measure(command,out):
                 os.killpg(proc.pid,signal.SIGKILL);proc.wait()
     if code:raise RuntimeError('Performance worker failed; see '+str(out))
     if denied:raise RuntimeError('Cannot measure owned process RSS: permission denied')
-    return {'wall_seconds':time.perf_counter()-started,'peak_process_tree_rss_bytes':peak,
-            'sample_count':sample_count,'sampling_interval_seconds':.02}
+    wall=time.perf_counter()-started
+    return {'wall_seconds':wall,'peak_process_tree_rss_bytes':peak,
+            'sample_count':sample_count,'sampling_interval_seconds':.02,
+            'sampling_interval_kind':'requested minimum delay after each observation',
+            'wall_seconds_per_sample':wall/max(1,sample_count)}
 
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path,default=ROOT/'work/goal-2/performance');p.add_argument('--generate-only',action='store_true');p.add_argument('--source',type=Path);p.add_argument('--before-script',type=Path)
-    p.add_argument('--resolution',choices=['480p','720p','1080p'],default='1080p');p.add_argument('--window-seconds',type=float,default=6);p.add_argument('--keep-seconds',type=float,default=60);
+    p.add_argument('--execution',choices=['cli','in-process'],default='cli');p.add_argument('--resolution',choices=['480p','720p','1080p'],default='1080p');p.add_argument('--window-seconds',type=float,default=6);p.add_argument('--keep-seconds',type=float,default=60);
     p.add_argument('--worker',choices=['before','after']);p.add_argument('--script',type=Path);p.add_argument('--project',type=Path);p.add_argument('--manifest',type=Path);p.add_argument('--cache',type=Path);p.add_argument('--worker-result',type=Path);a=p.parse_args()
     if a.worker:worker(a);return 0
     root=a.output.resolve();root.mkdir(parents=True,exist_ok=True);source=a.source or generate_source(root,a.resolution)
@@ -113,16 +122,23 @@ def main():
     if prime.exists():shutil.rmtree(prime)
     rights=root/'prime-rights.json';h.write(rights,dict(source_url='fixture:existing-cc0',creator='test_operator',license='CC0',processing_basis='cache preparation',restrictions='no human confirmation'))
     h.cmd_init(A(project=prime,video=source,rights=rights,reproducible=True,epoch=946684800));h.cmd_detect(A(project=prime,backend='manifest',manifest=manifest,runtime=None,python=sys.executable,model=None,roi=None,fps=3,before=3,after=3,device='cpu',timeout=300,cache_dir=cache,no_cache=False,refresh_cache=False))
+    implementation={str(f.relative_to(ROOT)):h.sha(f) for f in [Path(__file__),after,Path(media_io.__file__),ROOT/'robustness/generate.py']}
+    packages={}
+    for name in ['numpy','opencv-python','opencv-python-headless','psutil','onnxruntime']:
+        try:packages[name]=importlib.metadata.version(name)
+        except importlib.metadata.PackageNotFoundError:pass
     rows=[]
     for label,script in [('before',before),('after',after)]:
         project=root/label
         if project.exists():shutil.rmtree(project)
         result=root/(label+'-result.json')
-        command=[sys.executable,Path(__file__).resolve(),'--worker',label,'--source',source,'--script',script,'--project',project,'--manifest',manifest,'--cache',cache,'--worker-result',result,'--keep-seconds',str(a.keep_seconds)]
+        command=[sys.executable,Path(__file__).resolve(),'--worker',label,'--source',source,'--script',script,'--project',project,'--manifest',manifest,'--cache',cache,'--worker-result',result,'--keep-seconds',str(a.keep_seconds),'--execution',a.execution]
         measurement=measure(command,root/(label+'.log'));rows.append({**json.loads(result.read_text()),**measurement});print(label,json.dumps(measurement),flush=True)
     report={'schema_version':1,'machine':{'platform':platform.platform(),'logical_cpus':os.cpu_count()},
+       'implementation':implementation,'before_commit':'ee0d88e92ca717497306624ef091e267ec42a937','before_script_sha256':h.sha(before),
+       'software':{'python':platform.python_version(),'packages':packages,'ffmpeg':h.ffmpeg_version()},
        'source':{**meta,'sha256':h.sha(source),'bytes':source.stat().st_size,'generator':'4-second CC0 derivative looped to 60 minutes; '+a.resolution+'/30 with audio'},
-       'scope':f'No inference cost. 120 cached {a.window_seconds}-second windows, all rough clips, {a.keep_seconds}s retained/rendered. Same 30fps output before/after. Peak RSS includes owned child processes, not unrelated apps.',
+       'execution':a.execution,'scope':f'No inference cost. 120 cached {a.window_seconds}-second windows, all rough clips, {a.keep_seconds}s retained/rendered. Same 30fps output before/after. Peak RSS includes owned child processes, not unrelated apps.',
        'profiles':rows,'meets_300_seconds':rows[1]['wall_seconds']<300,
        'meets_2_gib':rows[1]['peak_process_tree_rss_bytes']<2*1024**3,
        'speedup':rows[0]['wall_seconds']/rows[1]['wall_seconds']}

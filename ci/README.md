@@ -14,6 +14,8 @@ python3 -m unittest discover -s skills/basketball-highlight-editor/tests -v
 node scripts/test_review_form.js examples/indiana/project/review.html
 ```
 
-完整 65 项输入矩阵和 60 分钟性能测试放在可选的 `slow-robustness` job。启用工作流后，通过 workflow_dispatch 将 `slow_robustness` 设为 true 即可运行；它获取完整 Git 历史，以固定 goal-1 提交作性能对照。默认快速测试会安装 `requirements-robustness.txt` 中的 NumPy、OpenCV 和 psutil。
+完整 65 项输入矩阵和 60 分钟性能测试放在可选的 `slow-robustness` job。启用工作流后，通过 workflow_dispatch 将 `slow_robustness` 设为 true 即可运行；它获取完整 Git 历史，以固定 goal-1 提交作性能对照。默认快速测试会安装 `requirements-robustness.txt` 中的 NumPy、OpenCV、ONNX Runtime 和 psutil。
 
 本次只更新配置模板，未推送分支，也未声称 GitHub 上运行过 CI。详细本机命令见 [robustness/README.md](../robustness/README.md)。
+
+HTML 表单检查需要 Node.js 18 以上（使用内置 Blob），不要用旧版系统 Node 跑这个检查。
