@@ -1,0 +1,522 @@
+[
+  {
+    "id": "zhijiang",
+    "page": {
+      "pageid": 138080173,
+      "ns": 6,
+      "title": "File:Ambassador Nicholas Burns plays basketball with Chinese students in Zhijiang Dong Autonomous County.webm",
+      "imagerepository": "local",
+      "videoinfo": [
+        {
+          "size": 1577445,
+          "width": 1100,
+          "height": 720,
+          "duration": 6.039,
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=138080173",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2023-09-25 05:10:32",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Ambassador Nicholas Burns plays basketball with Chinese students in Zhijiang Dong Autonomous County",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "PD US DOS|Zhijiang Dong Autonomous County|Videos of 2023 from China|Videos of 2023|Videos of basketball|2023-09-10|R. Nicholas Burns in 2023",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Ambassador Nicholas Burns plays basketball with Chinese students in Zhijiang Dong Autonomous County (芷江侗族自治县).",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "Published on 10 September 2023",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://twitter.com/USAmbChina/status/1700764801394442622\">https://twitter.com/USAmbChina/status/1700764801394442622</a>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "Ambassador of the United States of America to the People's Republic of China",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "Public domain",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Public domain",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "false",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Copyrighted": {
+              "value": "False",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "pd",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          },
+          "derivatives": [
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/4/48/Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+              "type": "video/webm; codecs=\"vp9, opus\"",
+              "width": 1100,
+              "height": 720,
+              "bandwidth": 2089677
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/48/Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm/Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm.240p.vp9.webm",
+              "type": "video/webm; codecs=\"vp9, opus\"",
+              "transcodekey": "240p.vp9.webm",
+              "width": 366,
+              "height": 240,
+              "bandwidth": 428232
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/48/Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm/Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm.360p.mpeg4.mov",
+              "type": "video/quicktime; codecs=\"mp4v\"",
+              "transcodekey": "360p.mpeg4.mov",
+              "width": 550,
+              "height": 360,
+              "bandwidth": 1646800
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/48/Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm/Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm.480p.vp9.webm",
+              "type": "video/webm; codecs=\"vp9, opus\"",
+              "transcodekey": "480p.vp9.webm",
+              "width": 734,
+              "height": 480,
+              "bandwidth": 1377792
+            }
+          ]
+        }
+      ]
+    },
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm",
+    "downloaded_at": "2026-10-28",
+    "path": "eval/data/sources/zhijiang.webm",
+    "sha256": "e2ffca2d0dac0f8d974fe005292b5e31ffebc0949288e3b7231039fccaeebe92",
+    "bytes": 1577445
+  },
+  {
+    "id": "dribbling",
+    "page": {
+      "pageid": 25556019,
+      "ns": 6,
+      "title": "File:Basketball-Basic Types of Dribbling.webm",
+      "imagerepository": "local",
+      "videoinfo": [
+        {
+          "size": 11992419,
+          "width": 960,
+          "height": 540,
+          "duration": 58.658,
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basketball-Basic_Types_of_Dribbling.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Basketball-Basic_Types_of_Dribbling.webm",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=25556019",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2013-04-11 22:13:23",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Basketball-Basic Types of Dribbling",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Self-published work|Media of the day|Videos of basketball",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "A demonstration of the basic types of dribbling in basketball.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2013-04-11 15:10:31",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Mart570&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Mart570 (page does not exist)\">Mart570</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 3.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 3.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/3.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-3.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          },
+          "derivatives": [
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basketball-Basic_Types_of_Dribbling.webm?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+              "type": "video/webm; codecs=\"vp8, vorbis\"",
+              "width": 960,
+              "height": 540,
+              "bandwidth": 1635571
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/35/Basketball-Basic_Types_of_Dribbling.webm/Basketball-Basic_Types_of_Dribbling.webm.240p.vp9.webm",
+              "type": "video/webm; codecs=\"vp9, opus\"",
+              "transcodekey": "240p.vp9.webm",
+              "width": 426,
+              "height": 240,
+              "bandwidth": 366968
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/35/Basketball-Basic_Types_of_Dribbling.webm/Basketball-Basic_Types_of_Dribbling.webm.360p.mpeg4.mov",
+              "type": "video/quicktime; codecs=\"mp4v\"",
+              "transcodekey": "360p.mpeg4.mov",
+              "width": 640,
+              "height": 360,
+              "bandwidth": 1116760
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/35/Basketball-Basic_Types_of_Dribbling.webm/Basketball-Basic_Types_of_Dribbling.webm.480p.vp9.webm",
+              "type": "video/webm; codecs=\"vp9, opus\"",
+              "transcodekey": "480p.vp9.webm",
+              "width": 854,
+              "height": 480,
+              "bandwidth": 1120880
+            }
+          ]
+        }
+      ]
+    },
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basketball-Basic_Types_of_Dribbling.webm",
+    "downloaded_at": "2026-10-28",
+    "path": "eval/data/sources/dribbling.webm",
+    "sha256": "1a592d92d8359729b679067977b295526fa376a9b15f92d3d7be3671941aa023",
+    "bytes": 11992419
+  },
+  {
+    "id": "skills-basic",
+    "page": {
+      "pageid": 102483305,
+      "ns": 6,
+      "title": "File:Basketball (1).ogv",
+      "imagerepository": "local",
+      "videoinfo": [
+        {
+          "size": 1349750,
+          "width": 654,
+          "height": 368,
+          "duration": 6.865443932207887,
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Basketball_%281%29.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Basketball_(1).ogv",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=102483305",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2021-03-28 09:33:31",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Basketball (1)",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Basketball in Ghana|Images from Wiki Loves Africa 2021|2021 in sports in Ghana|Self-published work|Videos from Ghana|Images from Wiki Loves Africa 2021 to check|Uploaded via Campaign:wlafrica|Images from Wiki Loves Africa 2021 in Ghana|Videos from Wiki Loves Africa 2021",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "Learning basic basketball skills",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2021-03-28",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Azorbli\" title=\"User:Azorbli\">Azorbli</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          },
+          "derivatives": [
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Basketball_%281%29.ogv?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+              "type": "video/ogg; codecs=\"theora\"",
+              "width": 654,
+              "height": 368,
+              "bandwidth": 1572804
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e0/Basketball_%281%29.ogv/Basketball_%281%29.ogv.240p.vp9.webm",
+              "type": "video/webm; codecs=\"vp9, opus\"",
+              "transcodekey": "240p.vp9.webm",
+              "width": 426,
+              "height": 240,
+              "bandwidth": 311592
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e0/Basketball_%281%29.ogv/Basketball_%281%29.ogv.360p.mpeg4.mov",
+              "type": "video/quicktime; codecs=\"mp4v\"",
+              "transcodekey": "360p.mpeg4.mov",
+              "width": 640,
+              "height": 360,
+              "bandwidth": 1011864
+            }
+          ]
+        }
+      ]
+    },
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Basketball_%281%29.ogv",
+    "downloaded_at": "2026-10-28",
+    "path": "eval/data/sources/skills-basic.ogv",
+    "sha256": "ca6a6580616e2f0b3916c0ce6cd2a5a08807ee53708d8cd78af3eafe533a0ee9",
+    "bytes": 1349750
+  },
+  {
+    "id": "nabua",
+    "page": {
+      "pageid": 46242590,
+      "ns": 6,
+      "title": "File:Nabua street basketball WTR.webm",
+      "imagerepository": "local",
+      "videoinfo": [
+        {
+          "size": 33320097,
+          "width": 1280,
+          "height": 720,
+          "duration": 17.387,
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Nabua_street_basketball_WTR.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "descriptionurl": "https://commons.wikimedia.org/wiki/File:Nabua_street_basketball_WTR.webm",
+          "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=46242590",
+          "extmetadata": {
+            "DateTime": {
+              "value": "2016-01-09 08:55:52",
+              "source": "mediawiki-metadata",
+              "hidden": ""
+            },
+            "ObjectName": {
+              "value": "Nabua street basketball WTR",
+              "source": "mediawiki-metadata"
+            },
+            "CommonsMetadataExtension": {
+              "value": 1.2,
+              "source": "extension",
+              "hidden": ""
+            },
+            "Categories": {
+              "value": "Nabua, Camarines Sur|WebM videos|Self-published work|Video display resolution 1280 x 720|Team Piltik|Wikipedia Takes Rinconada videos",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "Assessments": {
+              "value": "",
+              "source": "commons-categories",
+              "hidden": ""
+            },
+            "ImageDescription": {
+              "value": "two boys playing home made basketball ring and board at the side of the road in sta barbara Nabua.",
+              "source": "commons-desc-page"
+            },
+            "DateTimeOriginal": {
+              "value": "2016-01-09",
+              "source": "commons-desc-page"
+            },
+            "Credit": {
+              "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+              "source": "commons-desc-page"
+            },
+            "Artist": {
+              "value": "<a href=\"//commons.wikimedia.org/wiki/User:Yawrei\" title=\"User:Yawrei\">Yawrei</a>",
+              "source": "commons-desc-page"
+            },
+            "LicenseShortName": {
+              "value": "CC BY-SA 4.0",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "UsageTerms": {
+              "value": "Creative Commons Attribution-Share Alike 4.0",
+              "source": "commons-desc-page"
+            },
+            "AttributionRequired": {
+              "value": "true",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "LicenseUrl": {
+              "value": "https://creativecommons.org/licenses/by-sa/4.0",
+              "source": "commons-desc-page"
+            },
+            "Copyrighted": {
+              "value": "True",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "Restrictions": {
+              "value": "",
+              "source": "commons-desc-page",
+              "hidden": ""
+            },
+            "License": {
+              "value": "cc-by-sa-4.0",
+              "source": "commons-templates",
+              "hidden": ""
+            }
+          },
+          "derivatives": [
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/3/35/Nabua_street_basketball_WTR.webm?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+              "type": "video/webm; codecs=\"vp8, vorbis\"",
+              "width": 1280,
+              "height": 720,
+              "bandwidth": 15331039
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/35/Nabua_street_basketball_WTR.webm/Nabua_street_basketball_WTR.webm.240p.vp9.webm",
+              "type": "video/webm; codecs=\"vp9, opus\"",
+              "transcodekey": "240p.vp9.webm",
+              "width": 426,
+              "height": 240,
+              "bandwidth": 404016
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/35/Nabua_street_basketball_WTR.webm/Nabua_street_basketball_WTR.webm.360p.mpeg4.mov",
+              "type": "video/quicktime; codecs=\"mp4v\"",
+              "transcodekey": "360p.mpeg4.mov",
+              "width": 640,
+              "height": 360,
+              "bandwidth": 1144200
+            },
+            {
+              "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/35/Nabua_street_basketball_WTR.webm/Nabua_street_basketball_WTR.webm.480p.vp9.webm",
+              "type": "video/webm; codecs=\"vp9, opus\"",
+              "transcodekey": "480p.vp9.webm",
+              "width": 854,
+              "height": 480,
+              "bandwidth": 1115920
+            }
+          ]
+        }
+      ]
+    },
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Nabua_street_basketball_WTR.webm",
+    "downloaded_at": "2026-10-28",
+    "path": "eval/data/sources/nabua.webm",
+    "sha256": "7a9ef1c75dd7e4eeb7d4c10b507b72b5ea830abe53c5ac5777f499066c1c5415",
+    "bytes": 33320097
+  }
+]

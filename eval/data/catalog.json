@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "dataset_id": "basketball-eval-v1",
+  "created_at": "2026-10-28",
+  "split_policy": "Three newly collected source groups are reserved; same filming group cannot cross splits. Existing prior experiments all stay development.",
+  "videos": [
+    {
+      "id": "indiana",
+      "title": "indiana",
+      "group_id": "indiana-20240224",
+      "split": "development",
+      "source_path": "examples/indiana/source/indiana-cc0.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Indiana_Legends_Versus_Indiana_Lyons,_20240224_183141_(165)_(165).webm",
+      "author": "Koavf / Justin Anthony Knapp",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "downloaded_at": "2026-10-27",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Indiana_Legends_Versus_Indiana_Lyons%2C_20240224_183141_%28165%29_%28165%29.webm",
+      "sha256": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845",
+      "bytes": 16425066,
+      "duration": 16.3,
+      "width": 1920,
+      "height": 1080,
+      "scene_type": "indoor_competition",
+      "filming_conditions": "看台手机拍摄，晃动、多人交叉，有号码球衣",
+      "redistributable": true,
+      "evaluation_ranges": [
+        [
+          0,
+          16.3
+        ]
+      ],
+      "holdout_policy": "Development source; previous experiments may have viewed this footage."
+    },
+    {
+      "id": "university",
+      "title": "File:Cancha de basquetbol universidad.webm",
+      "group_id": "university-20250514",
+      "split": "development",
+      "source_path": "examples/unnumbered/sources/university.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cancha_de_basquetbol_universidad.webm",
+      "author": "Alejons06",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "downloaded_at": "2026-10-27",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Cancha_de_basquetbol_universidad.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+      "bytes": 12452945,
+      "duration": 60.6,
+      "width": 478,
+      "height": 850,
+      "scene_type": "outdoor_university",
+      "filming_conditions": "竖屏手机，隔铁网，便装无号码，人物出入画",
+      "redistributable": true,
+      "evaluation_ranges": [
+        [
+          0,
+          60.6
+        ]
+      ],
+      "holdout_policy": "Development source; previous experiments may have viewed this footage."
+    },
+    {
+      "id": "moscow1",
+      "title": "File:Streetball in Moscow Bolshoy Spasoglinishchevsky lane.webm",
+      "group_id": "moscow-spasoglinishchevsky-20250721",
+      "split": "development",
+      "source_path": "examples/unnumbered/sources/moscow1.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Streetball_in_Moscow_Bolshoy_Spasoglinishchevsky_lane.webm",
+      "author": "Predatorsamsung",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "downloaded_at": "2026-10-27",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Streetball_in_Moscow_Bolshoy_Spasoglinishchevsky_lane.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "18e8ee2cd6313ca14123efb6c7dfcd8b29bacd6102727d0ab27d997925b4cbb3",
+      "bytes": 2318310,
+      "duration": 9.394,
+      "width": 478,
+      "height": 850,
+      "scene_type": "outdoor_community",
+      "filming_conditions": "竖屏晃动、隔网远景、车辆和立柱遮挡、邻近活动区域",
+      "redistributable": true,
+      "evaluation_ranges": [
+        [
+          0,
+          9.394
+        ]
+      ],
+      "holdout_policy": "Development source; previous experiments may have viewed this footage."
+    },
+    {
+      "id": "moscow2",
+      "title": "File:Streetball in Moscow Bolshoy Spasoglinishchevsky lane2.webm",
+      "group_id": "moscow-spasoglinishchevsky-20250721",
+      "split": "development",
+      "source_path": "examples/unnumbered/sources/moscow2.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Streetball_in_Moscow_Bolshoy_Spasoglinishchevsky_lane2.webm",
+      "author": "Predatorsamsung",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "downloaded_at": "2026-10-27",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Streetball_in_Moscow_Bolshoy_Spasoglinishchevsky_lane2.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "bc56bdd6e458dc2d4b26275297b44b565f8e26517daaa17b7c3f3610aac0e469",
+      "bytes": 4151028,
+      "duration": 17.637,
+      "width": 478,
+      "height": 850,
+      "scene_type": "outdoor_community",
+      "filming_conditions": "同一拍摄事件的第二段；移动镜头，杂乱服饰及相邻区域",
+      "redistributable": true,
+      "evaluation_ranges": [
+        [
+          0,
+          17.637
+        ]
+      ],
+      "holdout_policy": "Development source; previous experiments may have viewed this footage."
+    },
+    {
+      "id": "ljubljana",
+      "title": "File:Sportpark Ljubljana - Skateboard and Basketball Aerials by Yuneec Typhoon Q500 4k.webm",
+      "group_id": "ljubljana-sportpark-2016",
+      "split": "development",
+      "source_path": "examples/unnumbered/sources/ljubljana480.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sportpark_Ljubljana_-_Skateboard_and_Basketball_Aerials_by_Yuneec_Typhoon_Q500_4k.webm",
+      "author": "Detlef Stöcker",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "downloaded_at": "2026-10-27",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/30/Sportpark_Ljubljana_-_Skateboard_and_Basketball_Aerials_by_Yuneec_Typhoon_Q500_4k.webm/Sportpark_Ljubljana_-_Skateboard_and_Basketball_Aerials_by_Yuneec_Typhoon_Q500_4k.webm.480p.vp9.webm",
+      "sha256": "f3b68df29e1c9a64a80ab7980a92c3de823af9a222192d697af1f1ba787a51a7",
+      "bytes": 34938186,
+      "duration": 199.753,
+      "width": 854,
+      "height": 480,
+      "scene_type": "outdoor_park",
+      "filming_conditions": "航拍，连续视角变化，多个相邻场地、普通上衣与号码球衣混合",
+      "redistributable": true,
+      "evaluation_ranges": [
+        [
+          129,
+          189
+        ]
+      ],
+      "holdout_policy": "Development source; previous experiments may have viewed this footage."
+    },
+    {
+      "id": "ukraine",
+      "title": "File:(2) BASKETBALL GAME IN TOWN OF BAR REGION OF VINNYTSIA STATE OF UKRAINE VIDEO BY VIKTOR O LEDENYOV 20160507.ogv",
+      "group_id": "bar-ukraine-20160507",
+      "split": "development",
+      "source_path": "examples/unnumbered/sources/ukraine-upright.mp4",
+      "source_url": "https://commons.wikimedia.org/wiki/File:(2)_BASKETBALL_GAME_IN_TOWN_OF_BAR_REGION_OF_VINNYTSIA_STATE_OF_UKRAINE_VIDEO_BY_VIKTOR_O_LEDENYOV_20160507.ogv",
+      "author": "Viktor O. Ledenyov",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "downloaded_at": "2026-10-27",
+      "download_url": null,
+      "sha256": "f7efe3225fe142bdecca3e6a0b6db20bffb34a95d47462fa0fb82db0c233a4f4",
+      "bytes": 5404210,
+      "duration": 20.612978,
+      "width": 480,
+      "height": 720,
+      "scene_type": "outdoor_community",
+      "filming_conditions": "手机低分辨率，镜头移动、逆光，已转正90度，球衣号码状态未核实",
+      "redistributable": true,
+      "evaluation_ranges": [
+        [
+          0,
+          20.612978
+        ]
+      ],
+      "holdout_policy": "Development source; previous experiments may have viewed this footage.",
+      "transform": "Clockwise 90 degree rotation, no audio, H264 CRF18; CC BY-SA 4.0 retained",
+      "raw_source_path": "examples/unnumbered/sources/ukraine.ogv",
+      "raw_source_sha256": "1c28d65fd8d48bd68f683794c2b1edf8dd6c2cccfa359281447806c32c2ea98b"
+    },
+    {
+      "id": "zhijiang",
+      "title": "File:Ambassador Nicholas Burns plays basketball with Chinese students in Zhijiang Dong Autonomous County.webm",
+      "group_id": "zhijiang-source",
+      "split": "development",
+      "source_path": "eval/data/sources/zhijiang.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm",
+      "author": "Ambassador of the United States of America to the People's Republic of China",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm",
+      "downloaded_at": "2026-10-28",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Ambassador_Nicholas_Burns_plays_basketball_with_Chinese_students_in_Zhijiang_Dong_Autonomous_County.webm",
+      "sha256": "e2ffca2d0dac0f8d974fe005292b5e31ffebc0949288e3b7231039fccaeebe92",
+      "bytes": 1577445,
+      "duration": 6.039,
+      "width": 1100,
+      "height": 720,
+      "scene_type": "outdoor_school",
+      "filming_conditions": "户外学校球场，手机短片，便装，公众活动背景，约6秒",
+      "redistributable": true,
+      "evaluation_ranges": [
+        [
+          0,
+          6.039
+        ]
+      ],
+      "holdout_policy": "Development source; previous experiments may have viewed this footage."
+    },
+    {
+      "id": "dribbling",
+      "title": "File:Basketball-Basic Types of Dribbling.webm",
+      "group_id": "dribbling-source",
+      "split": "holdout",
+      "source_path": "eval/data/sources/dribbling.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Basketball-Basic_Types_of_Dribbling.webm",
+      "author": "Mart570",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "downloaded_at": "2026-10-28",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Basketball-Basic_Types_of_Dribbling.webm",
+      "sha256": "1a592d92d8359729b679067977b295526fa376a9b15f92d3d7be3671941aa023",
+      "bytes": 11992419,
+      "duration": 58.658,
+      "width": 960,
+      "height": 540,
+      "scene_type": "indoor_practice",
+      "filming_conditions": "室内低机位近距离运球示范；作为非进球与误报对照，不是完整比赛",
+      "redistributable": true,
+      "evaluation_ranges": [
+        [
+          0,
+          58.658
+        ]
+      ],
+      "holdout_policy": "Reserved for explicit final evaluation; draft proposal generation is allowed, labels remain unconfirmed."
+    },
+    {
+      "id": "skills-basic",
+      "title": "File:Basketball (1).ogv",
+      "group_id": "skills-basic-source",
+      "split": "holdout",
+      "source_path": "eval/data/sources/skills-basic.ogv",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Basketball_(1).ogv",
+      "author": "Azorbli",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "downloaded_at": "2026-10-28",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Basketball_%281%29.ogv",
+      "sha256": "ca6a6580616e2f0b3916c0ce6cd2a5a08807ee53708d8cd78af3eafe533a0ee9",
+      "bytes": 1349750,
+      "duration": 6.865444,
+      "width": 640,
+      "height": 368,
+      "scene_type": "outdoor_community",
+      "filming_conditions": "加纳土质场地，低清晃动，简单篮架、杂色便装、练习回合",
+      "redistributable": true,
+      "evaluation_ranges": [
+        [
+          0,
+          6.865444
+        ]
+      ],
+      "holdout_policy": "Reserved for explicit final evaluation; draft proposal generation is allowed, labels remain unconfirmed."
+    },
+    {
+      "id": "nabua",
+      "title": "File:Nabua street basketball WTR.webm",
+      "group_id": "nabua-source",
+      "split": "holdout",
+      "source_path": "eval/data/sources/nabua.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nabua_street_basketball_WTR.webm",
+      "author": "Yawrei",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "downloaded_at": "2026-10-28",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Nabua_street_basketball_WTR.webm",
+      "sha256": "7a9ef1c75dd7e4eeb7d4c10b507b72b5ea830abe53c5ac5777f499066c1c5415",
+      "bytes": 33320097,
+      "duration": 17.387,
+      "width": 1280,
+      "height": 720,
+      "scene_type": "outdoor_roadside",
+      "filming_conditions": "菲律宾路边自制篮板篮筐，地面不平、强烈明暗对比、便装，无可读号码",
+      "redistributable": true,
+      "evaluation_ranges": [
+        [
+          0,
+          17.387
+        ]
+      ],
+      "holdout_policy": "Reserved for explicit final evaluation; draft proposal generation is allowed, labels remain unconfirmed."
+    }
+  ]
+}
