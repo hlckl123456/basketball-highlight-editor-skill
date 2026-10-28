@@ -101,7 +101,7 @@ def score_video(doc, prediction, role='visible', tolerance=1.0):
     identity_pairs = match_times(available, detected, tolerance)
     identity = {available[i]['id']: detected[j] for i, j in identity_pairs}
     for e in confirmed:
-        if e.get('legacy_candidate_id'):
+        if (e.get('confirmation') or {}).get('source') == 'legacy_indiana_user_review':
             matches_id = [p for p in detected if p.get('candidate_id') == e['legacy_candidate_id']]
             require(len(matches_id) <= 1, 'AMBIGUOUS_LEGACY_CANDIDATE_PREDICTION')
             if matches_id:

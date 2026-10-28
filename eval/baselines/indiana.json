@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "dataset_id": "basketball-eval-v1",
+  "catalog_sha256": "fbc52e6435c1722b016cd9f013fe5bc851bdffe39ad2885a29bdc5d9a93f6b3f",
+  "confirmed_registry_sha256": "1154351e7a3be885acd147e6fe129c4f56332687ede8eb45b819937fcc977b44",
+  "tolerance_seconds": 1.0,
+  "player_role": "visible",
+  "scope": "Confirmed facts only; FP requires explicitly reviewed interval or confirmed negative. Unknown fields are excluded.",
+  "holdout_evaluated": false,
+  "input_hashes": {
+    "indiana": {
+      "annotations": "eb41018020936f1f9be57d923db04855c2ac0bd1f5de4a65266a01500b065009",
+      "predictions": "ca3b9ce61c4846390fa95f76df3bb30365fcae678b8bf5306af35d2c4519fa71",
+      "source": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845"
+    }
+  },
+  "splits": {
+    "development": {
+      "status": "scored",
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "confirmed_positive_events": 0,
+        "confirmed_negative_events": 0,
+        "ignored_unreviewed_predictions": 4,
+        "ignored_unknown_predictions": 0,
+        "high_total_predictions": 2,
+        "high_evaluable_predictions": 2,
+        "high_correct": 2,
+        "target_events": 2,
+        "target_retrieved": 2,
+        "target_high": 2
+      },
+      "metrics": {
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "high_assignment_accuracy": 1.0,
+        "target_event_retrieval_high_or_uncertain": 1.0,
+        "high_confidence_coverage": 1.0,
+        "unreviewed_high_predictions": 0
+      },
+      "reviewed_seconds": 0.0,
+      "videos": [
+        {
+          "video_id": "indiana",
+          "counts": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "confirmed_positive_events": 0,
+            "confirmed_negative_events": 0,
+            "ignored_unreviewed_predictions": 4,
+            "ignored_unknown_predictions": 0,
+            "high_total_predictions": 2,
+            "high_evaluable_predictions": 2,
+            "high_correct": 2,
+            "target_events": 2,
+            "target_retrieved": 2,
+            "target_high": 2
+          },
+          "detection_details": [
+            {
+              "prediction_id": "c0001",
+              "status": "ignored_unreviewed"
+            },
+            {
+              "prediction_id": "c0002",
+              "status": "ignored_unreviewed"
+            },
+            {
+              "prediction_id": "c0003",
+              "status": "ignored_unreviewed"
+            },
+            {
+              "prediction_id": "c0004",
+              "status": "ignored_unreviewed"
+            }
+          ],
+          "identity_details": [
+            {
+              "event_id": "c0001",
+              "target_player_id": "p1",
+              "actual_target_presence_or_role": true,
+              "predicted_group": "high"
+            },
+            {
+              "event_id": "c0003",
+              "target_player_id": "p1",
+              "actual_target_presence_or_role": true,
+              "predicted_group": "high"
+            }
+          ],
+          "confirmed_events": 2,
+          "draft_events_ignored": 0,
+          "reviewed_seconds": 0,
+          "metrics": {
+            "event_precision": null,
+            "event_recall": null,
+            "event_f1": null,
+            "high_assignment_accuracy": 1.0,
+            "target_event_retrieval_high_or_uncertain": 1.0,
+            "high_confidence_coverage": 1.0,
+            "unreviewed_high_predictions": 0
+          }
+        }
+      ],
+      "event_metric_limitation": "No human-confirmed made-shot events; recall/F1 cannot be estimated."
+    },
+    "holdout": {
+      "status": "withheld",
+      "reason": "Use --include-holdout explicitly."
+    }
+  }
+}

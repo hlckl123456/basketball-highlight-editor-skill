@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "document_type": "basketball_annotations",
+  "dataset_id": "basketball-eval-v1",
+  "video_id": "indiana",
+  "video_sha256": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845",
+  "duration": 16.3,
+  "target_player_ids": [
+    "p1"
+  ],
+  "players": [
+    {
+      "id": "p1",
+      "appearance_description": "既有用户选择的紫衣2号，白色短袖、裸膝、浅色鞋"
+    }
+  ],
+  "events": [
+    {
+      "id": "c0001",
+      "time": 2.63,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": [
+        "p1"
+      ],
+      "visibility_complete": false,
+      "status": "confirmed",
+      "deleted": false,
+      "confirmed_fields": [
+        "visible_player_ids"
+      ],
+      "legacy_candidate_id": "c0001",
+      "clip_start": 0.0,
+      "clip_end": 4.63,
+      "confirmation": {
+        "source": "legacy_indiana_user_review",
+        "reviewer_kind": "user",
+        "reviewer": "本聊天用户",
+        "confirmed_at": "2026-10-28T04:18:29.460999+00:00",
+        "evidence_path": "examples/indiana/project/review-decisions.json",
+        "evidence_sha256": "91fae33366a23cc1bece17c40732002a93b860411747f5763557d23a3442de39",
+        "actual_authorization_reference": "本聊天用户实际回复：确认参考球员；保留 c0001、c0003，删除 c0002、c0004"
+      },
+      "notes": "历史人工确认仅支持此片段包含p1；事件时间、进球和其他球员角色尚未人工核实"
+    },
+    {
+      "id": "c0003",
+      "time": 11.57,
+      "is_score": null,
+      "scorer_id": null,
+      "ball_handler_id": null,
+      "visible_player_ids": [
+        "p1"
+      ],
+      "visibility_complete": false,
+      "status": "confirmed",
+      "deleted": false,
+      "confirmed_fields": [
+        "visible_player_ids"
+      ],
+      "legacy_candidate_id": "c0003",
+      "clip_start": 8.57,
+      "clip_end": 13.57,
+      "confirmation": {
+        "source": "legacy_indiana_user_review",
+        "reviewer_kind": "user",
+        "reviewer": "本聊天用户",
+        "confirmed_at": "2026-10-28T04:18:29.460999+00:00",
+        "evidence_path": "examples/indiana/project/review-decisions.json",
+        "evidence_sha256": "91fae33366a23cc1bece17c40732002a93b860411747f5763557d23a3442de39",
+        "actual_authorization_reference": "本聊天用户实际回复：确认参考球员；保留 c0001、c0003，删除 c0002、c0004"
+      },
+      "notes": "历史人工确认仅支持此片段包含p1；事件时间、进球和其他球员角色尚未人工核实"
+    }
+  ],
+  "reviewed_ranges": [],
+  "legacy_scope": "Clip-level target presence only. The user did NOT confirm shot times or made baskets."
+}

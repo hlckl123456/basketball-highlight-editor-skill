@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "dataset_id": "basketball-eval-v1",
+  "directory": "eval/annotations/confirmed",
+  "files": [
+    {
+      "path": "eval/annotations/confirmed/indiana.json",
+      "sha256": "eb41018020936f1f9be57d923db04855c2ac0bd1f5de4a65266a01500b065009",
+      "video_id": "indiana",
+      "video_sha256": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845",
+      "origin": "preexisting_user_confirmation; no new review-page confirmation fabricated"
+    }
+  ]
+}

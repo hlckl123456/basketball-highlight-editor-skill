@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/basketball-eval/annotations-v1",
+  "title": "Basketball annotations v1",
+  "type": "object",
+  "required": ["schema_version", "document_type", "dataset_id", "video_id", "video_sha256", "duration", "players", "events", "reviewed_ranges"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "document_type": {"const": "basketball_annotations"},
+    "dataset_id": {"const": "basketball-eval-v1"},
+    "video_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"},
+    "video_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "duration": {"type": "number", "exclusiveMinimum": 0},
+    "target_player_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "players": {"type": "array", "items": {"type": "object", "required": ["id", "appearance_description"], "properties": {"id": {"type": "string"}, "appearance_description": {"type": "string", "minLength": 1}}}},
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "time", "is_score", "scorer_id", "ball_handler_id", "visible_player_ids", "visibility_complete", "status", "confirmed_fields", "confirmation"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"},
+          "time": {"type": "number", "minimum": 0},
+          "is_score": {"type": ["boolean", "null"]},
+          "scorer_id": {"type": ["string", "null"]},
+          "ball_handler_id": {"type": ["string", "null"]},
+          "visible_player_ids": {"type": ["array", "null"], "items": {"type": "string"}, "uniqueItems": true},
+          "visibility_complete": {"type": "boolean"},
+          "deleted": {"type": "boolean"},
+          "status": {"enum": ["draft", "confirmed"]},
+          "confirmed_fields": {"type": "array", "items": {"enum": ["time", "is_score", "scorer_id", "ball_handler_id", "visible_player_ids"]}, "uniqueItems": true},
+          "confirmation": {"type": ["object", "null"]}
+        },
+        "allOf": [
+          {"if": {"properties": {"status": {"const": "draft"}}}, "then": {"properties": {"confirmed_fields": {"maxItems": 0}, "confirmation": {"type": "null"}}}},
+          {"if": {"properties": {"status": {"const": "confirmed"}}}, "then": {"properties": {"confirmed_fields": {"minItems": 1}, "confirmation": {"type": "object", "required": ["source", "reviewer_kind", "reviewer", "confirmed_at"], "properties": {"source": {"enum": ["review_page", "legacy_indiana_user_review"]}, "reviewer_kind": {"const": "user"}, "confirmed_at": {"type": "string", "format": "date-time"}}}}}}
+        ]
+      }
+    },
+    "reviewed_ranges": {"type": "array", "items": {"type": "object", "required": ["start", "end", "status"], "properties": {"start": {"type": "number", "minimum": 0}, "end": {"type": "number", "exclusiveMinimum": 0}, "status": {"enum": ["draft", "confirmed"]}}}}
+  },
+  "$comment": "eval/schema.py additionally enforces IDs, source hashes, bounds, confirmation receipts, and the narrowly scoped preexisting Indiana exception."
+}
