@@ -64,5 +64,22 @@
   "predicted_events": 4,
   "review_windows": 4,
   "all_annotations_are_draft": true,
-  "holdout_not_scored": false
+  "holdout_not_scored": false,
+  "run_input_artifacts": {
+    "hashes": {
+      "scripts/scan_video.py": "398b3efdfd09efb121b29e05418d7a0ddef153d755bc5338e517de2c1b523bcf",
+      "scripts/generate_candidates.py": "b2a33beb5a093a0e69cc4c8725b0af9b33fc36b9b7561b3a821582cf28ae1720",
+      "models/bball_model.static.onnx": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de"
+    },
+    "source_sha256": "a0efebc2a31a793b70cb80e8c7fcff610658df6818f734d2e8ff2af0b0edb845",
+    "sample_fps": 15,
+    "roi": [
+      0,
+      0,
+      700,
+      700
+    ],
+    "device": "cpu",
+    "note": "Indiana uses the immutable archived 15-fps candidates. Other scans use this unchanged existing read-only BHE runtime. Weights are not copied."
+  }
 }

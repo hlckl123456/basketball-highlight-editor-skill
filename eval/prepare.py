@@ -103,6 +103,7 @@ def prepare(v, runtime, refresh=False):
                             'assigned_player_id': 'p1' if group == 'high' else None}]
         prediction_events.append({'id': c['id'], 'candidate_id': c['id'], 'kind': 'detected_event',
                                   'time': c['event_time'], 'player_assignments': assignments})
+    attempted_detector = p.get('detector')
     fallback = not detected
     if fallback:
         # Failed/zero detections are retained as zero predictions, not relabeled
@@ -122,7 +123,7 @@ def prepare(v, runtime, refresh=False):
     _, p = h.load(work)
     dest.mkdir(parents=True, exist_ok=True)
     write(dest/'processing.json', {'video_id': vid, 'source_sha256': v['sha256'],
-          'detector': p['detector'], 'detector_failure': failure,
+          'detector': p['detector'], 'attempted_detector': attempted_detector, 'detector_failure': failure,
           'feature_failure': feature_failure, 'feature_extractor': p.get('feature_extractor'),
           'predicted_events': len(prediction_events), 'review_windows': len(p['candidates']),
           'all_annotations_are_draft': True, 'holdout_not_scored': v['split'] == 'holdout'})
