@@ -1,0 +1,42 @@
+{
+  "state": "completed",
+  "scoring_passes": 1,
+  "holdout_video_ids": [
+    "dribbling",
+    "nabua",
+    "skills-basic"
+  ],
+  "primary_role": "scorer",
+  "secondary_roles": {
+    "handler": {
+      "status": "not_evaluable_no_confirmed_facts",
+      "metrics": {
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "high_assignment_accuracy": null,
+        "target_event_retrieval_high_or_uncertain": null,
+        "high_confidence_coverage": null,
+        "unreviewed_high_predictions": 0
+      }
+    },
+    "visible": {
+      "status": "not_evaluable_no_confirmed_facts",
+      "metrics": {
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "high_assignment_accuracy": null,
+        "target_event_retrieval_high_or_uncertain": null,
+        "high_confidence_coverage": null,
+        "unreviewed_high_predictions": 0
+      }
+    }
+  },
+  "new_policy_holdout_predictions": 0,
+  "reason": "No confirmed held-out event windows, identities or reference samples; no model accuracy can be estimated",
+  "protected_files_unchanged": 687,
+  "frozen_sha256": "60bade1ccf08c679d8ab667f0a85eba67b9087f08c7b72b7f9946488aec3c867",
+  "score_output_sha256": "5c375f667a95ed784eb4da2b2ee8f275e56f3ede508022a28f28bbd21bbe3cc8",
+  "source_of_secondary_metrics": "Original ratios(empty_counts()), not additional held-out evaluations"
+}

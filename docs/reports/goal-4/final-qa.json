@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "unique_unit_tests": 163,
+  "new_attribution_tests": 52,
+  "full_evaluation_tests": 50,
+  "deferred_real_corpus_test_included_after_freeze": true,
+  "evaluation_log_sha256": "cc427ae0508c7d39410b43f66b6ba3e2653631b80d769f15e034b17bed55bb9e",
+  "full_release_verification": "passed; default verifier, no development-only omission",
+  "all_algorithm_code_unchanged_since_freeze": true,
+  "protected_files_unchanged": 687,
+  "main_unchanged": true,
+  "held_out_scoring_passes": 1,
+  "frozen_sha256": "60bade1ccf08c679d8ab667f0a85eba67b9087f08c7b72b7f9946488aec3c867",
+  "matrix_cases": 65,
+  "real_person_format_cases": 61,
+  "review_form": "passed",
+  "replay": "passed, two versions in isolated test_operator output",
+  "model_weight_diff": "none",
+  "original_test_assertions_relaxed": false,
+  "pushes": 0
+}

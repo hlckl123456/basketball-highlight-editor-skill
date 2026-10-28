@@ -1,0 +1,55 @@
+test_all_automatic_real_annotations_are_draft (test_corpus.CorpusSafety.test_all_automatic_real_annotations_are_draft) ... ok
+test_only_real_user_or_preserved_legacy_facts_can_be_scored (test_corpus.CorpusSafety.test_only_real_user_or_preserved_legacy_facts_can_be_scored) ... ok
+test_original_user_project_is_byte_for_byte_unchanged (test_corpus.CorpusSafety.test_original_user_project_is_byte_for_byte_unchanged) ... ok
+test_catalog_changes_require_rebuild_and_review (test_locking_import.LocksAndImports.test_catalog_changes_require_rebuild_and_review) ... ok
+test_changed_playback_media_is_rejected_before_import (test_locking_import.LocksAndImports.test_changed_playback_media_is_rejected_before_import) ... ok
+test_changed_source_video_is_rejected (test_locking_import.LocksAndImports.test_changed_source_video_is_rejected) ... ok
+test_cli_nonzero_on_tampered_confirmed_file (test_locking_import.LocksAndImports.test_cli_nonzero_on_tampered_confirmed_file) ... ok
+test_export_payload_edit_breaks_integrity (test_locking_import.LocksAndImports.test_export_payload_edit_breaks_integrity) ... ok
+test_holdout_hashes_still_lock_when_metrics_withheld (test_locking_import.LocksAndImports.test_holdout_hashes_still_lock_when_metrics_withheld) ... ok
+test_import_copies_only_explicit_confirmations_and_relocks (test_locking_import.LocksAndImports.test_import_copies_only_explicit_confirmations_and_relocks) ... ok
+test_import_refuses_to_relock_already_tampered_truth (test_locking_import.LocksAndImports.test_import_refuses_to_relock_already_tampered_truth) ... ok
+test_invalid_second_video_does_not_partially_write_first (test_locking_import.LocksAndImports.test_invalid_second_video_does_not_partially_write_first) ... ok
+test_lock_path_cannot_escape_root (test_locking_import.LocksAndImports.test_lock_path_cannot_escape_root) ... ok
+test_missing_and_unlocked_confirmed_files_are_rejected (test_locking_import.LocksAndImports.test_missing_and_unlocked_confirmed_files_are_rejected) ... ok
+test_semantic_tampering_is_rejected (test_locking_import.LocksAndImports.test_semantic_tampering_is_rejected) ... ok
+test_synthetic_browser_exports_cannot_enter_real_dataset (test_locking_import.LocksAndImports.test_synthetic_browser_exports_cannot_enter_real_dataset) ... ok
+test_whitespace_tampering_is_rejected (test_locking_import.LocksAndImports.test_whitespace_tampering_is_rejected) ... ok
+test_complete_fixture_is_valid (test_schema.AnnotationSchema.test_complete_fixture_is_valid) ... ok
+test_confirmation_requires_time_and_timezone (test_schema.AnnotationSchema.test_confirmation_requires_time_and_timezone) ... ok
+test_confirmed_requires_review_page_source (test_schema.AnnotationSchema.test_confirmed_requires_review_page_source) ... ok
+test_coverage_window_cannot_enter_detector_predictions (test_schema.AnnotationSchema.test_coverage_window_cannot_enter_detector_predictions) ... ok
+test_deleted_false_positive_stays_negative (test_schema.AnnotationSchema.test_deleted_false_positive_stays_negative) ... ok
+test_draft_has_no_human_receipt (test_schema.AnnotationSchema.test_draft_has_no_human_receipt) ... ok
+test_event_bounds_and_nonfinite_time (test_schema.AnnotationSchema.test_event_bounds_and_nonfinite_time) ... ok
+test_generator_can_only_write_drafts (test_schema.AnnotationSchema.test_generator_can_only_write_drafts) ... ok
+test_identical_source_cannot_leak_across_splits (test_schema.AnnotationSchema.test_identical_source_cannot_leak_across_splits) ... ok
+test_invalid_status_and_score_types (test_schema.AnnotationSchema.test_invalid_status_and_score_types) ... ok
+test_malformed_ids_actors_and_lists_are_rejected_cleanly (test_schema.AnnotationSchema.test_malformed_ids_actors_and_lists_are_rejected_cleanly) ... ok
+test_missing_required_event_field_is_rejected (test_schema.AnnotationSchema.test_missing_required_event_field_is_rejected) ... ok
+test_same_filming_group_cannot_cross_splits (test_schema.AnnotationSchema.test_same_filming_group_cannot_cross_splits) ... ok
+test_source_hash_and_targets_are_validated (test_schema.AnnotationSchema.test_source_hash_and_targets_are_validated) ... ok
+test_test_operator_cannot_become_human_truth (test_schema.AnnotationSchema.test_test_operator_cannot_become_human_truth) ... ok
+test_unknown_actor_and_duplicate_event_are_rejected (test_schema.AnnotationSchema.test_unknown_actor_and_duplicate_event_are_rejected) ... ok
+test_unknown_visibility_is_not_an_empty_confirmed_list (test_schema.AnnotationSchema.test_unknown_visibility_is_not_an_empty_confirmed_list) ... ok
+test_draft_interval_does_not_enable_false_positive_scoring (test_score.Scoring.test_draft_interval_does_not_enable_false_positive_scoring) ... ok
+test_drafts_are_ignored (test_score.Scoring.test_drafts_are_ignored) ... ok
+test_duplicates_cannot_match_twice (test_score.Scoring.test_duplicates_cannot_match_twice) ... ok
+test_explicit_negative_can_score_without_full_interval (test_score.Scoring.test_explicit_negative_can_score_without_full_interval) ... ok
+test_global_matching_avoids_greedy_undercount (test_score.Scoring.test_global_matching_avoids_greedy_undercount) ... ok
+test_holdout_is_separate_and_requires_explicit_flag (test_score.Scoring.test_holdout_is_separate_and_requires_explicit_flag) ... ok
+test_missed_event_is_a_false_negative (test_score.Scoring.test_missed_event_is_a_false_negative) ... ok
+test_one_second_tolerance_is_inclusive (test_score.Scoring.test_one_second_tolerance_is_inclusive) ... ok
+test_partial_visibility_does_not_imply_other_players_absent (test_score.Scoring.test_partial_visibility_does_not_imply_other_players_absent) ... ok
+test_real_indiana_baseline_does_not_invent_made_shots (test_score.Scoring.test_real_indiana_baseline_does_not_invent_made_shots) ... ok
+test_scoring_does_not_mutate_labels_or_locks (test_score.Scoring.test_scoring_does_not_mutate_labels_or_locks) ... ok
+test_three_player_metrics_have_separate_denominators (test_score.Scoring.test_three_player_metrics_have_separate_denominators) ... ok
+test_unknown_shot_truth_is_never_assumed_negative (test_score.Scoring.test_unknown_shot_truth_is_never_assumed_negative) ... ok
+test_unreviewed_predictions_are_not_false_positives (test_score.Scoring.test_unreviewed_predictions_are_not_false_positives) ... ok
+test_visible_player_is_not_assumed_to_be_scorer (test_score.Scoring.test_visible_player_is_not_assumed_to_be_scorer) ... ok
+test_wrong_assigned_identity_fails_high_accuracy_and_coverage (test_score.Scoring.test_wrong_assigned_identity_fails_high_accuracy_and_coverage) ... ok
+
+----------------------------------------------------------------------
+Ran 50 tests in 0.145s
+
+OK

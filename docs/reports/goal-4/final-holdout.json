@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "dataset_id": "basketball-eval-v1",
+  "catalog_sha256": "c59f558135c51a16d9ae3ad21544b164a9e0b565eb981930210a9b9b0b5ddd6f",
+  "confirmed_registry_sha256": "1154351e7a3be885acd147e6fe129c4f56332687ede8eb45b819937fcc977b44",
+  "tolerance_seconds": 1.0,
+  "player_role": "scorer",
+  "scope": "Confirmed facts only; FP requires explicitly reviewed interval or confirmed negative. Unknown fields are excluded.",
+  "holdout_evaluated": true,
+  "input_hashes": {},
+  "splits": {
+    "development": {
+      "status": "no_confirmed_annotations",
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "confirmed_positive_events": 0,
+        "confirmed_negative_events": 0,
+        "ignored_unreviewed_predictions": 0,
+        "ignored_unknown_predictions": 0,
+        "high_total_predictions": 0,
+        "high_evaluable_predictions": 0,
+        "high_correct": 0,
+        "target_events": 0,
+        "target_retrieved": 0,
+        "target_high": 0
+      },
+      "metrics": {
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "high_assignment_accuracy": null,
+        "target_event_retrieval_high_or_uncertain": null,
+        "high_confidence_coverage": null,
+        "unreviewed_high_predictions": 0
+      },
+      "reviewed_seconds": 0.0,
+      "videos": [],
+      "event_metric_limitation": "No human-confirmed made-shot events; recall/F1 cannot be estimated."
+    },
+    "holdout": {
+      "status": "no_confirmed_annotations",
+      "counts": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "confirmed_positive_events": 0,
+        "confirmed_negative_events": 0,
+        "ignored_unreviewed_predictions": 0,
+        "ignored_unknown_predictions": 0,
+        "high_total_predictions": 0,
+        "high_evaluable_predictions": 0,
+        "high_correct": 0,
+        "target_events": 0,
+        "target_retrieved": 0,
+        "target_high": 0
+      },
+      "metrics": {
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "high_assignment_accuracy": null,
+        "target_event_retrieval_high_or_uncertain": null,
+        "high_confidence_coverage": null,
+        "unreviewed_high_predictions": 0
+      },
+      "reviewed_seconds": 0.0,
+      "videos": [],
+      "event_metric_limitation": "No human-confirmed made-shot events; recall/F1 cannot be estimated."
+    }
+  }
+}
