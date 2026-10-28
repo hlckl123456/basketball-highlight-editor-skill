@@ -1,0 +1,11 @@
+{
+  "status": "draft",
+  "camera": "moving/edited supplementary stress footage, not fixed camera",
+  "target": "target",
+  "windows": 8,
+  "legacy_high": [],
+  "texture_high": [],
+  "texture_segments": [],
+  "accuracy": null,
+  "human_confirmed_ground_truth": false
+}

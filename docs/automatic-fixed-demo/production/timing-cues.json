@@ -1,0 +1,163 @@
+{
+  "voice": "macOS Tingting / AI narration / not the user voice",
+  "duration": 52.987,
+  "scenes": [
+    {
+      "id": "reference",
+      "label": "固定机位，先选一张参考图",
+      "text": "这次改用固定机位的校园录像。没有球衣号码，我先选白色上衣、深色长裤这位作参考。",
+      "start": 0,
+      "duration": 8.94,
+      "cues": [
+        "reference-00",
+        "reference-01"
+      ]
+    },
+    {
+      "id": "match",
+      "label": "后段由程序重新认出",
+      "text": "后面让程序自己找人。绿框来自实际匹配结果，每秒检查五帧；不确定的时刻就不画框。人物离开又回来，也重新比较服饰。",
+      "start": 8.94,
+      "duration": 12.387,
+      "cues": [
+        "match-00",
+        "match-01",
+        "match-02"
+      ]
+    },
+    {
+      "id": "guard",
+      "label": "上衣不一致，保留不确定",
+      "text": "把参考换成深蓝上衣，后面的白衣就不能算成他。衣服不一致时，程序保留不确定，不勉强给高置信。",
+      "start": 21.327,
+      "duration": 10.417,
+      "cues": [
+        "guard-00",
+        "guard-01"
+      ]
+    },
+    {
+      "id": "result",
+      "label": "让程序导出独立草稿",
+      "text": "程序自动选出两个远离参考的相邻窗口，接成六秒草稿。保留编号由代码算出，没有手工挑片段。",
+      "start": 31.744,
+      "duration": 10.154,
+      "cues": [
+        "result-00",
+        "result-01"
+      ]
+    },
+    {
+      "id": "compare",
+      "label": "保留实际结果，也保留失败",
+      "text": "只给一张目标参考，同一套窗口从零个变成两个高置信。低光移动那段仍未通过，原始失败和限制都保留在首页。",
+      "start": 41.898,
+      "duration": 11.089,
+      "cues": [
+        "compare-00",
+        "compare-01"
+      ]
+    }
+  ],
+  "cues": [
+    {
+      "id": "reference-00",
+      "scene": "reference",
+      "text": "这次改用固定机位的校园录像。",
+      "audio": "work/automatic-fixed-demo/cues/reference-00.aiff",
+      "start": 0,
+      "speech_duration": 2.50907,
+      "duration": 2.709
+    },
+    {
+      "id": "reference-01",
+      "scene": "reference",
+      "text": "没有球衣号码，我先选白色上衣、深色长裤这位作参考。",
+      "audio": "work/automatic-fixed-demo/cues/reference-01.aiff",
+      "start": 2.709,
+      "speech_duration": 5.230658,
+      "duration": 6.231
+    },
+    {
+      "id": "match-00",
+      "scene": "match",
+      "text": "后面让程序自己找人。",
+      "audio": "work/automatic-fixed-demo/cues/match-00.aiff",
+      "start": 8.94,
+      "speech_duration": 1.955057,
+      "duration": 2.155
+    },
+    {
+      "id": "match-01",
+      "scene": "match",
+      "text": "绿框来自实际匹配结果，每秒检查五帧；不确定的时刻就不画框。",
+      "audio": "work/automatic-fixed-demo/cues/match-01.aiff",
+      "start": 11.095,
+      "speech_duration": 5.913878,
+      "duration": 6.114
+    },
+    {
+      "id": "match-02",
+      "scene": "match",
+      "text": "人物离开又回来，也重新比较服饰。",
+      "audio": "work/automatic-fixed-demo/cues/match-02.aiff",
+      "start": 17.209,
+      "speech_duration": 3.117868,
+      "duration": 4.118
+    },
+    {
+      "id": "guard-00",
+      "scene": "guard",
+      "text": "把参考换成深蓝上衣，后面的白衣就不能算成他。",
+      "audio": "work/automatic-fixed-demo/cues/guard-00.aiff",
+      "start": 21.327,
+      "speech_duration": 4.474059,
+      "duration": 4.674
+    },
+    {
+      "id": "guard-01",
+      "scene": "guard",
+      "text": "衣服不一致时，程序保留不确定，不勉强给高置信。",
+      "audio": "work/automatic-fixed-demo/cues/guard-01.aiff",
+      "start": 26.001,
+      "speech_duration": 4.742676,
+      "duration": 5.743
+    },
+    {
+      "id": "result-00",
+      "scene": "result",
+      "text": "程序自动选出两个远离参考的相邻窗口，接成六秒草稿。",
+      "audio": "work/automatic-fixed-demo/cues/result-00.aiff",
+      "start": 31.744,
+      "speech_duration": 5.199728,
+      "duration": 5.4
+    },
+    {
+      "id": "result-01",
+      "scene": "result",
+      "text": "保留编号由代码算出，没有手工挑片段。",
+      "audio": "work/automatic-fixed-demo/cues/result-01.aiff",
+      "start": 37.144,
+      "speech_duration": 3.75424,
+      "duration": 4.754
+    },
+    {
+      "id": "compare-00",
+      "scene": "compare",
+      "text": "只给一张目标参考，同一套窗口从零个变成两个高置信。",
+      "audio": "work/automatic-fixed-demo/cues/compare-00.aiff",
+      "start": 41.898,
+      "speech_duration": 5.050748,
+      "duration": 5.251
+    },
+    {
+      "id": "compare-01",
+      "scene": "compare",
+      "text": "低光移动那段仍未通过，原始失败和限制都保留在首页。",
+      "audio": "work/automatic-fixed-demo/cues/compare-01.aiff",
+      "start": 47.149,
+      "speech_duration": 4.837823,
+      "duration": 5.838
+    }
+  ]
+}

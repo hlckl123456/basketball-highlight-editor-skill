@@ -1,0 +1,25 @@
+{
+  "kind": "saved_project_samples",
+  "people": [
+    {
+      "id": "white",
+      "description": "白色 T 恤、深色长裤、浅色鞋，无球衣号码",
+      "samples": [
+        {
+          "time": 13.4,
+          "box": [
+            327,
+            413,
+            350,
+            481
+          ],
+          "sample_id": "s001",
+          "reviewer_kind": "test_operator",
+          "appearance": "default",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ]
+    }
+  ]
+}

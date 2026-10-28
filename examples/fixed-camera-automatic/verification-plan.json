@@ -1,0 +1,19 @@
+{
+  "status": "draft",
+  "primary": "fixed-camera university, 60.6 seconds, four unnumbered ordinary-clothes players",
+  "reference_interval": [
+    0,
+    15
+  ],
+  "reference_exclusion_seconds": 3,
+  "verification_interval": [
+    40,
+    60.6
+  ],
+  "parameters": "clothing-texture-reid-v2 initial engineering gates; no tuning on formal hold-out",
+  "supplement": "Different no-number sources used for stress checks, not called fixed if camera moves",
+  "facts": "No human-confirmed labels available for these identities; counts are automatic output counts, accuracy metrics remain unavailable",
+  "all_four_profiles_reported": true,
+  "manual_editing_of_model_assignments": false,
+  "note": "This public source has previously been inspected, so this is a reproducible cross-time check, not an unseen-video generalization claim."
+}

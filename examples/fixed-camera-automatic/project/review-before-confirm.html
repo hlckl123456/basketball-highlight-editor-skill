@@ -1,0 +1,1549 @@
+<!doctype html><meta charset="utf-8"><title>篮球候选复核</title><style>body{font:16px system-ui;max-width:1200px;margin:30px auto;background:#f5f4ef;color:#18232b}article{background:white;padding:20px;margin:20px 0;border-radius:12px}.row{display:flex;flex-wrap:wrap;gap:10px}figure{margin:6px;max-width:210px}figcaption{font-size:12px}pre{white-space:pre-wrap}</style><h1>篮球候选复核</h1><h2>已保存的参考球员</h2><div class="row"><figure><img src="samples/s001.jpg" width="100"><figcaption>white · 13.40s · test_operator</figcaption></figure></div><p>状态：awaiting_clip_review · 修订 7。球衣颜色和 OCR 只是线索。visible 高置信只表示人在场，不证明他得分或持球；scorer／handler 需独立回合证据。没有认出目标仍进入不确定组。</p><p>确认选片后停在 awaiting_edit_prompt；收到下一条剪辑指令才生成版本。</p><pre>{
+  &quot;players&quot;: [
+    {
+      &quot;description&quot;: &quot;白色 T 恤、深色长裤、浅色鞋，无球衣号码&quot;,
+      &quot;id&quot;: &quot;white&quot;,
+      &quot;reference&quot;: &quot;samples/s001.jpg&quot;
+    }
+  ],
+  &quot;selection&quot;: {
+    &quot;high_confidence&quot;: [
+      &quot;c0018&quot;,
+      &quot;c0019&quot;
+    ],
+    &quot;other&quot;: [],
+    &quot;player_id&quot;: &quot;white&quot;,
+    &quot;role&quot;: &quot;visible&quot;,
+    &quot;selected_by&quot;: &quot;test_operator reference fixture; no manual clip assignments&quot;,
+    &quot;uncertain&quot;: [
+      &quot;c0001&quot;,
+      &quot;c0002&quot;,
+      &quot;c0003&quot;,
+      &quot;c0004&quot;,
+      &quot;c0005&quot;,
+      &quot;c0006&quot;,
+      &quot;c0007&quot;,
+      &quot;c0008&quot;,
+      &quot;c0009&quot;,
+      &quot;c0010&quot;,
+      &quot;c0011&quot;,
+      &quot;c0012&quot;,
+      &quot;c0013&quot;,
+      &quot;c0014&quot;,
+      &quot;c0015&quot;,
+      &quot;c0016&quot;,
+      &quot;c0017&quot;,
+      &quot;c0020&quot;,
+      &quot;c0021&quot;
+    ]
+  },
+  &quot;confirmation&quot;: null
+}</pre><article><h2>c0001 · 0.00–3.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0001.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0001&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0002 · 3.00–6.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0002.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0002&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0003 · 6.00–9.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0003.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0003&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0004 · 9.00–12.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0004.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0004&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0005 · 12.00–15.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0005.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0005&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0006 · 15.00–18.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0006.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0006&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0007 · 18.00–21.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0007.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0007&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0008 · 21.00–24.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0008.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0008&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0009 · 24.00–27.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0009.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0009&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0010 · 27.00–30.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0010.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0010&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0011 · 30.00–33.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0011.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0011&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0012 · 33.00–36.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0012.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0012&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0013 · 36.00–39.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0013.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0013&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0014 · 39.00–42.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0014.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0014&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0015 · 42.00–45.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0015.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0015&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0016 · 45.00–48.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0016.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0016&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0017 · 48.00–51.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0017.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0017&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0018 · 51.00–54.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/high_confidence/c0018.mp4"></video><div class="row"><p>自动在场证据范围：51.40–52.40 秒（5 个采样点通过）。范围内也可能有未通过的采样点，不能视为逐帧连续确认；这不是得分归属。</p></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0018&quot;,
+  &quot;certainty&quot;: &quot;high&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [
+    {
+      &quot;bbox_xyxy&quot;: [
+        356.74,
+        414.43,
+        379.3,
+        479.57
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.2238239288330078,
+      &quot;observation_id&quot;: &quot;f00257_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 51.4,
+      &quot;track_id&quot;: 41
+    },
+    {
+      &quot;bbox_xyxy&quot;: [
+        355.31,
+        414.98,
+        378.14,
+        480.16
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.23979871869087221,
+      &quot;observation_id&quot;: &quot;f00258_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 51.6,
+      &quot;track_id&quot;: 41
+    },
+    {
+      &quot;bbox_xyxy&quot;: [
+        350.16,
+        415.03,
+        372.34,
+        480.51
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.30326735377311703,
+      &quot;observation_id&quot;: &quot;f00260_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 52.0,
+      &quot;track_id&quot;: 41
+    },
+    {
+      &quot;bbox_xyxy&quot;: [
+        350.34,
+        414.87,
+        371.83,
+        480.85
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.2803380787372589,
+      &quot;observation_id&quot;: &quot;f00261_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 52.2,
+      &quot;track_id&quot;: 41
+    },
+    {
+      &quot;bbox_xyxy&quot;: [
+        349.65,
+        414.88,
+        372.97,
+        481.03
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.22346868216991422,
+      &quot;observation_id&quot;: &quot;f00262_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 52.4,
+      &quot;track_id&quot;: 41
+    }
+  ],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: &quot;white&quot;,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;high&quot;,
+  &quot;presence_player_id&quot;: &quot;white&quot;,
+  &quot;reason&quot;: &quot;Supported visible presence only; not scorer or handler proof&quot;,
+  &quot;reason_codes&quot;: [],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;high&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [
+    [
+      51.4,
+      {
+        &quot;box&quot;: [
+          356.74,
+          414.43,
+          379.3,
+          479.57
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.3190816439095699,
+          &quot;distance&quot;: 0.2238239288330078,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.19286537766456605,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.24592018127441406,
+            0.19875144958496094,
+            0.21798419952392578
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.1965590214876463
+        },
+        &quot;distance&quot;: 0.2238239288330078,
+        &quot;observation_id&quot;: &quot;f00257_p00&quot;,
+        &quot;person_margin&quot;: 0.19286537766456605,
+        &quot;person_score&quot;: 0.8273,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00000&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ],
+    [
+      51.6,
+      {
+        &quot;box&quot;: [
+          355.31,
+          414.98,
+          378.14,
+          480.16
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.25359414795176916,
+          &quot;distance&quot;: 0.23979871869087221,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.17662225365638728,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.2443937063217163,
+            0.26243090629577637,
+            0.18985366821289062
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.19148794679252573
+        },
+        &quot;distance&quot;: 0.23979871869087221,
+        &quot;observation_id&quot;: &quot;f00258_p00&quot;,
+        &quot;person_margin&quot;: 0.17662225365638728,
+        &quot;person_score&quot;: 0.8564,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00000&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ],
+    [
+      52.0,
+      {
+        &quot;box&quot;: [
+          350.16,
+          415.03,
+          372.34,
+          480.51
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.21235537442511118,
+          &quot;distance&quot;: 0.30326735377311703,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.12601219117641455,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.32935869693756104,
+            0.2850620746612549,
+            0.27642107009887695
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.22672517844540643
+        },
+        &quot;distance&quot;: 0.30326735377311703,
+        &quot;observation_id&quot;: &quot;f00260_p00&quot;,
+        &quot;person_margin&quot;: 0.12601219117641455,
+        &quot;person_score&quot;: 0.881,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00000&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ],
+    [
+      52.2,
+      {
+        &quot;box&quot;: [
+          350.34,
+          414.87,
+          371.83,
+          480.85
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.23666382148690185,
+          &quot;distance&quot;: 0.2803380787372589,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.08000334501266476,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.29888927936553955,
+            0.2809615135192871,
+            0.23750686645507812
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.20887361526350426
+        },
+        &quot;distance&quot;: 0.2803380787372589,
+        &quot;observation_id&quot;: &quot;f00261_p00&quot;,
+        &quot;person_margin&quot;: 0.08000334501266476,
+        &quot;person_score&quot;: 0.8701,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00000&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ],
+    [
+      52.4,
+      {
+        &quot;box&quot;: [
+          349.65,
+          414.88,
+          372.97,
+          481.03
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.2645582795333841,
+          &quot;distance&quot;: 0.22346868216991422,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.16379292011260987,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.2587810158729553,
+            0.17065393924713135,
+            0.2364417314529419
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.22999165543137437
+        },
+        &quot;distance&quot;: 0.22346868216991422,
+        &quot;observation_id&quot;: &quot;f00262_p00&quot;,
+        &quot;person_margin&quot;: 0.16379292011260987,
+        &quot;person_score&quot;: 0.8909,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00000&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ]
+  ],
+  &quot;support_count&quot;: 5,
+  &quot;supported_time_ranges&quot;: [
+    {
+      &quot;end&quot;: 52.4,
+      &quot;id&quot;: &quot;segment-00000&quot;,
+      &quot;start&quot;: 51.4,
+      &quot;support_count&quot;: 5,
+      &quot;support_times&quot;: [
+        51.4,
+        51.6,
+        52.0,
+        52.2,
+        52.4
+      ],
+      &quot;unresolved_times&quot;: [
+        51.8
+      ]
+    }
+  ],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0019 · 54.00–57.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/high_confidence/c0019.mp4"></video><div class="row"><p>自动在场证据范围：54.00–55.40 秒（8 个采样点通过）, 55.80–56.80 秒（6 个采样点通过）。范围内也可能有未通过的采样点，不能视为逐帧连续确认；这不是得分归属。</p></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0019&quot;,
+  &quot;certainty&quot;: &quot;high&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [
+    {
+      &quot;bbox_xyxy&quot;: [
+        349.73,
+        413.86,
+        372.93,
+        480.12
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.25886898934841157,
+      &quot;observation_id&quot;: &quot;f00270_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 54.0,
+      &quot;track_id&quot;: 41
+    },
+    {
+      &quot;bbox_xyxy&quot;: [
+        349.96,
+        414.48,
+        370.71,
+        479.77
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.19401174187660217,
+      &quot;observation_id&quot;: &quot;f00271_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 54.2,
+      &quot;track_id&quot;: 41
+    },
+    {
+      &quot;bbox_xyxy&quot;: [
+        350.13,
+        414.16,
+        370.82,
+        479.82
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.2143775701522827,
+      &quot;observation_id&quot;: &quot;f00272_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 54.4,
+      &quot;track_id&quot;: 41
+    },
+    {
+      &quot;bbox_xyxy&quot;: [
+        350.03,
+        414.02,
+        370.81,
+        480.0
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.2038573920726776,
+      &quot;observation_id&quot;: &quot;f00273_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 54.6,
+      &quot;track_id&quot;: 41
+    },
+    {
+      &quot;bbox_xyxy&quot;: [
+        350.03,
+        413.76,
+        372.66,
+        480.11
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.22055128514766692,
+      &quot;observation_id&quot;: &quot;f00274_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 54.8,
+      &quot;track_id&quot;: 41
+    },
+    {
+      &quot;bbox_xyxy&quot;: [
+        350.05,
+        413.79,
+        373.33,
+        479.94
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.21450433135032654,
+      &quot;observation_id&quot;: &quot;f00275_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 55.0,
+      &quot;track_id&quot;: 41
+    },
+    {
+      &quot;bbox_xyxy&quot;: [
+        350.34,
+        413.11,
+        371.5,
+        479.96
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.2787977814674377,
+      &quot;observation_id&quot;: &quot;f00276_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 55.2,
+      &quot;track_id&quot;: 41
+    },
+    {
+      &quot;bbox_xyxy&quot;: [
+        350.2,
+        412.92,
+        370.58,
+        479.84
+      ],
+      &quot;detail&quot;: &quot;Model presence proposal; compare manual references and competing people; not role verification&quot;,
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;model_distance&quot;: 0.2223427176475525,
+      &quot;observation_id&quot;: &quot;f00277_p00&quot;,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;
+      ],
+      &quot;time&quot;: 55.4,
+      &quot;track_id&quot;: 41
+    }
+  ],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: &quot;white&quot;,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;high&quot;,
+  &quot;presence_player_id&quot;: &quot;white&quot;,
+  &quot;reason&quot;: &quot;Supported visible presence only; not scorer or handler proof&quot;,
+  &quot;reason_codes&quot;: [],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;high&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [
+    [
+      54.0,
+      {
+        &quot;box&quot;: [
+          349.73,
+          413.86,
+          372.93,
+          480.12
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.25233799924162037,
+          &quot;distance&quot;: 0.25886898934841157,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.09679405689239501,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.2752746343612671,
+            0.2646769881248474,
+            0.21179229021072388
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.1945206449113401
+        },
+        &quot;distance&quot;: 0.25886898934841157,
+        &quot;observation_id&quot;: &quot;f00270_p00&quot;,
+        &quot;person_margin&quot;: 0.09679405689239501,
+        &quot;person_score&quot;: 0.8664,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00001&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ],
+    [
+      54.2,
+      {
+        &quot;box&quot;: [
+          349.96,
+          414.48,
+          370.71,
+          479.77
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.2068283670875965,
+          &quot;distance&quot;: 0.19401174187660217,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.1787672251462937,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.21289265155792236,
+            0.17778706550598145,
+            0.17992287874221802
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.16972886462746886
+        },
+        &quot;distance&quot;: 0.19401174187660217,
+        &quot;observation_id&quot;: &quot;f00271_p00&quot;,
+        &quot;person_margin&quot;: 0.1787672251462937,
+        &quot;person_score&quot;: 0.8495,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00001&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ],
+    [
+      54.4,
+      {
+        &quot;box&quot;: [
+          350.13,
+          414.16,
+          370.82,
+          479.82
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.21167652130261813,
+          &quot;distance&quot;: 0.2143775701522827,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.21594188213348386,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.22057771682739258,
+            0.21007585525512695,
+            0.2079552412033081
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.1752118054800088
+        },
+        &quot;distance&quot;: 0.2143775701522827,
+        &quot;observation_id&quot;: &quot;f00272_p00&quot;,
+        &quot;person_margin&quot;: 0.21594188213348386,
+        &quot;person_score&quot;: 0.8438,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00001&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ],
+    [
+      54.6,
+      {
+        &quot;box&quot;: [
+          350.03,
+          414.02,
+          370.81,
+          480.0
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.22077848086941093,
+          &quot;distance&quot;: 0.2038573920726776,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.2557579070329666,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.217393159866333,
+            0.19275033473968506,
+            0.19283926486968994
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.20236095790591394
+        },
+        &quot;distance&quot;: 0.2038573920726776,
+        &quot;observation_id&quot;: &quot;f00273_p00&quot;,
+        &quot;person_margin&quot;: 0.2557579070329666,
+        &quot;person_score&quot;: 0.8488,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00001&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ],
+    [
+      54.8,
+      {
+        &quot;box&quot;: [
+          350.03,
+          413.76,
+          372.66,
+          480.11
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.22345940225335004,
+          &quot;distance&quot;: 0.22055128514766692,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.18795184791088104,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.23969578742980957,
+            0.19514185190200806,
+            0.22194266319274902
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.19871226198022748
+        },
+        &quot;distance&quot;: 0.22055128514766692,
+        &quot;observation_id&quot;: &quot;f00274_p00&quot;,
+        &quot;person_margin&quot;: 0.18795184791088104,
+        &quot;person_score&quot;: 0.8658,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00001&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ],
+    [
+      55.0,
+      {
+        &quot;box&quot;: [
+          350.05,
+          413.79,
+          373.33,
+          479.94
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.2474157767554194,
+          &quot;distance&quot;: 0.21450433135032654,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.19901137650012968,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.23074746131896973,
+            0.19976747035980225,
+            0.20374679565429688
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.19457812228643664
+        },
+        &quot;distance&quot;: 0.21450433135032654,
+        &quot;observation_id&quot;: &quot;f00275_p00&quot;,
+        &quot;person_margin&quot;: 0.19901137650012968,
+        &quot;person_score&quot;: 0.8737,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00001&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ],
+    [
+      55.2,
+      {
+        &quot;box&quot;: [
+          350.34,
+          413.11,
+          371.5,
+          479.96
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.19549588207331087,
+          &quot;distance&quot;: 0.2787977814674377,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.179401969909668,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.30722081661224365,
+            0.2512131929397583,
+            0.2631189823150635
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.1559599926579708
+        },
+        &quot;distance&quot;: 0.2787977814674377,
+        &quot;observation_id&quot;: &quot;f00276_p00&quot;,
+        &quot;person_margin&quot;: 0.179401969909668,
+        &quot;person_score&quot;: 0.852,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00001&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ],
+    [
+      55.4,
+      {
+        &quot;box&quot;: [
+          350.2,
+          412.92,
+          370.58,
+          479.84
+        ],
+        &quot;confidence_evidence&quot;: {
+          &quot;color_distance&quot;: 0.2012708445436157,
+          &quot;distance&quot;: 0.2223427176475525,
+          &quot;eligible&quot;: true,
+          &quot;is_probability&quot;: false,
+          &quot;person_margin&quot;: 0.24721249938011172,
+          &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+          &quot;profile_margin&quot;: null,
+          &quot;reasons&quot;: [],
+          &quot;reference_ids&quot;: [
+            &quot;s001&quot;
+          ],
+          &quot;region_distances&quot;: [
+            0.22926729917526245,
+            0.2172514796257019,
+            0.2156720757484436
+          ],
+          &quot;scope&quot;: &quot;visible_presence_only&quot;,
+          &quot;upper_clothing_distance&quot;: 0.19648715555245483
+        },
+        &quot;distance&quot;: 0.2223427176475525,
+        &quot;observation_id&quot;: &quot;f00277_p00&quot;,
+        &quot;person_margin&quot;: 0.24721249938011172,
+        &quot;person_score&quot;: 0.8565,
+        &quot;player_id&quot;: &quot;white&quot;,
+        &quot;profile_margin&quot;: null,
+        &quot;segment_id&quot;: &quot;segment-00001&quot;,
+        &quot;track_id&quot;: 41
+      }
+    ]
+  ],
+  &quot;support_count&quot;: 8,
+  &quot;supported_time_ranges&quot;: [
+    {
+      &quot;end&quot;: 55.4,
+      &quot;id&quot;: &quot;segment-00001&quot;,
+      &quot;start&quot;: 54.0,
+      &quot;support_count&quot;: 8,
+      &quot;support_times&quot;: [
+        54.0,
+        54.2,
+        54.4,
+        54.6,
+        54.8,
+        55.0,
+        55.2,
+        55.4
+      ],
+      &quot;unresolved_times&quot;: []
+    },
+    {
+      &quot;end&quot;: 56.8,
+      &quot;id&quot;: &quot;segment-00002&quot;,
+      &quot;start&quot;: 55.8,
+      &quot;support_count&quot;: 6,
+      &quot;support_times&quot;: [
+        55.8,
+        56.0,
+        56.2,
+        56.4,
+        56.6,
+        56.8
+      ],
+      &quot;unresolved_times&quot;: []
+    }
+  ],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0020 · 57.00–60.00s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0020.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0020&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><article><h2>c0021 · 60.00–60.60s</h2><p>Systematic review window; not inferred made basket</p><video controls preload="none" width="600" src="rough/uncertain/c0021.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;at&quot;: &quot;2026-10-28T16:00:04+00:00&quot;,
+  &quot;candidate_id&quot;: &quot;c0021&quot;,
+  &quot;certainty&quot;: &quot;uncertain&quot;,
+  &quot;confidence_scope&quot;: &quot;visible_presence_only&quot;,
+  &quot;evidence&quot;: [],
+  &quot;is_probability&quot;: false,
+  &quot;never_auto_exclude&quot;: true,
+  &quot;player_id&quot;: null,
+  &quot;policy_version&quot;: &quot;clothing-texture-reid-v2&quot;,
+  &quot;presence_certainty&quot;: &quot;uncertain&quot;,
+  &quot;presence_player_id&quot;: null,
+  &quot;reason&quot;: &quot;Review required: insufficient_independent_texture_run&quot;,
+  &quot;reason_codes&quot;: [
+    &quot;insufficient_independent_texture_run&quot;
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;role&quot;: &quot;visible&quot;,
+  &quot;role_certainty&quot;: {
+    &quot;handler&quot;: &quot;uncertain&quot;,
+    &quot;scorer&quot;: &quot;uncertain&quot;,
+    &quot;visible&quot;: &quot;uncertain&quot;
+  },
+  &quot;role_reasons&quot;: {
+    &quot;handler&quot;: &quot;clothing_presence_does_not_prove_ball_handler&quot;,
+    &quot;scorer&quot;: &quot;clothing_presence_does_not_prove_scorer&quot;
+  },
+  &quot;support&quot;: [],
+  &quot;support_count&quot;: 0,
+  &quot;supported_time_ranges&quot;: [],
+  &quot;target_player_id&quot;: &quot;white&quot;
+}</pre></article><section style="background:#e3eee9;padding:20px"><h2>逐段决定</h2><p>填写后下载复核 JSON，交给 Codex 保存项目。此页不会合并成片或联网。</p><label>复核人 <input id="reviewer" placeholder="你的称呼"></label><div id="choices"></div><button id="download">下载选片决定 JSON</button><p id="message"></p></section><script>const config={"revision": 7, "player": "white", "ids": ["c0018", "c0019", "c0001", "c0002", "c0003", "c0004", "c0005", "c0006", "c0007", "c0008", "c0009", "c0010", "c0011", "c0012", "c0013", "c0014", "c0015", "c0016", "c0017", "c0020", "c0021"]};
+const choices=document.getElementById('choices');
+for(const id of config.ids){const label=document.createElement('label');label.style.display='block';label.append(id+' ');const s=document.createElement('select');s.id='decision-'+id;for(const [v,t] of [['','请选择'],['keep','保留'],['reject','删除']]){const o=document.createElement('option');o.value=v;o.textContent=t;s.append(o)}label.append(s);choices.append(label)}
+document.getElementById('download').onclick=()=>{const reviewer=document.getElementById('reviewer').value.trim();const decisions={};for(const id of config.ids){decisions[id]=document.getElementById('decision-'+id).value}if(!reviewer||Object.values(decisions).some(v=>!v)){document.getElementById('message').textContent='请填写复核人并决定每一段。';return}const data={project_revision:config.revision,player_id:config.player,reviewer_kind:'user',reviewer,authorization_reference:'Manual local review.html submission at revision '+config.revision,decisions};const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='review-decisions.json';a.click();URL.revokeObjectURL(a.href);document.getElementById('message').textContent='已下载。请把决定文件交给 Codex，保存后会等待下一条剪辑指令。'};</script>

@@ -4,19 +4,23 @@
 
 A local, review-first basketball highlight skill for Codex. Includes runnable scripts, tests, licensed real-video cases and evidence replay. Player identity is evidence-backed and reviewable, not an autonomous recognition guarantee.
 
-## 没穿号码球衣，也能从参考图开始选人
+## 固定机位，没有号码，给一张参考让程序找人
 
-这次用公园里的便装篮球录像重做：选中**白 T 恤、深红短裤、白鞋**的球员，保存两张相隔三分钟的参考图，重新提取人形与服饰特征，逐段复核，再剪成下面这版。没有使用球衣号码。
+这次用固定视角的校园便装篮球录像验证。选一张**白色 T 恤、深色长裤**参考，程序从后段自动找回同一个穿着的人。主演示每次只给目标一张参考，没有逐段手填高置信或保留编号。
 
-[![点击看白衣球员的 36 秒成片](docs/unnumbered-demo/cover.png)](examples/park-unnumbered/project/versions/unnumbered-chronological/reel.mp4)
+[![看固定机位自动识别 demo](docs/automatic-fixed-demo/cover.png)](docs/automatic-fixed-demo/fixed-automatic-demo.mp4)
 
-**[▶ 看实际剪出来的 36 秒成片（MP4）](examples/park-unnumbered/project/versions/unnumbered-chronological/reel.mp4)**
+**[▶ 看实际操作演示，中文 AI 配音](docs/automatic-fixed-demo/fixed-automatic-demo.mp4)** · **[▶ 看自动选出并导出的 6 秒草稿](examples/fixed-camera-automatic/project/versions/automatic-draft-v2/reel.mp4)**
 
-<video controls preload="metadata" width="960" poster="docs/unnumbered-demo/cover.png" src="examples/park-unnumbered/project/versions/unnumbered-chronological/reel.mp4"><a href="examples/park-unnumbered/project/versions/unnumbered-chronological/reel.mp4">播放或下载成片</a></video>
+<video controls preload="metadata" width="960" poster="docs/automatic-fixed-demo/cover.png" src="docs/automatic-fixed-demo/fixed-automatic-demo.mp4"><a href="docs/automatic-fixed-demo/fixed-automatic-demo.mp4">播放或下载 demo</a></video>
 
-**[▶ 看选人、复核、导出的使用演示（MP4）](docs/unnumbered-demo/unnumbered-workflow.mp4)** · [完整案例与原片时间表](docs/PARK_UNNUMBERED_CASE.zh-CN.md) · [实际复核页](examples/park-unnumbered/project/review-before-confirm.html) · [口播稿与字幕](docs/unnumbered-demo/README.md)
+[可操作的真实结果回放](examples/fixed-camera-automatic/recognition.html) · [完整案例与新旧对照](docs/AUTOMATIC_FIXED_CASE.zh-CN.md) · [全部粗剪复核页](examples/fixed-camera-automatic/project/review-before-confirm.html) · [算法与验证报告](docs/reports/automatic-appearance.md)
 
-操作演示约 1 分 14 秒，中文 AI 配音。原片、参考图、八段粗剪、五段保留／三段删除的决定、EDL 和实际成片都在仓库里。本次自动分组为高置信 0 段、不确定 8 段，随后由测试操作员对照参考图完成选片。模拟操作记为 `test_operator`；这是服饰选人后复核的参与回合剪辑，覆盖窗口不等于自动识别进球，人物在场也不等于他得分。
+同一原片、同一张参考、同一批 21 个覆盖窗口：旧颜色策略 0 个高置信，新服饰纹理与连续证据策略 **2 个高置信、19 个不确定**。两个高置信窗口均远离参考，程序自动接成六秒草稿；它们相邻，属于同一次后段重新出现，不能当成两个独立成功实验。绿色框来自实际本地推理输出，回放页不做实时推理。
+
+轮换另三个人也保留了结果，但目前只有参考附近通过。另一段便装球局检索有通过区间；原来的夜间移动镜头仍为 8 段不确定，未解决。以上是自动输出数量，不是人工确认的准确率。这里验证“人在场”，没有据此声称他持球或进球。参考与导出测试全记为 `test_operator`，完整未知项保留，等待真实用户复核。
+
+先前的[夜间移动机位案例](docs/PARK_UNNUMBERED_CASE.zh-CN.md)和[手工复核演示](docs/unnumbered-demo/README.md)作为历史记录保留，不作为这次自动识别成功的证据。
 
 ## 人工标注与评测（goal-1-eval）
 
@@ -53,7 +57,7 @@ A local, review-first basketball highlight skill for Codex. Includes runnable sc
 
 1. 用户提供有权本地处理的比赛视频。
 2. BHE 公开源码 CLI 找疑似穿框事件；也可以导入已有候选，或使用明确标为低精度的覆盖窗口。
-3. 无号码场景使用本地 YOLOX 人体检测、服饰样本与短轨迹匹配；保留可核对的框和完整帧。旧 `features` 入口提供颜色区域及可选 OCR。
+3. 无号码场景使用本地 YOLOX 人体检测、服饰纹理样本与短轨迹匹配；保留可核对的框和完整帧。旧 `features` 入口提供颜色区域及可选 OCR。
 4. 用户选择视觉参考球员。没有号码时，先确认一张或几张服饰样本。
 5. 根据证据整理高置信归属与不确定项，生成独立粗剪。人物在场、实际持球者和得分者分开记录。
 6. 用户保留／删除片段。确认后写入 `awaiting_edit_prompt`，保留原视频引用、项目、EDL 和粗剪，不自动合并成片。
@@ -61,7 +65,7 @@ A local, review-first basketball highlight skill for Codex. Includes runnable sc
 
 ## 先不准备模型，复核完整案例
 
-需要 Python 3.10 以上，以及 PATH 中的 FFmpeg／FFprobe。不需要联网、API key 或安装 Python 包。
+需要 Python 3.10 以上，以及 PATH 中的 FFmpeg／FFprobe。只复核与重放原案例不需要联网、API key 或安装 Python 包；完整测试还需要已有 NumPy、OpenCV、ONNX Runtime，版本见 `ci/requirements-robustness.txt`。新纹理推理另外需要 PyTorch，数值向量重放无需 PyTorch。
 
 ```sh
 git clone https://github.com/hlckl123456/basketball-highlight-editor-skill.git

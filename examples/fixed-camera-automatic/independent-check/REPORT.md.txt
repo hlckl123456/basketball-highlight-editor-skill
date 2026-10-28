@@ -1,0 +1,47 @@
+# Independent automatic appearance forward test
+
+Status: draft agent visual review, not human confirmation or ground truth. No archived predictions, automatic-selection files or expected counts were read. The test stopped at `awaiting_clip_review`, with `confirmation: null`; no confirm/version commands were run. No network, package install, commit or push was used.
+
+## Run
+
+The fresh project is `project/` beside this report. `reproduce.sh` records reproducible CLI steps for a new destination. The initial run used the existing BHE Python, supplied authorized DINOv2-S weights, the original university.webm and its existing rights JSON. All four reference-inputs.json fixtures were saved with `reviewer_kind: test_operator`, with white the selected target.
+
+The stable background was inspected at 0, 1, 5, 13.4, 20, 30, 40, 50 and 60 seconds. Court ROI 0 350 478 570 was chosen from the original source frame. Motion-coverage created overlapping review windows; these are not scoring detections. People ran with --stream --tile 240 --fps 5. Matching ran with --role visible --appearance-model ... --apply.
+
+Source SHA256: `81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0`. Appearance weights SHA256: `b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9`. Policy: clothing-texture-reid-v2. Appearance cache reported cache_hit=false and 455 observations.
+
+## Actual output
+
+- Person scan: 303 sampled frames, 455 proposed boxes.
+- Accepted observations: white 30, green 16, navy 0, orange 0. All remain model draft evidence.
+- White supported intervals: 51.4–52.4 (6 observations), 53.2–55.2 (11), 55.8–58.6 (13).
+- High visible-presence windows: c0009, 48–56 seconds; c0010, 54–60.6 seconds.
+- Nine uncertain windows: c0001–c0008 and c0011. Nothing automatically excluded.
+- Scorer/handler certainty remains uncertain for all proposals.
+- Rough rendering succeeded: 11 separate MP4s; all 2,376 frames decoded without failure. High previews are in rough/high_confidence and uncertain previews in rough/uncertain. c0009/c0010/c0002 preview frames were visually checked against source time positions.
+
+## Independent visual observations and limitations
+
+1. All 30 accepted white boxes were visually inspected in accepted-white-1.jpg through accepted-white-3.jpg against source-derived frames. They consistently enclose the intended white T-shirt/dark trousers/pale shoes. No wrong-person accepted white observation was seen in this inspected set. This is a small draft audit, not an accuracy estimate.
+2. Recall is limited even around the chosen reference. White is plainly visible at 12, 13.4, 15, 18 and 27 seconds in court-audit-1.jpg, but all early candidate windows remain uncertain. At the exact 13.4-second reference, the corresponding detection f00067_p00 is uncertain with insufficient_contiguous_texture_support; 13.6 and 14.0 have the same reason. At 12 seconds the reason is texture_distance_too_large. This is conservative behavior, but an operator cannot assume reference-adjacent or plainly visible appearances will be recovered.
+3. Uncertain best-profile labels can be wrong. At 8 seconds, the visible white player is labelled green?; at 50 seconds the full white-person box f00250_p00 is green?; at 60 seconds the white player f00300_p01 is green?. These do not enter the accepted or high group. Wrong tentative profile IDs should not be presented as recognized identities.
+4. At 50 seconds, the detector also emits a narrow overlapping partial box f00250_p01 over the white player (roughly x384–396, y422–481), plus a tiny edge proposal. The matching reasons include ambiguous_same_frame_person/quality failures. Duplicate partial detections can therefore reduce support; this is a concrete difficult input, not evidence that white is absent.
+5. supported_time_ranges is a segment envelope, not uninterrupted accepted identity at every sampled instant. The 55.8–58.6 segment includes a 57.6→58.2 accepted-observation gap. The 58.0 box remains explicitly uncertain (quality and texture distance). No identity was propagated to that rejected box, but a consumer reading only the interval boundaries could overstate continuous support. Retain the per-observation record when describing this interval.
+6. The two high rough windows overlap by two seconds, so duplicate source content remains in this coverage-based review. The current task stopped before editing; deduplication is an editorial review question.
+7. The portrait source is pillarboxed into 1280×720 rough media. The whole image is preserved, but distant players are very small. The extracted source/court/crop evidence is more useful for identity review than the landscape rough alone.
+
+Warnings in logs about unavailable xFormers and ORT telemetry persistence did not prevent successful local matching or rendering. No CLI crash occurred.
+
+## Evidence
+
+- project/people/detections.json, matches.json, candidate-proposals.json
+- project/project.json, candidates.csv, review.html
+- summary.txt and summary.json
+- rough-verification.json (probe metadata and decoded-frame counts)
+- source-overview.jpg, reference-source.png
+- court-audit-1.jpg, court-audit-2.jpg
+- accepted-white-1.jpg, accepted-white-2.jpg, accepted-white-3.jpg
+- rough-audit.jpg
+- people.log, match.log, rough.log, sample-commands.json
+
+The source files, archived examples/evaluations, confirmed records and installed Skill were not edited. The fresh project is under ignored work/independent-forward-test.

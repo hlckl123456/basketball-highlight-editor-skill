@@ -1,0 +1,19 @@
+{
+  "status": "draft",
+  "reviewer_kind": "test_operator",
+  "reference_count": 1,
+  "high_windows": [
+    "c0018",
+    "c0019"
+  ],
+  "automatic_exported_windows": [
+    "c0018",
+    "c0019"
+  ],
+  "manual_clip_assignment_edits": false,
+  "fresh_person_inference": false,
+  "fresh_texture_requested": false,
+  "torch_imported": false,
+  "human_confirmation": false,
+  "source_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0"
+}

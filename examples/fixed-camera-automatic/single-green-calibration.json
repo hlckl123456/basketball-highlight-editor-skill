@@ -1,0 +1,25 @@
+{
+  "kind": "saved_project_samples",
+  "people": [
+    {
+      "id": "green",
+      "description": "绿色连帽上衣、蓝色长裤，无球衣号码",
+      "samples": [
+        {
+          "time": 1,
+          "box": [
+            185,
+            380,
+            224,
+            492
+          ],
+          "sample_id": "s001",
+          "reviewer_kind": "test_operator",
+          "appearance": "default",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ]
+    }
+  ]
+}

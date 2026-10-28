@@ -1,0 +1,59 @@
+{
+  "camera": "fixed-view campus source",
+  "confirmation_submitted": false,
+  "manual_clip_assignment_edits": false,
+  "actual_result_viewer": true,
+  "target_switch_test": "pass",
+  "unknown_state_test": "pass",
+  "proof": [
+    {
+      "scene": "reference",
+      "source_time": 13.8,
+      "target": "white",
+      "display_state": "参考附近 · 不计独立验证",
+      "model_inference": "precomputed local output, not simulated real-time inference",
+      "manual_assignment_edits": false
+    },
+    {
+      "scene": "reference",
+      "duration": 8.94,
+      "errors": []
+    },
+    {
+      "scene": "match",
+      "source_time": 54.757093,
+      "target": "white",
+      "display_state": "本采样点：匹配通过",
+      "model_inference": "precomputed local output, not simulated real-time inference",
+      "manual_assignment_edits": false
+    },
+    {
+      "scene": "match",
+      "duration": 12.387,
+      "errors": []
+    },
+    {
+      "scene": "guard",
+      "source_time": 55.996723,
+      "target": "navy",
+      "display_state": "本采样点：未通过／未识别",
+      "model_inference": "precomputed local output, not simulated real-time inference",
+      "manual_assignment_edits": false
+    },
+    {
+      "scene": "guard",
+      "duration": 10.417,
+      "errors": []
+    },
+    {
+      "scene": "result",
+      "duration": 10.154,
+      "errors": []
+    },
+    {
+      "scene": "compare",
+      "duration": 11.089,
+      "errors": []
+    }
+  ]
+}

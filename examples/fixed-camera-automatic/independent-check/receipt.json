@@ -1,0 +1,14 @@
+{
+  "status": "draft",
+  "reviewer_kind": "independent_agent_visual_review",
+  "archived_predictions_read_before_trial": false,
+  "fresh_person_scan": true,
+  "fresh_texture_inference": true,
+  "input_samples": 303,
+  "person_boxes": 455,
+  "accepted_white_observations": 30,
+  "wrong_person_boxes_seen_in_draft_inspection": 0,
+  "formal_accuracy": null,
+  "human_confirmation": false,
+  "notes": "Independent trial preceded the final upper-shirt guard. Its different ROI and coverage windows used fresh inference. Sample-envelope and tentative-ID reporting were clarified afterward. These draft visual checks are not confirmed accuracy."
+}

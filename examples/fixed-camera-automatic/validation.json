@@ -1,0 +1,86 @@
+{
+  "status": "draft",
+  "checks": [
+    {
+      "suite": "skills/basketball-highlight-editor/tests",
+      "tests": 56,
+      "passed": true
+    },
+    {
+      "suite": "eval/tests",
+      "tests": 50,
+      "passed": true
+    },
+    {
+      "suite": "robustness/tests",
+      "tests": 17,
+      "passed": true
+    },
+    {
+      "suite": "experiments/detection/tests",
+      "tests": 19,
+      "passed": true
+    },
+    {
+      "suite": "experiments/attribution/tests",
+      "tests": 52,
+      "passed": true
+    },
+    {
+      "suite": "original_case_replay",
+      "passed": true
+    }
+  ],
+  "unit_test_total": 194,
+  "main_unchanged": true,
+  "indiana_and_eval_unchanged_from_previous_branch": true,
+  "model_weights_added_to_git": false,
+  "single_reference_replay": {
+    "status": "draft",
+    "reviewer_kind": "test_operator",
+    "reference_count": 1,
+    "high_windows": [
+      "c0018",
+      "c0019"
+    ],
+    "automatic_exported_windows": [
+      "c0018",
+      "c0019"
+    ],
+    "manual_clip_assignment_edits": false,
+    "fresh_person_inference": false,
+    "fresh_texture_requested": false,
+    "torch_imported": false,
+    "human_confirmation": false,
+    "source_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0"
+  },
+  "installed_default_backend": {
+    "explicit_model_flag": false,
+    "high": 2,
+    "uncertain": 19,
+    "source": "local authorized weights, no automatic download"
+  },
+  "bundle_integrity_checks": "bundle-integrity-checks.json",
+  "formal_accuracy": null,
+  "holdout_used_for_tuning": false,
+  "final_public_replay": {
+    "status": "draft",
+    "reviewer_kind": "test_operator",
+    "reference_count": 1,
+    "high_windows": [
+      "c0018",
+      "c0019"
+    ],
+    "automatic_exported_windows": [
+      "c0018",
+      "c0019"
+    ],
+    "manual_clip_assignment_edits": false,
+    "fresh_person_inference": false,
+    "fresh_texture_requested": false,
+    "torch_imported": false,
+    "human_confirmation": false,
+    "source_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0"
+  },
+  "review_form_node_test": "pass under bundled modern Node; system Node lacks global Blob"
+}

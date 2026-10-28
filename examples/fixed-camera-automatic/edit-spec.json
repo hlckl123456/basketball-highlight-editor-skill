@@ -1,0 +1,8 @@
+{
+  "prompt": "User requests an actual demonstration of improved automatic recognition on unnumbered fixed-camera footage. Export every independent model-high presence window in time order as a DRAFT demonstration; no handpicked event IDs or human identity confirmation.",
+  "clip_ids": [
+    "c0018",
+    "c0019"
+  ],
+  "max_duration": 60
+}

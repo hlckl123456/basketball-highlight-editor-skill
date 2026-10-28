@@ -1,0 +1,22 @@
+id,start,end,group,player_id,certainty,role,presence_certainty,selection_reason,reason
+c0001,0.0,3.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0002,3.0,6.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0003,6.0,9.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0004,9.0,12.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0005,12.0,15.0,high_confidence,white,high,visible,high,supported_target_presence,Supported visible presence only; not scorer or handler proof
+c0006,15.0,18.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0007,18.0,21.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0008,21.0,24.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0009,24.0,27.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0010,27.0,30.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0011,30.0,33.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0012,33.0,36.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0013,36.0,39.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0014,39.0,42.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0015,42.0,45.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0016,45.0,48.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0017,48.0,51.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0018,51.0,54.0,high_confidence,white,high,visible,high,supported_target_presence,Supported visible presence only; not scorer or handler proof
+c0019,54.0,57.0,high_confidence,white,high,visible,high,supported_target_presence,Supported visible presence only; not scorer or handler proof
+c0020,57.0,60.0,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run
+c0021,60.0,60.6,uncertain,,uncertain,visible,uncertain,identity_unresolved,Review required: insufficient_independent_texture_run

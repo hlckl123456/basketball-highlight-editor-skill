@@ -1,0 +1,12 @@
+{
+  "schema": "clothing-dinov2-v1-head22-input112x224-parts",
+  "key": "5d7d240cfd01b399bbcbc4fb4e6a97759d65f7345a2e2aa272d751cea00aa6cd",
+  "source_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+  "weights_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+  "sha256": "dbe7a6af097e81e92536433cd9b2de49c9aad87034ac311deee3ff70af04c826",
+  "observations": 492,
+  "cache_hit": false,
+  "elapsed_seconds": 6.305,
+  "head_fraction_discarded": 0.22,
+  "weights_stored": false
+}

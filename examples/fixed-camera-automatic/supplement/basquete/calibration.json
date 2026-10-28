@@ -1,0 +1,64 @@
+{
+  "kind": "test_operator",
+  "status": "draft",
+  "scope": "Reference-only choices before predictions; no test event labels, all initial thresholds frozen",
+  "people": [
+    {
+      "id": "orange-yellow",
+      "description": "Orange T-shirt, yellow shorts, dark shoes; no jersey number",
+      "samples": [
+        {
+          "time": 1,
+          "box": [
+            79,
+            173,
+            130,
+            335
+          ],
+          "sample_id": "orange-yellow-first",
+          "reviewer_kind": "test_operator",
+          "origin": "test_operator",
+          "status": "draft"
+        }
+      ]
+    },
+    {
+      "id": "shirtless-dark",
+      "description": "Shirtless, black shorts, red shoes; no jersey number",
+      "samples": [
+        {
+          "time": 1,
+          "box": [
+            560,
+            167,
+            615,
+            280
+          ],
+          "sample_id": "shirtless-dark-first",
+          "reviewer_kind": "test_operator",
+          "origin": "test_operator",
+          "status": "draft"
+        }
+      ]
+    },
+    {
+      "id": "shirtless-gray",
+      "description": "Shirtless, gray shorts, dark shoes; no jersey number",
+      "samples": [
+        {
+          "time": 1,
+          "box": [
+            602,
+            164,
+            703,
+            381
+          ],
+          "sample_id": "shirtless-gray-first",
+          "reviewer_kind": "test_operator",
+          "origin": "test_operator",
+          "status": "draft"
+        }
+      ]
+    }
+  ]
+}

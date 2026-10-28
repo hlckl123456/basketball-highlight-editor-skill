@@ -1,0 +1,36 @@
+{
+  "status": "draft",
+  "selection": {
+    "high_confidence": [],
+    "other": [],
+    "player_id": "white",
+    "role": "visible",
+    "selected_by": "test_operator reference fixture; no manual event choices",
+    "uncertain": [
+      "c0001",
+      "c0002",
+      "c0003",
+      "c0004",
+      "c0005",
+      "c0006",
+      "c0007",
+      "c0008",
+      "c0009",
+      "c0010",
+      "c0011",
+      "c0012",
+      "c0013",
+      "c0014",
+      "c0015",
+      "c0016",
+      "c0017",
+      "c0018",
+      "c0019",
+      "c0020",
+      "c0021"
+    ]
+  },
+  "algorithm": "honest-attribution-v1",
+  "same_windows_and_references": true,
+  "reference_count": 1
+}

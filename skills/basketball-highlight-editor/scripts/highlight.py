@@ -727,7 +727,7 @@ def report(root, p):
                          (esc(f['path']),esc(f['path']),f['time']) for f in c.get('frames',[]))
         ranges=(c.get('assignment') or {}).get('supported_time_ranges',[])
         if ranges:
-            images='<p>自动认出目标的时间段：'+', '.join('%.2f–%.2f 秒'%(x['start'],x['end']) for x in ranges)+'。其余画面仍需复核；这不是得分归属。</p>'+images
+            images='<p>自动在场证据范围：'+', '.join('%.2f–%.2f 秒（%d 个采样点通过）'%(x['start'],x['end'],x['support_count']) for x in ranges)+'。范围内也可能有未通过的采样点，不能视为逐帧连续确认；这不是得分归属。</p>'+images
         video = '<video controls preload="none" width="600" src="%s"></video>' % esc(c['preview']) if c.get('preview') else ''
         crops = ''.join('<figure><img loading="lazy" src="%s" width="70"><figcaption>%s / %s / OCR %s</figcaption></figure>' %
                         (esc(o['crop']),esc(o['id']),esc(o['color']['dominant']),esc(str(o['number_ocr']))) for o in c['observations'])

@@ -1,0 +1,4 @@
+file 'part000.mp4'
+duration 3.000000000
+file 'part001.mp4'
+duration 3.000000000

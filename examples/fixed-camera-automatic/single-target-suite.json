@@ -1,0 +1,49 @@
+{
+  "status": "draft",
+  "protocol": "Four separate runs, each receives exactly one target reference and no other manual person profiles",
+  "profiles": [
+    {
+      "player_id": "green",
+      "reference_count": 1,
+      "other_manual_reference_count": 0,
+      "legacy_high_windows": [],
+      "texture_high_windows": [
+        "c0001"
+      ],
+      "accuracy": null
+    },
+    {
+      "player_id": "navy",
+      "reference_count": 1,
+      "other_manual_reference_count": 0,
+      "legacy_high_windows": [],
+      "texture_high_windows": [
+        "c0002"
+      ],
+      "accuracy": null
+    },
+    {
+      "player_id": "orange",
+      "reference_count": 1,
+      "other_manual_reference_count": 0,
+      "legacy_high_windows": [],
+      "texture_high_windows": [
+        "c0002"
+      ],
+      "accuracy": null
+    },
+    {
+      "player_id": "white",
+      "reference_count": 1,
+      "other_manual_reference_count": 0,
+      "legacy_high_windows": [],
+      "texture_high_windows": [
+        "c0018",
+        "c0019"
+      ],
+      "accuracy": null
+    }
+  ],
+  "manual_clip_assignments": false,
+  "human_ground_truth": false
+}

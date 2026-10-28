@@ -1,0 +1,31 @@
+{
+  "project_revision": 17,
+  "player_id": "white",
+  "reviewer_kind": "test_operator",
+  "reviewer": "Deterministic export test of model high list, no human clip review or manual overrides",
+  "status": "draft",
+  "decision_basis": "machine high list minus reference-neighborhood overlap",
+  "decisions": {
+    "c0005": "reject",
+    "c0018": "keep",
+    "c0019": "keep",
+    "c0001": "reject",
+    "c0002": "reject",
+    "c0003": "reject",
+    "c0004": "reject",
+    "c0006": "reject",
+    "c0007": "reject",
+    "c0008": "reject",
+    "c0009": "reject",
+    "c0010": "reject",
+    "c0011": "reject",
+    "c0012": "reject",
+    "c0013": "reject",
+    "c0014": "reject",
+    "c0015": "reject",
+    "c0016": "reject",
+    "c0017": "reject",
+    "c0020": "reject",
+    "c0021": "reject"
+  }
+}

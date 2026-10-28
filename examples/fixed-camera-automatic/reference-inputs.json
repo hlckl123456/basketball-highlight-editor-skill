@@ -1,0 +1,54 @@
+{
+  "status": "draft",
+  "reviewer_kind": "test_operator",
+  "samples": [
+    {
+      "player_id": "white",
+      "time": 13.4,
+      "bbox_xyxy": [
+        327,
+        413,
+        350,
+        481
+      ],
+      "description": "白色 T 恤、深色长裤、浅色鞋，无球衣号码",
+      "reviewer_kind": "test_operator"
+    },
+    {
+      "player_id": "green",
+      "time": 1,
+      "bbox_xyxy": [
+        185,
+        380,
+        224,
+        492
+      ],
+      "description": "绿色连帽上衣、蓝色长裤，无球衣号码",
+      "reviewer_kind": "test_operator"
+    },
+    {
+      "player_id": "orange",
+      "time": 5,
+      "bbox_xyxy": [
+        259,
+        411,
+        287,
+        481
+      ],
+      "description": "橙色上衣、深色长裤，无球衣号码",
+      "reviewer_kind": "test_operator"
+    },
+    {
+      "player_id": "navy",
+      "time": 5,
+      "bbox_xyxy": [
+        188,
+        412,
+        224,
+        485
+      ],
+      "description": "深蓝上衣、深色长裤，无球衣号码",
+      "reviewer_kind": "test_operator"
+    }
+  ]
+}

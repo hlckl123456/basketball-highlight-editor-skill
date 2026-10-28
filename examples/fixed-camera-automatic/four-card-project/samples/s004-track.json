@@ -1,0 +1,261 @@
+{
+  "id": "s004",
+  "player_id": "navy",
+  "time": 5,
+  "bbox_xyxy": [
+    188,
+    412,
+    224,
+    485
+  ],
+  "description": "深蓝上衣、深色长裤，无球衣号码",
+  "confirmed_by": "Operator chooses only reference crops in the first 15 seconds; no later event decisions or human truth",
+  "reviewer_kind": "test_operator",
+  "reference": "samples/s004.jpg",
+  "appearance": "default",
+  "valid_from": null,
+  "valid_until": null,
+  "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+  "track_proposals": [
+    {
+      "time": 3.0,
+      "bbox_xyxy": [
+        186.8,
+        412.0,
+        222.8,
+        485.0
+      ],
+      "surviving_points": 15,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 3.2,
+      "bbox_xyxy": [
+        186.7,
+        412.0,
+        222.7,
+        485.0
+      ],
+      "surviving_points": 15,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 3.4,
+      "bbox_xyxy": [
+        186.7,
+        412.0,
+        222.7,
+        485.0
+      ],
+      "surviving_points": 15,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 3.6,
+      "bbox_xyxy": [
+        186.7,
+        412.0,
+        222.7,
+        485.0
+      ],
+      "surviving_points": 15,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 3.8,
+      "bbox_xyxy": [
+        186.8,
+        412.0,
+        222.8,
+        485.0
+      ],
+      "surviving_points": 15,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 4.0,
+      "bbox_xyxy": [
+        186.8,
+        412.0,
+        222.8,
+        485.0
+      ],
+      "surviving_points": 17,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 4.2,
+      "bbox_xyxy": [
+        187.0,
+        412.0,
+        223.0,
+        485.0
+      ],
+      "surviving_points": 17,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 4.4,
+      "bbox_xyxy": [
+        187.4,
+        412.0,
+        223.4,
+        485.0
+      ],
+      "surviving_points": 17,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 4.6,
+      "bbox_xyxy": [
+        187.5,
+        412.0,
+        223.5,
+        485.0
+      ],
+      "surviving_points": 18,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 4.8,
+      "bbox_xyxy": [
+        187.8,
+        412.0,
+        223.8,
+        485.0
+      ],
+      "surviving_points": 21,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 5.2,
+      "bbox_xyxy": [
+        188.2,
+        412.0,
+        224.2,
+        485.0
+      ],
+      "surviving_points": 19,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 5.4,
+      "bbox_xyxy": [
+        188.2,
+        412.0,
+        224.2,
+        485.0
+      ],
+      "surviving_points": 19,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 5.6,
+      "bbox_xyxy": [
+        188.2,
+        412.0,
+        224.2,
+        485.0
+      ],
+      "surviving_points": 19,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 5.8,
+      "bbox_xyxy": [
+        188.2,
+        412.0,
+        224.2,
+        485.0
+      ],
+      "surviving_points": 19,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 6.0,
+      "bbox_xyxy": [
+        188.2,
+        412.0,
+        224.2,
+        485.0
+      ],
+      "surviving_points": 19,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 6.2,
+      "bbox_xyxy": [
+        188.2,
+        412.0,
+        224.2,
+        485.0
+      ],
+      "surviving_points": 19,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 6.4,
+      "bbox_xyxy": [
+        188.2,
+        412.0,
+        224.2,
+        485.0
+      ],
+      "surviving_points": 19,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 6.6,
+      "bbox_xyxy": [
+        188.2,
+        412.0,
+        224.2,
+        485.0
+      ],
+      "surviving_points": 19,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 6.8,
+      "bbox_xyxy": [
+        188.2,
+        412.0,
+        224.2,
+        485.0
+      ],
+      "surviving_points": 19,
+      "initial_points": 23,
+      "identity_verified": false
+    },
+    {
+      "time": 7.0,
+      "bbox_xyxy": [
+        188.2,
+        412.0,
+        224.2,
+        485.0
+      ],
+      "surviving_points": 19,
+      "initial_points": 23,
+      "identity_verified": false
+    }
+  ]
+}

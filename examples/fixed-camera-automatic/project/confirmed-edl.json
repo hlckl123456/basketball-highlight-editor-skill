@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "source": {
+    "codec": "vp9",
+    "coded_height": 850,
+    "coded_width": 478,
+    "duration": 60.6,
+    "fps": "30",
+    "has_audio": false,
+    "height": 850,
+    "path": "../../unnumbered/sources/university.webm",
+    "presentation_start": 0.0,
+    "render_fps": "30",
+    "rights": {
+      "bytes": 12452945,
+      "creator": "Alejons06",
+      "download_authorization": "User requested testing assorted unnumbered public basketball footage.",
+      "id": "university",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "processing_basis": "Original author public Commons license, local regression and evidence publication",
+      "restrictions": "Keep original attribution and license, no implied endorsement; derivatives keep CC BY-SA 4.0 when applicable",
+      "selection_notes": "All screened material retained, including hard/partially numbered scenes; target shirt-number status is separately reviewed.",
+      "sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cancha_de_basquetbol_universidad.webm",
+      "title": "File:Cancha de basquetbol universidad.webm",
+      "transformation": "none"
+    },
+    "rotation": 0,
+    "sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+    "time_base": "1/1000",
+    "width": 478
+  },
+  "project_revision": 8,
+  "player_id": "white",
+  "clips": [
+    {
+      "id": "c0018",
+      "start": 51.0,
+      "end": 54.0,
+      "labels": []
+    },
+    {
+      "id": "c0019",
+      "start": 54.0,
+      "end": 57.0,
+      "labels": []
+    }
+  ]
+}

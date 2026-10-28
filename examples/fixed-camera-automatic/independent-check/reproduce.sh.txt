@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+BHE_REPO='<REPO_ROOT>'
+BHE_PY='<PYTHON_WITH_RUNTIME>'
+BHE_SCRIPT="$BHE_REPO/skills/basketball-highlight-editor/scripts/highlight.py"
+# Use a new destination; init deliberately refuses an existing project.
+BHE_TEST_DIR="${BHE_TEST_DIR:-$BHE_REPO/work/independent-forward-test-replay}"
+export BHE_REPO BHE_PY BHE_SCRIPT BHE_TEST_DIR PYTHONDONTWRITEBYTECODE=1
+mkdir -p "$BHE_TEST_DIR"
+"$BHE_PY" "$BHE_SCRIPT" doctor
+"$BHE_PY" "$BHE_SCRIPT" init "$BHE_TEST_DIR/project" --video "$BHE_REPO/examples/unnumbered/sources/university.webm" --rights "$BHE_REPO/examples/unnumbered/rights/university.json" --reproducible
+"$BHE_PY" "$BHE_SCRIPT" detect "$BHE_TEST_DIR/project" --backend motion-coverage
+"$BHE_PY" "$BHE_SCRIPT" people "$BHE_TEST_DIR/project" --stream --roi 0 350 478 570 --tile 240 --fps 5
+"$BHE_PY" - <<'PY'
+import json,os,subprocess
+from pathlib import Path
+repo=Path(os.environ['BHE_REPO'])
+for s in json.loads((repo/'examples/fixed-camera-automatic/reference-inputs.json').read_text())['samples']:
+ subprocess.run([os.environ['BHE_PY'],os.environ['BHE_SCRIPT'],'sample',str(Path(os.environ['BHE_TEST_DIR'])/'project'),'--player',s['player_id'],'--time',str(s['time']),'--bbox',*map(str,s['bbox_xyxy']),'--description',s['description'],'--reviewer-kind','test_operator','--confirmed-by','Independent forward-test fixture selection; examples/fixed-camera-automatic/reference-inputs.json; test_operator only'],check=True)
+PY
+"$BHE_PY" "$BHE_SCRIPT" match-people "$BHE_TEST_DIR/project" --player white --role visible --appearance-model "$BHE_REPO/work/automatic-reid/dinov2_vits14_pretrain.pth" --apply
+"$BHE_PY" "$BHE_SCRIPT" select "$BHE_TEST_DIR/project" --player white --role visible --selected-by 'Independent forward-test fixture selection; test_operator only'
+"$BHE_PY" "$BHE_SCRIPT" rough "$BHE_TEST_DIR/project"

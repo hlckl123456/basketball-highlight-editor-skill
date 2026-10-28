@@ -1,0 +1,1453 @@
+{
+  "status": "draft",
+  "manual_assignment_changes": false,
+  "assignments": [
+    {
+      "candidate_id": "w000",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": "orange-yellow",
+      "presence_certainty": "high",
+      "role_certainty": {
+        "visible": "high",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [],
+      "support_count": 5,
+      "support": [
+        [
+          0.667,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00002_p00",
+            "track_id": 0,
+            "box": [
+              35.23,
+              171.26,
+              98.47,
+              330.36
+            ],
+            "person_score": 0.8336,
+            "distance": 0.12352266907691956,
+            "profile_margin": 0.1742908775806427,
+            "person_margin": 0.16327515840530393,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 0.12352266907691956,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.1742908775806427,
+              "person_margin": 0.16327515840530393,
+              "reasons": [],
+              "region_distances": [
+                0.15427875518798828,
+                0.10866296291351318,
+                0.08032596111297607
+              ],
+              "color_distance": 0.11257211280835654,
+              "upper_clothing_distance": 0.14423986806812125
+            },
+            "segment_id": "segment-00000"
+          }
+        ],
+        [
+          1.0,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00003_p00",
+            "track_id": 0,
+            "box": [
+              78.7,
+              173.39,
+              129.5,
+              335.3
+            ],
+            "person_score": 0.8258,
+            "distance": 4.1723251342773435e-08,
+            "profile_margin": 0.2933497875928879,
+            "person_margin": 0.2933496683835983,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 4.1723251342773435e-08,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.2933497875928879,
+              "person_margin": 0.2933496683835983,
+              "reasons": [],
+              "region_distances": [
+                0.0,
+                1.1920928955078125e-07,
+                0.0
+              ],
+              "color_distance": 0.0,
+              "upper_clothing_distance": 0.0
+            },
+            "segment_id": "segment-00000"
+          }
+        ],
+        [
+          1.333,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00004_p00",
+            "track_id": 0,
+            "box": [
+              135.79,
+              164.47,
+              187.14,
+              335.71
+            ],
+            "person_score": 0.8045,
+            "distance": 0.12095213532447815,
+            "profile_margin": 0.19265754222869877,
+            "person_margin": 0.1442820817232132,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 0.12095213532447815,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.19265754222869877,
+              "person_margin": 0.1442820817232132,
+              "reasons": [],
+              "region_distances": [
+                0.1251826286315918,
+                0.124381422996521,
+                0.10543227195739746
+              ],
+              "color_distance": 0.05863368212796377,
+              "upper_clothing_distance": 0.0503755216705816
+            },
+            "segment_id": "segment-00000"
+          }
+        ],
+        [
+          1.667,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00005_p00",
+            "track_id": 0,
+            "box": [
+              171.84,
+              168.76,
+              242.39,
+              335.4
+            ],
+            "person_score": 0.8392,
+            "distance": 0.18629100322723388,
+            "profile_margin": 0.13587332367897034,
+            "person_margin": 0.09451301693916322,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 0.18629100322723388,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.13587332367897034,
+              "person_margin": 0.09451301693916322,
+              "reasons": [],
+              "region_distances": [
+                0.21971571445465088,
+                0.1679929494857788,
+                0.14310699701309204
+              ],
+              "color_distance": 0.16859556556093472,
+              "upper_clothing_distance": 0.17881034396995607
+            },
+            "segment_id": "segment-00000"
+          }
+        ],
+        [
+          2.0,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00006_p01",
+            "track_id": 0,
+            "box": [
+              241.19,
+              167.35,
+              288.47,
+              333.56
+            ],
+            "person_score": 0.7967,
+            "distance": 0.22771081626415252,
+            "profile_margin": 0.1594534128904343,
+            "person_margin": 0.06164527833461764,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 0.22771081626415252,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.1594534128904343,
+              "person_margin": 0.06164527833461764,
+              "reasons": [],
+              "region_distances": [
+                0.26784294843673706,
+                0.19707679748535156,
+                0.191023051738739
+              ],
+              "color_distance": 0.1324246800689082,
+              "upper_clothing_distance": 0.12427935223887251
+            },
+            "segment_id": "segment-00000"
+          }
+        ]
+      ],
+      "supported_time_ranges": [
+        {
+          "id": "segment-00000",
+          "start": 0.667,
+          "end": 2.0,
+          "support_count": 5,
+          "support_times": [
+            0.667,
+            1.0,
+            1.333,
+            1.667,
+            2.0
+          ],
+          "unresolved_times": []
+        }
+      ],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w006",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w012",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w018",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w024",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w030",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w036",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w042",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w048",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w054",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w060",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w066",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w072",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w078",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w084",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w090",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w096",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w102",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w108",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w114",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w120",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w126",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": "orange-yellow",
+      "presence_certainty": "high",
+      "role_certainty": {
+        "visible": "high",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [],
+      "support_count": 4,
+      "support": [
+        [
+          129.333,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00388_p00",
+            "track_id": 688,
+            "box": [
+              62.0,
+              204.96,
+              118.42,
+              394.52
+            ],
+            "person_score": 0.808,
+            "distance": 0.21711349785327913,
+            "profile_margin": 0.11243055760860446,
+            "person_margin": 0.11448195874691006,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 0.21711349785327913,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.11243055760860446,
+              "person_margin": 0.11448195874691006,
+              "reasons": [],
+              "region_distances": [
+                0.25219666957855225,
+                0.19723063707351685,
+                0.17297136783599854
+              ],
+              "color_distance": 0.17407321855369248,
+              "upper_clothing_distance": 0.1796143176035916
+            },
+            "segment_id": "segment-00003"
+          }
+        ],
+        [
+          129.667,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00389_p00",
+            "track_id": 688,
+            "box": [
+              32.54,
+              209.19,
+              118.71,
+              397.44
+            ],
+            "person_score": 0.85,
+            "distance": 0.24641923904418944,
+            "profile_margin": 0.1241780251264572,
+            "person_margin": 0.1334892690181732,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 0.24641923904418944,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.1241780251264572,
+              "person_margin": 0.1334892690181732,
+              "reasons": [],
+              "region_distances": [
+                0.2768549919128418,
+                0.2189617156982422,
+                0.2259894609451294
+              ],
+              "color_distance": 0.1995901358989073,
+              "upper_clothing_distance": 0.16015138368683318
+            },
+            "segment_id": "segment-00003"
+          }
+        ],
+        [
+          130.0,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00390_p00",
+            "track_id": 688,
+            "box": [
+              25.66,
+              212.18,
+              100.36,
+              385.92
+            ],
+            "person_score": 0.8314,
+            "distance": 0.21969806253910065,
+            "profile_margin": 0.14197733402252197,
+            "person_margin": 0.2116942584514618,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 0.21969806253910065,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.14197733402252197,
+              "person_margin": 0.2116942584514618,
+              "reasons": [],
+              "region_distances": [
+                0.2581269145011902,
+                0.18676745891571045,
+                0.19086170196533203
+              ],
+              "color_distance": 0.12006151937491139,
+              "upper_clothing_distance": 0.06718689707821816
+            },
+            "segment_id": "segment-00003"
+          }
+        ],
+        [
+          130.333,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00391_p00",
+            "track_id": 688,
+            "box": [
+              28.18,
+              219.14,
+              115.63,
+              371.66
+            ],
+            "person_score": 0.8293,
+            "distance": 0.2859258383512497,
+            "profile_margin": 0.10973229110240934,
+            "person_margin": 0.09259410500526427,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 0.2859258383512497,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.10973229110240934,
+              "person_margin": 0.09259410500526427,
+              "reasons": [],
+              "region_distances": [
+                0.3223307132720947,
+                0.2547181248664856,
+                0.25862836837768555
+              ],
+              "color_distance": 0.19757099622101268,
+              "upper_clothing_distance": 0.11365373366057609
+            },
+            "segment_id": "segment-00003"
+          }
+        ]
+      ],
+      "supported_time_ranges": [
+        {
+          "id": "segment-00003",
+          "start": 129.333,
+          "end": 130.333,
+          "support_count": 4,
+          "support_times": [
+            129.333,
+            129.667,
+            130.0,
+            130.333
+          ],
+          "unresolved_times": []
+        }
+      ],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w132",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w138",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w144",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w150",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w156",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w162",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w168",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w174",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w180",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w186",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": "orange-yellow",
+      "presence_certainty": "high",
+      "role_certainty": {
+        "visible": "high",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [],
+      "support_count": 4,
+      "support": [
+        [
+          186.0,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00558_p04",
+            "track_id": 961,
+            "box": [
+              424.58,
+              218.83,
+              503.26,
+              476.88
+            ],
+            "person_score": 0.8075,
+            "distance": 0.22455519139766691,
+            "profile_margin": 0.12329058647155763,
+            "person_margin": 0.0650764018297196,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 0.22455519139766691,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.12329058647155763,
+              "person_margin": 0.0650764018297196,
+              "reasons": [],
+              "region_distances": [
+                0.2607196569442749,
+                0.20785754919052124,
+                0.17240601778030396
+              ],
+              "color_distance": 0.23687476613076353,
+              "upper_clothing_distance": 0.18649625145308008
+            },
+            "segment_id": "segment-00005"
+          }
+        ],
+        [
+          186.333,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00559_p04",
+            "track_id": 961,
+            "box": [
+              397.02,
+              200.17,
+              465.99,
+              447.81
+            ],
+            "person_score": 0.8505,
+            "distance": 0.21277960538864138,
+            "profile_margin": 0.18646261692047117,
+            "person_margin": 0.08197560012340543,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 0.21277960538864138,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.18646261692047117,
+              "person_margin": 0.08197560012340543,
+              "reasons": [],
+              "region_distances": [
+                0.24238741397857666,
+                0.20453155040740967,
+                0.16059613227844238
+              ],
+              "color_distance": 0.14929207538848255,
+              "upper_clothing_distance": 0.15072704406114693
+            },
+            "segment_id": "segment-00005"
+          }
+        ],
+        [
+          186.667,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00560_p03",
+            "track_id": 961,
+            "box": [
+              381.2,
+              217.23,
+              454.34,
+              431.2
+            ],
+            "person_score": 0.8503,
+            "distance": 0.19774613380432127,
+            "profile_margin": 0.14922935366630558,
+            "person_margin": 0.10951694846153259,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 0.19774613380432127,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.14922935366630558,
+              "person_margin": 0.10951694846153259,
+              "reasons": [],
+              "region_distances": [
+                0.22519803047180176,
+                0.17534351348876953,
+                0.1751839518547058
+              ],
+              "color_distance": 0.11916607636976365,
+              "upper_clothing_distance": 0.112525170127687
+            },
+            "segment_id": "segment-00005"
+          }
+        ],
+        [
+          187.0,
+          {
+            "player_id": "orange-yellow",
+            "observation_id": "f00561_p03",
+            "track_id": 961,
+            "box": [
+              393.83,
+              205.1,
+              454.08,
+              408.54
+            ],
+            "person_score": 0.8399,
+            "distance": 0.165627521276474,
+            "profile_margin": 0.15302036702632904,
+            "person_margin": 0.14445955157279972,
+            "confidence_evidence": {
+              "policy_version": "clothing-texture-reid-v2",
+              "eligible": true,
+              "scope": "visible_presence_only",
+              "is_probability": false,
+              "distance": 0.165627521276474,
+              "reference_ids": [
+                "orange-yellow-first"
+              ],
+              "profile_margin": 0.15302036702632904,
+              "person_margin": 0.14445955157279972,
+              "reasons": [],
+              "region_distances": [
+                0.19687950611114502,
+                0.14539027214050293,
+                0.13072574138641357
+              ],
+              "color_distance": 0.12039032768960012,
+              "upper_clothing_distance": 0.11494466598087082
+            },
+            "segment_id": "segment-00005"
+          }
+        ]
+      ],
+      "supported_time_ranges": [
+        {
+          "id": "segment-00005",
+          "start": 186.0,
+          "end": 187.0,
+          "support_count": 4,
+          "support_times": [
+            186.0,
+            186.333,
+            186.667,
+            187.0
+          ],
+          "unresolved_times": []
+        }
+      ],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w192",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w198",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w204",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "w210",
+      "target_player_id": "orange-yellow",
+      "presence_player_id": null,
+      "presence_certainty": "uncertain",
+      "role_certainty": {
+        "visible": "uncertain",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [
+        "insufficient_independent_texture_run"
+      ],
+      "support_count": 0,
+      "support": [],
+      "supported_time_ranges": [],
+      "never_auto_exclude": true
+    }
+  ]
+}

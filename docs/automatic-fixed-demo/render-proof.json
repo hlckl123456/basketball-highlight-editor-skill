@@ -1,0 +1,75 @@
+{
+  "duration": 52.987,
+  "scenes": [
+    {
+      "scene": "reference",
+      "raw_recording_seconds": 10.52,
+      "trimmed_setup_seconds": 1.58,
+      "target_seconds": 8.94,
+      "output_seconds": 8.933333
+    },
+    {
+      "scene": "match",
+      "raw_recording_seconds": 13.76,
+      "trimmed_setup_seconds": 1.3729999999999993,
+      "target_seconds": 12.387,
+      "output_seconds": 12.4
+    },
+    {
+      "scene": "guard",
+      "raw_recording_seconds": 11.84,
+      "trimmed_setup_seconds": 1.423,
+      "target_seconds": 10.417,
+      "output_seconds": 10.4
+    },
+    {
+      "scene": "result",
+      "raw_recording_seconds": 11.4,
+      "trimmed_setup_seconds": 1.2460000000000004,
+      "target_seconds": 10.154,
+      "output_seconds": 10.166667
+    },
+    {
+      "scene": "compare",
+      "raw_recording_seconds": 15.04,
+      "trimmed_setup_seconds": 3.9509999999999987,
+      "target_seconds": 11.089,
+      "output_seconds": 11.1
+    }
+  ],
+  "file": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "30/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "avg_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "53.000000"
+    }
+  },
+  "no_real_human_confirmation_generated": true,
+  "AI_voice": "macOS Tingting",
+  "capture_proof": "capture-proof.json",
+  "source": "Alejons06 / CC0 / Cancha de basquetbol universidad",
+  "source_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+  "source_audio": false,
+  "voice": "macOS Tingting synthesized narration, not a human user recording",
+  "camera": "fixed view; editorial static crop only",
+  "matching": "precomputed actual model output; no simulated real-time inference",
+  "capture": "isolated Playwright Chromium, local file navigation; no signed-in sessions",
+  "browser_fallback_reason": "Browser plugin not available; used existing Playwright for local rendered verification",
+  "truth": "all demo reference and export actions test_operator, all visual audits draft",
+  "media_sha256": "bcf0923eeec277eb0b00a8c1919a683a55340c8effaf1b74ffca03a7f6be5820"
+}

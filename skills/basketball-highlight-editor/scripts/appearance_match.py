@@ -4,11 +4,11 @@ No jersey OCR, face identity, score ownership or source-specific rules.
 from collections import defaultdict
 import math
 import numpy as np
-from attribution_policy import trusted,active,overlap,feature_distance,crop_quality
+from attribution_policy import trusted,active,overlap,feature_distance,part_distances,crop_quality
 from person_engine import descriptor,iou
 from person_temporal import tracklets
 POLICY_VERSION='clothing-texture-reid-v2'
-PARAMETERS={'max_distance':.32,'min_margin':.06,'max_part_distance':.45,'max_color_distance':.45,'min_observations':4,'min_span':.8,'max_gap':.71}
+PARAMETERS={'max_distance':.32,'min_margin':.06,'max_part_distance':.45,'max_color_distance':.45,'max_upper_color_distance':.30,'min_observations':4,'min_span':.8,'max_gap':.71}
 
 def distances(left,right):
  a,b=np.asarray(left),np.asarray(right)
@@ -41,6 +41,8 @@ def score_observation(obs,items,features,references,time,params=None):
  try:
   color=feature_distance(obs['descriptor'],ref['descriptor']);evidence['color_distance']=color
   if color>p['max_color_distance']:reasons.append('clothing_disagreement')
+  upper=part_distances(obs['descriptor'],ref['descriptor'])[0];evidence['upper_clothing_distance']=upper
+  if upper>p['max_upper_color_distance']:reasons.append('upper_clothing_disagreement')
  except (ValueError,TypeError,KeyError):reasons.append('clothing_descriptor_missing')
  if len(ranked)>1:
   evidence['profile_margin']=ranked[1][0]-cost
@@ -79,14 +81,14 @@ def predict_from_features(data,features,references,params=None):
     # A conflicting lookalike on this very track breaks continuity. Low-quality
     # gaps may remain unknown, never receive propagated identity themselves.
     e=item['confidence_evidence']
-    conflict=set(e['reasons'])&{'ambiguous_same_frame_person','ambiguous_player_profiles','clothing_disagreement'}
+    conflict=set(e['reasons'])&{'ambiguous_same_frame_person','ambiguous_player_profiles','clothing_disagreement','upper_clothing_disagreement'}
     if conflict or t-current[-1][0]>p['max_gap']:runs.append(current);current=[]
   if current:runs.append(current)
   supported=set()
   for run in runs:
    if len(run)<p['min_observations'] or run[-1][0]-run[0][0]+1e-6<p['min_span']:continue
    sid='segment-%05d'%len(segments);pid=run[0][1]['player_id']
-   segment={'id':sid,'track_id':tid,'player_id':pid,'start':run[0][0],'end':run[-1][0],'support_count':len(run),'observations':[o['observation_id'] for _,o in run],'reference_ids':sorted({ref for _,o in run for ref in o['confidence_evidence']['reference_ids']}),'status':'draft','scope':'visible_presence_only'}
+   segment={'id':sid,'track_id':tid,'player_id':pid,'start':run[0][0],'end':run[-1][0],'support_count':len(run),'support_times':[t for t,_ in run],'unresolved_times':[r['time'] for r in data['records'] if run[0][0]<=r['time']<=run[-1][0] and r['time'] not in {t for t,_ in run}],'observations':[o['observation_id'] for _,o in run],'reference_ids':sorted({ref for _,o in run for ref in o['confidence_evidence']['reference_ids']}),'status':'draft','scope':'visible_presence_only'}
    segments.append(segment)
    for t,o in run:supported.add(o['observation_id']);o['segment_id']=sid
   for t,item in observations:
@@ -94,6 +96,7 @@ def predict_from_features(data,features,references,params=None):
    else:
     if item['confidence_evidence']['eligible']:
      item['confidence_evidence']={**item['confidence_evidence'],'eligible':False,'reasons':['insufficient_contiguous_texture_support']}
+    item['hypothesis_player_id']=item['player_id'];item['player_id']=None
     rows[t]['uncertain'].append(item)
   summaries.append({'track_id':tid,'start':track[0][0],'end':track[-1][0],'count':len(track),'identity_verified':False})
  return {'records':list(rows.values()),'segments':segments,'tracks':summaries,'confidence_audit':audit,'parameters':p,'policy_version':POLICY_VERSION,'is_probability':False,'method':'head-trimmed DINOv2 clothing texture, color agreement, actual competitor margins, independent temporal support runs; presence only'}
@@ -104,9 +107,9 @@ def candidate_evidence(result,candidate,player):
  support=[];usable=[];p=result['parameters']
  for s in result.get('segments',[]):
   if s['player_id']!=player:continue
-  hits=[(r['time'],o) for r in result['records'] if candidate['start']<=r['time']<=candidate['end'] for o in r['accepted'] if o.get('segment_id')==s['id'] and o['player_id']==player]
+  hits=[(r['time'],o) for r in result['records'] if candidate['start']<=r['time']<candidate['end'] for o in r['accepted'] if o.get('segment_id')==s['id'] and o['player_id']==player]
   if len(hits)>=p['min_observations'] and hits[-1][0]-hits[0][0]+1e-6>=p['min_span']:
-   usable.append({'id':s['id'],'start':hits[0][0],'end':hits[-1][0],'support_count':len(hits)})
+   usable.append({'id':s['id'],'start':hits[0][0],'end':hits[-1][0],'support_count':len(hits),'support_times':[t for t,_ in hits],'unresolved_times':[r['time'] for r in result['records'] if hits[0][0]<=r['time']<=hits[-1][0] and r['time'] not in {t for t,_ in hits}]})
    if len(hits)>len(support):support=hits
  high=bool(support)
  return {'candidate_id':candidate['id'],'target_player_id':player,'presence_player_id':player if high else None,'presence_certainty':'high' if high else 'uncertain','role_certainty':{'visible':'high' if high else 'uncertain','scorer':'uncertain','handler':'uncertain'},'role_reasons':{'scorer':'clothing_presence_does_not_prove_scorer','handler':'clothing_presence_does_not_prove_ball_handler'},'confidence_scope':'visible_presence_only','policy_version':POLICY_VERSION,'is_probability':False,'reason_codes':[] if high else ['insufficient_independent_texture_run'],'support_count':len(support),'support':support,'supported_time_ranges':usable,'never_auto_exclude':True}

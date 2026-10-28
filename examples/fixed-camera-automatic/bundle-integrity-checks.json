@@ -1,0 +1,31 @@
+{
+  "status": "draft",
+  "checks": [
+    {
+      "check": "changed numerical features",
+      "rejected": true,
+      "message": "APPEARANCE_BUNDLE_HASH_MISMATCH"
+    },
+    {
+      "check": "changed observation geometry",
+      "rejected": true,
+      "message": "APPEARANCE_BUNDLE_GEOMETRY_MISMATCH"
+    },
+    {
+      "check": "changed reference choice",
+      "rejected": true,
+      "message": "APPEARANCE_BUNDLE_INPUT_MISMATCH"
+    },
+    {
+      "check": "different source hash",
+      "rejected": true,
+      "message": "APPEARANCE_BUNDLE_INPUT_MISMATCH"
+    },
+    {
+      "check": "changed model provenance",
+      "rejected": true,
+      "message": "APPEARANCE_BUNDLE_MODEL_MISMATCH"
+    }
+  ],
+  "human_confirmation": false
+}

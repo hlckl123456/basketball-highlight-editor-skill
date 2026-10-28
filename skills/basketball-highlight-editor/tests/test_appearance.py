@@ -105,6 +105,29 @@ class Appearance(unittest.TestCase):
   actual=m.predict_from_features(d,f,refs);self.assertEqual(actual,expected)
 
 
+ def test_rejected_profile_is_a_hypothesis_not_assigned_identity(self):
+  d,f,refs=self.data();d['records'][0]['items'][0]['quality']={};r=m.predict_from_features(d,f,refs)
+  rejected=next(o for o in r['records'][0]['uncertain'] if o['observation_id']=='p0')
+  self.assertIsNone(rejected['player_id']);self.assertEqual(rejected['hypothesis_player_id'],'target')
+ def test_segment_envelope_reports_unknown_samples_explicitly(self):
+  d,f,refs=self.data(12);d['records'][6]['items'][0]['quality']={};r=m.predict_from_features(d,f,refs)
+  segment=next(s for s in r['segments'] if s['player_id']=='target' and s['start']<=1.2<=s['end'])
+  self.assertIn(1.2,segment['unresolved_times']);self.assertNotIn(1.2,segment['support_times'])
+
+
+ def test_render_end_is_exclusive_for_support_observations(self):
+  r=self.predict();base={'id':'edge','start':0,'end':.8}
+  self.assertEqual(candidate_evidence(r,base,'target')['presence_certainty'],'uncertain')
+  self.assertEqual(candidate_evidence(r,{**base,'end':.81},'target')['presence_certainty'],'high')
+
+
+ def test_upper_clothing_color_cannot_be_diluted_by_matching_trousers(self):
+  d,f,refs=self.data()
+  for row in d['records']:row['items'][0]['descriptor'][0]=color(8)[0]
+  r=m.predict_from_features(d,f,refs)
+  self.assertEqual(self.candidate(r)['presence_certainty'],'uncertain')
+
+
 class Streaming(unittest.TestCase):
  @classmethod
  def setUpClass(cls):

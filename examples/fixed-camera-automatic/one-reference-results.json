@@ -1,0 +1,102 @@
+{
+  "status": "draft",
+  "target_reference_count": 1,
+  "other_manual_references": 0,
+  "automatic_high": [
+    {
+      "candidate_id": "c0018",
+      "target_player_id": "white",
+      "presence_player_id": "white",
+      "presence_certainty": "high",
+      "role_certainty": {
+        "visible": "high",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [],
+      "support_count": 5,
+      "supported_time_ranges": [
+        {
+          "id": "segment-00000",
+          "start": 51.4,
+          "end": 52.4,
+          "support_count": 5,
+          "support_times": [
+            51.4,
+            51.6,
+            52.0,
+            52.2,
+            52.4
+          ],
+          "unresolved_times": [
+            51.8
+          ]
+        }
+      ],
+      "never_auto_exclude": true
+    },
+    {
+      "candidate_id": "c0019",
+      "target_player_id": "white",
+      "presence_player_id": "white",
+      "presence_certainty": "high",
+      "role_certainty": {
+        "visible": "high",
+        "scorer": "uncertain",
+        "handler": "uncertain"
+      },
+      "role_reasons": {
+        "scorer": "clothing_presence_does_not_prove_scorer",
+        "handler": "clothing_presence_does_not_prove_ball_handler"
+      },
+      "confidence_scope": "visible_presence_only",
+      "policy_version": "clothing-texture-reid-v2",
+      "is_probability": false,
+      "reason_codes": [],
+      "support_count": 8,
+      "supported_time_ranges": [
+        {
+          "id": "segment-00001",
+          "start": 54.0,
+          "end": 55.4,
+          "support_count": 8,
+          "support_times": [
+            54.0,
+            54.2,
+            54.4,
+            54.6,
+            54.8,
+            55.0,
+            55.2,
+            55.4
+          ],
+          "unresolved_times": []
+        },
+        {
+          "id": "segment-00002",
+          "start": 55.8,
+          "end": 56.8,
+          "support_count": 6,
+          "support_times": [
+            55.8,
+            56.0,
+            56.2,
+            56.4,
+            56.6,
+            56.8
+          ],
+          "unresolved_times": []
+        }
+      ],
+      "never_auto_exclude": true
+    }
+  ],
+  "no_manual_assignment_changes": true
+}

@@ -1,0 +1,119 @@
+{
+  "status": "draft",
+  "camera": "moving/edited supplementary stress footage, not fixed camera",
+  "target": "orange-yellow",
+  "windows": 36,
+  "legacy_high": [
+    "w186"
+  ],
+  "texture_high": [
+    "w000",
+    "w126",
+    "w186"
+  ],
+  "texture_segments": [
+    {
+      "id": "segment-00000",
+      "track_id": 0,
+      "player_id": "orange-yellow",
+      "start": 0.667,
+      "end": 2.0,
+      "support_count": 5,
+      "support_times": [
+        0.667,
+        1.0,
+        1.333,
+        1.667,
+        2.0
+      ],
+      "unresolved_times": [],
+      "reference_ids": [
+        "orange-yellow-first"
+      ],
+      "status": "draft",
+      "scope": "visible_presence_only"
+    },
+    {
+      "id": "segment-00002",
+      "track_id": 304,
+      "player_id": "orange-yellow",
+      "start": 59.0,
+      "end": 60.0,
+      "support_count": 4,
+      "support_times": [
+        59.0,
+        59.333,
+        59.667,
+        60.0
+      ],
+      "unresolved_times": [],
+      "reference_ids": [
+        "orange-yellow-first"
+      ],
+      "status": "draft",
+      "scope": "visible_presence_only"
+    },
+    {
+      "id": "segment-00003",
+      "track_id": 688,
+      "player_id": "orange-yellow",
+      "start": 129.333,
+      "end": 130.333,
+      "support_count": 4,
+      "support_times": [
+        129.333,
+        129.667,
+        130.0,
+        130.333
+      ],
+      "unresolved_times": [],
+      "reference_ids": [
+        "orange-yellow-first"
+      ],
+      "status": "draft",
+      "scope": "visible_presence_only"
+    },
+    {
+      "id": "segment-00004",
+      "track_id": 896,
+      "player_id": "orange-yellow",
+      "start": 173.667,
+      "end": 174.667,
+      "support_count": 4,
+      "support_times": [
+        173.667,
+        174.0,
+        174.333,
+        174.667
+      ],
+      "unresolved_times": [],
+      "reference_ids": [
+        "orange-yellow-first"
+      ],
+      "status": "draft",
+      "scope": "visible_presence_only"
+    },
+    {
+      "id": "segment-00005",
+      "track_id": 961,
+      "player_id": "orange-yellow",
+      "start": 186.0,
+      "end": 187.0,
+      "support_count": 4,
+      "support_times": [
+        186.0,
+        186.333,
+        186.667,
+        187.0
+      ],
+      "unresolved_times": [],
+      "reference_ids": [
+        "orange-yellow-first"
+      ],
+      "status": "draft",
+      "scope": "visible_presence_only"
+    }
+  ],
+  "accuracy": null,
+  "human_confirmed_ground_truth": false
+}

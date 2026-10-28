@@ -1,0 +1,50 @@
+{
+  "status": "draft",
+  "reviewer_kind": "test_operator",
+  "same_source_windows_references": true,
+  "windows": 21,
+  "source_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+  "profiles": [
+    {
+      "player_id": "green",
+      "description": "绿色连帽上衣、蓝色长裤，无球衣号码",
+      "legacy_high_windows": [],
+      "texture_high_windows": [
+        "c0001",
+        "c0002"
+      ],
+      "uncertain_windows": 19,
+      "independent_accuracy": null
+    },
+    {
+      "player_id": "navy",
+      "description": "深蓝上衣、深色长裤，无球衣号码",
+      "legacy_high_windows": [],
+      "texture_high_windows": [],
+      "uncertain_windows": 21,
+      "independent_accuracy": null
+    },
+    {
+      "player_id": "orange",
+      "description": "橙色上衣、深色长裤，无球衣号码",
+      "legacy_high_windows": [],
+      "texture_high_windows": [],
+      "uncertain_windows": 21,
+      "independent_accuracy": null
+    },
+    {
+      "player_id": "white",
+      "description": "白色 T 恤、深色长裤、浅色鞋，无球衣号码",
+      "legacy_high_windows": [],
+      "texture_high_windows": [
+        "c0005",
+        "c0018",
+        "c0019"
+      ],
+      "uncertain_windows": 18,
+      "independent_accuracy": null
+    }
+  ],
+  "formal_identity_ground_truth": false,
+  "manual_model_assignment_changes": false
+}
