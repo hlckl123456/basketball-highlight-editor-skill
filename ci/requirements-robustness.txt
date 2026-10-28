@@ -1,0 +1,4 @@
+# CI-compatible pins; local report records its separately observed runtime.
+numpy==2.2.6
+opencv-python-headless==4.12.0.88
+psutil==7.0.0

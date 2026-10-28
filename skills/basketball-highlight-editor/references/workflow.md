@@ -84,9 +84,9 @@ On a later user request, write a new spec:
 python3 "$SKILL_DIR/scripts/highlight.py" version "$PROJECT_DIR" --name short-defense --spec /absolute/version-spec.json --render
 ```
 
-Without `--render`, this writes only an independent EDL. Each version has its own directory and stored prompt. Clip order follows `clip_ids`, duration is capped by trimming the last included clip, and rejected IDs are disallowed. The renderer normalizes landscape previews to 1280×720 at 30fps, preserves optional audio, and handles silent input. It does not make portrait crops, titles, music, slow motion or a native CapCut/Jianying project. Do not claim a generic natural-language editor is embedded in the CLI; Codex translates the user's prompt into supported, reviewable settings.
+Without `--render`, this writes only an independent EDL. Each version has its own directory and stored prompt. Clip order follows `clip_ids`, duration is capped by trimming the last included clip, and rejected IDs are disallowed. The renderer normalizes landscape previews to 1280×720 at the source nominal rational frame rate, preserves optional audio, and handles silent input. It does not make portrait crops, titles, music, slow motion or a native CapCut/Jianying project. Do not claim a generic natural-language editor is embedded in the CLI; Codex translates the user's prompt into supported, reviewable settings.
 
-The duration cap controls EDL clip lengths. Muxed duration can differ slightly through frame and audio-packet rounding; the real 6-second smoke-test version probed as 6.03 seconds.
+The duration cap controls EDL clip lengths. Version EDLs record the output frame allocation and rational rate. Cumulative rounding bounds reel duration error to one output frame; VFR is resampled using presentation timestamps. Audio is resampled to 48kHz stereo and silence-padded when shorter than video. Historical archived renders retain their original encoding behavior.
 
 ## Reopening and invalidation
 
@@ -122,3 +122,7 @@ Use the actual video's ROI and sample box; the example coordinates apply only to
 `people/detections.json` contains raw boxes, descriptors, times, model hash and source hash. `people/matches.json` contains accepted/uncertain observations and tracklets. `people/candidate-proposals.json` records whether proposals were applied. Applying proposals never records a human confirmation. The role is `merely_visible`; the main review form still requires every high and uncertain clip to be decided before `confirm` can write the EDL. Adding samples, scanning again or applying new matches invalidates the previous clip confirmation.
 
 Unknown or similar-clothing players require additional sample evidence and manual review. Distances and margins are model heuristics, not calibrated probability percentages. No-match clips stay uncertain because detection and matching can miss visible people.
+
+## Input handling, caching and test clocks
+
+For supported formats, timing rules, cache controls and actionable media errors, read [media I/O](media.md). Production projects keep real audit timestamps. Only automated test projects may use `init --reproducible`; that mode rejects human or agent confirmations and requires `test_operator`.

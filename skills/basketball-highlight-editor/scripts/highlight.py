@@ -48,11 +48,11 @@ def read(path):
     return json.loads(Path(path).read_text(encoding='utf-8'))
 
 
-def write(path, value):
+def write(path, value, canonical=False):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + '.tmp')
-    tmp.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    tmp.write_text(json.dumps(value, ensure_ascii=False, indent=2, sort_keys=canonical) + '\n', encoding='utf-8')
     tmp.replace(path)
 
 
@@ -106,7 +106,7 @@ def save(root, p, action, detail):
     p['revision'] += 1
     p['updated_at'] = stamp(p)
     p['history'].append({'at': stamp(p), 'action': action, 'detail': detail, 'revision': p['revision']})
-    write(root / 'project.json', p)
+    write(root / 'project.json', p, canonical=bool(p.get('reproducibility')))
     report(root, p)
 
 
@@ -252,16 +252,27 @@ def _detect_uncached(a):
     save(root, p, 'detect', {'count': len(raw), 'backend': p['detector']['backend']})
 
 
+_FFMPEG_VERSION=None
+
+def ffmpeg_version():
+    global _FFMPEG_VERSION
+    if _FFMPEG_VERSION is None:
+        _FFMPEG_VERSION=media_io.command(['ffmpeg','-version']).splitlines()[0]
+    return _FFMPEG_VERSION
+
+
 def detection_key(a,p):
     params={'schema':2,'video_sha256':p['source']['sha256'],'backend':a.backend,
             'fps':float(a.fps),'before':float(a.before),'after':float(a.after),
-            'roi':a.roi,'device':a.device,'adapter_sha256':sha(__file__)}
+            'roi':a.roi,'device':a.device,'adapter_sha256':sha(__file__),
+            'media_io_sha256':sha(media_io.__file__), 'ffmpeg_version':ffmpeg_version()}
     if a.backend=='bhe':
         runtime=Path(a.runtime).resolve()
         model=Path(a.model) if a.model else runtime/'models/bball_model.static.onnx'
         for name,path in [('model',model),('scan',runtime/'scripts/scan_video.py'),('candidates',runtime/'scripts/generate_candidates.py')]:
             if not path.is_file():raise ValueError('MODEL_OR_RUNTIME_MISSING: supply an existing authorized BHE runtime')
             params[name+'_sha256']=sha(path)
+        params['runtime_sources']={str(f.relative_to(runtime)):sha(f) for f in sorted((runtime/'src').rglob('*.py'))}
     elif a.backend=='manifest':
         if not getattr(a,'manifest',None):raise ValueError('CANDIDATE_MANIFEST_REQUIRED: use --manifest')
         params['manifest_sha256']=sha(a.manifest)
@@ -284,7 +295,7 @@ def cmd_detect(a):
         _detect_uncached(a)
         _,p=load(root)
         p['detector']=stable_paths(p['detector'],root)
-        write(root/'project.json',p);report(root,p)
+        write(root/'project.json',p,canonical=bool(p.get('reproducibility')));report(root,p)
         raw_json={}
         for name in ('detections.json','events.json','motion.json'):
             path=root/'detection'/name
@@ -485,10 +496,9 @@ def cmd_sample(a):
         raise ValueError('SAMPLE_BOX_OUT_OF_BOUNDS')
     if not re.fullmatch('[A-Za-z0-9_-]+',a.player):
         raise ValueError('INVALID_PLAYER_ID')
-    cap=cv2.VideoCapture(str(source_path(root,p)))
-    cap.set(cv2.CAP_PROP_POS_MSEC,a.time*1000)
-    ok,ref=cap.read()
-    if not ok:raise ValueError('SAMPLE_DECODE_FAILED')
+    cv2.setNumThreads(1)
+    media_source=source_path(root,p)
+    ref=media_io.frame_bgr(media_source,a.time,p['source'])
     dest=root/'samples';dest.mkdir(exist_ok=True)
     sid='s%03d'%(len(p.get('samples',[]))+1)
     path=dest/(sid+'.jpg');cv2.imwrite(str(path),ref[y1:y2,x1:x2])
@@ -504,8 +514,8 @@ def cmd_sample(a):
         t=a.time+direction*.2
         while (points is not None and len(points)>=8 and 0<=t<p['source']['duration']
                and abs(t-a.time)<=2.001):
-            cap.set(cv2.CAP_PROP_POS_MSEC,t*1000);ok,frame=cap.read()
-            if not ok:break
+            try:frame=media_io.frame_bgr(media_source,t,p['source'])
+            except ValueError:break
             cur=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
             nxt,status,err=cv2.calcOpticalFlowPyrLK(prev,cur,points,None)
             if nxt is None:break
@@ -521,7 +531,6 @@ def cmd_sample(a):
                             'surviving_points':int(good.sum()),'initial_points':count0,
                             'identity_verified':False})
             points=nxt[good].reshape(-1,1,2);prev=cur;t+=direction*.2
-    cap.release()
     record={'id':sid,'player_id':a.player,'time':a.time,'bbox_xyxy':a.bbox,
             'description':a.description,'confirmed_by':a.confirmed_by,
             'reviewer_kind':a.reviewer_kind,'reference':'samples/'+path.name,
@@ -587,7 +596,9 @@ def cmd_rough(a):
         for cid in p['selection'][group]:
             c = next(c for c in p['candidates'] if c['id'] == cid)
             out = dest / (cid+'.mp4')
-            cut(p, c, out, source_path(root,p))
+            rendered=cut(p, c, out, source_path(root,p))
+            c['preview_sha256']=sha(out)
+            c['preview_spec']={'source_sha256':p['source']['sha256'],'start':c['start'],'end':c['end'],**rendered,'render_schema':media_io.RENDER_SCHEMA}
             c['preview'] = str(out.relative_to(root))
     save(root, p, 'rough_previews', 'separate review clips only; no merged reel')
 
@@ -672,7 +683,12 @@ def cmd_version(a):
             original=next(q for q in p['candidates'] if q['id']==c['id'])
             preview=root/original.get('preview','__missing__')
             full_frames=media_io.frames_for(original['end']-original['start'],fps)
-            if (preview.is_file() and c['start']==original['start'] and c['end']==original['end']
+            if (preview.is_file() and sha(preview)==original.get('preview_sha256')
+                    and original.get('preview_spec',{}).get('source_sha256')==p['source']['sha256']
+                    and original.get('preview_spec',{}).get('render_schema')==media_io.RENDER_SCHEMA
+                    and original.get('preview_spec',{}).get('start')==c['start']
+                    and original.get('preview_spec',{}).get('end')==c['end']
+                    and c['start']==original['start'] and c['end']==original['end']
                     and c['render_frame_count']==full_frames):
                 shutil.copyfile(preview,out)
             else:cut(p,c,out,source_path(root,p))

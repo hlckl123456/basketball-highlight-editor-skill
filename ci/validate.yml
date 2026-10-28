@@ -1,5 +1,13 @@
 name: Validate skill and public case
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      slow_robustness:
+        description: Run full 65-case matrix and hour-long performance benchmark
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -12,6 +20,8 @@ jobs:
           python-version: '3.11'
       - name: Install media test dependency
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Install optional feature and RSS test dependencies
+        run: python3 -m pip install -r ci/requirements-robustness.txt
       - name: Verify public case and license manifests
         run: python3 scripts/verify_release.py
       - name: Run behavior and portability tests
@@ -24,3 +34,24 @@ jobs:
         run: python3 eval/score.py --video indiana --output work/indiana-baseline.json
       - name: Replay original confirmed case in an isolated output directory
         run: python3 scripts/replay_case.py --output work/indiana-replay
+      - name: Media I/O, cache, PTS and reproducibility regressions
+        run: python3 -m unittest discover -s robustness/tests -v
+      - name: Fast end-to-end input matrix
+        run: python3 robustness/matrix.py --suite smoke --output work/ci-smoke
+  slow-robustness:
+    if: github.event_name == 'workflow_dispatch' && inputs.slow_robustness
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11'
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: python3 -m pip install -r ci/requirements-robustness.txt
+      - name: Full codec, VFR, damage and 2-hour matrix
+        run: python3 robustness/matrix.py --suite full --include-long --output work/ci-full
+      - name: 60-minute cached pipeline time and memory gate
+        run: python3 robustness/performance.py --output work/ci-performance

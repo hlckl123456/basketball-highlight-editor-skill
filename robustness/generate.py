@@ -51,7 +51,9 @@ def encode(output,width,height,fps,codec,condition=None,audio='none',duration=4,
              'noise':'noise=alls=55:allf=t+u:all_seed=20261028',
              'lowbitrate':'null'}
     if condition:vf.append(effects[condition])
-    vf.append(clock_filter(width,height,offset))
+    # The measurement strip must survive the condition being measured.
+    # Compress the scene at 90 kb/s first, then add the clock in a second pass.
+    if condition!='lowbitrate':vf.append(clock_filter(width,height,offset))
     cmd += ['-map','0:v:0','-vf',','.join(vf),'-filter_threads','1','-t',str(duration),'-fps_mode','vfr' if fps=='vfr' else 'cfr','-pix_fmt','yuv420p','-threads','2']
     if codec=='h264':cmd+=['-c:v','libx264','-preset','ultrafast','-crf','40' if condition=='lowbitrate' else '24','-g',str(60 if fps=='vfr' else fps),'-video_track_timescale','60000']
     elif codec=='hevc':cmd+=['-c:v','libx265','-preset','ultrafast','-crf','28','-x265-params','pools=2:frame-threads=1:wpp=0:log-level=error','-tag:v','hvc1','-video_track_timescale','60000']
@@ -59,8 +61,22 @@ def encode(output,width,height,fps,codec,condition=None,audio='none',duration=4,
     if condition=='lowbitrate':cmd+=['-b:v','90k','-maxrate','90k','-bufsize','180k']
     if audio!='none':cmd+=['-map','1:a:0','-c:a','libopus' if codec=='vp9' else 'aac']
     else:cmd+=['-an']
-    cmd+=['-map_metadata','-1','-y',output]
+    encoded=Path(output).with_name(Path(output).stem+'-90kbps.mp4') if condition=='lowbitrate' else output
+    cmd+=['-map_metadata','-1','-y',encoded]
     run(cmd)
+    if condition=='lowbitrate':
+        run(['ffmpeg','-v','error','-threads','2','-i',encoded,'-vf',clock_filter(width,height,offset),'-filter_threads','1','-c:v','libx264','-preset','ultrafast','-crf','20','-threads','2','-an','-y',output])
+        Path(encoded).unlink()
+
+
+def rotate_fixture(source,output,degrees):
+    help_text=subprocess.check_output(['ffmpeg','-hide_banner','-h','full'],stderr=subprocess.DEVNULL,text=True)
+    if '-display_rotation' in help_text:
+        run(['ffmpeg','-v','error','-display_rotation:v:0',degrees,'-i',source,'-c','copy','-y',output])
+    else:
+        # FFmpeg 6.x uses the legacy output metadata API. The caller verifies
+        # the actual display matrix; silently unrotated fixtures are rejected.
+        run(['ffmpeg','-v','error','-i',source,'-c','copy','-metadata:s:v:0','rotate='+str(degrees),'-y',output])
 
 
 def generate(directory,suite='full',include_long=False):
@@ -83,12 +99,19 @@ def generate(directory,suite='full',include_long=False):
     extras += [(name,854,480,30,'h264',name,'none') for name in ['shake','lowlight','backlight','noise','lowbitrate']]
     if suite=='smoke':extras=[x for x in extras if x[0] in ['portrait','rotation-90','audio-short','lowlight']]
     for name,w,h,fps,codec,effect,audio in extras:
-        path=directory/(name+('.webm' if codec=='vp9' else '.mp4'))
+        path=directory/(name+('-clocked' if name=='lowbitrate' else '')+('.webm' if codec=='vp9' else '.mp4'))
         if not path.exists():
             if name.startswith('rotation-'):
                 temp=directory/(name+'-coded.mp4');encode(temp,w,h,fps,codec)
-                run(['ffmpeg','-v','error','-i',temp,'-c','copy','-metadata:s:v:0','rotate='+name.split('-')[1],'-y',path]);temp.unlink()
+                rotate_fixture(temp,path,name.split('-')[1]);temp.unlink()
             else:encode(path,w,h,fps,codec,effect,audio)
+        if name.startswith('rotation-'):
+            expected=int(name.split('-')[1])
+            info=json.loads(subprocess.check_output(['ffprobe','-v','error','-select_streams','v:0','-show_entries','stream_side_data=rotation','-of','json',str(path)],text=True))
+            actual=next((int(x['rotation'])%360 for x in info['streams'][0].get('side_data_list',[]) if 'rotation' in x),0)
+            if actual!=expected:
+                repaired=path.with_name(path.stem+'-repair.mp4')
+                rotate_fixture(path,repaired,expected);repaired.replace(path)
         cases.append({'id':name,'path':path.name,'valid':True,'width':w,'height':h,'fps':fps,'codec':codec,'duration':4,'audio':audio,'clock':'per-frame-index'})
     base=directory/next(c['path'] for c in cases if c['id']=='480p-24-h264')
     for name in ['truncated','truncated-faststart','zero-duration','audio-only']:

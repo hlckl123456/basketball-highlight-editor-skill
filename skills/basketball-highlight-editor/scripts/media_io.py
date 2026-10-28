@@ -12,7 +12,7 @@ from fractions import Fraction
 from pathlib import Path
 
 THREADS = 2
-RENDER_SCHEMA = 2
+RENDER_SCHEMA = 3
 
 
 def command(args, timeout=180, binary=False):
@@ -87,7 +87,7 @@ def probe(path, validate=True):
         # decoding an entire two-hour file at every project load.
         for t in sorted({0.0, max(0.0, duration - min(1.0, duration / 2))}):
             frame = command(['ffmpeg', '-v', 'error', '-xerror', '-err_detect', 'explode',
-                '-threads', THREADS, '-ss', f'{t:.9f}', '-i', path, '-map', '0:v:0',
+                '-threads', THREADS, '-seek_timestamp', '1', '-ss', f'{t + result["presentation_start"]:.9f}', '-i', path, '-map', '0:v:0',
                 '-frames:v', 1, '-vf', 'scale=16:16', '-filter_threads', 1,
                 '-pix_fmt', 'gray', '-f', 'rawvideo', '-'], timeout=60, binary=True)
             if len(frame) != 256:
@@ -102,7 +102,7 @@ def frame_bgr(path, seconds, meta=None, max_width=None):
     if max_width and width > max_width:
         scale = max_width / width; width = max_width; height = max(2, int(round(height * scale)))
     payload = command(['ffmpeg', '-v', 'error', '-threads', THREADS,
-                       '-ss', f'{seconds:.9f}', '-i', path, '-map', '0:v:0', '-an',
+                       '-seek_timestamp', '1', '-ss', f'{seconds + meta.get("presentation_start", 0):.9f}', '-i', path, '-map', '0:v:0', '-an',
                        '-frames:v', 1, '-vf', f'scale={width}:{height}', '-filter_threads', 1,
                        '-pix_fmt', 'bgr24', '-f', 'rawvideo', '-'], binary=True)
     if len(payload) != width * height * 3:
@@ -124,12 +124,13 @@ def render(source, meta, start, end, out, frame_count=None):
     if count < 1:
         raise ValueError('CLIP_SHORTER_THAN_ONE_FRAME: increase the clip duration')
     duration = float(Fraction(count, 1) / fps)
-    # Seeking timestamps stay relative to requested start. Do not shift the
+    # Absolute seeking is anchored to video presentation_start, not an earlier
+    # Opus priming timestamp in the container. Seeking timestamps stay relative to requested start. Do not shift the
     # first retained VFR frame to zero before temporal resampling.
     vf = (f'fps=fps={fps}:start_time=0:round=near:eof_action=pass,'
           'scale=1280:720:force_original_aspect_ratio=decrease:force_divisible_by=2,'
           'pad=1280:720:(ow-iw)/2:(oh-ih)/2,setsar=1')
-    cmd = ['ffmpeg', '-v', 'error', '-threads', THREADS, '-ss', f'{start:.9f}', '-i', source,
+    cmd = ['ffmpeg', '-v', 'error', '-threads', THREADS, '-seek_timestamp', '1', '-ss', f'{start + meta.get("presentation_start", 0):.9f}', '-i', source,
            '-map', '0:v:0', '-map', '0:a:0?', '-vf', vf, '-filter_threads', 1,
            '-frames:v', count, '-t', f'{duration:.9f}', '-c:v', 'libx264', '-threads', THREADS,
            '-preset', 'veryfast', '-crf', '22', '-pix_fmt', 'yuv420p']
