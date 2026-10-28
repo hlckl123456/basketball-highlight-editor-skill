@@ -6,7 +6,7 @@
 
 `people/matches.json` 的安全结果在 `records`，每个匹配附 `confidence_evidence` 和原因。旧算法的未经验证提议留在 `raw_hypotheses` 及带 legacy_ 前缀的审计字段，其 margin/anchor 不能用作概率或高置信依据；轨迹摘要的 margin 保持 null，明确标为未验证身份。旧扫描缺少质量字段时保守降级，请重新运行 `people`。候选的 `presence_certainty`、`role_certainty` 和 `reason_codes` 分开保存。
 
-同一人物建议保存 1–3 张清晰的人工参考。每个服饰组最多融合三个不同样本；反复复制同一时间和框不增加证据。更换衣服后，另加参考，指定 `sample --appearance new-outfit --valid-from S --valid-until E`。时间区间只表示该服饰适用范围；自动程序不会确认换衣服前后是同一个人。未确认的空档保留不确定。不做脸、肤色或体型身份识别；框几何只检查是否残缺／合并。
+同一人物建议保存 1–3 张清晰的人工参考。每个服饰组最多融合三个不同样本；反复复制同一时间和框不增加证据。更换衣服后，另加参考，指定 `sample --appearance new-outfit --valid-from S --valid-until E`。时间区间只表示该服饰适用范围；自动程序不会确认换衣服前后是同一个人。未确认的空档保留不确定。没有人脸、体型身份或肤色分类模型；框几何只检查是否残缺／合并。服饰分区可能混入皮肤或背景，不能据此声称光膀子场景可靠。
 
 `people/reference-proposals.json` 是自动扩充建议，始终为 draft、local_model、requires_user_review，不写入项目 samples，也不提升高置信。用户必须看过原图并明确选中之后，才能通过正常 sample 流程保存；无人值守测试只记录 test_operator。
 

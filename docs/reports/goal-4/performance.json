@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "machine": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "logical_cpus": 10
+  },
+  "implementation": {
+    "robustness/performance.py": "5c990829b10994ec1632471054f8f8c0eb48502841f7e21a06d4e0e72dc14c7b",
+    "skills/basketball-highlight-editor/scripts/highlight.py": "46861b79e69eae586201bfb5e3fcf9293941932c25f5b61e5f400d923912f43a",
+    "skills/basketball-highlight-editor/scripts/media_io.py": "56b2b323130510bcc8dbfe249b5390563bfdef87daf04e5c344663a77b960269",
+    "robustness/generate.py": "8cd45a889be71a06884cf6291f06af8de67bb5a803a322d3f9a08f22e7477695"
+  },
+  "before_commit": "ee0d88e92ca717497306624ef091e267ec42a937",
+  "before_script_sha256": "0697cadf948571e6a243b9cbb8115b57b74b5807435019d6b491a512bd2e933c",
+  "software": {
+    "python": "3.11.16",
+    "packages": {
+      "numpy": "2.4.6",
+      "opencv-python": "5.0.0.93",
+      "psutil": "7.2.2",
+      "onnxruntime": "1.31.0"
+    },
+    "ffmpeg": "ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers"
+  },
+  "source": {
+    "duration": 3600.026667,
+    "width": 1920,
+    "height": 1080,
+    "coded_width": 1920,
+    "coded_height": 1080,
+    "rotation": 0,
+    "fps": "30",
+    "render_fps": "30",
+    "has_audio": true,
+    "codec": "h264",
+    "time_base": "1/60000",
+    "presentation_start": 0.0,
+    "sha256": "9e6e5f4ee7eee82c7ccb628d6101a15e4f27f4b93b1b56df71d97af21b5256af",
+    "bytes": 6692911233,
+    "generator": "4-second CC0 derivative looped to 60 minutes; 1080p/30 with audio"
+  },
+  "execution": "cli",
+  "scope": "No inference cost. 120 cached 6-second windows, all rough clips, 60s retained/rendered. Same 30fps output before/after. Peak RSS includes owned child processes, not unrelated apps.",
+  "profiles": [
+    {
+      "profile": "before",
+      "execution": "cli",
+      "timings_seconds": {
+        "init": 4.120314875006443,
+        "cached_candidates": 3.8600618749915157,
+        "features": 22.59771429200191,
+        "annotate_select": 8.546471667010337,
+        "rough": 231.2004511670093,
+        "confirm": 4.377092832990456,
+        "render": 23.687753124977462
+      },
+      "candidate_count": 120,
+      "rough_seconds": 720.0,
+      "render_seconds": 60.0,
+      "reviewer_kind": "test_operator",
+      "output_fps": "30/1",
+      "wall_seconds": 310.3984153330093,
+      "peak_process_tree_rss_bytes": 511238144,
+      "sample_count": 9453,
+      "sampling_interval_seconds": 0.02,
+      "sampling_interval_kind": "requested minimum delay after each observation",
+      "wall_seconds_per_sample": 0.032835969039776716
+    },
+    {
+      "profile": "after",
+      "execution": "cli",
+      "timings_seconds": {
+        "init": 4.396612582990201,
+        "cached_candidates": 4.330927875009365,
+        "features": 87.80047054201714,
+        "annotate_select": 8.6815482910024,
+        "rough": 130.0402366250055,
+        "confirm": 4.428666916996008,
+        "render": 7.184441624995088
+      },
+      "candidate_count": 120,
+      "rough_seconds": 720.0,
+      "render_seconds": 60.0,
+      "reviewer_kind": "test_operator",
+      "output_fps": "30",
+      "detection_cache_hit": true,
+      "wall_seconds": 251.55705699999817,
+      "peak_process_tree_rss_bytes": 287858688,
+      "sample_count": 7900,
+      "sampling_interval_seconds": 0.02,
+      "sampling_interval_kind": "requested minimum delay after each observation",
+      "wall_seconds_per_sample": 0.031842665443037745
+    }
+  ],
+  "meets_300_seconds": true,
+  "meets_2_gib": true,
+  "speedup": 1.2339085972571686
+}

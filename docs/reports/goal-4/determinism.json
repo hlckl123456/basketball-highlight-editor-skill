@@ -1,0 +1,13 @@
+{
+  "same_code_fixed_input_repeated_outputs_identical": true,
+  "output_sha256": {
+    "final.json": "5da87c8fcccd88baae940c06caad574ed2b231650ad15de34a501a0b24859f94",
+    "final-indiana-matches.json": "5f2f2ee1104ff66e48e86a51a52196ee2d227e488d1ecd933570aaa4d082843c"
+  },
+  "baseline_code_matches_fixed_git_commit": {
+    "person_match.py": true,
+    "person_temporal.py": true,
+    "person_engine.py": true
+  },
+  "no_holdout_evaluation": true
+}

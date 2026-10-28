@@ -1,0 +1,10 @@
+{
+  "scope": "Failed development attempts retained as audit, not successful gates",
+  "incidents": [
+    {"phase": "new integration tests", "result": "7 setup errors", "cause": "New fixture adapter omitted the existing Workflow.setUpClass call", "resolution": "Fixed only the new adapter; all original assertions retained; 52 new tests pass"},
+    {"phase": "first full regression", "result": "65 format and 61 person I/O cases passed; performance failed before measurement", "cause": "Sandbox denied psutil process-tree RSS via sysctl", "error": "RSS_PERMISSION_DENIED", "resolution": "Rerun final local regression with the user's existing command authorization and process-monitoring permission; never count missing RSS as zero"},
+    {"phase": "final harness bootstrap", "result": "failed before behavior or slow tests", "cause": "New runner mishandled a relative --output path, and the draft report linked to a nonexistent Indiana README", "resolution": "Resolve and validate output path; link to the actual historical test-log; original verifier assertion preserved"},
+    {"phase": "code review", "result": "two safety contracts strengthened before final freeze", "cause": "Review-required flags must override old absence flags; legacy track margins must remain audit-only", "resolution": "Conservative routing and explicit unverified track-summary fields, with new regression cases"}
+  ],
+  "previous_goal_native_exit_hang": "Not reproduced in this goal's sequential runs; root cause remains unresolved and previous failed gate stays failed"
+}

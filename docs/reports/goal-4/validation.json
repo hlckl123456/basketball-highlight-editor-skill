@@ -1,0 +1,94 @@
+{
+  "scope": "sequential development gates; one real-corpus holdout-reading unit deferred; full verification after freeze",
+  "all_passed": true,
+  "code_unchanged_during_run": true,
+  "jobs": [
+    {
+      "name": "manifest",
+      "returncode": 0,
+      "seconds": 4.444,
+      "log": "work/goal-4/validation-final/manifest.log"
+    },
+    {
+      "name": "behavior",
+      "returncode": 0,
+      "seconds": 9.677,
+      "log": "work/goal-4/validation-final/behavior.log"
+    },
+    {
+      "name": "attribution",
+      "returncode": 0,
+      "seconds": 2.815,
+      "log": "work/goal-4/validation-final/attribution.log"
+    },
+    {
+      "name": "evaluation-development",
+      "returncode": 0,
+      "seconds": 0.534,
+      "log": "work/goal-4/validation-final/evaluation-development.log"
+    },
+    {
+      "name": "robustness",
+      "returncode": 0,
+      "seconds": 12.238,
+      "log": "work/goal-4/validation-final/robustness.log"
+    },
+    {
+      "name": "detection-research",
+      "returncode": 0,
+      "seconds": 0.254,
+      "log": "work/goal-4/validation-final/detection-research.log"
+    },
+    {
+      "name": "review-form",
+      "returncode": 0,
+      "seconds": 0.181,
+      "log": "work/goal-4/validation-final/review-form.log"
+    },
+    {
+      "name": "replay",
+      "returncode": 0,
+      "seconds": 7.171,
+      "log": "work/goal-4/validation-final/replay.log"
+    },
+    {
+      "name": "full-matrix",
+      "returncode": 0,
+      "seconds": 810.362,
+      "log": "work/goal-4/validation-final/full-matrix.log"
+    },
+    {
+      "name": "people-matrix",
+      "returncode": 0,
+      "seconds": 161.994,
+      "log": "work/goal-4/validation-final/people-matrix.log"
+    },
+    {
+      "name": "performance",
+      "returncode": 0,
+      "seconds": 567.424,
+      "log": "work/goal-4/validation-final/performance.log"
+    }
+  ],
+  "implementation": {
+    "experiments/attribution/benchmark.py": "b7d380159cd0603cfde86ec8a7fb824424b656018197a314141b3f1f22774bef",
+    "experiments/attribution/tests/test_benchmark.py": "34edcb20621dd985d9efd479d1537f20ca4bba937985fc61279dc9b247858dd8",
+    "experiments/attribution/tests/test_integration.py": "6b6f2af37acf422c28c5127e1746f4efc74f0e2768b4ee06fc61d63636662709",
+    "experiments/attribution/tests/test_policy.py": "b0a4a1450f10812481d43a338c618a819c59a85e48c3da768899ec102e7688b8",
+    "experiments/attribution/validate.py": "817be963ad8641922e82af09a85e3eb60897879942a616f0723abea245c6d38f",
+    "robustness/generate.py": "8cd45a889be71a06884cf6291f06af8de67bb5a803a322d3f9a08f22e7477695",
+    "robustness/matrix.py": "2465baf853184ae7d429d1ed1965fa94c247daaf4e9e88950084060fa694983b",
+    "robustness/people_matrix.py": "6e71ca5b652bf687a653630a76d976248ff91c6b0cae37fe7234a84e1fb910d2",
+    "robustness/performance.py": "5c990829b10994ec1632471054f8f8c0eb48502841f7e21a06d4e0e72dc14c7b",
+    "robustness/tests/test_io_cache.py": "6005895ddcdb7e66300dda2dcb602527e993eccb192348bc50501ef60ef9467a",
+    "skills/basketball-highlight-editor/scripts/attribution_policy.py": "ec613402a12558166c3cb5e8e5d5558d426eb7a9189dc88f5404698a68a79809",
+    "skills/basketball-highlight-editor/scripts/highlight.py": "46861b79e69eae586201bfb5e3fcf9293941932c25f5b61e5f400d923912f43a",
+    "skills/basketball-highlight-editor/scripts/media_io.py": "56b2b323130510bcc8dbfe249b5390563bfdef87daf04e5c344663a77b960269",
+    "skills/basketball-highlight-editor/scripts/person_engine.py": "f96bddb63649920516122e49a94b9992518c0ee80b74e3846f525068f8fb13e5",
+    "skills/basketball-highlight-editor/scripts/person_match.py": "c3e2119af0bd3ddb4ca9fd58fc2abdd20d9cbfd666c1e2d8818c303c5ec82ee7",
+    "skills/basketball-highlight-editor/scripts/person_temporal.py": "a760f46b23288cc87f481023b3aab8d67be4e6a81c2da136e8dd2dc549ce4653",
+    "skills/basketball-highlight-editor/scripts/result_cache.py": "7b24d66bd0e31ad048b4cacfa896d41aa75a3eda56ea6df8d46129a7569d2943",
+    "skills/basketball-highlight-editor/tests/test_people.py": "b40462044380b4f493c653ca154d9e3d7a0bb1993f99ba44c6bbb84a00d83629",
+    "skills/basketball-highlight-editor/tests/test_workflow.py": "30b2b37e62225cf893ec5e911009940a71453e735857256886722a40d574b0c1"
+  }
+}
