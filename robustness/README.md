@@ -4,7 +4,7 @@
 
 ## 运行
 
-需要 Python 3.10 以上、FFmpeg／FFprobe、NumPy 和 OpenCV。性能测量另需 psutil。优先复用已有环境；CI 的依赖清单在 `ci/requirements-robustness.txt`。
+需要 Python 3.10 以上、FFmpeg／FFprobe、NumPy 和 OpenCV。性能测量另需 psutil，人物推理检查需要 ONNX Runtime。优先复用已有环境；CI 的依赖清单在 `ci/requirements-robustness.txt`。
 
 在仓库根目录运行：
 
@@ -13,6 +13,7 @@ python3 -m unittest discover -s robustness/tests -v
 python3 robustness/matrix.py --suite smoke
 python3 robustness/matrix.py --suite full --include-long \
   --generated work/goal-2/full-variants --output work/goal-2/full-results
+python3 robustness/people_matrix.py --generated work/goal-2/full-variants
 python3 robustness/performance.py --output work/goal-2/performance
 ```
 
@@ -35,7 +36,7 @@ python3 robustness/performance.py --output work/goal-2/performance
 
 每个有效输入都完整运行两次独立项目：init、缓存候选、features、test_operator 标注与选人、rough、test_operator 确认、独立的后续测试剪辑指令、渲染、重新读取项目。第二次运行必须命中检测缓存。项目 JSON、确认 EDL、版本 EDL 必须逐字节相同。
 
-格式测试导入预声明的时间窗口，不把测试窗口说成检测到的进球。所有球员路由标签都标为不确定，所有确认都用 `test_operator`。检测缓存另有外部 BHE 命令的契约测试，命中时禁止再次调用检测脚本。矩阵不测模型识别准确率。
+格式测试导入预声明的时间窗口，不把测试窗口说成检测到的进球。所有球员路由标签都标为不确定，所有确认都用 `test_operator`。检测缓存另有外部 BHE 命令的契约测试，命中时禁止再次调用检测脚本。矩阵不测模型识别准确率。`people_matrix.py` 另外对 61 个有效输入各跑一个真实 YOLOX 样本和服饰匹配，核对显示尺寸、时长及采样时间；机械测试区域不代表球员身份。
 
 时间码是加在派生画面上的二进制帧序号。测试直接读取每个粗剪和版本片段的首尾画面，对照源视频 PTS。起止误差均不得超过一个源帧，片段与整条成片的时长误差不得超过一个输出帧。VFR 的源帧容差取该窗口实际的相邻 PTS 间隔，同时报告帧序号误差和秒数。低码率画面先按 90kb/s 压缩，再加测量条，防止把时间码损坏当成剪切偏移；带测量条的文件总码率会高于 90kb/s。
 

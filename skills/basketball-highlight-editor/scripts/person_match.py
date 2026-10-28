@@ -6,18 +6,18 @@ from pathlib import Path
 import cv2
 import numpy as np
 from person_engine import descriptor,distance,iou,sha
+import media_io
 
 
 def predict(data,calibration,max_distance=.40,profile_margin=.035,person_margin=.025):
-    cap=cv2.VideoCapture(data['video']);refs={}
+    cv2.setNumThreads(1)
+    meta=media_io.probe(data['video']);refs={}
     for person in calibration['people']:
         samples=[]
         for sample in person['samples']:
-            cap.set(cv2.CAP_PROP_POS_MSEC,sample['time']*1000);ok,frame=cap.read()
-            if not ok:raise ValueError('Missing calibration frame')
+            frame=media_io.frame_bgr(data['video'],sample['time'],meta)
             samples.append(descriptor(frame,sample['box']))
         refs[person['id']]=samples
-    cap.release()
     from person_temporal import assign
     results,tracks=assign(data,refs,calibration,max_distance,profile_margin,person_margin)
     return {'parameters':{'max_distance':max_distance,'profile_margin':profile_margin,'person_margin':person_margin},

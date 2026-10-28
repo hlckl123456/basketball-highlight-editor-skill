@@ -64,6 +64,25 @@ class IOAndCache(unittest.TestCase):
   media_io.render(p,meta,c['start'],c['end'],out)
   result=audit_clip(out,c,meta,pts(p),{'clock':'per-frame-index','duration':4})
   self.assertLessEqual(result['start_error_frames'],1)
+ def test_person_hash_never_loads_the_whole_movie(self):
+  import person_engine
+  expected=h.sha(self.video)
+  with patch.object(Path,'read_bytes',side_effect=AssertionError('whole movie read')):
+   self.assertEqual(person_engine.sha(self.video),expected)
+ def test_person_scan_and_match_share_rotated_presentation_frames(self):
+  import person_engine
+  from person_match import predict
+  rotated=self.base/'person-rotated.mov';rotate_fixture(self.video,rotated,90)
+  out=self.base/'person-rotated.json';shapes=[]
+  class FakeDetector:
+   def __init__(self,path):pass
+   def predict(self,frame,roi,threshold):shapes.append(frame.shape);return []
+  with patch.object(person_engine,'Detector',FakeDetector),patch.object(person_engine.cv2,'VideoCapture',side_effect=AssertionError('approximate seek')):
+   person_engine.detect(A(video=rotated,model=self.video,roi=None,fps=1,start=.5,end=1,tile=0,threshold=.2,output=out))
+   data=h.read(out);prediction=predict(data,{'people':[{'id':'test_region','samples':[{'time':.5,'box':[0,0,180,320]}]}]})
+  self.assertEqual(shapes,[(320,180,3)])
+  self.assertEqual((data['width'],data['height']),(180,320))
+  self.assertEqual(len(prediction['records']),1)
  def test_hash_memo_detects_same_size_content_changes(self):
   p=self.base/'mutating.bin';p.write_bytes(b'one');first=h.sha(p);p.write_bytes(b'two');self.assertNotEqual(h.sha(p),first)
  def test_hot_detection_skips_detector_and_keeps_project_bytes(self):

@@ -9,9 +9,14 @@ from pathlib import Path
 import cv2
 import numpy as np
 import onnxruntime as ort
+import media_io
 
 
-def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def sha(p):
+    digest=hashlib.sha256()
+    with Path(p).open('rb') as source:
+        for block in iter(lambda:source.read(1024*1024),b''):digest.update(block)
+    return digest.hexdigest()
 
 
 def iou(a,b):
@@ -98,19 +103,18 @@ class Detector:
 
 
 def detect(a):
-    cap=cv2.VideoCapture(str(a.video));fps=cap.get(cv2.CAP_PROP_FPS);n=cap.get(cv2.CAP_PROP_FRAME_COUNT)
-    w,h=int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    if not cap.isOpened() or fps<=0 or n<=0:raise ValueError('VIDEO_OPEN_FAILED')
+    cv2.setNumThreads(1)
+    meta=media_io.probe(a.video);w,h=meta['width'],meta['height']
     roi=a.roi or [0,0,w,h]
     if not (0<=roi[0]<roi[2]<=w and 0<=roi[1]<roi[3]<=h):raise ValueError('INVALID_PERSON_ROI')
     if not (0<a.fps<=30 and 0<=a.start<a.end and a.tile>=0 and 0<a.threshold<1):raise ValueError('INVALID_SCAN_PARAMETERS')
+    if a.start>=meta['duration']:raise ValueError('INVALID_SCAN_PARAMETERS: start must be inside the video timeline')
     det=Detector(a.model);records=[]
-    times=np.arange(a.start,min(a.end,n/fps),1/a.fps)
+    times=np.arange(a.start,min(a.end,meta['duration']),1/a.fps)
     out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True)
     previews=out.with_suffix('');previews.mkdir(exist_ok=True)
     for k,t in enumerate(times):
-        cap.set(cv2.CAP_PROP_POS_MSEC,float(t)*1000);ok,frame=cap.read()
-        if not ok:continue
+        frame=media_io.frame_bgr(a.video,float(t),meta)
         regions=[roi]
         if a.tile:
             xs=list(range(roi[0],max(roi[0]+1,roi[2]-a.tile+1),max(1,int(a.tile*.65))))
@@ -131,9 +135,8 @@ def detect(a):
                 x1,y1,x2,y2=map(int,o['box']);cv2.rectangle(view,(x1,y1),(x2,y2),(0,255,0),1)
                 cv2.putText(view,str(j),(x1,max(12,y1-3)),cv2.FONT_HERSHEY_SIMPLEX,.4,(0,0,255),1)
             cv2.imwrite(str(previews/f'{k:05d}-{t:.1f}.jpg'),view)
-    cap.release()
-    data={'schema_version':1,'descriptor_version':'clothing-v2','video':str(Path(a.video).resolve()),'video_sha256':sha(a.video),'model_sha256':sha(a.model),
-          'fps':a.fps,'roi':roi,'tile':a.tile,'threshold':a.threshold,'duration':n/fps,'analysis_range':[a.start,min(a.end,n/fps)],'width':w,'height':h,
+    data={'schema_version':1,'descriptor_version':'clothing-v2','media_io_schema':media_io.RENDER_SCHEMA,'video':str(Path(a.video).resolve()),'video_sha256':sha(a.video),'model_sha256':sha(a.model),
+          'fps':a.fps,'roi':roi,'tile':a.tile,'threshold':a.threshold,'duration':meta['duration'],'analysis_range':[a.start,min(a.end,meta['duration'])],'width':w,'height':h,
           'descriptor':'Approximate clothing bands, chromatic foreground weighting, hue+neutral bins and coarse lightness; no OCR or face embedding',
           'records':records}
     out.write_text(json.dumps(data,indent=2)+'\n')

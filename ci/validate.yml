@@ -53,5 +53,7 @@ jobs:
       - run: python3 -m pip install -r ci/requirements-robustness.txt
       - name: Full codec, VFR, damage and 2-hour matrix
         run: python3 robustness/matrix.py --suite full --include-long --output work/ci-full
+      - name: Real person-detection I/O across valid formats
+        run: python3 robustness/people_matrix.py --generated work/goal-2/variants --output work/ci-people
       - name: 60-minute cached pipeline time and memory gate
         run: python3 robustness/performance.py --output work/ci-performance
