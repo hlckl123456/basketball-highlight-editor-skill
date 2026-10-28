@@ -19,11 +19,29 @@ import sys
 import tempfile
 from datetime import datetime, timezone
 
-VERSION = '1.1.0'
+VERSION = '1.2.0'
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+import media_io
+import result_cache
+_SHA_MEMO = {}
 
 
 def now():
     return datetime.now(timezone.utc).isoformat()
+
+
+def stamp(p):
+    clock=p.get('reproducibility')
+    if clock:
+        return datetime.fromtimestamp(clock['epoch']+p.get('revision',0),timezone.utc).isoformat()
+    return now()
+
+
+def stable_paths(value,root):
+    if isinstance(value,dict):return {k:stable_paths(v,root) for k,v in value.items()}
+    if isinstance(value,list):return [stable_paths(v,root) for v in value]
+    if isinstance(value,str):return value.replace(str(root),'<PROJECT>')
+    return value
 
 
 def read(path):
@@ -39,11 +57,19 @@ def write(path, value):
 
 
 def sha(path):
-    h = hashlib.sha256()
-    with Path(path).open('rb') as f:
-        for block in iter(lambda: f.read(1024 * 1024), b''):
-            h.update(block)
-    return h.hexdigest()
+    path=Path(path)
+    before=path.stat()
+    key=(str(path.resolve()),before.st_dev,before.st_ino,before.st_size,before.st_mtime_ns,before.st_ctime_ns)
+    if key in _SHA_MEMO:return _SHA_MEMO[key]
+    h=hashlib.sha256()
+    with path.open('rb') as f:
+        for block in iter(lambda:f.read(1024*1024),b''):h.update(block)
+    after=path.stat()
+    if (before.st_size,before.st_mtime_ns,before.st_ctime_ns)!=(after.st_size,after.st_mtime_ns,after.st_ctime_ns):
+        raise ValueError('SOURCE_CHANGED_DURING_READ: stop modifying the source and retry')
+    if len(_SHA_MEMO)>128:_SHA_MEMO.clear()
+    _SHA_MEMO[key]=h.hexdigest()
+    return _SHA_MEMO[key]
 
 
 def run(cmd, timeout=180, env=None):
@@ -55,14 +81,7 @@ def run(cmd, timeout=180, env=None):
 
 
 def probe(path):
-    d = json.loads(run(['ffprobe', '-v', 'error', '-show_format', '-show_streams',
-                        '-of', 'json', path]))
-    v = next(s for s in d['streams'] if s['codec_type'] == 'video')
-    dur = float(d['format']['duration'])
-    if not math.isfinite(dur) or dur <= 0:
-        raise ValueError('INVALID_DURATION')
-    return {'duration': dur, 'width': v['width'], 'height': v['height'],
-            'fps': v['r_frame_rate'], 'has_audio': any(s['codec_type'] == 'audio' for s in d['streams'])}
+    return media_io.probe(path)
 
 
 def source_path(root, p):
@@ -85,8 +104,8 @@ def load(project):
 
 def save(root, p, action, detail):
     p['revision'] += 1
-    p['updated_at'] = now()
-    p['history'].append({'at': now(), 'action': action, 'detail': detail, 'revision': p['revision']})
+    p['updated_at'] = stamp(p)
+    p['history'].append({'at': stamp(p), 'action': action, 'detail': detail, 'revision': p['revision']})
     write(root / 'project.json', p)
     report(root, p)
 
@@ -115,16 +134,22 @@ def cmd_init(a):
     root = Path(a.project).resolve()
     if root.exists() and any(root.iterdir()):
         raise ValueError('PROJECT_NOT_EMPTY')
-    source = Path(a.video).resolve(strict=True)
+    source = Path(a.video).resolve()
+    metadata = probe(source)
     rights = read(a.rights)
     for key in ('source_url', 'license', 'creator', 'processing_basis', 'restrictions'):
         if not rights.get(key):
             raise ValueError('RIGHTS_FIELD_REQUIRED: ' + key)
     p = {'schema_version': 1, 'tool_version': VERSION, 'revision': 0,
          'state': 'initialized', 'created_at': now(), 'source': {
-             'path': str(source), 'sha256': sha(source), **probe(source), 'rights': rights},
+             'path': str(source), 'sha256': sha(source), **metadata, 'rights': rights},
          'detector': None, 'candidates': [], 'players': [], 'selection': None,
          'confirmation': None, 'versions': [], 'history': []}
+    if getattr(a,'reproducible',False):
+        epoch=getattr(a,'epoch',946684800)
+        if not isinstance(epoch,int) or not 0<=epoch<=4102444800:raise ValueError('INVALID_TEST_EPOCH')
+        p['reproducibility']={'epoch':epoch,'clock_kind':'fixed_test_clock','reviewer_policy':'test_operator only; never a human timestamp'}
+        p['created_at']=stamp(p)
     save(root, p, 'init', 'local source reference; no upload')
 
 
@@ -138,12 +163,17 @@ def cmd_relink(a):
     save(root,p,'relink_same_source',str(source))
 
 
-def cmd_detect(a):
+def _detect_uncached(a):
     root, p = load(a.project)
     if p['candidates']:
         raise ValueError('CANDIDATES_EXIST: use a new project to compare a detector')
     d = p['source']['duration']
-    if a.backend == 'bhe':
+    if a.backend == 'manifest':
+        manifest=read(a.manifest)
+        raw=manifest['candidates']
+        p['detector']={'backend':'portable-manifest','provenance':manifest['provenance'],
+                       'manifest_sha256':sha(a.manifest),'limitations':'Imported ranges; not fresh scoring inference.'}
+    elif a.backend == 'bhe':
         runtime = Path(a.runtime).resolve(strict=True)
         python = runtime / 'python/bin/python3.11'
         if a.python:
@@ -189,15 +219,25 @@ def cmd_detect(a):
         # A deterministic motion triage, not a basketball or shot recognizer.
         rawdir = root / 'detection'
         rawdir.mkdir(exist_ok=True)
-        tmp = rawdir / 'gray.raw'
-        run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', source_path(root,p),
-             '-vf', 'fps=2,scale=96:54', '-pix_fmt', 'gray', '-f', 'rawvideo', '-y', tmp], timeout=a.timeout)
-        buf = tmp.read_bytes()
-        n = 96 * 54
-        scores = [sum(abs(x-y) for x, y in zip(buf[i-n:i], buf[i:i+n])) / n
-                  for i in range(n, len(buf)-n+1, n)]
-        write(rawdir / 'motion.json', {'fps': 2, 'mean_abs_difference': scores})
-        tmp.unlink()
+        import time
+        cmd=['ffmpeg','-hide_banner','-loglevel','error','-threads','2','-i',source_path(root,p),
+             '-vf','fps=2,scale=96:54','-filter_threads','1','-pix_fmt','gray','-f','rawvideo','-']
+        scores=[];prev=None;started=time.monotonic()
+        with tempfile.TemporaryFile() as error:
+            child=subprocess.Popen([str(x) for x in cmd],stdout=subprocess.PIPE,stderr=error)
+            try:
+                while True:
+                    buf=child.stdout.read(96*54)
+                    if not buf:break
+                    if len(buf)!=96*54:raise ValueError('FRAME_DECODE_FAILED: partial coverage frame')
+                    if prev is not None:scores.append(sum(abs(x-y) for x,y in zip(prev,buf))/(96*54))
+                    prev=buf
+                    if time.monotonic()-started>a.timeout:raise ValueError('DETECTION_TIMEOUT: increase --timeout or use imported candidates')
+                if child.wait(timeout=30):
+                    error.seek(0);raise ValueError('COVERAGE_DECODE_FAILED: '+error.read().decode(errors='replace')[-1800:])
+            finally:
+                if child.poll() is None:child.kill();child.wait()
+        write(rawdir/'motion.json',{'fps':2,'mean_abs_difference':scores})
         raw = []
         # Keep bounded overlapping coverage windows so low motion is not lost.
         for i in range(math.ceil(d / 6)):
@@ -210,6 +250,48 @@ def cmd_detect(a):
     p['candidates'] = stamp_candidates(raw, d)
     p['state'] = 'candidates_ready'
     save(root, p, 'detect', {'count': len(raw), 'backend': p['detector']['backend']})
+
+
+def detection_key(a,p):
+    params={'schema':2,'video_sha256':p['source']['sha256'],'backend':a.backend,
+            'fps':float(a.fps),'before':float(a.before),'after':float(a.after),
+            'roi':a.roi,'device':a.device,'adapter_sha256':sha(__file__)}
+    if a.backend=='bhe':
+        runtime=Path(a.runtime).resolve()
+        model=Path(a.model) if a.model else runtime/'models/bball_model.static.onnx'
+        for name,path in [('model',model),('scan',runtime/'scripts/scan_video.py'),('candidates',runtime/'scripts/generate_candidates.py')]:
+            if not path.is_file():raise ValueError('MODEL_OR_RUNTIME_MISSING: supply an existing authorized BHE runtime')
+            params[name+'_sha256']=sha(path)
+    elif a.backend=='manifest':
+        if not getattr(a,'manifest',None):raise ValueError('CANDIDATE_MANIFEST_REQUIRED: use --manifest')
+        params['manifest_sha256']=sha(a.manifest)
+    return result_cache.digest(params),params
+
+
+def cmd_detect(a):
+    root,p=load(a.project)
+    if p['candidates']:raise ValueError('CANDIDATES_EXIST: use a new project to compare a detector')
+    directory=Path(getattr(a,'cache_dir',None) or root.parent/'.basketball-cache')
+    enabled=not getattr(a,'no_cache',False)
+    key,params=detection_key(a,p)
+    payload=result_cache.get(directory,'detection',key) if enabled and not getattr(a,'refresh_cache',False) else None
+    hit=payload is not None
+    if hit:
+        p['candidates']=payload['candidates'];p['detector']=payload['detector'];p['state']='candidates_ready'
+        save(root,p,'detect',{'count':len(p['candidates']),'backend':p['detector']['backend']})
+        for name,data in payload.get('raw_json',{}).items():write(root/'detection'/name,data)
+    else:
+        _detect_uncached(a)
+        _,p=load(root)
+        p['detector']=stable_paths(p['detector'],root)
+        write(root/'project.json',p);report(root,p)
+        raw_json={}
+        for name in ('detections.json','events.json','motion.json'):
+            path=root/'detection'/name
+            if path.exists():raw_json[name]=stable_paths(read(path),root)
+        payload={'candidates':p['candidates'],'detector':p['detector'],'raw_json':raw_json}
+        if enabled:result_cache.put(directory,'detection',key,payload)
+    write(root/'detection/cache-status.json',{'schema_version':1,'hit':hit,'key':key,'parameters':params})
 
 
 def cmd_import(a):
@@ -269,9 +351,8 @@ def cmd_features(a):
     root, p = load(a.project)
     if not p['candidates']:
         raise ValueError('NO_CANDIDATES: verify ROI or use explicit coverage fallback')
-    cap = cv2.VideoCapture(str(source_path(root,p)))
-    if not cap.isOpened():
-        raise ValueError('VIDEO_OPEN_FAILED')
+    cv2.setNumThreads(1)
+    media_source=source_path(root,p)
     hog = cv2.HOGDescriptor() if hasattr(cv2, 'HOGDescriptor') else None
     if hog is not None:
         hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
@@ -289,10 +370,7 @@ def cmd_features(a):
         count = max(2, math.ceil((c['end']-c['start']) / a.interval))
         for k in range(count):
             t = c['start'] + (c['end']-c['start']) * (k+.5) / count
-            cap.set(cv2.CAP_PROP_POS_MSEC, t*1000)
-            ok, frame = cap.read()
-            if not ok:
-                raise ValueError('FRAME_DECODE_FAILED at %.3f' % t)
+            frame=media_io.frame_bgr(media_source,t,p['source'])
             name = '%s_f%03d.jpg' % (c['id'], k)
             cv2.imwrite(str(frames/name), frame)
             c['frames'].append({'path': 'frames/'+name, 'time': round(t,4)})
@@ -331,7 +409,6 @@ def cmd_features(a):
                     'proposal_score': float(weight), 'person_verified': False,
                     'color': color_summary(torso), 'number_ocr': [] if a.no_ocr else ocr(crop_path),
                     'player_id': None, 'evidence': None})
-    cap.release()
     p['feature_extractor'] = {'backend': 'opencv-'+('hog' if hog is not None else 'uniform-color-proposals')+'-hsv-tesseract', 'opencv': cv2.__version__,
                              'interval': a.interval, 'ocr_enabled':not a.no_ocr,
                              'number_policy': 'OCR hints only; require visual verification'}
@@ -352,6 +429,7 @@ def cmd_annotate(a):
     root, p = load(a.project)
     data = read(a.file)
     reviewer = data['reviewer']
+    if p.get('reproducibility') and reviewer.get('kind')!='test_operator':raise ValueError('REPRODUCIBLE_PROJECT_REQUIRES_TEST_OPERATOR')
     if reviewer['kind'] not in ('user', 'test_operator', 'agent_visual_review') or not reviewer.get('name'):
         raise ValueError('INVALID_REVIEWER')
     players = data['players']
@@ -383,7 +461,7 @@ def cmd_annotate(a):
             t = float(e['time'])
             if not c['start'] <= t <= c['end'] or not e.get('detail'):
                 raise ValueError('INVALID_EVIDENCE')
-        c['assignment'] = {**item, 'reviewer': reviewer, 'at': now()}
+        c['assignment'] = {**item, 'reviewer': reviewer, 'at': stamp(p)}
         c['labels'] = item.get('labels', [])
     p['players'] = players
     invalidate(p)
@@ -401,6 +479,7 @@ def cmd_sample(a):
     root,p=load(a.project)
     if not 0<=a.time<p['source']['duration']:
         raise ValueError('SAMPLE_TIME_OUT_OF_BOUNDS')
+    if p.get('reproducibility') and a.reviewer_kind!='test_operator':raise ValueError('REPRODUCIBLE_PROJECT_REQUIRES_TEST_OPERATOR')
     x1,y1,x2,y2=a.bbox
     if not (0<=x1<x2<=p['source']['width'] and 0<=y1<y2<=p['source']['height']):
         raise ValueError('SAMPLE_BOX_OUT_OF_BOUNDS')
@@ -456,6 +535,7 @@ def cmd_sample(a):
 
 def cmd_confirm_sample(a):
     root,p=load(a.project)
+    if p.get('reproducibility'):raise ValueError('REPRODUCIBLE_PROJECT_REQUIRES_TEST_OPERATOR')
     sample=next((x for x in p.get('samples',[]) if x['id']==a.sample_id),None)
     if sample is None or not a.authorization_reference.strip():
         raise ValueError('SAMPLE_AND_ACTUAL_USER_CONFIRMATION_REQUIRED')
@@ -492,11 +572,9 @@ def cmd_select(a):
 
 
 def cut(p, c, out, source=None):
-    # Audio is optional; re-encode for accurate boundaries and compatible previews.
-    run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-ss', c['start'], '-i', source or p['source']['path'],
-         '-t', c['end']-c['start'], '-map', '0:v:0', '-map', '0:a:0?', '-vf', 'scale=1280:720:force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2,setsar=1,fps=30',
-         '-c:v', 'libx264', '-preset', 'fast', '-crf', '22', '-c:a', 'aac', '-ar', '48000',
-         '-ac', '2', '-movflags', '+faststart', '-y', out])
+    source=source or p['source']['path']
+    target=Path(out);target.parent.mkdir(parents=True,exist_ok=True)
+    return media_io.render(source,p['source'],c['start'],c['end'],target,c.get('render_frame_count'))
 
 
 def cmd_rough(a):
@@ -525,6 +603,7 @@ def cmd_confirm(a):
         raise ValueError('WRONG_PLAYER_REVIEW')
     if data.get('reviewer_kind') not in ('user', 'test_operator') or not data.get('reviewer'):
         raise ValueError('EXPLICIT_REVIEWER_REQUIRED')
+    if p.get('reproducibility') and data['reviewer_kind']!='test_operator':raise ValueError('REPRODUCIBLE_PROJECT_REQUIRES_TEST_OPERATOR')
     if data['reviewer_kind'] == 'user' and not data.get('authorization_reference'):
         raise ValueError('USER_AUTHORIZATION_REFERENCE_REQUIRED')
     decisions = data['decisions']
@@ -532,7 +611,7 @@ def cmd_confirm(a):
     if set(decisions) != required or any(v not in ('keep','reject') for v in decisions.values()):
         raise ValueError('REVIEW_EVERY_SELECTED_AND_UNCERTAIN_CANDIDATE')
     kept = [cid for cid,v in decisions.items() if v == 'keep']
-    p['confirmation'] = {**data, 'at': now(), 'kept': kept, 'decision_sha256': sha(a.file)}
+    p['confirmation'] = {**data, 'at': stamp(p), 'kept': kept, 'decision_sha256': sha(a.file)}
     p['state'] = 'awaiting_edit_prompt'
     save(root, p, 'confirm_selection', {'reviewer_kind': data['reviewer_kind'], 'kept': kept})
     write(root / 'confirmed-edl.json', edl(p, kept))
@@ -573,6 +652,15 @@ def cmd_version(a):
         c['end'] = min(c['end'], c['start']+remaining)
         remaining -= c['end']-c['start']
         clips.append(c)
+    fps=media_io.output_rate(p['source'])
+    cumulative=0.;allocated=0
+    for c in clips:
+        cumulative+=c['end']-c['start']
+        total=media_io.frames_for(cumulative,fps)
+        c['render_frame_count']=total-allocated
+        if c['render_frame_count']<1:raise ValueError('CLIP_SHORTER_THAN_ONE_FRAME: increase clip duration')
+        allocated=total
+    e['render_clock']={'fps':str(fps),'total_frames':allocated,'duration':float(allocated/fps)}
     e['clips'] = clips
     dest = root / 'versions' / a.name
     dest.mkdir(parents=True, exist_ok=False)
@@ -581,13 +669,23 @@ def cmd_version(a):
         pieces = []
         for i,c in enumerate(clips):
             out = dest / ('part%03d.mp4' % i)
-            cut(p, c, out, source_path(root,p))
+            original=next(q for q in p['candidates'] if q['id']==c['id'])
+            preview=root/original.get('preview','__missing__')
+            full_frames=media_io.frames_for(original['end']-original['start'],fps)
+            if (preview.is_file() and c['start']==original['start'] and c['end']==original['end']
+                    and c['render_frame_count']==full_frames):
+                shutil.copyfile(preview,out)
+            else:cut(p,c,out,source_path(root,p))
             pieces.append(out)
         # Only generated safe file names go into the ffmpeg concat file.
         listing = dest / 'concat.txt'
-        listing.write_text(''.join("file '%s'\n" % x.name for x in pieces))
-        run(['ffmpeg','-hide_banner','-loglevel','error','-f','concat','-safe','1','-i',listing,
-             '-c','copy','-movflags','+faststart','-y',dest/'reel.mp4'])
+        listing.write_text(''.join("file '%s'\nduration %.9f\n" % (x.name,float(c['render_frame_count']/fps)) for x,c in zip(pieces,clips)))
+        cmd=['ffmpeg','-hide_banner','-loglevel','error','-threads','2','-f','concat','-safe','1','-i',listing,
+             '-map','0:v:0','-map','0:a:0?','-c:v','copy']
+        if p['source']['has_audio']:
+            cmd+=['-af',f"aresample=48000:async=1:first_pts=0,apad,atrim=duration={float(allocated/fps):.9f}",'-c:a','aac','-ar','48000','-ac','2']
+        cmd+=['-t',f'{float(allocated/fps):.9f}','-map_metadata','-1','-movflags','+faststart','-y',dest/'reel.mp4']
+        run(cmd,timeout=max(180,int(float(allocated/fps)*2)))
         e['render_probe'] = probe(dest/'reel.mp4')
         write(dest/'edl.json', e)
     p['versions'].append({'name':a.name, 'prompt':spec['prompt'], 'edl':str((dest/'edl.json').relative_to(root)),
@@ -710,7 +808,7 @@ def cmd_match_people(a):
         byid={c['id']:c for c in p['candidates']}
         for item in evidence:
             byid[item['candidate_id']]['assignment']={**item,
-                'reviewer':{'kind':'local_model','name':'calibrated clothing + temporal consensus'},'at':now()}
+                'reviewer':{'kind':'local_model','name':'calibrated clothing + temporal consensus'},'at':stamp(p)}
         invalidate(p)
         save(root,p,'match_people',{'player_id':a.player,'proposals':'people/candidate-proposals.json',
                                   'high':sum(x['certainty']=='high' for x in evidence)})
@@ -722,9 +820,9 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     s=p.add_subparsers(dest='command',required=True)
     q=s.add_parser('doctor');q.set_defaults(fn=lambda a:print(json.dumps({'python':sys.version,'ffmpeg':shutil.which('ffmpeg'),'ffprobe':shutil.which('ffprobe'),'tesseract':shutil.which('tesseract'),'version':VERSION})))
-    q=s.add_parser('init');q.add_argument('project');q.add_argument('--video',required=True);q.add_argument('--rights',required=True);q.set_defaults(fn=cmd_init)
+    q=s.add_parser('init');q.add_argument('--reproducible',action='store_true');q.add_argument('--epoch',type=int,default=946684800);q.add_argument('project');q.add_argument('--video',required=True);q.add_argument('--rights',required=True);q.set_defaults(fn=cmd_init)
     q=s.add_parser('relink');q.add_argument('project');q.add_argument('--video',required=True);q.set_defaults(fn=cmd_relink)
-    q=s.add_parser('detect');q.add_argument('project');q.add_argument('--backend',choices=['bhe','motion-coverage'],default='bhe');q.add_argument('--runtime');q.add_argument('--python');q.add_argument('--model',help='Path to your own authorized compatible ONNX model');q.add_argument('--roi',nargs=4,type=int);q.add_argument('--fps',type=float,default=10);q.add_argument('--before',type=float,default=3);q.add_argument('--after',type=float,default=2);q.add_argument('--device',choices=['cpu','coreml'],default='cpu');q.add_argument('--timeout',type=int,default=600);q.set_defaults(fn=cmd_detect)
+    q=s.add_parser('detect');q.add_argument('project');q.add_argument('--backend',choices=['bhe','motion-coverage','manifest'],default='bhe');q.add_argument('--runtime');q.add_argument('--python');q.add_argument('--model',help='Path to your own authorized compatible ONNX model');q.add_argument('--roi',nargs=4,type=int);q.add_argument('--fps',type=float,default=10);q.add_argument('--before',type=float,default=3);q.add_argument('--after',type=float,default=2);q.add_argument('--device',choices=['cpu','coreml'],default='cpu');q.add_argument('--timeout',type=int,default=600);q.add_argument('--manifest');q.add_argument('--cache-dir');q.add_argument('--no-cache',action='store_true');q.add_argument('--refresh-cache',action='store_true');q.set_defaults(fn=cmd_detect)
     q=s.add_parser('import-candidates');q.add_argument('project');q.add_argument('--file',required=True);q.set_defaults(fn=cmd_import)
     q=s.add_parser('features');q.add_argument('project');q.add_argument('--interval',type=float,default=1.5);q.add_argument('--refresh',action='store_true');q.add_argument('--no-ocr',action='store_true',help='Skip number hints for unnumbered footage');q.set_defaults(fn=cmd_features)
     q=s.add_parser('people');q.add_argument('project');q.add_argument('--model');q.add_argument('--roi',nargs=4,type=int);q.add_argument('--tile',type=int,default=320);q.add_argument('--fps',type=float,default=3);q.add_argument('--start',type=float,default=0);q.add_argument('--end',type=float,default=1e9);q.set_defaults(fn=cmd_people)
@@ -747,7 +845,7 @@ def main():
         p.error('--interval must be positive')
     try:
         a.fn(a)
-    except (ValueError,KeyError,FileNotFoundError,subprocess.TimeoutExpired,ImportError) as e:
+    except (ValueError,KeyError,OSError,subprocess.TimeoutExpired,ImportError) as e:
         print(str(e),file=sys.stderr)
         return 2
     return 0
