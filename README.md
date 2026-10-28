@@ -8,6 +8,12 @@ A local, review-first basketball highlight skill for Codex. Includes runnable sc
 
 ![公开测试视频的候选画面](examples/indiana/project/frames/c0003_f001.jpg)
 
+## 人工标注与评测（goal-1-eval）
+
+新增 [离线 review 页面](eval/review.html)与 [使用说明](eval/README.md)。共 10 段许可明确的视频，7 段 development、3 段 hold-out，生成 35 条自动草稿。页面可播放前后窗口、修改时间和球员、删除误报、补漏检，并导出带来源记录的 JSON。
+
+`eval/score.py` 只使用经哈希锁验证的人工确认事实，分别输出事件 P/R/F1 与三项人物指标；hold-out 必须显式启用。Indiana 历史决定只确认了两段球员出现，进球指标保持 null，等待实际人工标注。完整工作与限制见 [goal-1 报告](docs/reports/goal-1.md)。
+
 ## 完整案例
 
 新增 **[无号码选人实测与迭代记录](docs/UNNUMBERED_CASE_STUDY.zh-CN.md)**：五个公开许可视频、两处无号码目标场景、三版方法对照、随机时间点留出、逐帧错误分析，以及两套完整粗剪项目。

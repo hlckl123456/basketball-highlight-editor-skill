@@ -8,10 +8,10 @@ import os
 import urllib.parse
 from pathlib import Path
 try:
-    from .schema import validate_catalog, validate_annotations, sha
+    from .schema import validate_catalog, validate_annotations, sha, require
     from .locking import read_locked
 except ImportError:
-    from schema import validate_catalog, validate_annotations, sha
+    from schema import validate_catalog, validate_annotations, sha, require
     from locking import read_locked
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -23,6 +23,8 @@ def build(root=ROOT, output=None, synthetic=False):
     read_locked(root, root/'eval/annotations/confirmed.lock.json')
     annotations, paths = [], {}
     for video in catalog['videos']:
+        if video.get('review_media_sha256'):
+            require(sha(root/video['review_media_path']) == video['review_media_sha256'], 'REVIEW_MEDIA_HASH_MISMATCH')
         vid = video['id']; state = root/'eval/annotations/review-state'/(vid+'.json')
         draft = root/'eval/annotations/drafts'/(vid+'.json')
         confirmed = root/'eval/annotations/confirmed'/(vid+'.json')

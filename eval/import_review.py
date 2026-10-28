@@ -53,6 +53,9 @@ def import_review(export_path, root=ROOT):
         require(vid in videos and vid not in seen, 'UNKNOWN_OR_DUPLICATE_EXPORTED_VIDEO')
         seen.add(vid)
         validate_annotations(doc, videos[vid], allow_legacy=vid == 'indiana')
+        require(sha(root/videos[vid]['source_path']) == videos[vid]['sha256'], 'SOURCE_MEDIA_HASH_MISMATCH')
+        if videos[vid].get('review_media_sha256'):
+            require(sha(root/videos[vid]['review_media_path']) == videos[vid]['review_media_sha256'], 'REVIEW_MEDIA_HASH_MISMATCH')
         for event in doc['events']:
             if event['status'] != 'confirmed':
                 continue

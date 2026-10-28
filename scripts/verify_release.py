@@ -46,10 +46,31 @@ def main():
         assert h.read(project/'confirmed-edl.json')['source']==p['source']
         assert not Path(p['source']['path']).is_absolute()
         for c in p['candidates']:assert (project/c['preview']).is_file()
+    # Evaluation facts have a separate human-only, hash-locked trust boundary.
+    if (ROOT/'eval/data/catalog.json').is_file():
+        import sys
+        sys.path.insert(0,str(ROOT))
+        from eval.schema import validate_catalog,validate_annotations
+        from eval.locking import read_locked
+        catalog=validate_catalog(h.read(ROOT/'eval/data/catalog.json'))
+        assert len(catalog['videos'])>=8
+        assert sum(v['split']=='holdout' for v in catalog['videos'])==3
+        assert sum(v['scene_type'].startswith('outdoor') for v in catalog['videos'])>len(catalog['videos'])/2
+        for v in catalog['videos']:
+            assert sha(ROOT/v['source_path'])==v['sha256'],v['id']
+            assert (ROOT/v['review_media_path']).is_file(),v['id']
+            assert sha(ROOT/v['review_media_path'])==v['review_media_sha256'],v['id']
+            draft=h.read(ROOT/'eval/annotations/drafts'/(v['id']+'.json'))
+            validate_annotations(draft,v,require_all_draft=True)
+            assert draft['events'],v['id']
+        registry,locked=read_locked(ROOT,ROOT/'eval/annotations/confirmed.lock.json')
+        for entry,path in locked:
+            v=next(v for v in catalog['videos'] if v['id']==entry['video_id'])
+            validate_annotations(h.read(path),v,allow_legacy=v['id']=='indiana')
     paths=[]
     for f in ROOT.rglob('*'):
         rel=f.relative_to(ROOT)
-        if not f.is_file() or any(p in ('.git','work','__pycache__') for p in rel.parts):continue
+        if not f.is_file() or any(p in ('.git','work','__pycache__','.local','local-media','.venv','node_modules') for p in rel.parts):continue
         assert f.suffix not in ('.pt','.onnx','.dmg','.apk','.exe') or f==model,rel
         assert f.stat().st_size<100_000_000,rel
         if f.suffix in ('.md','.json','.txt','.log','.html','.csv','.py','.yml','.yaml','.gz'):

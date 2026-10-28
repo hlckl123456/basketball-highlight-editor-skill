@@ -198,6 +198,9 @@ def main():
     for video in catalog['videos']:
         if not a.video or video['id'] in a.video:
             prepare(video, a.runtime, a.refresh)
+            media = ROOT/video['review_media_path']
+            if media.exists(): video['review_media_sha256'] = sha(media)
+    write(ROOT/'eval/data/catalog.json', catalog)
 
 
 if __name__ == '__main__':

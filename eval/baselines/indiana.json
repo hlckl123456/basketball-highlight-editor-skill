@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "dataset_id": "basketball-eval-v1",
-  "catalog_sha256": "fbc52e6435c1722b016cd9f013fe5bc851bdffe39ad2885a29bdc5d9a93f6b3f",
+  "catalog_sha256": "c59f558135c51a16d9ae3ad21544b164a9e0b565eb981930210a9b9b0b5ddd6f",
   "confirmed_registry_sha256": "1154351e7a3be885acd147e6fe129c4f56332687ede8eb45b819937fcc977b44",
   "tolerance_seconds": 1.0,
   "player_role": "visible",

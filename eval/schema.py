@@ -22,6 +22,10 @@ def require(value, message):
         raise ValidationError(message)
 
 
+def ident(value):
+    return isinstance(value, str) and ID.fullmatch(value) is not None
+
+
 def number(value):
     return type(value) in (int, float) and math.isfinite(value)
 
@@ -61,7 +65,7 @@ def timestamp(value):
 
 def confirmation(value, allow_legacy=False):
     require(isinstance(value, dict), 'CONFIRMED_REQUIRES_REVIEW_RECEIPT')
-    require(value.get('reviewer_kind') == 'user' and bool(value.get('reviewer', '').strip()),
+    require(value.get('reviewer_kind') == 'user' and isinstance(value.get('reviewer'), str) and bool(value['reviewer'].strip()),
             'HUMAN_REVIEWER_REQUIRED')
     timestamp(value.get('confirmed_at'))
     source = value.get('source')
@@ -76,14 +80,16 @@ def confirmation(value, allow_legacy=False):
 
 
 def validate_catalog(data):
+    require(isinstance(data, dict), 'CATALOG_MUST_BE_OBJECT')
     require(data.get('schema_version') == 1 and data.get('dataset_id') == DATASET,
             'INVALID_CATALOG_VERSION')
     videos = data.get('videos')
     require(isinstance(videos, list) and videos, 'EMPTY_VIDEO_CATALOG')
     ids, groups, source_splits = set(), {}, {}
     for v in videos:
+        require(isinstance(v, dict), 'VIDEO_MUST_BE_OBJECT')
         vid = v.get('id', '')
-        require(ID.fullmatch(vid) is not None and vid not in ids, 'INVALID_OR_DUPLICATE_VIDEO_ID')
+        require(ident(vid) and vid not in ids, 'INVALID_OR_DUPLICATE_VIDEO_ID')
         ids.add(vid)
         require(v.get('split') in ('development', 'holdout'), 'INVALID_SPLIT')
         require(number(v.get('duration')) and v['duration'] > 0, 'INVALID_DURATION')
@@ -104,6 +110,7 @@ def validate_catalog(data):
 
 
 def validate_annotations(doc, video, allow_legacy=False, require_all_draft=False):
+    require(isinstance(doc, dict), 'ANNOTATION_MUST_BE_OBJECT')
     require(doc.get('schema_version') == 1 and doc.get('document_type') == 'basketball_annotations',
             'INVALID_ANNOTATION_VERSION')
     require(doc.get('dataset_id') == DATASET and doc.get('video_id') == video['id'],
@@ -115,26 +122,28 @@ def validate_annotations(doc, video, allow_legacy=False, require_all_draft=False
     require(isinstance(players, list), 'PLAYERS_MUST_BE_ARRAY')
     pids = set()
     for p in players:
-        require(ID.fullmatch(p.get('id', '')) is not None and p['id'] not in pids,
+        require(isinstance(p, dict), 'PLAYER_MUST_BE_OBJECT')
+        require(ident(p.get('id', '')) and p['id'] not in pids,
                 'INVALID_OR_DUPLICATE_PLAYER_ID')
-        require(bool(p.get('appearance_description', '').strip()), 'PLAYER_DESCRIPTION_REQUIRED')
+        require(isinstance(p.get('appearance_description'), str) and bool(p['appearance_description'].strip()), 'PLAYER_DESCRIPTION_REQUIRED')
         pids.add(p['id'])
     targets = doc.get('target_player_ids', [])
-    require(isinstance(targets, list) and len(set(targets)) == len(targets) and set(targets) <= pids, 'INVALID_TARGET_PLAYERS')
+    require(isinstance(targets, list) and all(isinstance(x, str) for x in targets) and len(set(targets)) == len(targets) and set(targets) <= pids, 'INVALID_TARGET_PLAYERS')
     events = doc.get('events')
     require(isinstance(events, list), 'EVENTS_MUST_BE_ARRAY')
     ids = set()
     for e in events:
-        require(ID.fullmatch(e.get('id', '')) is not None and e['id'] not in ids,
+        require(isinstance(e, dict), 'EVENT_MUST_BE_OBJECT')
+        require(ident(e.get('id', '')) and e['id'] not in ids,
                 'INVALID_OR_DUPLICATE_EVENT_ID')
         ids.add(e['id'])
         require(all(k in e for k in ('is_score', 'scorer_id', 'ball_handler_id', 'visible_player_ids', 'visibility_complete', 'confirmed_fields', 'confirmation')), 'MISSING_EVENT_FIELD')
         require(number(e.get('time')) and 0 <= e['time'] <= video['duration'], 'EVENT_TIME_OUT_OF_RANGE')
         require(e.get('is_score') is None or type(e['is_score']) is bool, 'IS_SCORE_MUST_BE_BOOLEAN_OR_NULL')
         for key in ('scorer_id', 'ball_handler_id'):
-            require(e.get(key) is None or e[key] in pids, 'UNKNOWN_PLAYER: ' + key)
+            require(e.get(key) is None or (isinstance(e[key], str) and e[key] in pids), 'UNKNOWN_PLAYER: ' + key)
         visible = e.get('visible_player_ids')
-        require(visible is None or (isinstance(visible, list) and len(set(visible)) == len(visible)
+        require(visible is None or (isinstance(visible, list) and all(isinstance(x, str) for x in visible) and len(set(visible)) == len(visible)
                 and set(visible) <= pids), 'INVALID_VISIBLE_PLAYERS')
         require(type(e.get('visibility_complete', False)) is bool, 'INVALID_VISIBILITY_COMPLETENESS')
         require(not e.get('visibility_complete') or visible is not None, 'COMPLETE_VISIBILITY_NEEDS_LIST')
@@ -142,7 +151,7 @@ def validate_annotations(doc, video, allow_legacy=False, require_all_draft=False
         require(not e.get('deleted') or e.get('is_score') is False, 'DELETED_EVENT_MUST_BE_NEGATIVE')
         require(e.get('status') in ('draft', 'confirmed'), 'INVALID_ANNOTATION_STATUS')
         fields = e.get('confirmed_fields', [])
-        require(isinstance(fields, list) and len(fields) == len(set(fields)) and set(fields) <= FIELDS,
+        require(isinstance(fields, list) and all(isinstance(x, str) for x in fields) and len(fields) == len(set(fields)) and set(fields) <= FIELDS,
                 'INVALID_CONFIRMED_FIELDS')
         if e['status'] == 'draft':
             require(not fields and e.get('confirmation') is None, 'DRAFT_CANNOT_CARRY_CONFIRMATION')
@@ -159,7 +168,9 @@ def validate_annotations(doc, video, allow_legacy=False, require_all_draft=False
                         'LEGACY_REVIEW_ONLY_CONFIRMED_TARGET_PRESENCE')
             else:
                 require('time' in fields, 'CONFIRMED_EVENT_REQUIRES_TIME_REVIEW')
+    require(isinstance(doc.get('reviewed_ranges', []), list), 'REVIEWED_RANGES_MUST_BE_ARRAY')
     for r in doc.get('reviewed_ranges', []):
+        require(isinstance(r, dict), 'REVIEWED_RANGE_MUST_BE_OBJECT')
         require(number(r.get('start')) and number(r.get('end')) and
                 0 <= r['start'] < r['end'] <= video['duration'], 'INVALID_REVIEWED_RANGE')
         require(r.get('status') in ('draft', 'confirmed'), 'INVALID_RANGE_STATUS')
@@ -173,24 +184,29 @@ def validate_annotations(doc, video, allow_legacy=False, require_all_draft=False
 
 
 def validate_predictions(doc, video):
+    require(isinstance(doc, dict), 'PREDICTIONS_MUST_BE_OBJECT')
     require(doc.get('schema_version') == 1 and doc.get('document_type') == 'basketball_predictions',
             'INVALID_PREDICTION_VERSION')
     require(doc.get('video_id') == video['id'] and doc.get('video_sha256') == video['sha256'],
             'PREDICTION_SOURCE_MISMATCH')
     require(bool(doc.get('provenance')), 'PREDICTION_PROVENANCE_REQUIRED')
     ids = set()
-    for e in doc.get('events', []):
-        require(ID.fullmatch(e.get('id', '')) is not None and e['id'] not in ids,
+    require(isinstance(doc.get('events'), list), 'PREDICTION_EVENTS_MUST_BE_ARRAY')
+    for e in doc['events']:
+        require(isinstance(e, dict), 'PREDICTION_MUST_BE_OBJECT')
+        require(ident(e.get('id', '')) and e['id'] not in ids,
                 'INVALID_OR_DUPLICATE_PREDICTION_ID')
         ids.add(e['id'])
         require(number(e.get('time')) and 0 <= e['time'] <= video['duration'], 'PREDICTION_TIME_OUT_OF_RANGE')
         require(e.get('kind') == 'detected_event', 'COVERAGE_WINDOWS_ARE_NOT_DETECTIONS')
         targets = set()
+        require(isinstance(e.get('player_assignments', []), list), 'PLAYER_ASSIGNMENTS_MUST_BE_ARRAY')
         for p in e.get('player_assignments', []):
+            require(isinstance(p, dict), 'PLAYER_ASSIGNMENT_MUST_BE_OBJECT')
             pid = p.get('target_player_id', '')
-            require(ID.fullmatch(pid) is not None and pid not in targets, 'INVALID_PREDICTION_TARGET')
+            require(ident(pid) and pid not in targets, 'INVALID_PREDICTION_TARGET')
             targets.add(pid)
             require(p.get('group') in ('high', 'uncertain', 'excluded'), 'INVALID_PLAYER_GROUP')
-            require(p.get('assigned_player_id') is None or ID.fullmatch(p['assigned_player_id']),
+            require(p.get('assigned_player_id') is None or ident(p['assigned_player_id']),
                     'INVALID_ASSIGNED_PLAYER')
     return doc

@@ -32,7 +32,8 @@
       ],
       "holdout_policy": "Development source; previous experiments may have viewed this footage.",
       "review_media_path": "eval/data/review-media/indiana.mp4",
-      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license.",
+      "review_media_sha256": "2d92130cdf258d4368dab13012179ac2fc22f95da6608c75618452751eb8b378"
     },
     {
       "id": "university",
@@ -62,7 +63,8 @@
       ],
       "holdout_policy": "Development source; previous experiments may have viewed this footage.",
       "review_media_path": "eval/data/review-media/university.mp4",
-      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license.",
+      "review_media_sha256": "be4ba96f7a14c79e674bf2de90b7d218cedd74a489dbec1d4f3bd5f03aeaa1af"
     },
     {
       "id": "moscow1",
@@ -92,7 +94,8 @@
       ],
       "holdout_policy": "Development source; previous experiments may have viewed this footage.",
       "review_media_path": "eval/data/review-media/moscow1.mp4",
-      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license.",
+      "review_media_sha256": "35b6fbae0ddbf6ce77d6e83c18fe46e3cdf7a186e7cff5f5df039491df86fdc0"
     },
     {
       "id": "moscow2",
@@ -122,7 +125,8 @@
       ],
       "holdout_policy": "Development source; previous experiments may have viewed this footage.",
       "review_media_path": "eval/data/review-media/moscow2.mp4",
-      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license.",
+      "review_media_sha256": "d968b6266dd40e51f88ed883d1a4ff55235c2413feff0f0ee66fe378907a56e8"
     },
     {
       "id": "ljubljana",
@@ -152,7 +156,8 @@
       ],
       "holdout_policy": "Development source; previous experiments may have viewed this footage.",
       "review_media_path": "eval/data/review-media/ljubljana.mp4",
-      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license.",
+      "review_media_sha256": "876602ab1e8c8f39c84a0d4ba69e33d968570b92868b2a6725be62c5cfdafc37"
     },
     {
       "id": "ukraine",
@@ -185,7 +190,8 @@
       "raw_source_path": "examples/unnumbered/sources/ukraine.ogv",
       "raw_source_sha256": "1c28d65fd8d48bd68f683794c2b1edf8dd6c2cccfa359281447806c32c2ea98b",
       "review_media_path": "eval/data/review-media/ukraine.mp4",
-      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license.",
+      "review_media_sha256": "851755ea7414b7c216e169ac610b5afab4c82d43bbd23f755bb3d520c50079bd"
     },
     {
       "id": "zhijiang",
@@ -215,7 +221,8 @@
       ],
       "holdout_policy": "Development source; previous experiments may have viewed this footage.",
       "review_media_path": "eval/data/review-media/zhijiang.mp4",
-      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license.",
+      "review_media_sha256": "33d60bd27c994913794ccd3191e5f97ef676905215bec4a213c9db86f41d2a4c"
     },
     {
       "id": "dribbling",
@@ -245,7 +252,8 @@
       ],
       "holdout_policy": "Reserved for explicit final evaluation; draft proposal generation is allowed, labels remain unconfirmed.",
       "review_media_path": "eval/data/review-media/dribbling.mp4",
-      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license.",
+      "review_media_sha256": "118d36c5eac6ed897c36f6749d5083ec5aeb98883c69f3cba3982472c58cb3cd"
     },
     {
       "id": "skills-basic",
@@ -275,7 +283,8 @@
       ],
       "holdout_policy": "Reserved for explicit final evaluation; draft proposal generation is allowed, labels remain unconfirmed.",
       "review_media_path": "eval/data/review-media/skills-basic.mp4",
-      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license.",
+      "review_media_sha256": "140c39d8f2b054d6453818c2be1f5d35d5fc7ffdc251eafa5072d8e127d98339"
     },
     {
       "id": "nabua",
@@ -305,7 +314,8 @@
       ],
       "holdout_policy": "Reserved for explicit final evaluation; draft proposal generation is allowed, labels remain unconfirmed.",
       "review_media_path": "eval/data/review-media/nabua.mp4",
-      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license."
+      "review_media_transformation": "H264/AAC compatible local review copy; downscaled to fit 960x720, original aspect retained. Same source media license.",
+      "review_media_sha256": "450f4c87127dae9dddde4d2c9d0268e023ba4d0aec50e7a790d58733de8cd2d2"
     }
   ]
 }

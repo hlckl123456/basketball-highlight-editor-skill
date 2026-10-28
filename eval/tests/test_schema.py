@@ -66,6 +66,20 @@ class AnnotationSchema(unittest.TestCase):
         with self.assertRaisesRegex(ValidationError, 'SPLIT_LEAKAGE'):
             validate_catalog({'schema_version': 1, 'dataset_id': DATASET, 'videos': [a,b]})
 
+    def test_malformed_ids_actors_and_lists_are_rejected_cleanly(self):
+        for key,value in [('id',1),('scorer_id',{}),('visible_player_ids',[{}]),('confirmed_fields',[{}])]:
+            with self.subTest(key=key):
+                self.doc=annotations();self.doc['events'][0][key]=value;self.invalid()
+        self.doc=annotations();self.doc['events']=['not an event'];self.invalid('OBJECT')
+
+    def test_missing_required_event_field_is_rejected(self):
+        del self.doc['events'][0]['ball_handler_id'];self.invalid('MISSING_EVENT_FIELD')
+
+    def test_identical_source_cannot_leak_across_splits(self):
+        a=video();b=video('h','holdout')
+        with self.assertRaisesRegex(ValidationError,'SOURCE_HASH_SPLIT_LEAKAGE'):
+            validate_catalog({'schema_version':1,'dataset_id':DATASET,'videos':[a,b]})
+
     def test_coverage_window_cannot_enter_detector_predictions(self):
         p = predictions(); p['events'][0]['kind'] = 'coverage_fallback'
         with self.assertRaisesRegex(ValidationError, 'NOT_DETECTIONS'):

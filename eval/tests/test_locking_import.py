@@ -71,6 +71,16 @@ class LocksAndImports(unittest.TestCase):
         export=export_fixture(self.root,annotations(),synthetic=True)
         with self.assertRaisesRegex(ValidationError,'SYNTHETIC_UI_TEST_EXPORT'):import_review(export,self.root)
 
+    def test_changed_playback_media_is_rejected_before_import(self):
+        catalog=json.loads((self.root/'eval/data/catalog.json').read_text())
+        media=self.root/'eval/data/sources/review.mp4';media.write_bytes(b'SYNTHETIC PLAYBACK')
+        catalog['videos'][0]['review_media_path']=media.relative_to(self.root).as_posix()
+        catalog['videos'][0]['review_media_sha256']=sha(media)
+        write(self.root/'eval/data/catalog.json',catalog)
+        export=export_fixture(self.root,annotations());media.write_bytes(b'WRONG PLAYBACK')
+        with self.assertRaisesRegex(ValidationError,'REVIEW_MEDIA_HASH_MISMATCH'):
+            import_review(export,self.root)
+
     def test_export_payload_edit_breaks_integrity(self):
         export=export_fixture(self.root,annotations());d=json.loads(export.read_text());d['payload']['videos'][0]['events'][0]['time']=9;write(export,d)
         with self.assertRaisesRegex(ValidationError,'DIFFERS_FROM_HASHED'):import_review(export,self.root)

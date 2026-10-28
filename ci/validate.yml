@@ -18,3 +18,9 @@ jobs:
         run: python3 -m unittest discover -s skills/basketball-highlight-editor/tests -v
       - name: Check local review form logic
         run: node scripts/test_review_form.js examples/indiana/project/review.html
+      - name: Evaluation schema, matching and hash-lock tests
+        run: python3 -m unittest discover -s eval/tests -v
+      - name: Historical Indiana baseline without invented shot labels
+        run: python3 eval/score.py --video indiana --output work/indiana-baseline.json
+      - name: Replay original confirmed case in an isolated output directory
+        run: python3 scripts/replay_case.py --output work/indiana-replay
