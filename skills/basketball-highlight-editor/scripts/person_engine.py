@@ -114,8 +114,11 @@ def detect(a):
     times=np.arange(a.start,min(a.end,meta['duration']),1/a.fps)
     out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True)
     previews=out.with_suffix('');previews.mkdir(exist_ok=True)
-    for k,t in enumerate(times):
-        frame=media_io.frame_bgr(a.video,float(t),meta)
+    if getattr(a,'stream',False):
+        sampled=media_io.sampled_frames(a.video,[{'time':float(t)} for t in times],a.fps)
+    else:sampled=(({'time':float(t)},media_io.frame_bgr(a.video,float(t),meta)) for t in times)
+    for k,(sample,frame) in enumerate(sampled):
+        t=sample['time']
         regions=[roi]
         if a.tile:
             xs=list(range(roi[0],max(roi[0]+1,roi[2]-a.tile+1),max(1,int(a.tile*.65))))
@@ -146,7 +149,7 @@ def detect(a):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--video',required=True);p.add_argument('--model',required=True)
-    p.add_argument('--roi',nargs=4,type=int);p.add_argument('--start',type=float,default=0);p.add_argument('--end',type=float,default=1e9);p.add_argument('--tile',type=int,default=0);p.add_argument('--fps',type=float,default=5);p.add_argument('--threshold',type=float,default=.2);p.add_argument('--output',required=True)
+    p.add_argument('--stream',action='store_true',help='Decode source once at presentation timestamps');p.add_argument('--roi',nargs=4,type=int);p.add_argument('--start',type=float,default=0);p.add_argument('--end',type=float,default=1e9);p.add_argument('--tile',type=int,default=0);p.add_argument('--fps',type=float,default=5);p.add_argument('--threshold',type=float,default=.2);p.add_argument('--output',required=True)
     detect(p.parse_args())
 
 

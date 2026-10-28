@@ -143,3 +143,30 @@ def render(source, meta, start, end, out, frame_count=None):
             '-movflags', '+faststart', '-y', out]
     command(cmd, timeout=max(180, int(duration * 3)))
     return {'fps': str(fps), 'frames': count, 'duration': duration}
+
+
+def sampled_frames(video,rows,fps):
+ """Decode each source once at the scan's presentation timestamps, including VFR.
+ Nonuniform imported observations use the existing exact-time decoder instead.
+ """
+ import numpy as np
+ meta=probe(video);fps=float(fps)
+ if not rows:return
+ start=rows[0]['time'];uniform=all(abs(r['time']-(start+i/fps))<=.0011 for i,r in enumerate(rows))
+ if not uniform:
+  for row in rows:yield row,frame_bgr(video,row['time'],meta)
+  return
+ filt=f"setpts=PTS-STARTPTS,select='gte(t,{start:.9f}+selected_n/{fps:.9f})'"
+ cmd=['ffmpeg','-v','error','-threads','2','-i',str(video),'-map','0:v:0','-an','-vf',filt,'-filter_threads','1','-frames:v',str(len(rows)),'-fps_mode','passthrough','-pix_fmt','bgr24','-f','rawvideo','-']
+ proc=subprocess.Popen(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+ n=meta['width']*meta['height']*3
+ try:
+  for row in rows:
+   payload=proc.stdout.read(n)
+   if len(payload)!=n:raise ValueError('APPEARANCE_FRAME_DECODE_FAILED: '+str(row['time']))
+   yield row,np.frombuffer(payload,np.uint8).reshape(meta['height'],meta['width'],3)
+  proc.stdout.close();stderr=proc.stderr.read();code=proc.wait(timeout=30)
+  if code:raise ValueError('APPEARANCE_DECODER_FAILED: '+stderr.decode(errors='replace')[-500:])
+ finally:
+  if proc.poll() is None:proc.terminate();proc.wait(timeout=10)
+  proc.stdout.close();proc.stderr.close()

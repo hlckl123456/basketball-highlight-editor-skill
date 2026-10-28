@@ -57,3 +57,9 @@ Python、FFmpeg／FFprobe、Tesseract 和 Python 包是外部执行依赖，不�
 ## 公开导出处理
 
 已去掉工具个人配置、Ultralytics UUID 和本机用户名路径。历史命令的机器路径用占位符保留，公开项目改用相对源路径。原测试的候选、媒体、人工选择与等待状态没有因此改变。原始 v1.0.0 Skill 单独存档，方便对照原测试哈希；新开源版的相对路径支持以 v1.0.1 发布。
+
+## DINOv2 可选服饰纹理后端
+
+使用 Meta 的经典 DINOv2 ViT-S/14 LVD142M 通用视觉骨干，仅比较裁去框顶部后的服饰区域。官方[源码](https://github.com/facebookresearch/dinov2)及[模型卡](https://github.com/facebookresearch/dinov2/blob/main/MODEL_CARD.md)明确列出 Apache-2.0；本项目不使用 Cell-DINO 或 XRay-DINO。
+
+推理架构子集按提交 `7764ea0f912e53c92e82eb78a2a1631e92725fc8` 原样保存于 [Skill 资产目录](skills/basketball-highlight-editor/assets/dinov2/LICENSE)，包含版权头与 Apache-2.0 许可。[来源与逐文件 SHA256](skills/basketball-highlight-editor/assets/dinov2/provenance.json)用于运行时校验。预训练权重仅本地使用，不提交；首次提取需要已有 PyTorch，归档向量重放不需要权重或 PyTorch。

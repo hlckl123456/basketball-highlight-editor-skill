@@ -119,6 +119,9 @@ def filter_matches(data,raw_records,references):
  return result,audit
 
 def candidate_evidence(result,candidate,player):
+ if result.get('policy_version')=='clothing-texture-reid-v2':
+  from appearance_match import candidate_evidence as appearance_candidate
+  return appearance_candidate(result,candidate,player)
  hits=[];reasons=[]
  for r in result['records']:
   if not candidate['start']<=r['time']<=candidate['end']:continue

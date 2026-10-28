@@ -725,6 +725,9 @@ def report(root, p):
     for c in p['candidates']:
         images = ''.join('<a href="%s"><img loading="lazy" src="%s" width="300"><br>%.2fs</a>' %
                          (esc(f['path']),esc(f['path']),f['time']) for f in c.get('frames',[]))
+        ranges=(c.get('assignment') or {}).get('supported_time_ranges',[])
+        if ranges:
+            images='<p>自动认出目标的时间段：'+', '.join('%.2f–%.2f 秒'%(x['start'],x['end']) for x in ranges)+'。其余画面仍需复核；这不是得分归属。</p>'+images
         video = '<video controls preload="none" width="600" src="%s"></video>' % esc(c['preview']) if c.get('preview') else ''
         crops = ''.join('<figure><img loading="lazy" src="%s" width="70"><figcaption>%s / %s / OCR %s</figcaption></figure>' %
                         (esc(o['crop']),esc(o['id']),esc(o['color']['dominant']),esc(str(o['number_ocr']))) for o in c['observations'])
@@ -769,7 +772,7 @@ def cmd_people(a):
     dest=root/'people';dest.mkdir(exist_ok=True)
     detect(SimpleNamespace(video=source_path(root,p),model=model,roi=a.roi,
            tile=a.tile,fps=a.fps,start=a.start,end=a.end,threshold=.2,
-           output=dest/'detections.json'))
+           output=dest/'detections.json',stream=getattr(a,'stream',False)))
     d=read(dest/'detections.json')
     d['video']=p['source']['path']
     write(dest/'detections.json',d)
@@ -807,7 +810,20 @@ def cmd_match_people(a):
             'samples':[{'time':s['time'],'box':s['bbox_xyxy'],'sample_id':s['id'],
                         'reviewer_kind':s['reviewer_kind'],**{k:s[k] for k in ('appearance','valid_from','valid_until','is_automatic','origin') if k in s}} for s in ss]})
     data['video']=str(source_path(root,p))
-    result=predict(data,cal)
+    appearance_model=getattr(a,'appearance_model',None)
+    appearance_bundle=getattr(a,'appearance_bundle',None)
+    if appearance_model and appearance_bundle:raise ValueError('CHOOSE_APPEARANCE_MODEL_OR_BUNDLE')
+    if getattr(a,'clothing_only',False) and (appearance_model or appearance_bundle):raise ValueError('CHOOSE_CLOTHING_ONLY_OR_APPEARANCE')
+    if not appearance_model and not appearance_bundle and not getattr(a,'clothing_only',False):
+        local_model=Path(__file__).parents[1]/'assets/dinov2/dinov2_vits14_pretrain.pth'
+        if local_model.is_file():appearance_model=local_model
+    if appearance_model:
+        from appearance_match import predict as appearance_predict
+        result=appearance_predict(data,cal,appearance_model,root/'people/appearance.npz')
+    elif appearance_bundle:
+        from appearance_match import predict_from_bundle
+        result=predict_from_bundle(data,cal,appearance_bundle)
+    else:result=predict(data,cal)
     result.update({'source_sha256':p['source']['sha256'],
                    'detections_sha256':meta['data_sha256'],
                    'meaning':'Model-supported clothing sample correspondence; presence only. Human clip review required.'})
@@ -855,8 +871,8 @@ def main():
     q=s.add_parser('detect');q.add_argument('project');q.add_argument('--backend',choices=['bhe','motion-coverage','manifest'],default='bhe');q.add_argument('--runtime');q.add_argument('--python');q.add_argument('--model',help='Path to your own authorized compatible ONNX model');q.add_argument('--roi',nargs=4,type=int);q.add_argument('--fps',type=float,default=10);q.add_argument('--before',type=float,default=3);q.add_argument('--after',type=float,default=2);q.add_argument('--device',choices=['cpu','coreml'],default='cpu');q.add_argument('--timeout',type=int,default=600);q.add_argument('--manifest');q.add_argument('--cache-dir');q.add_argument('--no-cache',action='store_true');q.add_argument('--refresh-cache',action='store_true');q.set_defaults(fn=cmd_detect)
     q=s.add_parser('import-candidates');q.add_argument('project');q.add_argument('--file',required=True);q.set_defaults(fn=cmd_import)
     q=s.add_parser('features');q.add_argument('project');q.add_argument('--interval',type=float,default=1.5);q.add_argument('--refresh',action='store_true');q.add_argument('--no-ocr',action='store_true',help='Skip number hints for unnumbered footage');q.set_defaults(fn=cmd_features)
-    q=s.add_parser('people');q.add_argument('project');q.add_argument('--model');q.add_argument('--roi',nargs=4,type=int);q.add_argument('--tile',type=int,default=320);q.add_argument('--fps',type=float,default=3);q.add_argument('--start',type=float,default=0);q.add_argument('--end',type=float,default=1e9);q.set_defaults(fn=cmd_people)
-    q=s.add_parser('match-people');q.add_argument('project');q.add_argument('--player',required=True);q.add_argument('--role',choices=['scorer','handler','visible'],default='scorer');q.add_argument('--apply',action='store_true',help='Apply model proposals, invalidate prior clip confirmation');q.set_defaults(fn=cmd_match_people)
+    q=s.add_parser('people');q.add_argument('project');q.add_argument('--stream',action='store_true',help='Decode once at sample presentation timestamps (including VFR)');q.add_argument('--model');q.add_argument('--roi',nargs=4,type=int);q.add_argument('--tile',type=int,default=320);q.add_argument('--fps',type=float,default=3);q.add_argument('--start',type=float,default=0);q.add_argument('--end',type=float,default=1e9);q.set_defaults(fn=cmd_people)
+    q=s.add_parser('match-people');q.add_argument('project');q.add_argument('--clothing-only',action='store_true',help='Explicit legacy color-only comparison, even if the texture model is installed');q.add_argument('--appearance-model',help='Explicit local DINOv2-S weights; texture re-identification, no download');q.add_argument('--appearance-bundle',help='Replay hash-checked derived clothing features without weights');q.add_argument('--player',required=True);q.add_argument('--role',choices=['scorer','handler','visible'],default='scorer');q.add_argument('--apply',action='store_true',help='Apply model proposals, invalidate prior clip confirmation');q.set_defaults(fn=cmd_match_people)
     q=s.add_parser('add');q.add_argument('project');q.add_argument('--start',required=True,type=float);q.add_argument('--end',required=True,type=float);q.add_argument('--reason',required=True);q.set_defaults(fn=cmd_add)
     q=s.add_parser('annotate');q.add_argument('project');q.add_argument('--file',required=True);q.set_defaults(fn=cmd_annotate)
     q=s.add_parser('sample');q.add_argument('project');q.add_argument('--player',required=True);q.add_argument('--time',required=True,type=float);q.add_argument('--bbox',nargs=4,type=int,required=True);q.add_argument('--description',required=True);q.add_argument('--confirmed-by',required=True);q.add_argument('--reviewer-kind',choices=['user','test_operator'],required=True);q.add_argument('--appearance',default='default');q.add_argument('--valid-from',type=float);q.add_argument('--valid-until',type=float);q.set_defaults(fn=cmd_sample)
