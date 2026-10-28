@@ -11,3 +11,12 @@ third_party/bhe/models/*.onnx
 *.exe
 .env
 .env.*
+
+# Evaluation local-only media, environments and UI test products
+eval/local-media/
+eval/.local/
+node_modules/
+*.onnx
+*.pt
+*.pth
+*.safetensors
