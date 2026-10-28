@@ -1,0 +1,114 @@
+{
+  "id": "s003",
+  "player_id": "mustard",
+  "time": 130,
+  "bbox_xyxy": [
+    562,
+    362,
+    602,
+    480
+  ],
+  "description": "Mustard tee, navy shorts, green shoes; no readable jersey number",
+  "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+  "reviewer_kind": "test_operator",
+  "reference": "samples/s003.jpg",
+  "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+  "track_proposals": [
+    {
+      "time": 128.4,
+      "bbox_xyxy": [
+        562.8,
+        271.2,
+        602.8,
+        389.2
+      ],
+      "surviving_points": 8,
+      "initial_points": 24,
+      "identity_verified": false
+    },
+    {
+      "time": 128.6,
+      "bbox_xyxy": [
+        564.9,
+        281.7,
+        604.9,
+        399.7
+      ],
+      "surviving_points": 8,
+      "initial_points": 24,
+      "identity_verified": false
+    },
+    {
+      "time": 128.8,
+      "bbox_xyxy": [
+        564.5,
+        292.7,
+        604.5,
+        410.7
+      ],
+      "surviving_points": 10,
+      "initial_points": 24,
+      "identity_verified": false
+    },
+    {
+      "time": 129.0,
+      "bbox_xyxy": [
+        560.3,
+        306.0,
+        600.3,
+        424.0
+      ],
+      "surviving_points": 11,
+      "initial_points": 24,
+      "identity_verified": false
+    },
+    {
+      "time": 129.2,
+      "bbox_xyxy": [
+        553.6,
+        315.3,
+        593.6,
+        433.3
+      ],
+      "surviving_points": 11,
+      "initial_points": 24,
+      "identity_verified": false
+    },
+    {
+      "time": 129.4,
+      "bbox_xyxy": [
+        548.1,
+        325.2,
+        588.1,
+        443.2
+      ],
+      "surviving_points": 11,
+      "initial_points": 24,
+      "identity_verified": false
+    },
+    {
+      "time": 129.6,
+      "bbox_xyxy": [
+        548.6,
+        338.6,
+        588.6,
+        456.6
+      ],
+      "surviving_points": 12,
+      "initial_points": 24,
+      "identity_verified": false
+    },
+    {
+      "time": 129.8,
+      "bbox_xyxy": [
+        554.5,
+        350.4,
+        594.5,
+        468.4
+      ],
+      "surviving_points": 12,
+      "initial_points": 24,
+      "identity_verified": false
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "tool_version": "1.1.0",
+  "source_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+  "redetected": true,
+  "state": "awaiting_edit_prompt",
+  "revision": 15,
+  "reviewer_kind": "test_operator",
+  "kept": [
+    "c0001",
+    "c0002"
+  ],
+  "high_confidence": [
+    "c0001",
+    "c0002"
+  ],
+  "uncertain": [
+    "c0003",
+    "c0004",
+    "c0005",
+    "c0006"
+  ],
+  "versions": []
+}

@@ -1,0 +1,204 @@
+{
+  "provenance": {
+    "annotator": "Codex visual review of original frames, approximate bounding boxes",
+    "kind": "test_operator",
+    "human_verified": false,
+    "method": "Raw source frames inspected before matching predictions. Not a human user confirmation."
+  },
+  "frames": [
+    {
+      "time": 130,
+      "people": {
+        "green": [
+          255,
+          315,
+          295,
+          437
+        ],
+        "mustard": [
+          562,
+          362,
+          602,
+          480
+        ]
+      }
+    },
+    {
+      "time": 135,
+      "people": {
+        "green": null,
+        "mustard": null
+      }
+    },
+    {
+      "time": 140,
+      "people": {
+        "green": [
+          492,
+          120,
+          554,
+          205
+        ],
+        "mustard": [
+          395,
+          106,
+          451,
+          179
+        ]
+      }
+    },
+    {
+      "time": 145,
+      "people": {
+        "green": [
+          455,
+          121,
+          484,
+          178
+        ],
+        "mustard": [
+          417,
+          90,
+          439,
+          154
+        ]
+      }
+    },
+    {
+      "time": 150,
+      "people": {
+        "green": [
+          447,
+          181,
+          482,
+          237
+        ],
+        "mustard": [
+          408,
+          141,
+          443,
+          193
+        ]
+      }
+    },
+    {
+      "time": 155,
+      "people": {
+        "green": [
+          344,
+          319,
+          391,
+          388
+        ],
+        "mustard": [
+          242,
+          368,
+          292,
+          418
+        ]
+      }
+    },
+    {
+      "time": 160,
+      "people": {
+        "green": [
+          467,
+          120,
+          511,
+          184
+        ],
+        "mustard": [
+          416,
+          144,
+          451,
+          210
+        ]
+      }
+    },
+    {
+      "time": 165,
+      "people": {
+        "green": [
+          333,
+          144,
+          372,
+          232
+        ],
+        "mustard": [
+          449,
+          240,
+          508,
+          341
+        ]
+      }
+    },
+    {
+      "time": 170,
+      "people": {
+        "green": [
+          333,
+          87,
+          385,
+          161
+        ],
+        "mustard": [
+          314,
+          233,
+          377,
+          338
+        ]
+      }
+    },
+    {
+      "time": 175,
+      "people": {
+        "green": [
+          570,
+          277,
+          651,
+          380
+        ],
+        "mustard": [
+          399,
+          311,
+          446,
+          400
+        ]
+      }
+    },
+    {
+      "time": 180,
+      "people": {
+        "green": [
+          714,
+          178,
+          800,
+          269
+        ],
+        "mustard": [
+          420,
+          425,
+          495,
+          480
+        ]
+      }
+    },
+    {
+      "time": 185,
+      "people": {
+        "green": [
+          713,
+          178,
+          805,
+          266
+        ],
+        "mustard": [
+          360,
+          280,
+          409,
+          383
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "source": {
+    "path": "../sources/ljubljana480.webm",
+    "sha256": "f3b68df29e1c9a64a80ab7980a92c3de823af9a222192d697af1f1ba787a51a7",
+    "duration": 199.753,
+    "width": 854,
+    "height": 480,
+    "fps": "30000/1001",
+    "has_audio": true,
+    "rights": {
+      "id": "ljubljana480",
+      "title": "File:Sportpark Ljubljana - Skateboard and Basketball Aerials by Yuneec Typhoon Q500 4k.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sportpark_Ljubljana_-_Skateboard_and_Basketball_Aerials_by_Yuneec_Typhoon_Q500_4k.webm",
+      "creator": "Detlef Stöcker",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "sha256": "f3b68df29e1c9a64a80ab7980a92c3de823af9a222192d697af1f1ba787a51a7",
+      "bytes": 34938186,
+      "transformation": "480p Wikimedia derivative",
+      "download_authorization": "User requested testing assorted unnumbered public basketball footage.",
+      "selection_notes": "All screened material retained, including hard/partially numbered scenes; target shirt-number status is separately reviewed.",
+      "processing_basis": "Original author public Commons license, local regression and evidence publication",
+      "restrictions": "Keep original attribution and license, no implied endorsement; derivatives keep CC BY-SA 4.0 when applicable"
+    }
+  },
+  "project_revision": 11,
+  "player_id": "green",
+  "clips": [
+    {
+      "id": "c0001",
+      "start": 129.0,
+      "end": 138.0,
+      "labels": []
+    },
+    {
+      "id": "c0002",
+      "start": 139.0,
+      "end": 148.0,
+      "labels": []
+    },
+    {
+      "id": "c0003",
+      "start": 149.0,
+      "end": 158.0,
+      "labels": []
+    },
+    {
+      "id": "c0004",
+      "start": 159.0,
+      "end": 168.0,
+      "labels": []
+    },
+    {
+      "id": "c0005",
+      "start": 169.0,
+      "end": 178.0,
+      "labels": []
+    },
+    {
+      "id": "c0006",
+      "start": 179.0,
+      "end": 189.0,
+      "labels": []
+    }
+  ]
+}

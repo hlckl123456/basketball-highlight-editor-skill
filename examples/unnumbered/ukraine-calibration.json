@@ -1,0 +1,54 @@
+{
+  "kind": "test_operator",
+  "description": "Explicit raw-frame clothing samples; no truth lookup during prediction.",
+  "people": [
+    {
+      "id": "yellow_black",
+      "description": "Yellow top and black shorts; jersey number status unverified, no OCR used",
+      "samples": [
+        {
+          "time": 0,
+          "box": [
+            379,
+            348,
+            441,
+            435
+          ]
+        },
+        {
+          "time": 18,
+          "box": [
+            312,
+            397,
+            356,
+            481
+          ]
+        }
+      ]
+    },
+    {
+      "id": "warm_blue",
+      "description": "Warm/orange torso and blue shorts; torso garment uncertain at low resolution",
+      "samples": [
+        {
+          "time": 6,
+          "box": [
+            269,
+            386,
+            302,
+            437
+          ]
+        },
+        {
+          "time": 12,
+          "box": [
+            334,
+            388,
+            352,
+            444
+          ]
+        }
+      ]
+    }
+  ]
+}

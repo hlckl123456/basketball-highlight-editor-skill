@@ -19,7 +19,7 @@ import sys
 import tempfile
 from datetime import datetime, timezone
 
-VERSION = '1.0.1'
+VERSION = '1.1.0'
 
 
 def now():
@@ -423,7 +423,8 @@ def cmd_sample(a):
         current_box=np.array([x1,y1,x2,y2],dtype=float)
         count0=len(points) if points is not None else 0
         t=a.time+direction*.2
-        while points is not None and len(points)>=8 and 0<=t<p['source']['duration']:
+        while (points is not None and len(points)>=8 and 0<=t<p['source']['duration']
+               and abs(t-a.time)<=2.001):
             cap.set(cv2.CAP_PROP_POS_MSEC,t*1000);ok,frame=cap.read()
             if not ok:break
             cur=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
@@ -615,6 +616,11 @@ def report(root, p):
 const choices=document.getElementById('choices');
 for(const id of config.ids){const label=document.createElement('label');label.style.display='block';label.append(id+' ');const s=document.createElement('select');s.id='decision-'+id;for(const [v,t] of [['','请选择'],['keep','保留'],['reject','删除']]){const o=document.createElement('option');o.value=v;o.textContent=t;s.append(o)}label.append(s);choices.append(label)}
 document.getElementById('download').onclick=()=>{const reviewer=document.getElementById('reviewer').value.trim();const decisions={};for(const id of config.ids){decisions[id]=document.getElementById('decision-'+id).value}if(!reviewer||Object.values(decisions).some(v=>!v)){document.getElementById('message').textContent='请填写复核人并决定每一段。';return}const data={project_revision:config.revision,player_id:config.player,reviewer_kind:'user',reviewer,authorization_reference:'Manual local review.html submission at revision '+config.revision,decisions};const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='review-decisions.json';a.click();URL.revokeObjectURL(a.href);document.getElementById('message').textContent='已下载。请把决定文件交给 Codex，保存后会等待下一条剪辑指令。'};</script>'''
+    if p.get('samples'):
+        gallery=''.join('<figure><img src="%s" width="100"><figcaption>%s · %.2fs · %s</figcaption></figure>' %
+            (esc(s['reference']),esc(s['player_id']),s['time'],esc(s['reviewer_kind'])) for s in p['samples']
+            if all(k in s for k in ('reference','player_id','time','reviewer_kind')))
+        text=text.replace('<h1>篮球候选复核</h1>','<h1>篮球候选复核</h1><h2>已保存的参考球员</h2><div class="row">'+gallery+'</div>')
     (root/'review.html').write_text(text,encoding='utf-8')
     fields = ['id','start','end','group','player_id','certainty','reason']
     with (root/'candidates.csv').open('w',newline='',encoding='utf-8') as f:
@@ -631,6 +637,87 @@ def cmd_status(a):
     print(json.dumps({k:p[k] for k in ('state','revision','selection','confirmation','versions')},ensure_ascii=False,indent=2))
 
 
+def cmd_people(a):
+    """Scan people independently of hoop events. No OCR or package downloads."""
+    from person_engine import detect
+    from types import SimpleNamespace
+    root,p=load(a.project)
+    model=Path(a.model) if a.model else Path(__file__).parents[1]/'assets/yolox/yolox_nano.onnx'
+    dest=root/'people';dest.mkdir(exist_ok=True)
+    detect(SimpleNamespace(video=source_path(root,p),model=model,roi=a.roi,
+           tile=a.tile,fps=a.fps,start=a.start,end=a.end,threshold=.2,
+           output=dest/'detections.json'))
+    d=read(dest/'detections.json')
+    d['video']=p['source']['path']
+    write(dest/'detections.json',d)
+    p['person_detector']={'method':'YOLOX-Nano 416 CPU + clothing-v2',
+        'model_sha256':sha(model),'data':'people/detections.json',
+        'data_sha256':sha(dest/'detections.json'),'ocr_enabled':False}
+    # A new scan makes previous model proposals stale.
+    for c in p['candidates']:
+        if (c.get('assignment') or {}).get('reviewer',{}).get('kind')=='local_model':
+            c['assignment']=None
+    invalidate(p)
+    save(root,p,'scan_people',p['person_detector'])
+
+
+def cmd_match_people(a):
+    """Match saved samples and propose clip presence; never infer shot ownership."""
+    from person_match import predict
+    root,p=load(a.project)
+    samples=p.get('samples',[])
+    if not any(s['player_id']==a.player for s in samples):
+        raise ValueError('SAVED_CALIBRATION_REQUIRED')
+    meta=p.get('person_detector') or {}
+    data_path=root/meta.get('data','people/detections.json')
+    if not data_path.is_file() or sha(data_path)!=meta.get('data_sha256'):
+        raise ValueError('PERSON_SCAN_MISSING_OR_CHANGED')
+    data=read(data_path)
+    if data['video_sha256']!=p['source']['sha256'] or data.get('descriptor_version')!='clothing-v2':
+        raise ValueError('PERSON_SCAN_SOURCE_OR_DESCRIPTOR_MISMATCH')
+    cal={'kind':'saved_project_samples','people':[]}
+    for pid in sorted({s['player_id'] for s in samples}):
+        ss=[s for s in samples if s['player_id']==pid]
+        cal['people'].append({'id':pid,'description':ss[0]['description'],
+            'samples':[{'time':s['time'],'box':s['bbox_xyxy'],'sample_id':s['id'],
+                        'reviewer_kind':s['reviewer_kind']} for s in ss]})
+    data['video']=str(source_path(root,p))
+    result=predict(data,cal)
+    result.update({'source_sha256':p['source']['sha256'],
+                   'detections_sha256':meta['data_sha256'],
+                   'meaning':'Model-supported clothing sample correspondence; presence only. Human clip review required.'})
+    write(root/'people/matches.json',result)
+    target=[s for s in samples if s['player_id']==a.player]
+    evidence=[]
+    for c in p['candidates']:
+        hits=[(r['time'],o) for r in result['records'] if c['start']<=r['time']<=c['end']
+              for o in r['accepted'] if o['player_id']==a.player]
+        strong=len(hits)>=3 and max(t for t,o in hits)-min(t for t,o in hits)>=.5
+        item={'candidate_id':c['id'],'player_id':a.player if strong else None,
+              'certainty':'high' if strong else 'uncertain','role':'merely_visible',
+              'reason':'Repeated calibrated clothing and short-track evidence; presence only' if strong else 'Insufficient consistent sample matches; inspect original clip',
+              'evidence':[{'kind':'confirmed_sample_match','time':t,
+                  'sample_id':target[0]['id'],'detail':'Local model proposal: clothing-v2 + short tracklet; compare all saved samples',
+                  'sample_ids':[s['id'] for s in target],
+                  'observation_id':o['observation_id'],'bbox_xyxy':o['box'],
+                  'track_id':o['track_id'],'model_distance':o['distance']} for t,o in hits]}
+        evidence.append(item)
+    write(root/'people/candidate-proposals.json',{'player_id':a.player,'assignments':evidence,
+        'applied':a.apply,'reviewer':{'kind':'local_model','name':'calibrated clothing + temporal consensus'}})
+    if a.apply:
+        p['players']=[{'id':q['id'],'description':q['description'],
+            'reference':next(s['reference'] for s in samples if s['player_id']==q['id'])} for q in cal['people']]
+        byid={c['id']:c for c in p['candidates']}
+        for item in evidence:
+            byid[item['candidate_id']]['assignment']={**item,
+                'reviewer':{'kind':'local_model','name':'calibrated clothing + temporal consensus'},'at':now()}
+        invalidate(p)
+        save(root,p,'match_people',{'player_id':a.player,'proposals':'people/candidate-proposals.json',
+                                  'high':sum(x['certainty']=='high' for x in evidence)})
+    print(json.dumps({'applied':a.apply,'high':sum(x['certainty']=='high' for x in evidence),
+                      'uncertain':sum(x['certainty']=='uncertain' for x in evidence)}))
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     s=p.add_subparsers(dest='command',required=True)
@@ -640,6 +727,8 @@ def main():
     q=s.add_parser('detect');q.add_argument('project');q.add_argument('--backend',choices=['bhe','motion-coverage'],default='bhe');q.add_argument('--runtime');q.add_argument('--python');q.add_argument('--model',help='Path to your own authorized compatible ONNX model');q.add_argument('--roi',nargs=4,type=int);q.add_argument('--fps',type=float,default=10);q.add_argument('--before',type=float,default=3);q.add_argument('--after',type=float,default=2);q.add_argument('--device',choices=['cpu','coreml'],default='cpu');q.add_argument('--timeout',type=int,default=600);q.set_defaults(fn=cmd_detect)
     q=s.add_parser('import-candidates');q.add_argument('project');q.add_argument('--file',required=True);q.set_defaults(fn=cmd_import)
     q=s.add_parser('features');q.add_argument('project');q.add_argument('--interval',type=float,default=1.5);q.add_argument('--refresh',action='store_true');q.add_argument('--no-ocr',action='store_true',help='Skip number hints for unnumbered footage');q.set_defaults(fn=cmd_features)
+    q=s.add_parser('people');q.add_argument('project');q.add_argument('--model');q.add_argument('--roi',nargs=4,type=int);q.add_argument('--tile',type=int,default=320);q.add_argument('--fps',type=float,default=3);q.add_argument('--start',type=float,default=0);q.add_argument('--end',type=float,default=1e9);q.set_defaults(fn=cmd_people)
+    q=s.add_parser('match-people');q.add_argument('project');q.add_argument('--player',required=True);q.add_argument('--apply',action='store_true',help='Apply model proposals, invalidate prior clip confirmation');q.set_defaults(fn=cmd_match_people)
     q=s.add_parser('add');q.add_argument('project');q.add_argument('--start',required=True,type=float);q.add_argument('--end',required=True,type=float);q.add_argument('--reason',required=True);q.set_defaults(fn=cmd_add)
     q=s.add_parser('annotate');q.add_argument('project');q.add_argument('--file',required=True);q.set_defaults(fn=cmd_annotate)
     q=s.add_parser('sample');q.add_argument('project');q.add_argument('--player',required=True);q.add_argument('--time',required=True,type=float);q.add_argument('--bbox',nargs=4,type=int,required=True);q.add_argument('--description',required=True);q.add_argument('--confirmed-by',required=True);q.add_argument('--reviewer-kind',choices=['user','test_operator'],required=True);q.set_defaults(fn=cmd_sample)

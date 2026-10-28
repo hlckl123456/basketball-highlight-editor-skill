@@ -1,0 +1,162 @@
+{
+  "id": "s004",
+  "player_id": "white",
+  "time": 60,
+  "bbox_xyxy": [
+    338,
+    411,
+    365,
+    487
+  ],
+  "description": "Plain white top and dark trousers; no jersey number",
+  "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+  "reviewer_kind": "test_operator",
+  "reference": "samples/s004.jpg",
+  "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+  "track_proposals": [
+    {
+      "time": 58.0,
+      "bbox_xyxy": [
+        339.6,
+        411.5,
+        366.6,
+        487.5
+      ],
+      "surviving_points": 16,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 58.2,
+      "bbox_xyxy": [
+        339.5,
+        411.4,
+        366.5,
+        487.4
+      ],
+      "surviving_points": 16,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 58.4,
+      "bbox_xyxy": [
+        339.1,
+        411.4,
+        366.1,
+        487.4
+      ],
+      "surviving_points": 17,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 58.6,
+      "bbox_xyxy": [
+        338.9,
+        411.4,
+        365.9,
+        487.4
+      ],
+      "surviving_points": 17,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 58.8,
+      "bbox_xyxy": [
+        338.6,
+        411.3,
+        365.6,
+        487.3
+      ],
+      "surviving_points": 18,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 59.0,
+      "bbox_xyxy": [
+        338.3,
+        411.1,
+        365.3,
+        487.1
+      ],
+      "surviving_points": 18,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 59.2,
+      "bbox_xyxy": [
+        337.9,
+        411.2,
+        364.9,
+        487.2
+      ],
+      "surviving_points": 18,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 59.4,
+      "bbox_xyxy": [
+        337.8,
+        411.2,
+        364.8,
+        487.2
+      ],
+      "surviving_points": 18,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 59.6,
+      "bbox_xyxy": [
+        337.8,
+        411.3,
+        364.8,
+        487.3
+      ],
+      "surviving_points": 18,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 59.8,
+      "bbox_xyxy": [
+        337.9,
+        411.1,
+        364.9,
+        487.1
+      ],
+      "surviving_points": 18,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 60.2,
+      "bbox_xyxy": [
+        337.9,
+        411.0,
+        364.9,
+        487.0
+      ],
+      "surviving_points": 18,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 60.4,
+      "bbox_xyxy": [
+        337.6,
+        411.0,
+        364.6,
+        487.0
+      ],
+      "surviving_points": 18,
+      "initial_points": 18,
+      "identity_verified": false
+    }
+  ]
+}

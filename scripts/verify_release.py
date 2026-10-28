@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Verify portable case, third-party source hashes, media and public text hygiene."""
-import argparse,hashlib,importlib.util,json,re
+import argparse,gzip,hashlib,importlib.util,json,re
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -33,17 +33,30 @@ def main():
     # The archived first version must still match the historical real-run hashes.
     for f in h.read(case/'validation/installed-manifest.json'):
         assert sha(case/'original-skill-v1.0.0'/f['path'])==f['sha256'],f['path']
+    model=ROOT/'skills/basketball-highlight-editor/assets/yolox/yolox_nano.onnx'
+    provenance=h.read(model.parent/'provenance.json')
+    assert provenance['sha256']==sha(model) and provenance['license']=='Apache-2.0'
+    for name in ('university','ljubljana'):
+        project,p=h.load(ROOT/'examples/unnumbered'/(name+'-project'))
+        assert p['state']=='awaiting_edit_prompt' and not p['versions']
+        assert p['confirmation']['reviewer_kind']=='test_operator'
+        assert all(s['reviewer_kind']=='test_operator' for s in p['samples'])
+        assert sha(project/'people/detections.json')==p['person_detector']['data_sha256']
+        assert h.read(project/'people/matches.json')['detections_sha256']==p['person_detector']['data_sha256']
+        assert h.read(project/'confirmed-edl.json')['source']==p['source']
+        assert not Path(p['source']['path']).is_absolute()
+        for c in p['candidates']:assert (project/c['preview']).is_file()
     paths=[]
     for f in ROOT.rglob('*'):
         rel=f.relative_to(ROOT)
         if not f.is_file() or any(p in ('.git','work','__pycache__') for p in rel.parts):continue
-        assert f.suffix not in ('.pt','.onnx','.dmg','.apk','.exe'),rel
+        assert f.suffix not in ('.pt','.onnx','.dmg','.apk','.exe') or f==model,rel
         assert f.stat().st_size<100_000_000,rel
-        if f.suffix in ('.md','.json','.txt','.log','.html','.csv','.py','.yml','.yaml'):
-            text=f.read_text(encoding='utf-8')
+        if f.suffix in ('.md','.json','.txt','.log','.html','.csv','.py','.yml','.yaml','.gz'):
+            text=gzip.decompress(f.read_bytes()).decode() if f.suffix=='.gz' else f.read_text(encoding='utf-8')
             assert not re.search(r'/Users/[A-Za-z0-9_.-]+/|/home/[A-Za-z0-9_.-]+/',text),rel
             assert not re.search(r'\bgh[pousr]_[A-Za-z0-9]{20,}\b|github_pat_[A-Za-z0-9_]{20,}',text),rel
-            if f.suffix=='.json':
+            if f.suffix in ('.json','.gz'):
                 value=json.loads(text)
                 def sensitive(v):
                     if isinstance(v,dict):

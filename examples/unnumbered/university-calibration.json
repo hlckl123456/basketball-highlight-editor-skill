@@ -1,0 +1,102 @@
+{
+  "kind": "test_operator",
+  "description": "Manually selected clothing samples from raw source, before identity predictions; not a human user's new confirmation.",
+  "people": [
+    {
+      "id": "green",
+      "description": "Olive-green top and blue jeans; no readable jersey number",
+      "samples": [
+        {
+          "time": 0,
+          "box": [
+            154,
+            380,
+            192,
+            490
+          ]
+        },
+        {
+          "time": 5,
+          "box": [
+            390,
+            374,
+            437,
+            488
+          ]
+        }
+      ]
+    },
+    {
+      "id": "white",
+      "description": "Plain white top and dark trousers; no jersey number",
+      "samples": [
+        {
+          "time": 5,
+          "box": [
+            80,
+            416,
+            103,
+            485
+          ]
+        },
+        {
+          "time": 60,
+          "box": [
+            338,
+            411,
+            365,
+            487
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orange",
+      "description": "Orange top and black trousers; no jersey number",
+      "samples": [
+        {
+          "time": 5,
+          "box": [
+            259,
+            410,
+            288,
+            484
+          ]
+        },
+        {
+          "time": 60,
+          "box": [
+            258,
+            405,
+            284,
+            487
+          ]
+        }
+      ]
+    },
+    {
+      "id": "navy",
+      "description": "Plain navy top and navy trousers; no jersey number",
+      "samples": [
+        {
+          "time": 0,
+          "box": [
+            128,
+            409,
+            158,
+            487
+          ]
+        },
+        {
+          "time": 5,
+          "box": [
+            192,
+            406,
+            224,
+            488
+          ]
+        }
+      ]
+    }
+  ]
+}

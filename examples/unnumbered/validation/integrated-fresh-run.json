@@ -1,0 +1,82 @@
+[
+  {
+    "scene": "university",
+    "fresh_inference_records_differing_from_archived_redescribed_cache": 4,
+    "sampled_records": 182,
+    "all_six_rough_clips_decoded": true,
+    "source_sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+    "metrics": [
+      {
+        "split": "development",
+        "tp": 21,
+        "fp": 1,
+        "fn": 5,
+        "visible": 26,
+        "detector_found": 25,
+        "evaluated_player_frames": 62,
+        "unknown_truth": 6,
+        "calibration_excluded": 8,
+        "precision": 0.9545454545454546,
+        "recall": 0.8076923076923077,
+        "detector_recall": 0.9615384615384616
+      },
+      {
+        "split": "-holdout",
+        "tp": 14,
+        "fp": 0,
+        "fn": 3,
+        "visible": 17,
+        "detector_found": 17,
+        "evaluated_player_frames": 43,
+        "unknown_truth": 5,
+        "calibration_excluded": 0,
+        "precision": 1.0,
+        "recall": 0.8235294117647058,
+        "detector_recall": 1.0
+      }
+    ],
+    "revision": 15,
+    "state": "awaiting_edit_prompt",
+    "reviewer_kind": "test_operator"
+  },
+  {
+    "scene": "ljubljana",
+    "fresh_inference_records_differing_from_archived_redescribed_cache": 141,
+    "sampled_records": 180,
+    "all_six_rough_clips_decoded": true,
+    "source_sha256": "f3b68df29e1c9a64a80ab7980a92c3de823af9a222192d697af1f1ba787a51a7",
+    "metrics": [
+      {
+        "split": "development",
+        "tp": 16,
+        "fp": 0,
+        "fn": 2,
+        "visible": 18,
+        "detector_found": 17,
+        "evaluated_player_frames": 20,
+        "unknown_truth": 0,
+        "calibration_excluded": 4,
+        "precision": 1.0,
+        "recall": 0.8888888888888888,
+        "detector_recall": 0.9444444444444444
+      },
+      {
+        "split": "-holdout",
+        "tp": 22,
+        "fp": 0,
+        "fn": 2,
+        "visible": 24,
+        "detector_found": 23,
+        "evaluated_player_frames": 24,
+        "unknown_truth": 0,
+        "calibration_excluded": 0,
+        "precision": 1.0,
+        "recall": 0.9166666666666666,
+        "detector_recall": 0.9583333333333334
+      }
+    ],
+    "revision": 11,
+    "state": "awaiting_edit_prompt",
+    "reviewer_kind": "test_operator"
+  }
+]

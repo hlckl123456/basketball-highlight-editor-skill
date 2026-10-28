@@ -1,0 +1,945 @@
+{
+  "metrics": {
+    "tp": 21,
+    "fp": 1,
+    "fn": 5,
+    "visible": 26,
+    "detector_found": 25,
+    "evaluated_player_frames": 62,
+    "unknown_truth": 6,
+    "calibration_excluded": 8,
+    "precision": 0.9545454545454546,
+    "recall": 0.8076923076923077,
+    "detector_recall": 0.9615384615384616
+  },
+  "per_player": {
+    "green": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "visible": 2,
+      "detector_found": 2,
+      "evaluated_player_frames": 16,
+      "unknown_truth": 1,
+      "calibration_excluded": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "detector_recall": 1.0
+    },
+    "white": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 3,
+      "visible": 12,
+      "detector_found": 11,
+      "evaluated_player_frames": 16,
+      "unknown_truth": 1,
+      "calibration_excluded": 2,
+      "precision": 1.0,
+      "recall": 0.75,
+      "detector_recall": 0.9166666666666666
+    },
+    "orange": {
+      "tp": 6,
+      "fp": 1,
+      "fn": 1,
+      "visible": 7,
+      "detector_found": 7,
+      "evaluated_player_frames": 13,
+      "unknown_truth": 4,
+      "calibration_excluded": 2,
+      "precision": 0.8571428571428571,
+      "recall": 0.8571428571428571,
+      "detector_recall": 1.0
+    },
+    "navy": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 1,
+      "visible": 5,
+      "detector_found": 5,
+      "evaluated_player_frames": 17,
+      "unknown_truth": 0,
+      "calibration_excluded": 2,
+      "precision": 1.0,
+      "recall": 0.8,
+      "detector_recall": 1.0
+    }
+  },
+  "frames": [
+    {
+      "time": 0,
+      "player_id": "white",
+      "truth": [
+        245,
+        414,
+        275,
+        486
+      ],
+      "prediction": null,
+      "status": "fn"
+    },
+    {
+      "time": 2,
+      "player_id": "green",
+      "truth": [
+        221,
+        378,
+        263,
+        489
+      ],
+      "prediction": {
+        "observation_id": "f00006_p03",
+        "player_id": "green",
+        "box": [
+          219.77,
+          395.7,
+          239.86,
+          490.81
+        ],
+        "distance": 0.27823,
+        "profile_margin": 1.0,
+        "person_score": 0.7168,
+        "track_id": 1,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 2,
+      "player_id": "orange",
+      "truth": [
+        416,
+        405,
+        445,
+        484
+      ],
+      "prediction": {
+        "observation_id": "f00006_p04",
+        "player_id": "orange",
+        "box": [
+          410.99,
+          403.74,
+          441.11,
+          481.78
+        ],
+        "distance": 0.34832,
+        "profile_margin": 1.0,
+        "person_score": 0.8152,
+        "track_id": 6,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 2,
+      "player_id": "navy",
+      "truth": [
+        149,
+        409,
+        186,
+        489
+      ],
+      "prediction": {
+        "observation_id": "f00006_p00",
+        "player_id": "navy",
+        "box": [
+          154.64,
+          416.77,
+          184.85,
+          482.5
+        ],
+        "distance": 0.17758,
+        "profile_margin": 1.0,
+        "person_score": 0.7725,
+        "track_id": 0,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 4,
+      "player_id": "green",
+      "truth": [
+        326,
+        375,
+        370,
+        490
+      ],
+      "prediction": {
+        "observation_id": "f00012_p04",
+        "player_id": "green",
+        "box": [
+          329.54,
+          376.59,
+          371.03,
+          486.16
+        ],
+        "distance": 0.24774,
+        "profile_margin": 1.0,
+        "person_score": 0.7393,
+        "track_id": 7,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 4,
+      "player_id": "white",
+      "truth": [
+        43,
+        416,
+        66,
+        485
+      ],
+      "prediction": {
+        "observation_id": "f00012_p00",
+        "player_id": "white",
+        "box": [
+          31.62,
+          420.87,
+          63.14,
+          484.18
+        ],
+        "distance": 0.34194,
+        "profile_margin": 1.0,
+        "person_score": 0.7778,
+        "track_id": 9,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 4,
+      "player_id": "orange",
+      "truth": [
+        301,
+        403,
+        341,
+        487
+      ],
+      "prediction": {
+        "observation_id": "f00012_p03",
+        "player_id": "orange",
+        "box": [
+          304.34,
+          401.35,
+          346.2,
+          481.1
+        ],
+        "distance": 0.1857,
+        "profile_margin": 1.0,
+        "person_score": 0.7771,
+        "track_id": 6,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 4,
+      "player_id": "navy",
+      "truth": [
+        175,
+        410,
+        201,
+        488
+      ],
+      "prediction": {
+        "observation_id": "f00012_p02",
+        "player_id": "navy",
+        "box": [
+          176.88,
+          418.61,
+          196.68,
+          485.19
+        ],
+        "distance": 0.20493,
+        "profile_margin": 1.0,
+        "person_score": 0.7453,
+        "track_id": 0,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 6,
+      "player_id": "white",
+      "truth": [
+        114,
+        416,
+        138,
+        485
+      ],
+      "prediction": {
+        "observation_id": "f00018_p00",
+        "player_id": "white",
+        "box": [
+          118.74,
+          424.1,
+          138.09,
+          480.21
+        ],
+        "distance": 0.30371,
+        "profile_margin": 1.0,
+        "person_score": 0.7193,
+        "track_id": 9,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 6,
+      "player_id": "orange",
+      "truth": [
+        255,
+        409,
+        281,
+        485
+      ],
+      "prediction": {
+        "observation_id": "f00018_p01",
+        "player_id": "orange",
+        "box": [
+          236.91,
+          414.57,
+          279.31,
+          480.86
+        ],
+        "distance": 0.42251,
+        "profile_margin": 1.0,
+        "person_score": 0.782,
+        "track_id": 6,
+        "track_anchored": true
+      },
+      "status": "wrong_person_or_box"
+    },
+    {
+      "time": 6,
+      "player_id": "navy",
+      "truth": [
+        246,
+        408,
+        273,
+        487
+      ],
+      "prediction": null,
+      "status": "fn"
+    },
+    {
+      "time": 8,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 8,
+      "player_id": "white",
+      "truth": [
+        166,
+        414,
+        193,
+        485
+      ],
+      "prediction": {
+        "observation_id": "f00024_p00",
+        "player_id": "white",
+        "box": [
+          163.46,
+          428.22,
+          197.66,
+          482.09
+        ],
+        "distance": 0.36983,
+        "profile_margin": 1.0,
+        "person_score": 0.7797,
+        "track_id": 9,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 8,
+      "player_id": "orange",
+      "truth": [
+        262,
+        413,
+        287,
+        484
+      ],
+      "prediction": {
+        "observation_id": "f00024_p01",
+        "player_id": "orange",
+        "box": [
+          260.37,
+          420.23,
+          285.17,
+          480.44
+        ],
+        "distance": 0.2498,
+        "profile_margin": 1.0,
+        "person_score": 0.8206,
+        "track_id": 6,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 8,
+      "player_id": "navy",
+      "truth": [
+        326,
+        413,
+        356,
+        485
+      ],
+      "prediction": {
+        "observation_id": "f00024_p02",
+        "player_id": "navy",
+        "box": [
+          328.63,
+          422.36,
+          353.45,
+          479.55
+        ],
+        "distance": 0.23188,
+        "profile_margin": 0.07845,
+        "person_score": 0.823,
+        "track_id": 15,
+        "track_anchored": false
+      },
+      "status": "tp"
+    },
+    {
+      "time": 10,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 10,
+      "player_id": "white",
+      "truth": [
+        198,
+        416,
+        232,
+        486
+      ],
+      "prediction": {
+        "observation_id": "f00030_p00",
+        "player_id": "white",
+        "box": [
+          199.16,
+          419.03,
+          227.69,
+          483.21
+        ],
+        "distance": 0.19146,
+        "profile_margin": 1.0,
+        "person_score": 0.843,
+        "track_id": 9,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 10,
+      "player_id": "orange",
+      "truth": [
+        222,
+        421,
+        242,
+        485
+      ],
+      "prediction": {
+        "observation_id": "f00030_p01",
+        "player_id": "orange",
+        "box": [
+          221.53,
+          420.57,
+          239.33,
+          480.95
+        ],
+        "distance": 0.29103,
+        "profile_margin": 1.0,
+        "person_score": 0.6866,
+        "track_id": 6,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 10,
+      "player_id": "navy",
+      "truth": [
+        363,
+        407,
+        404,
+        481
+      ],
+      "prediction": {
+        "observation_id": "f00030_p02",
+        "player_id": "navy",
+        "box": [
+          369.38,
+          424.63,
+          403.68,
+          481.38
+        ],
+        "distance": 0.27933,
+        "profile_margin": 0.07845,
+        "person_score": 0.7354,
+        "track_id": 15,
+        "track_anchored": false
+      },
+      "status": "tp"
+    },
+    {
+      "time": 12,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 12,
+      "player_id": "white",
+      "truth": [
+        285,
+        413,
+        312,
+        486
+      ],
+      "prediction": {
+        "observation_id": "f00036_p00",
+        "player_id": "white",
+        "box": [
+          285.94,
+          414.26,
+          305.42,
+          482.35
+        ],
+        "distance": 0.24023,
+        "profile_margin": 1.0,
+        "person_score": 0.8266,
+        "track_id": 9,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 12,
+      "player_id": "orange",
+      "truth": [
+        431,
+        414,
+        461,
+        486
+      ],
+      "prediction": {
+        "observation_id": "f00036_p01",
+        "player_id": "orange",
+        "box": [
+          430.59,
+          407.95,
+          459.08,
+          476.7
+        ],
+        "distance": 0.38736,
+        "profile_margin": 0.39287,
+        "person_score": 0.7771,
+        "track_id": 17,
+        "track_anchored": false
+      },
+      "status": "tp"
+    },
+    {
+      "time": 12,
+      "player_id": "navy",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 14,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 14,
+      "player_id": "white",
+      "truth": [
+        319,
+        413,
+        345,
+        486
+      ],
+      "prediction": {
+        "observation_id": "f00042_p00",
+        "player_id": "white",
+        "box": [
+          326.15,
+          412.76,
+          353.35,
+          480.77
+        ],
+        "distance": 0.1956,
+        "profile_margin": 1.0,
+        "person_score": 0.8837,
+        "track_id": 9,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 14,
+      "player_id": "orange",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 14,
+      "player_id": "navy",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 15,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 15,
+      "player_id": "white",
+      "truth": [
+        337,
+        416,
+        375,
+        489
+      ],
+      "prediction": {
+        "observation_id": "f00045_p00",
+        "player_id": "white",
+        "box": [
+          339.45,
+          413.66,
+          373.09,
+          481.24
+        ],
+        "distance": 0.28468,
+        "profile_margin": 1.0,
+        "person_score": 0.8754,
+        "track_id": 9,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 15,
+      "player_id": "orange",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 15,
+      "player_id": "navy",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 20,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 20,
+      "player_id": "white",
+      "truth": [
+        453,
+        428,
+        478,
+        480
+      ],
+      "prediction": null,
+      "status": "fn"
+    },
+    {
+      "time": 20,
+      "player_id": "orange",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 20,
+      "player_id": "navy",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 25,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 25,
+      "player_id": "white",
+      "truth": [
+        452,
+        420,
+        478,
+        481
+      ],
+      "prediction": null,
+      "status": "fn"
+    },
+    {
+      "time": 25,
+      "player_id": "orange",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 25,
+      "player_id": "navy",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 30,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 30,
+      "player_id": "white",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 30,
+      "player_id": "orange",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 30,
+      "player_id": "navy",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 35,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 35,
+      "player_id": "white",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 35,
+      "player_id": "orange",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 35,
+      "player_id": "navy",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 40,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 40,
+      "player_id": "white",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 40,
+      "player_id": "navy",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 45,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 45,
+      "player_id": "white",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 45,
+      "player_id": "navy",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 50,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 50,
+      "player_id": "white",
+      "truth": [
+        381,
+        411,
+        414,
+        488
+      ],
+      "prediction": {
+        "observation_id": "f00150_p00",
+        "player_id": "white",
+        "box": [
+          383.7,
+          415.18,
+          415.1,
+          479.23
+        ],
+        "distance": 0.18488,
+        "profile_margin": 1.0,
+        "person_score": 0.898,
+        "track_id": 26,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 50,
+      "player_id": "navy",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 55,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 55,
+      "player_id": "white",
+      "truth": [
+        345,
+        414,
+        370,
+        485
+      ],
+      "prediction": {
+        "observation_id": "f00165_p00",
+        "player_id": "white",
+        "box": [
+          350.58,
+          415.08,
+          373.51,
+          480.85
+        ],
+        "distance": 0.28507,
+        "profile_margin": 1.0,
+        "person_score": 0.8731,
+        "track_id": 26,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 55,
+      "player_id": "orange",
+      "truth": [
+        438,
+        416,
+        464,
+        478
+      ],
+      "prediction": {
+        "observation_id": "f00165_p01",
+        "player_id": "orange",
+        "box": [
+          436.71,
+          417.07,
+          467.05,
+          474.3
+        ],
+        "distance": 0.29663,
+        "profile_margin": 1.0,
+        "person_score": 0.8407,
+        "track_id": 29,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 55,
+      "player_id": "navy",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 60,
+      "player_id": "green",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 60,
+      "player_id": "navy",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    }
+  ],
+  "iou_threshold": 0.35,
+  "truth_provenance": "Agent visual annotation of unannotated original frames with source-coordinate grid; fixed before running identity matching. Sparse frame benchmark, not all-frame ground truth. Unknown marks a sliver/occlusion insufficient for identity; null means absent. Expanded with independently inspected raw frames at 2,4,6,8,12,14s. Early development annotation, NOT a held-out benchmark."
+}

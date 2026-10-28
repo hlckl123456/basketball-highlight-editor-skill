@@ -1,0 +1,8 @@
+{
+  "parent": "ukraine",
+  "creator": "Viktor O. Ledenyov",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "transformation": "Rotate 90 degrees clockwise, remove audio, transcode H264 CRF18",
+  "sha256": "f7efe3225fe142bdecca3e6a0b6db20bffb34a95d47462fa0fb82db0c233a4f4"
+}

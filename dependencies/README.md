@@ -12,3 +12,6 @@
 基础状态管理、粗剪、版本渲染和行为测试使用 Python 标准库及外部 FFmpeg／FFprobe，不要求安装这些 Python 包。重新提取特征需要 NumPy／OpenCV；Tesseract 可选。重新运行 BHE 还需要自己的授权兼容模型和检测依赖，或已有的授权 BHE 运行时。
 
 优先复用本机已有环境。安装任何新依赖前先审阅用途和许可；这些文件不会被启动脚本自动执行。许可及明确未打包项见仓库根目录 `THIRD_PARTY_NOTICES.md`。
+
+
+v1.1 的 `people` / `match-people` 复用同一现有运行时中的 NumPy 2.4.6、OpenCV 5.0.0、ONNX Runtime 1.31.0，不使用 Ultralytics 或 Torch 来执行人物识别。官方 YOLOX-Nano ONNX 和许可已在 Skill 的 `assets/yolox` 内提供，来源和哈希见其 `provenance.json`。它与没有打包的 BHE 篮球模型是两个不同文件。完整无号码测试资料位于 `examples/unnumbered`。

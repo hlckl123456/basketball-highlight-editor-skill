@@ -1,0 +1,40 @@
+{
+  "seed": 20261028,
+  "frozen_version": "v3",
+  "algorithm_hashes": {
+    "person_pilot.py": "4943f9ddbb2aabeb9da1e2505b99a8d5b8a27831ace0474214921c3aadf04266",
+    "temporal.py": "484497c276e9e86d5117da064978a3844dc96318f4a3240fac08a46e618c61c4",
+    "appearance_eval.py": "5249689e407d2d3bc479930a06c8ba1c3d6568d9d464795cf0e31fc35361172c"
+  },
+  "purpose": "Additional time-point holdout within existing source videos; NOT new independent venues",
+  "times": {
+    "university": [
+      1,
+      7,
+      19,
+      24,
+      26,
+      28,
+      47,
+      52,
+      54,
+      56,
+      57,
+      59
+    ],
+    "ljubljana": [
+      129,
+      132,
+      146,
+      147,
+      157,
+      162,
+      166,
+      176,
+      177,
+      182,
+      184,
+      186
+    ]
+  }
+}

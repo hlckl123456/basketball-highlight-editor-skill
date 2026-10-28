@@ -1,0 +1,359 @@
+{
+  "provenance": "Agent visual annotation of unannotated original frames with source-coordinate grid; fixed before running identity matching. Sparse frame benchmark, not all-frame ground truth. Unknown marks a sliver/occlusion insufficient for identity; null means absent. Expanded with independently inspected raw frames at 2,4,6,8,12,14s. Early development annotation, NOT a held-out benchmark.",
+  "frames": [
+    {
+      "time": 0,
+      "people": {
+        "green": [
+          154,
+          380,
+          192,
+          490
+        ],
+        "white": [
+          245,
+          414,
+          275,
+          486
+        ],
+        "orange": "unknown",
+        "navy": [
+          128,
+          409,
+          158,
+          487
+        ]
+      }
+    },
+    {
+      "time": 2,
+      "people": {
+        "green": [
+          221,
+          378,
+          263,
+          489
+        ],
+        "white": "unknown",
+        "orange": [
+          416,
+          405,
+          445,
+          484
+        ],
+        "navy": [
+          149,
+          409,
+          186,
+          489
+        ]
+      }
+    },
+    {
+      "time": 4,
+      "people": {
+        "green": [
+          326,
+          375,
+          370,
+          490
+        ],
+        "white": [
+          43,
+          416,
+          66,
+          485
+        ],
+        "orange": [
+          301,
+          403,
+          341,
+          487
+        ],
+        "navy": [
+          175,
+          410,
+          201,
+          488
+        ]
+      }
+    },
+    {
+      "time": 5,
+      "people": {
+        "green": [
+          390,
+          374,
+          437,
+          488
+        ],
+        "white": [
+          80,
+          416,
+          103,
+          485
+        ],
+        "orange": [
+          259,
+          410,
+          288,
+          484
+        ],
+        "navy": [
+          192,
+          406,
+          224,
+          488
+        ]
+      }
+    },
+    {
+      "time": 6,
+      "people": {
+        "green": "unknown",
+        "white": [
+          114,
+          416,
+          138,
+          485
+        ],
+        "orange": [
+          255,
+          409,
+          281,
+          485
+        ],
+        "navy": [
+          246,
+          408,
+          273,
+          487
+        ]
+      }
+    },
+    {
+      "time": 8,
+      "people": {
+        "green": null,
+        "white": [
+          166,
+          414,
+          193,
+          485
+        ],
+        "orange": [
+          262,
+          413,
+          287,
+          484
+        ],
+        "navy": [
+          326,
+          413,
+          356,
+          485
+        ]
+      }
+    },
+    {
+      "time": 10,
+      "people": {
+        "green": null,
+        "white": [
+          198,
+          416,
+          232,
+          486
+        ],
+        "orange": [
+          222,
+          421,
+          242,
+          485
+        ],
+        "navy": [
+          363,
+          407,
+          404,
+          481
+        ]
+      }
+    },
+    {
+      "time": 12,
+      "people": {
+        "green": null,
+        "white": [
+          285,
+          413,
+          312,
+          486
+        ],
+        "orange": [
+          431,
+          414,
+          461,
+          486
+        ],
+        "navy": null
+      }
+    },
+    {
+      "time": 14,
+      "people": {
+        "green": null,
+        "white": [
+          319,
+          413,
+          345,
+          486
+        ],
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 15,
+      "people": {
+        "green": null,
+        "white": [
+          337,
+          416,
+          375,
+          489
+        ],
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 20,
+      "people": {
+        "green": null,
+        "white": [
+          453,
+          428,
+          478,
+          480
+        ],
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 25,
+      "people": {
+        "green": null,
+        "white": [
+          452,
+          420,
+          478,
+          481
+        ],
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 30,
+      "people": {
+        "green": null,
+        "white": null,
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 35,
+      "people": {
+        "green": null,
+        "white": null,
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 40,
+      "people": {
+        "green": null,
+        "white": null,
+        "orange": "unknown",
+        "navy": null
+      }
+    },
+    {
+      "time": 45,
+      "people": {
+        "green": null,
+        "white": null,
+        "orange": "unknown",
+        "navy": null
+      }
+    },
+    {
+      "time": 50,
+      "people": {
+        "green": null,
+        "white": [
+          381,
+          411,
+          414,
+          488
+        ],
+        "orange": "unknown",
+        "navy": null
+      }
+    },
+    {
+      "time": 55,
+      "people": {
+        "green": null,
+        "white": [
+          345,
+          414,
+          370,
+          485
+        ],
+        "orange": [
+          438,
+          416,
+          464,
+          478
+        ],
+        "navy": null
+      }
+    },
+    {
+      "time": 60,
+      "people": {
+        "green": null,
+        "white": [
+          338,
+          411,
+          365,
+          487
+        ],
+        "orange": [
+          258,
+          405,
+          284,
+          487
+        ],
+        "navy": null
+      }
+    }
+  ],
+  "annotation_audit": [
+    {
+      "reason": "Contact-sheet tile boundary transcription error caught by checking unannotated individual source frames; actor is at right edge, not left. No matcher threshold was changed.",
+      "times": [
+        20,
+        25
+      ]
+    },
+    {
+      "time": 4,
+      "reason": "GT-only overlay shows navy box displaced to the right; corrected the box to the visible body, before any algorithm change. Original annotation versions retained."
+    }
+  ]
+}

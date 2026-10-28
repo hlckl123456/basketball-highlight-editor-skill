@@ -15,7 +15,13 @@ BHE 固定到提交 `4d78d6fa2da74fa3d5f3c9719ab7189f24c545e3`。所有转存的
 
 案例中的媒体仅用于公开说明和复现辅助剪辑流程。CC0 的版权依据不代表已经获得所有人物、场地、商标、音乐或背书方面的许可，不把画中球员当作任务用户，不建议直接拿案例视频做自己的商业宣传。
 
-## 未重新分发的模型权重
+## 新增人体模型与无号码测试素材
+
+`skills/basketball-highlight-editor/assets/yolox/` 随 Skill 提供官方未修改的 YOLOX-Nano ONNX、Apache-2.0 LICENSE 和来源 SHA256。来源为 [YOLOX 官方模型发行](https://github.com/Megvii-BaseDetection/YOLOX/releases/tag/0.1.1rc0)，许可依据为[官方项目 Apache-2.0 LICENSE](https://github.com/Megvii-BaseDetection/YOLOX/blob/main/LICENSE)及其模型发布；所查发行页未列出单独模型条款。没有把该模型冒充为本项目训练的篮球模型。`third_party/yolox/onnx_inference.py` 是官方参考文件，保留 Megvii 版权；实际独立适配器的预处理／解码参考该实现，新增分块、服饰和轨迹代码在文件中注明修改。参考文件不作为单独可运行的依赖包，运行 Skill 不需要安装 YOLOX。
+
+`examples/unnumbered/` 中大学视频为 Alejons06 的 CC0；Ljubljana 视频为 Detlef Stöcker 的 CC BY 3.0；莫斯科两段为 Predatorsamsung 的 CC BY 4.0；乌克兰视频为 Viktor O. Ledenyov 的 CC BY-SA 4.0。每段原视频、旋转派生视频、帧、标注图和剪辑保留其来源许可，乌克兰派生内容继续适用 CC BY-SA 4.0。作者、来源和许可详见该目录的 `source-registry.json`、`rights/` 及[无号码案例](docs/UNNUMBERED_CASE_STUDY.zh-CN.md)。这些公开案例中的球员不是本任务用户。
+
+## 未重新分发的 BHE 模型权重
 
 [BHE 官方模型说明](https://github.com/fly7632785/basketball-highlight-editor/blob/v0.1.12/models/README.md)明确要求分别确认权重、训练数据、推理框架和导出格式的授权；没有明确再分发许可时要求使用者自备模型。仓库中保留了这份[上游说明](third_party/bhe/models/UPSTREAM_MODEL_POLICY.md)。
 

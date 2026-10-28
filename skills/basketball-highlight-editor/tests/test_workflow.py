@@ -5,6 +5,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 from types import SimpleNamespace as Args
 
 spec=importlib.util.spec_from_file_location('highlight',Path(__file__).parents[1]/'scripts/highlight.py')
@@ -65,6 +66,35 @@ class Workflow(unittest.TestCase):
         self.select();_,p=h.load(self.root)
         self.assertEqual(p['selection']['high_confidence'],['c0001'])
         self.assertEqual(p['selection']['uncertain'],['c0002'])
+
+    def prepare_person_scan(self):
+        _,p=h.load(self.root)
+        p['samples']=[{'id':'s001','player_id':'white21','description':'plain white shirt',
+            'time':0,'bbox_xyxy':[0,0,40,100],'reviewer_kind':'test_operator','reference':'synthetic sample'}]
+        data={'video_sha256':p['source']['sha256'],'descriptor_version':'clothing-v2','records':[]}
+        h.write(self.root/'people/detections.json',data)
+        p['person_detector']={'data':'people/detections.json','data_sha256':h.sha(self.root/'people/detections.json')}
+        h.write(self.root/'project.json',p)
+
+    def test_person_scan_tampering_is_rejected(self):
+        self.prepare_person_scan()
+        h.write(self.root/'people/detections.json',{'changed':True})
+        with patch.dict('sys.modules',{'person_match':Args(predict=lambda *a:None)}):
+            with self.assertRaisesRegex(ValueError,'PERSON_SCAN_MISSING_OR_CHANGED'):
+                h.cmd_match_people(Args(project=self.root,player='white21',apply=True))
+
+    def test_model_matching_invalidates_confirmation_and_preserves_review_kind(self):
+        self.select();h.cmd_confirm(Args(project=self.root,file=self.decision()))
+        self.prepare_person_scan()
+        prediction={'records':[{'time':t,'accepted':[{'player_id':'white21','observation_id':str(t),
+            'box':[0,0,40,100],'track_id':0,'distance':.1}]} for t in (0,.333,.667)]}
+        with patch.dict('sys.modules',{'person_match':Args(predict=lambda *a:prediction)}):
+            h.cmd_match_people(Args(project=self.root,player='white21',apply=True))
+        _,p=h.load(self.root)
+        self.assertIsNone(p['confirmation']);self.assertIsNone(p['selection'])
+        self.assertEqual(p['samples'][0]['reviewer_kind'],'test_operator')
+        self.assertEqual(p['candidates'][0]['assignment']['reviewer']['kind'],'local_model')
+        self.assertEqual(p['candidates'][1]['assignment']['certainty'],'uncertain')
 
     def test_unnumbered_requires_saved_sample(self):
         self.data['assignments'][0]['evidence']=[{'kind':'confirmed_sample_match',

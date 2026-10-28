@@ -1,0 +1,7 @@
+id,start,end,group,player_id,certainty,reason
+c0001,0.0,4.0,high_confidence,green,high,Repeated calibrated clothing and short-track evidence; presence only
+c0002,4.0,9.0,high_confidence,green,high,Repeated calibrated clothing and short-track evidence; presence only
+c0003,10.0,14.0,uncertain,,uncertain,Insufficient consistent sample matches; inspect original clip
+c0004,19.0,27.0,uncertain,,uncertain,Insufficient consistent sample matches; inspect original clip
+c0005,33.0,38.0,uncertain,,uncertain,Insufficient consistent sample matches; inspect original clip
+c0006,49.0,60.0,uncertain,,uncertain,Insufficient consistent sample matches; inspect original clip

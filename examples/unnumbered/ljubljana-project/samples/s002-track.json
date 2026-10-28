@@ -1,0 +1,162 @@
+{
+  "id": "s002",
+  "player_id": "green",
+  "time": 165,
+  "bbox_xyxy": [
+    333,
+    144,
+    372,
+    232
+  ],
+  "description": "Plain green shirt, navy shorts, light shoes; no readable jersey number",
+  "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+  "reviewer_kind": "test_operator",
+  "reference": "samples/s002.jpg",
+  "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+  "track_proposals": [
+    {
+      "time": 164.0,
+      "bbox_xyxy": [
+        293.4,
+        134.1,
+        332.4,
+        222.1
+      ],
+      "surviving_points": 8,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 164.2,
+      "bbox_xyxy": [
+        303.9,
+        135.3,
+        342.9,
+        223.3
+      ],
+      "surviving_points": 8,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 164.4,
+      "bbox_xyxy": [
+        311.7,
+        137.4,
+        350.7,
+        225.4
+      ],
+      "surviving_points": 8,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 164.6,
+      "bbox_xyxy": [
+        318.8,
+        141.1,
+        357.8,
+        229.1
+      ],
+      "surviving_points": 14,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 164.8,
+      "bbox_xyxy": [
+        326.5,
+        142.9,
+        365.5,
+        230.9
+      ],
+      "surviving_points": 15,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 165.2,
+      "bbox_xyxy": [
+        336.0,
+        145.2,
+        375.0,
+        233.2
+      ],
+      "surviving_points": 18,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 165.4,
+      "bbox_xyxy": [
+        337.2,
+        145.2,
+        376.2,
+        233.2
+      ],
+      "surviving_points": 15,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 165.6,
+      "bbox_xyxy": [
+        338.3,
+        144.1,
+        377.3,
+        232.1
+      ],
+      "surviving_points": 15,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 165.8,
+      "bbox_xyxy": [
+        339.7,
+        142.2,
+        378.7,
+        230.2
+      ],
+      "surviving_points": 14,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 166.0,
+      "bbox_xyxy": [
+        342.5,
+        140.4,
+        381.5,
+        228.4
+      ],
+      "surviving_points": 12,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 166.2,
+      "bbox_xyxy": [
+        344.2,
+        140.3,
+        383.2,
+        228.3
+      ],
+      "surviving_points": 9,
+      "initial_points": 18,
+      "identity_verified": false
+    },
+    {
+      "time": 166.4,
+      "bbox_xyxy": [
+        346.6,
+        139.7,
+        385.6,
+        227.7
+      ],
+      "surviving_points": 8,
+      "initial_points": 18,
+      "identity_verified": false
+    }
+  ]
+}

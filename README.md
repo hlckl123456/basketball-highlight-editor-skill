@@ -4,11 +4,13 @@
 
 A local, review-first basketball highlight skill for Codex. Includes runnable scripts, tests, a licensed real-video case and evidence replay. Player identity is evidence-backed and reviewable, not an autonomous recognition guarantee.
 
-**本仓库已经用真实公开许可视频跑通过流程。它还不是可靠识别整场无号码比赛的模型。**
+**已加入真实无号码场景测试：大学球场与公园航拍的随机留出时间点共认对 36/41 个可见目标帧，未发现误认。方法、全部样本和失败记录见[无号码实测案例](docs/UNNUMBERED_CASE_STUDY.zh-CN.md)。这是短片抽样结果，尚无整场比赛验证。**
 
 ![公开测试视频的候选画面](examples/indiana/project/frames/c0003_f001.jpg)
 
 ## 完整案例
+
+新增 **[无号码选人实测与迭代记录](docs/UNNUMBERED_CASE_STUDY.zh-CN.md)**：五个公开许可视频、两处无号码目标场景、三版方法对照、随机时间点留出、逐帧错误分析，以及两套完整粗剪项目。
 
 先看 **[真实案例 walkthrough](docs/CASE_STUDY.zh-CN.md)**。文档展示原始视频、失败的全画面检测、ROI 修正、4 个候选、服饰／号码线索、用户选人、二次删选、保存状态和测试版本，并给出可点击的图片、视频及 JSON。
 
@@ -21,7 +23,7 @@ A local, review-first basketball highlight skill for Codex. Includes runnable sc
 
 1. 用户提供有权本地处理的比赛视频。
 2. BHE 公开源码 CLI 找疑似穿框事件；也可以导入已有候选，或使用明确标为低精度的覆盖窗口。
-3. 本地脚本提取服饰颜色区域、可选号码 OCR、完整参考帧。提议可能包含广告牌和观众，不能直接当作球员身份。
+3. 无号码场景使用本地 YOLOX 人体检测、服饰样本与短轨迹匹配；保留可核对的框和完整帧。旧 `features` 入口提供颜色区域及可选 OCR。
 4. 用户选择视觉参考球员。没有号码时，先确认一张或几张服饰样本。
 5. 根据证据整理高置信归属与不确定项，生成独立粗剪。人物在场、实际持球者和得分者分开记录。
 6. 用户保留／删除片段。确认后写入 `awaiting_edit_prompt`，保留原视频引用、项目、EDL 和粗剪，不自动合并成片。
@@ -84,11 +86,13 @@ python3 "$CLI" detect work/new-game --backend bhe \
 | 公开许可原视频、全部候选、16 张完整帧、639 个特征裁图、参考样本 | `examples/indiana/` |
 | 真实确认项目／EDL、原始检测结果、失败对照、测试版本和运行记录 | `examples/indiana/` |
 | 用到的 BHE MIT 源码及原许可 | `third_party/bhe/` |
+| 无号码原片、标注、冻结算法、错误记录和完整项目 | `examples/unnumbered/` |
+| 官方 YOLOX-Nano 模型、来源及 Apache 许可，推理参考源码 | `skills/.../assets/yolox/`、`third_party/yolox/` |
 | 实测依赖版本、第三方许可、模型哈希和明确的未打包说明 | `dependencies/`、`THIRD_PARTY_NOTICES.md` |
 
 完整清单和来源见 [第三方与依赖说明](THIRD_PARTY_NOTICES.md)。根目录 MIT 许可覆盖自有代码和原创说明；测试视频遵循作者 CC0，第三方内容保留各自许可。
 
-**BHE 官方明确没有让模型权重自动继承源码 MIT 许可。** 因此本仓库不转存授权不明确的 `.pt`／`.onnx` 权重，也不把含模型的 DMG 换名重新发布。模型哈希、缺失原因与自备模型的接口都已公开。Python、FFmpeg 和第三方包作为外部依赖提供版本与官方来源，不镜像整套系统环境。
+**BHE 官方明确没有让其模型权重自动继承源码 MIT 许可。** 因此本仓库不转存授权不明确的 BHE `.pt`／`.onnx` 权重，也不把含模型的 DMG 换名重新发布。模型哈希、缺失原因与自备模型的接口都已公开。新增人体检测使用官方 Apache-2.0 YOLOX 项目的 Nano 模型，单独附有模型、许可与来源记录；它不代替 BHE 的篮球／篮筐模型。Python、FFmpeg 和第三方包作为外部依赖提供版本与官方来源，不镜像整套系统环境。
 
 ## 已验证的范围
 
@@ -96,7 +100,8 @@ python3 "$CLI" detect work/new-game --backend bhe \
 - 相同视频、ROI、模型和 CPU 参数重复生成相同的 4 个事件时间点。
 - 4 段粗剪、两个有音轨测试版本及静音输入均可解码。
 - 正式项目经过真实用户确认，仍在 `awaiting_edit_prompt`，无自动生成的正式成片。
-- 无号码的参考样本、跳过 OCR、短时光流与不确定项机制已运行。真实无号码整场比赛的识别准确率尚未验证。
+- 新增无号码测试：大学与公园场景的随机时间点留出，精度 36/36、可见帧召回 36/41；相似服饰对照仍仅有 50% 召回，完整结果与标注边界见新案例。
+- 新版在已有运行时通过 25 项行为测试；两个新测试项目从原片重新检测并保存粗剪／EDL，确认均标为 `test_operator`。整场指标仍待建立。
 
 当前渲染器支持横版直接剪切、排序和时长上限。音乐、字幕、智能竖屏跟拍、慢动作与剪映／CapCut 原生工程不在已验证能力中。完整实测边界见 [validation.md](skills/basketball-highlight-editor/references/validation.md)。
 

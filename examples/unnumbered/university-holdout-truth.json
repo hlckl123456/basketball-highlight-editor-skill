@@ -1,0 +1,203 @@
+{
+  "provenance": {
+    "kind": "test_operator",
+    "annotator": "Codex visual review of randomized original source frames before holdout prediction inspection",
+    "human_verified": false,
+    "scope": "Time-point holdout within existing videos; approximate manually read boxes, no new independent venue"
+  },
+  "frames": [
+    {
+      "time": 1,
+      "people": {
+        "green": [
+          185,
+          380,
+          224,
+          489
+        ],
+        "white": "unknown",
+        "orange": "unknown",
+        "navy": [
+          142,
+          410,
+          177,
+          486
+        ]
+      }
+    },
+    {
+      "time": 7,
+      "people": {
+        "green": null,
+        "white": [
+          153,
+          416,
+          179,
+          482
+        ],
+        "orange": [
+          272,
+          411,
+          299,
+          482
+        ],
+        "navy": "unknown"
+      }
+    },
+    {
+      "time": 19,
+      "people": {
+        "green": null,
+        "white": [
+          434,
+          411,
+          464,
+          487
+        ],
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 24,
+      "people": {
+        "green": null,
+        "white": [
+          453,
+          439,
+          478,
+          479
+        ],
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 26,
+      "people": {
+        "green": null,
+        "white": [
+          444,
+          416,
+          473,
+          481
+        ],
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 28,
+      "people": {
+        "green": null,
+        "white": "unknown",
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 47,
+      "people": {
+        "green": null,
+        "white": null,
+        "orange": "unknown",
+        "navy": null
+      }
+    },
+    {
+      "time": 52,
+      "people": {
+        "green": null,
+        "white": [
+          350,
+          411,
+          376,
+          482
+        ],
+        "orange": [
+          424,
+          421,
+          445,
+          478
+        ],
+        "navy": null
+      }
+    },
+    {
+      "time": 54,
+      "people": {
+        "green": null,
+        "white": [
+          350,
+          411,
+          375,
+          482
+        ],
+        "orange": [
+          428,
+          419,
+          449,
+          478
+        ],
+        "navy": null
+      }
+    },
+    {
+      "time": 56,
+      "people": {
+        "green": null,
+        "white": [
+          350,
+          411,
+          374,
+          482
+        ],
+        "orange": [
+          427,
+          419,
+          450,
+          480
+        ],
+        "navy": null
+      }
+    },
+    {
+      "time": 57,
+      "people": {
+        "green": null,
+        "white": [
+          350,
+          411,
+          376,
+          482
+        ],
+        "orange": [
+          410,
+          418,
+          433,
+          482
+        ],
+        "navy": null
+      }
+    },
+    {
+      "time": 59,
+      "people": {
+        "green": null,
+        "white": [
+          338,
+          411,
+          372,
+          483
+        ],
+        "orange": [
+          287,
+          418,
+          313,
+          483
+        ],
+        "navy": null
+      }
+    }
+  ]
+}

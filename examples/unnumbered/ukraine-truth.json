@@ -1,0 +1,126 @@
+{
+  "provenance": {
+    "annotator": "Codex visual review of original frames, approximate bounding boxes",
+    "kind": "test_operator",
+    "human_verified": false,
+    "method": "Raw source frames inspected before matching predictions. Not a human user confirmation."
+  },
+  "frames": [
+    {
+      "time": 0,
+      "people": {
+        "yellow_black": [
+          379,
+          348,
+          441,
+          435
+        ],
+        "warm_blue": [
+          88,
+          345,
+          115,
+          412
+        ]
+      }
+    },
+    {
+      "time": 3,
+      "people": {
+        "yellow_black": [
+          332,
+          361,
+          364,
+          426
+        ],
+        "warm_blue": [
+          111,
+          386,
+          161,
+          463
+        ]
+      }
+    },
+    {
+      "time": 6,
+      "people": {
+        "yellow_black": [
+          216,
+          383,
+          244,
+          435
+        ],
+        "warm_blue": [
+          269,
+          386,
+          302,
+          437
+        ]
+      }
+    },
+    {
+      "time": 9,
+      "people": {
+        "yellow_black": [
+          225,
+          390,
+          255,
+          442
+        ],
+        "warm_blue": [
+          340,
+          385,
+          364,
+          437
+        ]
+      }
+    },
+    {
+      "time": 12,
+      "people": {
+        "yellow_black": [
+          126,
+          388,
+          157,
+          450
+        ],
+        "warm_blue": [
+          334,
+          388,
+          352,
+          444
+        ]
+      }
+    },
+    {
+      "time": 15,
+      "people": {
+        "yellow_black": [
+          186,
+          384,
+          232,
+          449
+        ],
+        "warm_blue": null
+      }
+    },
+    {
+      "time": 18,
+      "people": {
+        "yellow_black": [
+          312,
+          397,
+          356,
+          481
+        ],
+        "warm_blue": null
+      }
+    },
+    {
+      "time": 20,
+      "people": {
+        "yellow_black": null,
+        "warm_blue": null
+      }
+    }
+  ]
+}

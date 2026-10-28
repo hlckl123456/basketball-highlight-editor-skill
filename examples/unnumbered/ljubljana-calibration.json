@@ -1,0 +1,54 @@
+{
+  "kind": "test_operator",
+  "description": "Explicit raw-frame clothing samples; no truth lookup during prediction.",
+  "people": [
+    {
+      "id": "green",
+      "description": "Plain green shirt, navy shorts, light shoes; no readable jersey number",
+      "samples": [
+        {
+          "time": 130,
+          "box": [
+            255,
+            315,
+            295,
+            437
+          ]
+        },
+        {
+          "time": 165,
+          "box": [
+            333,
+            144,
+            372,
+            232
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mustard",
+      "description": "Mustard tee, navy shorts, green shoes; no readable jersey number",
+      "samples": [
+        {
+          "time": 130,
+          "box": [
+            562,
+            362,
+            602,
+            480
+          ]
+        },
+        {
+          "time": 165,
+          "box": [
+            449,
+            240,
+            508,
+            341
+          ]
+        }
+      ]
+    }
+  ]
+}

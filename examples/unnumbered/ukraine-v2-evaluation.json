@@ -1,0 +1,3070 @@
+{
+  "input_sha256": "8b359510f4552e768734096f52fdc030a09482be5d13030203d801a3c03dbaf0",
+  "truth_sha256": "e3e50cde5b4c153bfd982c4dbd6dd4de4518567998ae8d613afedf37d51b7d99",
+  "calibration_sha256": "054df8c56028cecbe57adc85c038861fe5931a59c408576f51557fc7d53b120e",
+  "predictions": {
+    "parameters": {
+      "max_distance": 0.4,
+      "profile_margin": 0.035,
+      "person_margin": 0.025
+    },
+    "calibration": {
+      "kind": "test_operator",
+      "description": "Explicit raw-frame clothing samples; no truth lookup during prediction.",
+      "people": [
+        {
+          "id": "yellow_black",
+          "description": "Yellow top and black shorts; jersey number status unverified, no OCR used",
+          "samples": [
+            {
+              "time": 0,
+              "box": [
+                379,
+                348,
+                441,
+                435
+              ]
+            },
+            {
+              "time": 18,
+              "box": [
+                312,
+                397,
+                356,
+                481
+              ]
+            }
+          ]
+        },
+        {
+          "id": "warm_blue",
+          "description": "Warm/orange torso and blue shorts; torso garment uncertain at low resolution",
+          "samples": [
+            {
+              "time": 6,
+              "box": [
+                269,
+                386,
+                302,
+                437
+              ]
+            },
+            {
+              "time": 12,
+              "box": [
+                334,
+                388,
+                352,
+                444
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "records": [
+      {
+        "time": 0.0,
+        "accepted": [
+          {
+            "observation_id": "f00000_p01",
+            "player_id": "yellow_black",
+            "box": [
+              378.32,
+              356.08,
+              426.79,
+              433.12
+            ],
+            "distance": 0.11869,
+            "profile_margin": 0.24739,
+            "person_score": 0.8765
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00000_p02",
+            "player_id": "warm_blue",
+            "box": [
+              435.83,
+              340.06,
+              449.03,
+              371.38
+            ],
+            "distance": 0.86421,
+            "profile_margin": 0.06991,
+            "person_score": 0.3443
+          },
+          {
+            "observation_id": "f00000_p00",
+            "player_id": "yellow_black",
+            "box": [
+              87.56,
+              347.44,
+              111.89,
+              419.81
+            ],
+            "distance": 0.21118,
+            "profile_margin": 0.17706,
+            "person_score": 0.8089
+          }
+        ]
+      },
+      {
+        "time": 0.333,
+        "accepted": [
+          {
+            "observation_id": "f00001_p02",
+            "player_id": "yellow_black",
+            "box": [
+              382.39,
+              350.3,
+              428.85,
+              423.44
+            ],
+            "distance": 0.13931,
+            "profile_margin": 0.21839,
+            "person_score": 0.8881
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00001_p01",
+            "player_id": "warm_blue",
+            "box": [
+              379.07,
+              334.22,
+              389.84,
+              363.4
+            ],
+            "distance": 0.84936,
+            "profile_margin": 0.09931,
+            "person_score": 0.2362
+          },
+          {
+            "observation_id": "f00001_p00",
+            "player_id": "yellow_black",
+            "box": [
+              41.56,
+              346.31,
+              75.74,
+              418.66
+            ],
+            "distance": 0.23433,
+            "profile_margin": 0.09182,
+            "person_score": 0.8849
+          }
+        ]
+      },
+      {
+        "time": 0.667,
+        "accepted": [
+          {
+            "observation_id": "f00002_p02",
+            "player_id": "yellow_black",
+            "box": [
+              377.95,
+              356.11,
+              431.95,
+              428.93
+            ],
+            "distance": 0.13732,
+            "profile_margin": 0.32543,
+            "person_score": 0.8806
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00002_p01",
+            "player_id": "warm_blue",
+            "box": [
+              328.76,
+              340.43,
+              340.07,
+              369.55
+            ],
+            "distance": 0.8459,
+            "profile_margin": 0.09865,
+            "person_score": 0.4051
+          },
+          {
+            "observation_id": "f00002_p00",
+            "player_id": "yellow_black",
+            "box": [
+              8.93,
+              348.84,
+              37.76,
+              430.25
+            ],
+            "distance": 0.26209,
+            "profile_margin": 0.08481,
+            "person_score": 0.8461
+          }
+        ]
+      },
+      {
+        "time": 1.0,
+        "accepted": [
+          {
+            "observation_id": "f00003_p02",
+            "player_id": "yellow_black",
+            "box": [
+              381.24,
+              358.12,
+              418.95,
+              424.45
+            ],
+            "distance": 0.17344,
+            "profile_margin": 0.24202,
+            "person_score": 0.8934
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00003_p01",
+            "player_id": "warm_blue",
+            "box": [
+              289.62,
+              339.08,
+              300.36,
+              368.11
+            ],
+            "distance": 0.84413,
+            "profile_margin": 0.10139,
+            "person_score": 0.3355
+          },
+          {
+            "observation_id": "f00003_p00",
+            "player_id": "yellow_black",
+            "box": [
+              0.16,
+              352.79,
+              14.05,
+              411.53
+            ],
+            "distance": 0.26309,
+            "profile_margin": 0.10344,
+            "person_score": 0.6449
+          }
+        ]
+      },
+      {
+        "time": 1.333,
+        "accepted": [],
+        "uncertain": [
+          {
+            "observation_id": "f00004_p00",
+            "player_id": "warm_blue",
+            "box": [
+              370.18,
+              363.72,
+              402.46,
+              425.1
+            ],
+            "distance": 0.35996,
+            "profile_margin": 0.01667,
+            "person_score": 0.8501
+          }
+        ]
+      },
+      {
+        "time": 1.667,
+        "accepted": [],
+        "uncertain": [
+          {
+            "observation_id": "f00005_p00",
+            "player_id": "warm_blue",
+            "box": [
+              206.65,
+              349.13,
+              217.47,
+              376.29
+            ],
+            "distance": 0.85695,
+            "profile_margin": 0.09168,
+            "person_score": 0.5566
+          },
+          {
+            "observation_id": "f00005_p01",
+            "player_id": "warm_blue",
+            "box": [
+              363.5,
+              368.48,
+              394.41,
+              430.0
+            ],
+            "distance": 0.34318,
+            "profile_margin": 0.02899,
+            "person_score": 0.8747
+          }
+        ]
+      },
+      {
+        "time": 2.0,
+        "accepted": [
+          {
+            "observation_id": "f00006_p00",
+            "player_id": "yellow_black",
+            "box": [
+              0.33,
+              366.97,
+              41.25,
+              429.67
+            ],
+            "distance": 0.24401,
+            "profile_margin": 0.13766,
+            "person_score": 0.7626
+          },
+          {
+            "observation_id": "f00006_p02",
+            "player_id": "warm_blue",
+            "box": [
+              359.89,
+              370.17,
+              392.24,
+              427.21
+            ],
+            "distance": 0.29634,
+            "profile_margin": 0.14998,
+            "person_score": 0.852
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00006_p01",
+            "player_id": "warm_blue",
+            "box": [
+              175.82,
+              349.39,
+              186.41,
+              374.38
+            ],
+            "distance": 0.85675,
+            "profile_margin": 0.08179,
+            "person_score": 0.2094
+          }
+        ]
+      },
+      {
+        "time": 2.333,
+        "accepted": [
+          {
+            "observation_id": "f00007_p00",
+            "player_id": "yellow_black",
+            "box": [
+              16.64,
+              372.5,
+              74.19,
+              452.28
+            ],
+            "distance": 0.287,
+            "profile_margin": 0.07639,
+            "person_score": 0.8145
+          },
+          {
+            "observation_id": "f00007_p02",
+            "player_id": "warm_blue",
+            "box": [
+              365.05,
+              381.63,
+              382.48,
+              431.25
+            ],
+            "distance": 0.31974,
+            "profile_margin": 0.09506,
+            "person_score": 0.826
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00007_p01",
+            "player_id": "warm_blue",
+            "box": [
+              151.0,
+              354.16,
+              161.73,
+              383.71
+            ],
+            "distance": 0.86108,
+            "profile_margin": 0.08257,
+            "person_score": 0.3906
+          }
+        ]
+      },
+      {
+        "time": 2.667,
+        "accepted": [
+          {
+            "observation_id": "f00008_p00",
+            "player_id": "yellow_black",
+            "box": [
+              49.76,
+              377.73,
+              91.42,
+              456.66
+            ],
+            "distance": 0.25732,
+            "profile_margin": 0.04243,
+            "person_score": 0.8378
+          },
+          {
+            "observation_id": "f00008_p03",
+            "player_id": "warm_blue",
+            "box": [
+              345.41,
+              375.08,
+              363.87,
+              423.1
+            ],
+            "distance": 0.33362,
+            "profile_margin": 0.10764,
+            "person_score": 0.7332
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00008_p01",
+            "player_id": "warm_blue",
+            "box": [
+              124.88,
+              356.82,
+              135.95,
+              383.86
+            ],
+            "distance": 0.86765,
+            "profile_margin": 0.07469,
+            "person_score": 0.403
+          },
+          {
+            "observation_id": "f00008_p02",
+            "player_id": "warm_blue",
+            "box": [
+              338.67,
+              329.58,
+              372.01,
+              429.64
+            ],
+            "distance": 0.43913,
+            "profile_margin": 0.23943,
+            "person_score": 0.5664
+          }
+        ]
+      },
+      {
+        "time": 3.0,
+        "accepted": [
+          {
+            "observation_id": "f00009_p00",
+            "player_id": "yellow_black",
+            "box": [
+              109.43,
+              386.24,
+              149.24,
+              465.38
+            ],
+            "distance": 0.27629,
+            "profile_margin": 0.05825,
+            "person_score": 0.8464
+          },
+          {
+            "observation_id": "f00009_p05",
+            "player_id": "warm_blue",
+            "box": [
+              338.96,
+              374.5,
+              358.32,
+              427.78
+            ],
+            "distance": 0.36537,
+            "profile_margin": 0.15457,
+            "person_score": 0.723
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00009_p01",
+            "player_id": "warm_blue",
+            "box": [
+              114.87,
+              365.34,
+              126.26,
+              394.66
+            ],
+            "distance": 0.85264,
+            "profile_margin": 0.08015,
+            "person_score": 0.2429
+          },
+          {
+            "observation_id": "f00009_p02",
+            "player_id": "warm_blue",
+            "box": [
+              136.18,
+              374.43,
+              144.81,
+              398.77
+            ],
+            "distance": 0.74999,
+            "profile_margin": 0.07168,
+            "person_score": 0.3275
+          },
+          {
+            "observation_id": "f00009_p03",
+            "player_id": "warm_blue",
+            "box": [
+              326.96,
+              338.95,
+              360.69,
+              427.85
+            ],
+            "distance": 0.4077,
+            "profile_margin": 0.17008,
+            "person_score": 0.5967
+          },
+          {
+            "observation_id": "f00009_p04",
+            "player_id": "yellow_black",
+            "box": [
+              337.76,
+              376.5,
+              352.71,
+              406.38
+            ],
+            "distance": 0.37696,
+            "profile_margin": 0.05072,
+            "person_score": 0.2348
+          }
+        ]
+      },
+      {
+        "time": 3.333,
+        "accepted": [
+          {
+            "observation_id": "f00010_p04",
+            "player_id": "warm_blue",
+            "box": [
+              329.39,
+              393.03,
+              349.51,
+              434.99
+            ],
+            "distance": 0.33665,
+            "profile_margin": 0.08854,
+            "person_score": 0.7524
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00010_p00",
+            "player_id": "warm_blue",
+            "box": [
+              57.48,
+              375.04,
+              68.08,
+              399.07
+            ],
+            "distance": 0.81747,
+            "profile_margin": 0.11178,
+            "person_score": 0.2369
+          },
+          {
+            "observation_id": "f00010_p01",
+            "player_id": "warm_blue",
+            "box": [
+              110.53,
+              370.32,
+              121.64,
+              397.27
+            ],
+            "distance": 0.84982,
+            "profile_margin": 0.09269,
+            "person_score": 0.4649
+          },
+          {
+            "observation_id": "f00010_p02",
+            "player_id": "yellow_black",
+            "box": [
+              163.49,
+              392.31,
+              206.86,
+              467.08
+            ],
+            "distance": 0.23802,
+            "profile_margin": 0.11442,
+            "person_score": 0.8038
+          },
+          {
+            "observation_id": "f00010_p03",
+            "player_id": "yellow_black",
+            "box": [
+              182.21,
+              394.71,
+              196.39,
+              451.42
+            ],
+            "distance": 0.23896,
+            "profile_margin": 0.13024,
+            "person_score": 0.7162
+          }
+        ]
+      },
+      {
+        "time": 3.667,
+        "accepted": [
+          {
+            "observation_id": "f00011_p01",
+            "player_id": "yellow_black",
+            "box": [
+              208.71,
+              393.33,
+              239.5,
+              466.34
+            ],
+            "distance": 0.26803,
+            "profile_margin": 0.03793,
+            "person_score": 0.8313
+          },
+          {
+            "observation_id": "f00011_p02",
+            "player_id": "warm_blue",
+            "box": [
+              305.72,
+              392.2,
+              323.11,
+              436.11
+            ],
+            "distance": 0.36279,
+            "profile_margin": 0.08148,
+            "person_score": 0.8125
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00011_p00",
+            "player_id": "warm_blue",
+            "box": [
+              94.49,
+              369.97,
+              105.62,
+              398.27
+            ],
+            "distance": 0.85718,
+            "profile_margin": 0.08441,
+            "person_score": 0.552
+          },
+          {
+            "observation_id": "f00011_p03",
+            "player_id": "warm_blue",
+            "box": [
+              329.31,
+              336.15,
+              347.97,
+              388.3
+            ],
+            "distance": 0.71829,
+            "profile_margin": 0.12149,
+            "person_score": 0.2278
+          }
+        ]
+      },
+      {
+        "time": 4.0,
+        "accepted": [
+          {
+            "observation_id": "f00012_p00",
+            "player_id": "yellow_black",
+            "box": [
+              235.59,
+              397.99,
+              277.37,
+              464.52
+            ],
+            "distance": 0.29729,
+            "profile_margin": 0.08961,
+            "person_score": 0.8467
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00012_p01",
+            "player_id": "warm_blue",
+            "box": [
+              283.31,
+              391.29,
+              299.9,
+              437.09
+            ],
+            "distance": 0.36136,
+            "profile_margin": 0.03402,
+            "person_score": 0.8549
+          }
+        ]
+      },
+      {
+        "time": 4.333,
+        "accepted": [
+          {
+            "observation_id": "f00013_p01",
+            "player_id": "warm_blue",
+            "box": [
+              269.66,
+              399.2,
+              280.15,
+              446.5
+            ],
+            "distance": 0.3375,
+            "profile_margin": 0.07239,
+            "person_score": 0.6993
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00013_p00",
+            "player_id": "yellow_black",
+            "box": [
+              259.88,
+              394.02,
+              304.85,
+              458.81
+            ],
+            "distance": 0.37857,
+            "profile_margin": 0.00647,
+            "person_score": 0.8213
+          },
+          {
+            "observation_id": "f00013_p02",
+            "player_id": "warm_blue",
+            "box": [
+              281.36,
+              345.26,
+              309.48,
+              410.22
+            ],
+            "distance": 0.61579,
+            "profile_margin": 0.03915,
+            "person_score": 0.2115
+          }
+        ]
+      },
+      {
+        "time": 4.667,
+        "accepted": [
+          {
+            "observation_id": "f00014_p03",
+            "player_id": "warm_blue",
+            "box": [
+              295.03,
+              400.05,
+              320.81,
+              450.43
+            ],
+            "distance": 0.30779,
+            "profile_margin": 0.12244,
+            "person_score": 0.7618
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00014_p00",
+            "player_id": "warm_blue",
+            "box": [
+              57.17,
+              373.46,
+              68.23,
+              401.36
+            ],
+            "distance": 0.84287,
+            "profile_margin": 0.09554,
+            "person_score": 0.3877
+          },
+          {
+            "observation_id": "f00014_p01",
+            "player_id": "yellow_black",
+            "box": [
+              260.85,
+              335.43,
+              280.51,
+              371.95
+            ],
+            "distance": 0.49062,
+            "profile_margin": 0.0332,
+            "person_score": 0.2425
+          },
+          {
+            "observation_id": "f00014_p02",
+            "player_id": "warm_blue",
+            "box": [
+              269.41,
+              387.32,
+              287.33,
+              437.97
+            ],
+            "distance": 0.35182,
+            "profile_margin": 0.05727,
+            "person_score": 0.8028
+          }
+        ]
+      },
+      {
+        "time": 5.0,
+        "accepted": [
+          {
+            "observation_id": "f00015_p05",
+            "player_id": "warm_blue",
+            "box": [
+              300.16,
+              392.45,
+              330.09,
+              448.73
+            ],
+            "distance": 0.30405,
+            "profile_margin": 0.09501,
+            "person_score": 0.8626
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00015_p00",
+            "player_id": "warm_blue",
+            "box": [
+              238.94,
+              340.73,
+              268.39,
+              398.8
+            ],
+            "distance": 0.47858,
+            "profile_margin": 0.0593,
+            "person_score": 0.2387
+          },
+          {
+            "observation_id": "f00015_p01",
+            "player_id": "yellow_black",
+            "box": [
+              241.21,
+              336.59,
+              260.16,
+              369.48
+            ],
+            "distance": 0.55472,
+            "profile_margin": 0.06623,
+            "person_score": 0.2046
+          },
+          {
+            "observation_id": "f00015_p02",
+            "player_id": "warm_blue",
+            "box": [
+              251.46,
+              346.86,
+              275.12,
+              434.85
+            ],
+            "distance": 0.41504,
+            "profile_margin": 0.18019,
+            "person_score": 0.3608
+          },
+          {
+            "observation_id": "f00015_p03",
+            "player_id": "warm_blue",
+            "box": [
+              252.82,
+              386.94,
+              267.98,
+              435.82
+            ],
+            "distance": 0.40993,
+            "profile_margin": 0.04369,
+            "person_score": 0.8116
+          },
+          {
+            "observation_id": "f00015_p04",
+            "player_id": "warm_blue",
+            "box": [
+              269.06,
+              375.34,
+              279.71,
+              408.1
+            ],
+            "distance": 0.50651,
+            "profile_margin": 0.00968,
+            "person_score": 0.2652
+          }
+        ]
+      },
+      {
+        "time": 5.333,
+        "accepted": [
+          {
+            "observation_id": "f00016_p03",
+            "player_id": "warm_blue",
+            "box": [
+              295.77,
+              396.04,
+              316.08,
+              445.99
+            ],
+            "distance": 0.2702,
+            "profile_margin": 0.13535,
+            "person_score": 0.8136
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00016_p00",
+            "player_id": "warm_blue",
+            "box": [
+              18.43,
+              370.92,
+              30.54,
+              399.01
+            ],
+            "distance": 0.86198,
+            "profile_margin": 0.08697,
+            "person_score": 0.232
+          },
+          {
+            "observation_id": "f00016_p01",
+            "player_id": "yellow_black",
+            "box": [
+              223.81,
+              335.71,
+              241.47,
+              370.15
+            ],
+            "distance": 0.50881,
+            "profile_margin": 0.1042,
+            "person_score": 0.3071
+          },
+          {
+            "observation_id": "f00016_p02",
+            "player_id": "yellow_black",
+            "box": [
+              237.12,
+              385.99,
+              251.17,
+              435.27
+            ],
+            "distance": 0.37281,
+            "profile_margin": 0.03267,
+            "person_score": 0.7269
+          },
+          {
+            "observation_id": "f00016_p04",
+            "player_id": "yellow_black",
+            "box": [
+              301.58,
+              415.94,
+              314.95,
+              446.53
+            ],
+            "distance": 0.60117,
+            "profile_margin": 0.04783,
+            "person_score": 0.2802
+          }
+        ]
+      },
+      {
+        "time": 5.667,
+        "accepted": [],
+        "uncertain": [
+          {
+            "observation_id": "f00017_p01",
+            "player_id": "warm_blue",
+            "box": [
+              255.04,
+              335.82,
+              274.34,
+              393.75
+            ],
+            "distance": 0.74201,
+            "profile_margin": 0.10763,
+            "person_score": 0.2745
+          },
+          {
+            "observation_id": "f00017_p02",
+            "player_id": "warm_blue",
+            "box": [
+              288.47,
+              393.28,
+              308.05,
+              434.61
+            ],
+            "distance": 0.3265,
+            "profile_margin": 0.11622,
+            "person_score": 0.7584
+          },
+          {
+            "observation_id": "f00017_p00",
+            "player_id": "warm_blue",
+            "box": [
+              230.72,
+              386.18,
+              252.29,
+              434.28
+            ],
+            "distance": 0.33055,
+            "profile_margin": 0.11199,
+            "person_score": 0.8014
+          }
+        ]
+      },
+      {
+        "time": 6.0,
+        "accepted": [
+          {
+            "observation_id": "f00018_p06",
+            "player_id": "warm_blue",
+            "box": [
+              271.63,
+              395.31,
+              290.71,
+              432.12
+            ],
+            "distance": 0.27959,
+            "profile_margin": 0.10526,
+            "person_score": 0.8066
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00018_p00",
+            "player_id": "warm_blue",
+            "box": [
+              6.67,
+              370.39,
+              17.89,
+              400.93
+            ],
+            "distance": 0.86705,
+            "profile_margin": 0.07916,
+            "person_score": 0.4532
+          },
+          {
+            "observation_id": "f00018_p01",
+            "player_id": "yellow_black",
+            "box": [
+              214.83,
+              334.95,
+              233.14,
+              368.09
+            ],
+            "distance": 0.52082,
+            "profile_margin": 0.06133,
+            "person_score": 0.3221
+          },
+          {
+            "observation_id": "f00018_p02",
+            "player_id": "warm_blue",
+            "box": [
+              219.19,
+              389.06,
+              237.3,
+              432.8
+            ],
+            "distance": 0.35586,
+            "profile_margin": 0.00471,
+            "person_score": 0.8396
+          },
+          {
+            "observation_id": "f00018_p03",
+            "player_id": "yellow_black",
+            "box": [
+              232.18,
+              345.08,
+              253.54,
+              370.83
+            ],
+            "distance": 0.4748,
+            "profile_margin": 0.06353,
+            "person_score": 0.2449
+          },
+          {
+            "observation_id": "f00018_p04",
+            "player_id": "warm_blue",
+            "box": [
+              250.7,
+              335.51,
+              268.54,
+              384.15
+            ],
+            "distance": 0.70322,
+            "profile_margin": 0.11317,
+            "person_score": 0.2086
+          },
+          {
+            "observation_id": "f00018_p05",
+            "player_id": "warm_blue",
+            "box": [
+              271.53,
+              397.95,
+              279.82,
+              431.45
+            ],
+            "distance": 0.31697,
+            "profile_margin": 0.09741,
+            "person_score": 0.6273
+          }
+        ]
+      },
+      {
+        "time": 6.333,
+        "accepted": [
+          {
+            "observation_id": "f00019_p01",
+            "player_id": "warm_blue",
+            "box": [
+              252.82,
+              396.95,
+              271.05,
+              436.91
+            ],
+            "distance": 0.2845,
+            "profile_margin": 0.13139,
+            "person_score": 0.8038
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00019_p02",
+            "player_id": "warm_blue",
+            "box": [
+              263.2,
+              380.15,
+              278.46,
+              408.71
+            ],
+            "distance": 0.59288,
+            "profile_margin": 0.11731,
+            "person_score": 0.289
+          },
+          {
+            "observation_id": "f00019_p00",
+            "player_id": "warm_blue",
+            "box": [
+              206.47,
+              392.21,
+              224.98,
+              434.28
+            ],
+            "distance": 0.33,
+            "profile_margin": 0.06236,
+            "person_score": 0.7174
+          }
+        ]
+      },
+      {
+        "time": 6.667,
+        "accepted": [
+          {
+            "observation_id": "f00020_p02",
+            "player_id": "warm_blue",
+            "box": [
+              239.82,
+              387.13,
+              253.3,
+              432.76
+            ],
+            "distance": 0.27765,
+            "profile_margin": 0.18448,
+            "person_score": 0.8049
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00020_p01",
+            "player_id": "warm_blue",
+            "box": [
+              194.89,
+              390.74,
+              214.87,
+              437.23
+            ],
+            "distance": 0.3083,
+            "profile_margin": 0.12648,
+            "person_score": 0.7792
+          },
+          {
+            "observation_id": "f00020_p00",
+            "player_id": "warm_blue",
+            "box": [
+              186.27,
+              390.13,
+              204.34,
+              433.57
+            ],
+            "distance": 0.38071,
+            "profile_margin": 0.09309,
+            "person_score": 0.2788
+          }
+        ]
+      },
+      {
+        "time": 7.0,
+        "accepted": [],
+        "uncertain": [
+          {
+            "observation_id": "f00021_p01",
+            "player_id": "warm_blue",
+            "box": [
+              211.86,
+              346.02,
+              240.8,
+              421.41
+            ],
+            "distance": 0.55912,
+            "profile_margin": 0.07558,
+            "person_score": 0.2086
+          },
+          {
+            "observation_id": "f00021_p00",
+            "player_id": "warm_blue",
+            "box": [
+              180.84,
+              393.15,
+              202.62,
+              437.28
+            ],
+            "distance": 0.28824,
+            "profile_margin": 0.10019,
+            "person_score": 0.826
+          },
+          {
+            "observation_id": "f00021_p02",
+            "player_id": "warm_blue",
+            "box": [
+              223.08,
+              387.94,
+              236.19,
+              430.77
+            ],
+            "distance": 0.29866,
+            "profile_margin": 0.12211,
+            "person_score": 0.7576
+          }
+        ]
+      },
+      {
+        "time": 7.333,
+        "accepted": [],
+        "uncertain": [
+          {
+            "observation_id": "f00022_p01",
+            "player_id": "warm_blue",
+            "box": [
+              206.37,
+              340.71,
+              244.81,
+              416.28
+            ],
+            "distance": 0.57903,
+            "profile_margin": 0.09088,
+            "person_score": 0.2441
+          },
+          {
+            "observation_id": "f00022_p00",
+            "player_id": "warm_blue",
+            "box": [
+              172.91,
+              388.65,
+              199.38,
+              432.0
+            ],
+            "distance": 0.28204,
+            "profile_margin": 0.16376,
+            "person_score": 0.7761
+          },
+          {
+            "observation_id": "f00022_p02",
+            "player_id": "warm_blue",
+            "box": [
+              215.8,
+              390.92,
+              229.94,
+              427.83
+            ],
+            "distance": 0.30441,
+            "profile_margin": 0.08804,
+            "person_score": 0.7828
+          }
+        ]
+      },
+      {
+        "time": 7.667,
+        "accepted": [
+          {
+            "observation_id": "f00023_p03",
+            "player_id": "warm_blue",
+            "box": [
+              206.92,
+              394.25,
+              222.81,
+              430.46
+            ],
+            "distance": 0.29252,
+            "profile_margin": 0.16357,
+            "person_score": 0.8371
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00023_p00",
+            "player_id": "warm_blue",
+            "box": [
+              1.52,
+              370.75,
+              14.62,
+              400.29
+            ],
+            "distance": 0.87674,
+            "profile_margin": 0.07066,
+            "person_score": 0.4295
+          },
+          {
+            "observation_id": "f00023_p02",
+            "player_id": "warm_blue",
+            "box": [
+              184.91,
+              387.57,
+              209.36,
+              428.85
+            ],
+            "distance": 0.49233,
+            "profile_margin": 0.18768,
+            "person_score": 0.333
+          },
+          {
+            "observation_id": "f00023_p04",
+            "player_id": "warm_blue",
+            "box": [
+              244.06,
+              334.01,
+              264.91,
+              400.69
+            ],
+            "distance": 0.76047,
+            "profile_margin": 0.11951,
+            "person_score": 0.2352
+          },
+          {
+            "observation_id": "f00023_p01",
+            "player_id": "warm_blue",
+            "box": [
+              164.47,
+              390.5,
+              186.77,
+              435.96
+            ],
+            "distance": 0.34743,
+            "profile_margin": 0.08642,
+            "person_score": 0.7988
+          }
+        ]
+      },
+      {
+        "time": 8.0,
+        "accepted": [],
+        "uncertain": [
+          {
+            "observation_id": "f00024_p00",
+            "player_id": "warm_blue",
+            "box": [
+              35.77,
+              369.51,
+              47.85,
+              401.86
+            ],
+            "distance": 0.86109,
+            "profile_margin": 0.08319,
+            "person_score": 0.2284
+          },
+          {
+            "observation_id": "f00024_p02",
+            "player_id": "warm_blue",
+            "box": [
+              218.35,
+              386.68,
+              233.65,
+              427.28
+            ],
+            "distance": 0.47254,
+            "profile_margin": 0.15304,
+            "person_score": 0.2493
+          },
+          {
+            "observation_id": "f00024_p01",
+            "player_id": "warm_blue",
+            "box": [
+              178.37,
+              386.8,
+              195.82,
+              433.01
+            ],
+            "distance": 0.30597,
+            "profile_margin": 0.06859,
+            "person_score": 0.8284
+          },
+          {
+            "observation_id": "f00024_p03",
+            "player_id": "warm_blue",
+            "box": [
+              226.97,
+              388.4,
+              246.0,
+              428.51
+            ],
+            "distance": 0.32276,
+            "profile_margin": 0.15816,
+            "person_score": 0.7931
+          }
+        ]
+      },
+      {
+        "time": 8.333,
+        "accepted": [
+          {
+            "observation_id": "f00025_p02",
+            "player_id": "warm_blue",
+            "box": [
+              268.73,
+              394.35,
+              288.82,
+              429.57
+            ],
+            "distance": 0.34821,
+            "profile_margin": 0.09264,
+            "person_score": 0.7493
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00025_p00",
+            "player_id": "warm_blue",
+            "box": [
+              77.69,
+              371.25,
+              88.84,
+              397.54
+            ],
+            "distance": 0.83525,
+            "profile_margin": 0.106,
+            "person_score": 0.2204
+          },
+          {
+            "observation_id": "f00025_p01",
+            "player_id": "yellow_black",
+            "box": [
+              201.46,
+              396.1,
+              217.33,
+              435.7
+            ],
+            "distance": 0.2973,
+            "profile_margin": 0.03192,
+            "person_score": 0.8475
+          }
+        ]
+      },
+      {
+        "time": 8.667,
+        "accepted": [
+          {
+            "observation_id": "f00026_p02",
+            "player_id": "yellow_black",
+            "box": [
+              223.01,
+              407.93,
+              239.85,
+              437.41
+            ],
+            "distance": 0.31006,
+            "profile_margin": 0.15503,
+            "person_score": 0.254
+          },
+          {
+            "observation_id": "f00026_p03",
+            "player_id": "warm_blue",
+            "box": [
+              316.46,
+              386.9,
+              332.0,
+              432.07
+            ],
+            "distance": 0.26024,
+            "profile_margin": 0.16818,
+            "person_score": 0.8168
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00026_p00",
+            "player_id": "warm_blue",
+            "box": [
+              113.96,
+              370.8,
+              124.84,
+              397.11
+            ],
+            "distance": 0.84582,
+            "profile_margin": 0.09939,
+            "person_score": 0.3282
+          },
+          {
+            "observation_id": "f00026_p04",
+            "player_id": "warm_blue",
+            "box": [
+              328.65,
+              391.8,
+              345.49,
+              427.53
+            ],
+            "distance": 0.58785,
+            "profile_margin": 0.16627,
+            "person_score": 0.4687
+          },
+          {
+            "observation_id": "f00026_p01",
+            "player_id": "warm_blue",
+            "box": [
+              222.86,
+              385.88,
+              253.81,
+              438.63
+            ],
+            "distance": 0.28559,
+            "profile_margin": 0.04558,
+            "person_score": 0.7959
+          }
+        ]
+      },
+      {
+        "time": 9.0,
+        "accepted": [
+          {
+            "observation_id": "f00027_p02",
+            "player_id": "warm_blue",
+            "box": [
+              342.12,
+              387.79,
+              359.04,
+              432.25
+            ],
+            "distance": 0.35971,
+            "profile_margin": 0.11472,
+            "person_score": 0.7894
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00027_p00",
+            "player_id": "warm_blue",
+            "box": [
+              127.41,
+              373.42,
+              137.93,
+              401.62
+            ],
+            "distance": 0.84752,
+            "profile_margin": 0.09646,
+            "person_score": 0.2643
+          },
+          {
+            "observation_id": "f00027_p01",
+            "player_id": "warm_blue",
+            "box": [
+              227.84,
+              391.33,
+              254.31,
+              442.22
+            ],
+            "distance": 0.32316,
+            "profile_margin": 0.03021,
+            "person_score": 0.8399
+          }
+        ]
+      },
+      {
+        "time": 9.333,
+        "accepted": [
+          {
+            "observation_id": "f00028_p02",
+            "player_id": "yellow_black",
+            "box": [
+              217.48,
+              393.77,
+              246.23,
+              444.27
+            ],
+            "distance": 0.25602,
+            "profile_margin": 0.15341,
+            "person_score": 0.8808
+          },
+          {
+            "observation_id": "f00028_p03",
+            "player_id": "warm_blue",
+            "box": [
+              365.62,
+              392.37,
+              383.54,
+              438.23
+            ],
+            "distance": 0.37696,
+            "profile_margin": 0.07644,
+            "person_score": 0.7087
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00028_p00",
+            "player_id": "warm_blue",
+            "box": [
+              139.95,
+              374.52,
+              151.65,
+              399.58
+            ],
+            "distance": 0.85702,
+            "profile_margin": 0.0793,
+            "person_score": 0.3164
+          },
+          {
+            "observation_id": "f00028_p01",
+            "player_id": "warm_blue",
+            "box": [
+              182.06,
+              348.5,
+              194.73,
+              398.99
+            ],
+            "distance": 0.70381,
+            "profile_margin": 0.10853,
+            "person_score": 0.2274
+          }
+        ]
+      },
+      {
+        "time": 9.667,
+        "accepted": [
+          {
+            "observation_id": "f00029_p01",
+            "player_id": "yellow_black",
+            "box": [
+              215.76,
+              403.36,
+              239.91,
+              452.4
+            ],
+            "distance": 0.22525,
+            "profile_margin": 0.08146,
+            "person_score": 0.854
+          },
+          {
+            "observation_id": "f00029_p02",
+            "player_id": "warm_blue",
+            "box": [
+              377.28,
+              403.05,
+              396.78,
+              448.65
+            ],
+            "distance": 0.27933,
+            "profile_margin": 0.13013,
+            "person_score": 0.8213
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00029_p00",
+            "player_id": "warm_blue",
+            "box": [
+              145.97,
+              381.42,
+              156.85,
+              409.17
+            ],
+            "distance": 0.85863,
+            "profile_margin": 0.08174,
+            "person_score": 0.5315
+          }
+        ]
+      },
+      {
+        "time": 10.0,
+        "accepted": [
+          {
+            "observation_id": "f00030_p02",
+            "player_id": "yellow_black",
+            "box": [
+              200.34,
+              400.12,
+              226.51,
+              451.94
+            ],
+            "distance": 0.23224,
+            "profile_margin": 0.1208,
+            "person_score": 0.8425
+          },
+          {
+            "observation_id": "f00030_p03",
+            "player_id": "warm_blue",
+            "box": [
+              387.77,
+              404.76,
+              405.64,
+              450.55
+            ],
+            "distance": 0.29142,
+            "profile_margin": 0.15307,
+            "person_score": 0.8072
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00030_p00",
+            "player_id": "warm_blue",
+            "box": [
+              100.73,
+              384.07,
+              109.97,
+              408.36
+            ],
+            "distance": 0.81559,
+            "profile_margin": 0.11641,
+            "person_score": 0.2132
+          },
+          {
+            "observation_id": "f00030_p01",
+            "player_id": "warm_blue",
+            "box": [
+              150.97,
+              380.09,
+              161.7,
+              406.86
+            ],
+            "distance": 0.85215,
+            "profile_margin": 0.09438,
+            "person_score": 0.336
+          }
+        ]
+      },
+      {
+        "time": 10.333,
+        "accepted": [
+          {
+            "observation_id": "f00031_p02",
+            "player_id": "yellow_black",
+            "box": [
+              191.07,
+              400.81,
+              215.31,
+              454.67
+            ],
+            "distance": 0.20171,
+            "profile_margin": 0.20723,
+            "person_score": 0.79
+          },
+          {
+            "observation_id": "f00031_p04",
+            "player_id": "warm_blue",
+            "box": [
+              385.47,
+              404.32,
+              410.51,
+              451.9
+            ],
+            "distance": 0.27655,
+            "profile_margin": 0.16618,
+            "person_score": 0.8042
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00031_p00",
+            "player_id": "warm_blue",
+            "box": [
+              101.17,
+              384.05,
+              110.31,
+              408.81
+            ],
+            "distance": 0.81547,
+            "profile_margin": 0.11538,
+            "person_score": 0.2249
+          },
+          {
+            "observation_id": "f00031_p01",
+            "player_id": "warm_blue",
+            "box": [
+              151.24,
+              380.03,
+              162.52,
+              407.29
+            ],
+            "distance": 0.86644,
+            "profile_margin": 0.0769,
+            "person_score": 0.5214
+          },
+          {
+            "observation_id": "f00031_p03",
+            "player_id": "warm_blue",
+            "box": [
+              200.2,
+              400.27,
+              216.06,
+              434.63
+            ],
+            "distance": 0.31483,
+            "profile_margin": 0.03918,
+            "person_score": 0.571
+          }
+        ]
+      },
+      {
+        "time": 10.667,
+        "accepted": [
+          {
+            "observation_id": "f00032_p02",
+            "player_id": "yellow_black",
+            "box": [
+              176.38,
+              397.8,
+              209.94,
+              455.14
+            ],
+            "distance": 0.17711,
+            "profile_margin": 0.19973,
+            "person_score": 0.8653
+          },
+          {
+            "observation_id": "f00032_p04",
+            "player_id": "warm_blue",
+            "box": [
+              388.97,
+              404.7,
+              405.35,
+              443.65
+            ],
+            "distance": 0.33082,
+            "profile_margin": 0.1057,
+            "person_score": 0.7534
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00032_p00",
+            "player_id": "warm_blue",
+            "box": [
+              100.95,
+              385.75,
+              110.23,
+              409.95
+            ],
+            "distance": 0.82034,
+            "profile_margin": 0.11014,
+            "person_score": 0.2636
+          },
+          {
+            "observation_id": "f00032_p01",
+            "player_id": "warm_blue",
+            "box": [
+              149.93,
+              381.17,
+              160.65,
+              410.58
+            ],
+            "distance": 0.84104,
+            "profile_margin": 0.09932,
+            "person_score": 0.3573
+          },
+          {
+            "observation_id": "f00032_p03",
+            "player_id": "warm_blue",
+            "box": [
+              200.14,
+              398.65,
+              212.16,
+              432.39
+            ],
+            "distance": 0.37772,
+            "profile_margin": 0.09186,
+            "person_score": 0.4366
+          }
+        ]
+      },
+      {
+        "time": 11.0,
+        "accepted": [
+          {
+            "observation_id": "f00033_p01",
+            "player_id": "yellow_black",
+            "box": [
+              169.53,
+              406.43,
+              200.35,
+              455.71
+            ],
+            "distance": 0.1748,
+            "profile_margin": 0.23137,
+            "person_score": 0.8591
+          },
+          {
+            "observation_id": "f00033_p03",
+            "player_id": "warm_blue",
+            "box": [
+              371.48,
+              404.21,
+              394.37,
+              454.58
+            ],
+            "distance": 0.31932,
+            "profile_margin": 0.07588,
+            "person_score": 0.7284
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00033_p00",
+            "player_id": "warm_blue",
+            "box": [
+              149.13,
+              381.59,
+              159.46,
+              410.48
+            ],
+            "distance": 0.86133,
+            "profile_margin": 0.07919,
+            "person_score": 0.5309
+          },
+          {
+            "observation_id": "f00033_p02",
+            "player_id": "warm_blue",
+            "box": [
+              182.23,
+              354.77,
+              201.48,
+              403.08
+            ],
+            "distance": 0.53936,
+            "profile_margin": 0.08429,
+            "person_score": 0.2142
+          }
+        ]
+      },
+      {
+        "time": 11.333,
+        "accepted": [
+          {
+            "observation_id": "f00034_p01",
+            "player_id": "yellow_black",
+            "box": [
+              158.7,
+              398.94,
+              184.69,
+              455.88
+            ],
+            "distance": 0.15245,
+            "profile_margin": 0.20415,
+            "person_score": 0.8691
+          },
+          {
+            "observation_id": "f00034_p02",
+            "player_id": "warm_blue",
+            "box": [
+              349.52,
+              398.95,
+              378.85,
+              454.0
+            ],
+            "distance": 0.2672,
+            "profile_margin": 0.11227,
+            "person_score": 0.7832
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00034_p00",
+            "player_id": "warm_blue",
+            "box": [
+              142.9,
+              381.73,
+              153.36,
+              410.17
+            ],
+            "distance": 0.87064,
+            "profile_margin": 0.06815,
+            "person_score": 0.4553
+          }
+        ]
+      },
+      {
+        "time": 11.667,
+        "accepted": [
+          {
+            "observation_id": "f00035_p00",
+            "player_id": "yellow_black",
+            "box": [
+              130.71,
+              401.51,
+              172.21,
+              452.92
+            ],
+            "distance": 0.18738,
+            "profile_margin": 0.28381,
+            "person_score": 0.8962
+          },
+          {
+            "observation_id": "f00035_p02",
+            "player_id": "warm_blue",
+            "box": [
+              330.6,
+              397.08,
+              357.01,
+              450.29
+            ],
+            "distance": 0.24983,
+            "profile_margin": 0.18356,
+            "person_score": 0.8071
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00035_p01",
+            "player_id": "warm_blue",
+            "box": [
+              138.92,
+              378.64,
+              148.83,
+              407.53
+            ],
+            "distance": 0.83858,
+            "profile_margin": 0.0828,
+            "person_score": 0.3653
+          }
+        ]
+      },
+      {
+        "time": 12.0,
+        "accepted": [
+          {
+            "observation_id": "f00036_p00",
+            "player_id": "yellow_black",
+            "box": [
+              128.73,
+              395.11,
+              158.77,
+              452.01
+            ],
+            "distance": 0.08627,
+            "profile_margin": 0.32256,
+            "person_score": 0.858
+          },
+          {
+            "observation_id": "f00036_p02",
+            "player_id": "warm_blue",
+            "box": [
+              327.62,
+              398.71,
+              349.19,
+              449.51
+            ],
+            "distance": 0.26472,
+            "profile_margin": 0.12071,
+            "person_score": 0.7964
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00036_p01",
+            "player_id": "warm_blue",
+            "box": [
+              142.02,
+              375.9,
+              153.57,
+              406.96
+            ],
+            "distance": 0.84192,
+            "profile_margin": 0.09964,
+            "person_score": 0.2556
+          }
+        ]
+      },
+      {
+        "time": 12.333,
+        "accepted": [
+          {
+            "observation_id": "f00037_p00",
+            "player_id": "yellow_black",
+            "box": [
+              105.99,
+              399.73,
+              141.26,
+              454.89
+            ],
+            "distance": 0.20735,
+            "profile_margin": 0.10524,
+            "person_score": 0.8688
+          },
+          {
+            "observation_id": "f00037_p02",
+            "player_id": "warm_blue",
+            "box": [
+              323.88,
+              404.76,
+              346.03,
+              456.05
+            ],
+            "distance": 0.25642,
+            "profile_margin": 0.09207,
+            "person_score": 0.8357
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00037_p01",
+            "player_id": "warm_blue",
+            "box": [
+              146.14,
+              380.23,
+              157.23,
+              408.02
+            ],
+            "distance": 0.82669,
+            "profile_margin": 0.11641,
+            "person_score": 0.4509
+          }
+        ]
+      },
+      {
+        "time": 12.667,
+        "accepted": [
+          {
+            "observation_id": "f00038_p00",
+            "player_id": "yellow_black",
+            "box": [
+              105.87,
+              400.66,
+              136.1,
+              451.41
+            ],
+            "distance": 0.21387,
+            "profile_margin": 0.11313,
+            "person_score": 0.8564
+          },
+          {
+            "observation_id": "f00038_p02",
+            "player_id": "warm_blue",
+            "box": [
+              335.11,
+              403.1,
+              352.48,
+              454.5
+            ],
+            "distance": 0.29461,
+            "profile_margin": 0.07231,
+            "person_score": 0.7431
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00038_p01",
+            "player_id": "warm_blue",
+            "box": [
+              164.52,
+              378.38,
+              175.61,
+              406.26
+            ],
+            "distance": 0.86562,
+            "profile_margin": 0.07633,
+            "person_score": 0.346
+          }
+        ]
+      },
+      {
+        "time": 13.0,
+        "accepted": [
+          {
+            "observation_id": "f00039_p00",
+            "player_id": "yellow_black",
+            "box": [
+              124.3,
+              395.72,
+              159.19,
+              455.67
+            ],
+            "distance": 0.16293,
+            "profile_margin": 0.19217,
+            "person_score": 0.8145
+          },
+          {
+            "observation_id": "f00039_p02",
+            "player_id": "warm_blue",
+            "box": [
+              365.19,
+              401.3,
+              394.83,
+              456.48
+            ],
+            "distance": 0.34179,
+            "profile_margin": 0.12195,
+            "person_score": 0.8129
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00039_p01",
+            "player_id": "warm_blue",
+            "box": [
+              207.27,
+              379.43,
+              217.39,
+              406.35
+            ],
+            "distance": 0.86259,
+            "profile_margin": 0.08378,
+            "person_score": 0.4506
+          }
+        ]
+      },
+      {
+        "time": 13.333,
+        "accepted": [
+          {
+            "observation_id": "f00040_p00",
+            "player_id": "yellow_black",
+            "box": [
+              149.48,
+              400.01,
+              197.93,
+              456.01
+            ],
+            "distance": 0.12609,
+            "profile_margin": 0.26963,
+            "person_score": 0.9028
+          },
+          {
+            "observation_id": "f00040_p03",
+            "player_id": "warm_blue",
+            "box": [
+              404.23,
+              402.13,
+              431.05,
+              458.73
+            ],
+            "distance": 0.25709,
+            "profile_margin": 0.04822,
+            "person_score": 0.8676
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00040_p02",
+            "player_id": "warm_blue",
+            "box": [
+              260.68,
+              379.65,
+              272.22,
+              407.39
+            ],
+            "distance": 0.86769,
+            "profile_margin": 0.07409,
+            "person_score": 0.4934
+          },
+          {
+            "observation_id": "f00040_p01",
+            "player_id": "yellow_black",
+            "box": [
+              182.1,
+              410.6,
+              196.9,
+              456.98
+            ],
+            "distance": 0.20643,
+            "profile_margin": 0.18183,
+            "person_score": 0.715
+          }
+        ]
+      },
+      {
+        "time": 13.667,
+        "accepted": [
+          {
+            "observation_id": "f00041_p00",
+            "player_id": "yellow_black",
+            "box": [
+              188.47,
+              388.95,
+              210.02,
+              453.54
+            ],
+            "distance": 0.16923,
+            "profile_margin": 0.16982,
+            "person_score": 0.8572
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00041_p02",
+            "player_id": "warm_blue",
+            "box": [
+              306.87,
+              377.64,
+              318.27,
+              406.29
+            ],
+            "distance": 0.86338,
+            "profile_margin": 0.07472,
+            "person_score": 0.4749
+          },
+          {
+            "observation_id": "f00041_p03",
+            "player_id": "yellow_black",
+            "box": [
+              443.24,
+              398.15,
+              460.75,
+              457.5
+            ],
+            "distance": 0.24095,
+            "profile_margin": 0.03079,
+            "person_score": 0.8165
+          },
+          {
+            "observation_id": "f00041_p01",
+            "player_id": "yellow_black",
+            "box": [
+              200.25,
+              393.68,
+              209.38,
+              452.35
+            ],
+            "distance": 0.22106,
+            "profile_margin": 0.1347,
+            "person_score": 0.7457
+          }
+        ]
+      },
+      {
+        "time": 14.0,
+        "accepted": [
+          {
+            "observation_id": "f00042_p01",
+            "player_id": "yellow_black",
+            "box": [
+              201.65,
+              391.11,
+              226.04,
+              451.49
+            ],
+            "distance": 0.20407,
+            "profile_margin": 0.12791,
+            "person_score": 0.8509
+          },
+          {
+            "observation_id": "f00042_p03",
+            "player_id": "warm_blue",
+            "box": [
+              461.22,
+              397.31,
+              479.89,
+              440.02
+            ],
+            "distance": 0.24795,
+            "profile_margin": 0.09244,
+            "person_score": 0.7228
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00042_p00",
+            "player_id": "warm_blue",
+            "box": [
+              182.11,
+              358.43,
+              196.95,
+              398.06
+            ],
+            "distance": 0.74975,
+            "profile_margin": 0.06358,
+            "person_score": 0.248
+          },
+          {
+            "observation_id": "f00042_p02",
+            "player_id": "warm_blue",
+            "box": [
+              341.79,
+              377.29,
+              352.71,
+              405.57
+            ],
+            "distance": 0.87305,
+            "profile_margin": 0.07731,
+            "person_score": 0.5751
+          }
+        ]
+      },
+      {
+        "time": 14.333,
+        "accepted": [],
+        "uncertain": [
+          {
+            "observation_id": "f00043_p01",
+            "player_id": "warm_blue",
+            "box": [
+              366.48,
+              376.61,
+              377.08,
+              404.73
+            ],
+            "distance": 0.85501,
+            "profile_margin": 0.08447,
+            "person_score": 0.4238
+          },
+          {
+            "observation_id": "f00043_p00",
+            "player_id": "yellow_black",
+            "box": [
+              200.61,
+              390.74,
+              237.64,
+              452.19
+            ],
+            "distance": 0.18983,
+            "profile_margin": 0.20793,
+            "person_score": 0.8528
+          },
+          {
+            "observation_id": "f00043_p02",
+            "player_id": "yellow_black",
+            "box": [
+              472.95,
+              426.63,
+              480,
+              455.93
+            ],
+            "distance": 0.19865,
+            "profile_margin": 0.24604,
+            "person_score": 0.3173
+          }
+        ]
+      },
+      {
+        "time": 14.667,
+        "accepted": [
+          {
+            "observation_id": "f00044_p00",
+            "player_id": "yellow_black",
+            "box": [
+              195.23,
+              387.0,
+              226.03,
+              449.55
+            ],
+            "distance": 0.22877,
+            "profile_margin": 0.09793,
+            "person_score": 0.8743
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00044_p01",
+            "player_id": "warm_blue",
+            "box": [
+              392.26,
+              374.27,
+              402.57,
+              402.19
+            ],
+            "distance": 0.86472,
+            "profile_margin": 0.07539,
+            "person_score": 0.3951
+          }
+        ]
+      },
+      {
+        "time": 15.0,
+        "accepted": [
+          {
+            "observation_id": "f00045_p00",
+            "player_id": "yellow_black",
+            "box": [
+              200.1,
+              388.52,
+              232.6,
+              450.13
+            ],
+            "distance": 0.1924,
+            "profile_margin": 0.12634,
+            "person_score": 0.8759
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00045_p01",
+            "player_id": "warm_blue",
+            "box": [
+              413.53,
+              373.25,
+              424.93,
+              404.22
+            ],
+            "distance": 0.86555,
+            "profile_margin": 0.07551,
+            "person_score": 0.4167
+          }
+        ]
+      },
+      {
+        "time": 15.333,
+        "accepted": [
+          {
+            "observation_id": "f00046_p00",
+            "player_id": "yellow_black",
+            "box": [
+              200.15,
+              387.73,
+              223.85,
+              451.84
+            ],
+            "distance": 0.18338,
+            "profile_margin": 0.10939,
+            "person_score": 0.8786
+          }
+        ],
+        "uncertain": []
+      },
+      {
+        "time": 15.667,
+        "accepted": [
+          {
+            "observation_id": "f00047_p00",
+            "player_id": "yellow_black",
+            "box": [
+              190.74,
+              386.79,
+              229.57,
+              454.89
+            ],
+            "distance": 0.15534,
+            "profile_margin": 0.1681,
+            "person_score": 0.8706
+          }
+        ],
+        "uncertain": []
+      },
+      {
+        "time": 16.0,
+        "accepted": [
+          {
+            "observation_id": "f00048_p00",
+            "player_id": "yellow_black",
+            "box": [
+              207.69,
+              386.61,
+              235.7,
+              456.52
+            ],
+            "distance": 0.11391,
+            "profile_margin": 0.22429,
+            "person_score": 0.8733
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00048_p01",
+            "player_id": "warm_blue",
+            "box": [
+              331.69,
+              354.02,
+              350.93,
+              397.84
+            ],
+            "distance": 0.64818,
+            "profile_margin": 0.10231,
+            "person_score": 0.2936
+          }
+        ]
+      },
+      {
+        "time": 16.333,
+        "accepted": [
+          {
+            "observation_id": "f00049_p00",
+            "player_id": "yellow_black",
+            "box": [
+              223.39,
+              385.45,
+              257.09,
+              456.76
+            ],
+            "distance": 0.09283,
+            "profile_margin": 0.26002,
+            "person_score": 0.8933
+          }
+        ],
+        "uncertain": []
+      },
+      {
+        "time": 16.667,
+        "accepted": [
+          {
+            "observation_id": "f00050_p00",
+            "player_id": "yellow_black",
+            "box": [
+              244.86,
+              381.1,
+              275.62,
+              458.65
+            ],
+            "distance": 0.16145,
+            "profile_margin": 0.1442,
+            "person_score": 0.882
+          }
+        ],
+        "uncertain": []
+      },
+      {
+        "time": 17.0,
+        "accepted": [
+          {
+            "observation_id": "f00051_p00",
+            "player_id": "yellow_black",
+            "box": [
+              266.61,
+              356.85,
+              288.01,
+              450.07
+            ],
+            "distance": 0.26841,
+            "profile_margin": 0.08069,
+            "person_score": 0.7894
+          }
+        ],
+        "uncertain": []
+      },
+      {
+        "time": 17.333,
+        "accepted": [
+          {
+            "observation_id": "f00052_p00",
+            "player_id": "yellow_black",
+            "box": [
+              265.33,
+              380.55,
+              291.2,
+              458.35
+            ],
+            "distance": 0.16811,
+            "profile_margin": 0.13333,
+            "person_score": 0.8742
+          }
+        ],
+        "uncertain": []
+      },
+      {
+        "time": 17.667,
+        "accepted": [
+          {
+            "observation_id": "f00053_p00",
+            "player_id": "yellow_black",
+            "box": [
+              281.67,
+              390.07,
+              311.13,
+              470.69
+            ],
+            "distance": 0.12619,
+            "profile_margin": 0.20105,
+            "person_score": 0.834
+          }
+        ],
+        "uncertain": []
+      },
+      {
+        "time": 18.0,
+        "accepted": [
+          {
+            "observation_id": "f00054_p00",
+            "player_id": "yellow_black",
+            "box": [
+              318.68,
+              400.12,
+              357.33,
+              478.63
+            ],
+            "distance": 0.03677,
+            "profile_margin": 0.34012,
+            "person_score": 0.8806
+          }
+        ],
+        "uncertain": []
+      },
+      {
+        "time": 18.333,
+        "accepted": [
+          {
+            "observation_id": "f00055_p00",
+            "player_id": "yellow_black",
+            "box": [
+              328.21,
+              396.82,
+              359.87,
+              484.4
+            ],
+            "distance": 0.0891,
+            "profile_margin": 0.24747,
+            "person_score": 0.8671
+          }
+        ],
+        "uncertain": []
+      },
+      {
+        "time": 18.667,
+        "accepted": [
+          {
+            "observation_id": "f00056_p00",
+            "player_id": "yellow_black",
+            "box": [
+              307.46,
+              391.17,
+              350.91,
+              486.92
+            ],
+            "distance": 0.10441,
+            "profile_margin": 0.24595,
+            "person_score": 0.87
+          }
+        ],
+        "uncertain": []
+      },
+      {
+        "time": 19.0,
+        "accepted": [
+          {
+            "observation_id": "f00057_p00",
+            "player_id": "yellow_black",
+            "box": [
+              251.11,
+              384.09,
+              286.08,
+              493.58
+            ],
+            "distance": 0.18541,
+            "profile_margin": 0.09987,
+            "person_score": 0.8751
+          }
+        ],
+        "uncertain": []
+      },
+      {
+        "time": 19.333,
+        "accepted": [
+          {
+            "observation_id": "f00058_p01",
+            "player_id": "yellow_black",
+            "box": [
+              182.08,
+              388.07,
+              197.91,
+              485.18
+            ],
+            "distance": 0.11151,
+            "profile_margin": 0.2446,
+            "person_score": 0.7031
+          }
+        ],
+        "uncertain": [
+          {
+            "observation_id": "f00058_p00",
+            "player_id": "yellow_black",
+            "box": [
+              159.14,
+              380.33,
+              198.47,
+              493.04
+            ],
+            "distance": 0.199,
+            "profile_margin": 0.08152,
+            "person_score": 0.872
+          }
+        ]
+      },
+      {
+        "time": 19.667,
+        "accepted": [
+          {
+            "observation_id": "f00059_p00",
+            "player_id": "yellow_black",
+            "box": [
+              61.14,
+              372.1,
+              112.41,
+              499.6
+            ],
+            "distance": 0.22138,
+            "profile_margin": 0.0869,
+            "person_score": 0.89
+          }
+        ],
+        "uncertain": []
+      },
+      {
+        "time": 20.0,
+        "accepted": [],
+        "uncertain": []
+      },
+      {
+        "time": 20.333,
+        "accepted": [
+          {
+            "observation_id": "f00061_p00",
+            "player_id": "yellow_black",
+            "box": [
+              428.99,
+              387.99,
+              461.92,
+              482.21
+            ],
+            "distance": 0.19241,
+            "profile_margin": 0.14347,
+            "person_score": 0.8455
+          }
+        ],
+        "uncertain": []
+      }
+    ],
+    "method": "clothing HSV regions, excluding head, fixed thresholds; no OCR, face recognition or GT lookup"
+  },
+  "evaluation": {
+    "metrics": {
+      "tp": 3,
+      "fp": 2,
+      "fn": 5,
+      "visible": 8,
+      "detector_found": 8,
+      "evaluated_player_frames": 12,
+      "unknown_truth": 0,
+      "calibration_excluded": 4,
+      "precision": 0.6,
+      "recall": 0.375,
+      "detector_recall": 1.0
+    },
+    "per_player": {
+      "yellow_black": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 3,
+        "visible": 5,
+        "detector_found": 5,
+        "evaluated_player_frames": 6,
+        "unknown_truth": 0,
+        "calibration_excluded": 2,
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "detector_recall": 1.0
+      },
+      "warm_blue": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "visible": 3,
+        "detector_found": 3,
+        "evaluated_player_frames": 6,
+        "unknown_truth": 0,
+        "calibration_excluded": 2,
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "detector_recall": 1.0
+      }
+    },
+    "frames": [
+      {
+        "time": 0,
+        "player_id": "warm_blue",
+        "truth": [
+          88,
+          345,
+          115,
+          412
+        ],
+        "prediction": null,
+        "status": "fn"
+      },
+      {
+        "time": 3,
+        "player_id": "yellow_black",
+        "truth": [
+          332,
+          361,
+          364,
+          426
+        ],
+        "prediction": {
+          "observation_id": "f00009_p00",
+          "player_id": "yellow_black",
+          "box": [
+            109.43,
+            386.24,
+            149.24,
+            465.38
+          ],
+          "distance": 0.27629,
+          "profile_margin": 0.05825,
+          "person_score": 0.8464
+        },
+        "status": "wrong_person_or_box"
+      },
+      {
+        "time": 3,
+        "player_id": "warm_blue",
+        "truth": [
+          111,
+          386,
+          161,
+          463
+        ],
+        "prediction": {
+          "observation_id": "f00009_p05",
+          "player_id": "warm_blue",
+          "box": [
+            338.96,
+            374.5,
+            358.32,
+            427.78
+          ],
+          "distance": 0.36537,
+          "profile_margin": 0.15457,
+          "person_score": 0.723
+        },
+        "status": "wrong_person_or_box"
+      },
+      {
+        "time": 6,
+        "player_id": "yellow_black",
+        "truth": [
+          216,
+          383,
+          244,
+          435
+        ],
+        "prediction": null,
+        "status": "fn"
+      },
+      {
+        "time": 9,
+        "player_id": "yellow_black",
+        "truth": [
+          225,
+          390,
+          255,
+          442
+        ],
+        "prediction": null,
+        "status": "fn"
+      },
+      {
+        "time": 9,
+        "player_id": "warm_blue",
+        "truth": [
+          340,
+          385,
+          364,
+          437
+        ],
+        "prediction": {
+          "observation_id": "f00027_p02",
+          "player_id": "warm_blue",
+          "box": [
+            342.12,
+            387.79,
+            359.04,
+            432.25
+          ],
+          "distance": 0.35971,
+          "profile_margin": 0.11472,
+          "person_score": 0.7894
+        },
+        "status": "tp"
+      },
+      {
+        "time": 12,
+        "player_id": "yellow_black",
+        "truth": [
+          126,
+          388,
+          157,
+          450
+        ],
+        "prediction": {
+          "observation_id": "f00036_p00",
+          "player_id": "yellow_black",
+          "box": [
+            128.73,
+            395.11,
+            158.77,
+            452.01
+          ],
+          "distance": 0.08627,
+          "profile_margin": 0.32256,
+          "person_score": 0.858
+        },
+        "status": "tp"
+      },
+      {
+        "time": 15,
+        "player_id": "yellow_black",
+        "truth": [
+          186,
+          384,
+          232,
+          449
+        ],
+        "prediction": {
+          "observation_id": "f00045_p00",
+          "player_id": "yellow_black",
+          "box": [
+            200.1,
+            388.52,
+            232.6,
+            450.13
+          ],
+          "distance": 0.1924,
+          "profile_margin": 0.12634,
+          "person_score": 0.8759
+        },
+        "status": "tp"
+      },
+      {
+        "time": 15,
+        "player_id": "warm_blue",
+        "truth": null,
+        "prediction": null,
+        "status": "correct_absence"
+      },
+      {
+        "time": 18,
+        "player_id": "warm_blue",
+        "truth": null,
+        "prediction": null,
+        "status": "correct_absence"
+      },
+      {
+        "time": 20,
+        "player_id": "yellow_black",
+        "truth": null,
+        "prediction": null,
+        "status": "correct_absence"
+      },
+      {
+        "time": 20,
+        "player_id": "warm_blue",
+        "truth": null,
+        "prediction": null,
+        "status": "correct_absence"
+      }
+    ],
+    "iou_threshold": 0.35,
+    "truth_provenance": {
+      "annotator": "Codex visual review of original frames, approximate bounding boxes",
+      "kind": "test_operator",
+      "human_verified": false,
+      "method": "Raw source frames inspected before matching predictions. Not a human user confirmation."
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "metrics": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 4,
+    "visible": 8,
+    "detector_found": 8,
+    "evaluated_player_frames": 12,
+    "unknown_truth": 0,
+    "calibration_excluded": 4,
+    "precision": 1.0,
+    "recall": 0.5,
+    "detector_recall": 1.0
+  },
+  "per_player": {
+    "yellow_black": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 2,
+      "visible": 5,
+      "detector_found": 5,
+      "evaluated_player_frames": 6,
+      "unknown_truth": 0,
+      "calibration_excluded": 2,
+      "precision": 1.0,
+      "recall": 0.6,
+      "detector_recall": 1.0
+    },
+    "warm_blue": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 2,
+      "visible": 3,
+      "detector_found": 3,
+      "evaluated_player_frames": 6,
+      "unknown_truth": 0,
+      "calibration_excluded": 2,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "detector_recall": 1.0
+    }
+  },
+  "frames": [
+    {
+      "time": 0,
+      "player_id": "warm_blue",
+      "truth": [
+        88,
+        345,
+        115,
+        412
+      ],
+      "prediction": null,
+      "status": "fn"
+    },
+    {
+      "time": 3,
+      "player_id": "yellow_black",
+      "truth": [
+        332,
+        361,
+        364,
+        426
+      ],
+      "prediction": {
+        "observation_id": "f00009_p05",
+        "player_id": "yellow_black",
+        "box": [
+          338.96,
+          374.5,
+          358.32,
+          427.78
+        ],
+        "distance": 0.51994,
+        "profile_margin": 1.0,
+        "person_score": 0.723,
+        "track_id": 1,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 3,
+      "player_id": "warm_blue",
+      "truth": [
+        111,
+        386,
+        161,
+        463
+      ],
+      "prediction": null,
+      "status": "fn"
+    },
+    {
+      "time": 6,
+      "player_id": "yellow_black",
+      "truth": [
+        216,
+        383,
+        244,
+        435
+      ],
+      "prediction": null,
+      "status": "fn"
+    },
+    {
+      "time": 9,
+      "player_id": "yellow_black",
+      "truth": [
+        225,
+        390,
+        255,
+        442
+      ],
+      "prediction": null,
+      "status": "fn"
+    },
+    {
+      "time": 9,
+      "player_id": "warm_blue",
+      "truth": [
+        340,
+        385,
+        364,
+        437
+      ],
+      "prediction": {
+        "observation_id": "f00027_p02",
+        "player_id": "warm_blue",
+        "box": [
+          342.12,
+          387.79,
+          359.04,
+          432.25
+        ],
+        "distance": 0.35971,
+        "profile_margin": 1.0,
+        "person_score": 0.7894,
+        "track_id": 44,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 12,
+      "player_id": "yellow_black",
+      "truth": [
+        126,
+        388,
+        157,
+        450
+      ],
+      "prediction": {
+        "observation_id": "f00036_p00",
+        "player_id": "yellow_black",
+        "box": [
+          128.73,
+          395.11,
+          158.77,
+          452.01
+        ],
+        "distance": 0.08627,
+        "profile_margin": 0.18945,
+        "person_score": 0.858,
+        "track_id": 47,
+        "track_anchored": false
+      },
+      "status": "tp"
+    },
+    {
+      "time": 15,
+      "player_id": "yellow_black",
+      "truth": [
+        186,
+        384,
+        232,
+        449
+      ],
+      "prediction": {
+        "observation_id": "f00045_p00",
+        "player_id": "yellow_black",
+        "box": [
+          200.1,
+          388.52,
+          232.6,
+          450.13
+        ],
+        "distance": 0.1924,
+        "profile_margin": 1.0,
+        "person_score": 0.8759,
+        "track_id": 55,
+        "track_anchored": true
+      },
+      "status": "tp"
+    },
+    {
+      "time": 15,
+      "player_id": "warm_blue",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 18,
+      "player_id": "warm_blue",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 20,
+      "player_id": "yellow_black",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    },
+    {
+      "time": 20,
+      "player_id": "warm_blue",
+      "truth": null,
+      "prediction": null,
+      "status": "correct_absence"
+    }
+  ],
+  "iou_threshold": 0.35,
+  "truth_provenance": {
+    "annotator": "Codex visual review of original frames, approximate bounding boxes",
+    "kind": "test_operator",
+    "human_verified": false,
+    "method": "Raw source frames inspected before matching predictions. Not a human user confirmation."
+  }
+}

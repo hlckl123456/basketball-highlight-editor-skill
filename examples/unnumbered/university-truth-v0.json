@@ -1,0 +1,207 @@
+{
+  "provenance": "Agent visual annotation of unannotated original frames with source-coordinate grid; fixed before running identity matching. Sparse frame benchmark, not all-frame ground truth. Unknown marks a sliver/occlusion insufficient for identity; null means absent.",
+  "frames": [
+    {
+      "time": 0,
+      "people": {
+        "green": [
+          154,
+          380,
+          192,
+          490
+        ],
+        "white": [
+          245,
+          414,
+          275,
+          486
+        ],
+        "orange": "unknown",
+        "navy": [
+          128,
+          409,
+          158,
+          487
+        ]
+      }
+    },
+    {
+      "time": 5,
+      "people": {
+        "green": [
+          390,
+          374,
+          437,
+          488
+        ],
+        "white": [
+          80,
+          416,
+          103,
+          485
+        ],
+        "orange": [
+          259,
+          410,
+          288,
+          484
+        ],
+        "navy": [
+          192,
+          406,
+          224,
+          488
+        ]
+      }
+    },
+    {
+      "time": 10,
+      "people": {
+        "green": null,
+        "white": [
+          198,
+          416,
+          232,
+          486
+        ],
+        "orange": [
+          222,
+          421,
+          242,
+          485
+        ],
+        "navy": [
+          363,
+          407,
+          404,
+          481
+        ]
+      }
+    },
+    {
+      "time": 15,
+      "people": {
+        "green": null,
+        "white": [
+          337,
+          416,
+          375,
+          489
+        ],
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 20,
+      "people": {
+        "green": null,
+        "white": null,
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 25,
+      "people": {
+        "green": null,
+        "white": [
+          0,
+          425,
+          27,
+          488
+        ],
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 30,
+      "people": {
+        "green": null,
+        "white": null,
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 35,
+      "people": {
+        "green": null,
+        "white": null,
+        "orange": null,
+        "navy": null
+      }
+    },
+    {
+      "time": 40,
+      "people": {
+        "green": null,
+        "white": null,
+        "orange": "unknown",
+        "navy": null
+      }
+    },
+    {
+      "time": 45,
+      "people": {
+        "green": null,
+        "white": null,
+        "orange": "unknown",
+        "navy": null
+      }
+    },
+    {
+      "time": 50,
+      "people": {
+        "green": null,
+        "white": [
+          381,
+          411,
+          414,
+          488
+        ],
+        "orange": "unknown",
+        "navy": null
+      }
+    },
+    {
+      "time": 55,
+      "people": {
+        "green": null,
+        "white": [
+          345,
+          414,
+          370,
+          485
+        ],
+        "orange": [
+          438,
+          416,
+          464,
+          478
+        ],
+        "navy": null
+      }
+    },
+    {
+      "time": 60,
+      "people": {
+        "green": null,
+        "white": [
+          338,
+          411,
+          365,
+          487
+        ],
+        "orange": [
+          258,
+          405,
+          284,
+          487
+        ],
+        "navy": null
+      }
+    }
+  ]
+}

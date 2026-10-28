@@ -1,0 +1,14 @@
+{
+  "project_revision": 10,
+  "player_id": "green",
+  "reviewer_kind": "test_operator",
+  "reviewer": "Public regression test; no fabricated human confirmation",
+  "decisions": {
+    "c0001": "keep",
+    "c0002": "keep",
+    "c0003": "keep",
+    "c0004": "keep",
+    "c0005": "keep",
+    "c0006": "keep"
+  }
+}

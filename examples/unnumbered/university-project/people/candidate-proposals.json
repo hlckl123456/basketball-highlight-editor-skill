@@ -1,0 +1,478 @@
+{
+  "player_id": "green",
+  "assignments": [
+    {
+      "candidate_id": "c0001",
+      "player_id": "green",
+      "certainty": "high",
+      "role": "merely_visible",
+      "reason": "Repeated calibrated clothing and short-track evidence; presence only",
+      "evidence": [
+        {
+          "kind": "confirmed_sample_match",
+          "time": 0.0,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00000_p01",
+          "bbox_xyxy": [
+            150.04,
+            380.16,
+            196.58,
+            489.33
+          ],
+          "track_id": 1,
+          "model_distance": 0.08078
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 0.333,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00001_p02",
+          "bbox_xyxy": [
+            167.11,
+            380.03,
+            202.16,
+            495.37
+          ],
+          "track_id": 1,
+          "model_distance": 0.2471
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 0.667,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00002_p01",
+          "bbox_xyxy": [
+            176.81,
+            389.44,
+            217.71,
+            490.07
+          ],
+          "track_id": 1,
+          "model_distance": 0.21524
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 1.0,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00003_p01",
+          "bbox_xyxy": [
+            185.33,
+            381.76,
+            224.01,
+            490.44
+          ],
+          "track_id": 1,
+          "model_distance": 0.26767
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 1.333,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00004_p01",
+          "bbox_xyxy": [
+            194.62,
+            382.96,
+            230.6,
+            492.7
+          ],
+          "track_id": 1,
+          "model_distance": 0.27232
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 1.667,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00005_p03",
+          "bbox_xyxy": [
+            208.39,
+            383.41,
+            239.52,
+            485.03
+          ],
+          "track_id": 1,
+          "model_distance": 0.35522
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 2.0,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00006_p03",
+          "bbox_xyxy": [
+            219.77,
+            395.7,
+            239.86,
+            490.81
+          ],
+          "track_id": 1,
+          "model_distance": 0.27823
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 2.333,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00007_p01",
+          "bbox_xyxy": [
+            228.22,
+            384.22,
+            281.32,
+            489.62
+          ],
+          "track_id": 7,
+          "model_distance": 0.31364
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 2.667,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00008_p01",
+          "bbox_xyxy": [
+            250.57,
+            379.27,
+            294.06,
+            488.1
+          ],
+          "track_id": 7,
+          "model_distance": 0.35997
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 3.0,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00009_p01",
+          "bbox_xyxy": [
+            264.67,
+            381.78,
+            310.07,
+            488.66
+          ],
+          "track_id": 7,
+          "model_distance": 0.30744
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 3.333,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00010_p03",
+          "bbox_xyxy": [
+            281.91,
+            377.09,
+            330.95,
+            495.31
+          ],
+          "track_id": 7,
+          "model_distance": 0.27564
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 3.667,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00011_p04",
+          "bbox_xyxy": [
+            284.27,
+            385.28,
+            352.41,
+            488.65
+          ],
+          "track_id": 7,
+          "model_distance": 0.25094
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 4.0,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00012_p04",
+          "bbox_xyxy": [
+            329.54,
+            376.59,
+            371.03,
+            486.16
+          ],
+          "track_id": 7,
+          "model_distance": 0.24774
+        }
+      ]
+    },
+    {
+      "candidate_id": "c0002",
+      "player_id": "green",
+      "certainty": "high",
+      "role": "merely_visible",
+      "reason": "Repeated calibrated clothing and short-track evidence; presence only",
+      "evidence": [
+        {
+          "kind": "confirmed_sample_match",
+          "time": 4.0,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00012_p04",
+          "bbox_xyxy": [
+            329.54,
+            376.59,
+            371.03,
+            486.16
+          ],
+          "track_id": 7,
+          "model_distance": 0.24774
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 4.333,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00013_p04",
+          "bbox_xyxy": [
+            344.86,
+            373.95,
+            395.46,
+            493.29
+          ],
+          "track_id": 7,
+          "model_distance": 0.18752
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 4.667,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00014_p04",
+          "bbox_xyxy": [
+            371.9,
+            376.05,
+            416.4,
+            494.74
+          ],
+          "track_id": 7,
+          "model_distance": 0.18871
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 5.0,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00015_p03",
+          "bbox_xyxy": [
+            388.47,
+            374.65,
+            436.94,
+            490.56
+          ],
+          "track_id": 7,
+          "model_distance": 0.04901
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 5.333,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00016_p02",
+          "bbox_xyxy": [
+            407.34,
+            379.04,
+            463.58,
+            491.26
+          ],
+          "track_id": 7,
+          "model_distance": 0.20453
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 5.667,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00017_p04",
+          "bbox_xyxy": [
+            426.61,
+            373.35,
+            472.23,
+            489.61
+          ],
+          "track_id": 7,
+          "model_distance": 0.15927
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 6.0,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00018_p02",
+          "bbox_xyxy": [
+            435.02,
+            370.87,
+            477.62,
+            492.01
+          ],
+          "track_id": 7,
+          "model_distance": 0.13188
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 6.333,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00019_p03",
+          "bbox_xyxy": [
+            448.27,
+            368.42,
+            477.83,
+            493.49
+          ],
+          "track_id": 7,
+          "model_distance": 0.14822
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "time": 6.667,
+          "sample_id": "s001",
+          "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+          "sample_ids": [
+            "s001",
+            "s002"
+          ],
+          "observation_id": "f00020_p02",
+          "bbox_xyxy": [
+            454.99,
+            378.37,
+            477.64,
+            493.92
+          ],
+          "track_id": 7,
+          "model_distance": 0.25808
+        }
+      ]
+    },
+    {
+      "candidate_id": "c0003",
+      "player_id": null,
+      "certainty": "uncertain",
+      "role": "merely_visible",
+      "reason": "Insufficient consistent sample matches; inspect original clip",
+      "evidence": []
+    },
+    {
+      "candidate_id": "c0004",
+      "player_id": null,
+      "certainty": "uncertain",
+      "role": "merely_visible",
+      "reason": "Insufficient consistent sample matches; inspect original clip",
+      "evidence": []
+    },
+    {
+      "candidate_id": "c0005",
+      "player_id": null,
+      "certainty": "uncertain",
+      "role": "merely_visible",
+      "reason": "Insufficient consistent sample matches; inspect original clip",
+      "evidence": []
+    },
+    {
+      "candidate_id": "c0006",
+      "player_id": null,
+      "certainty": "uncertain",
+      "role": "merely_visible",
+      "reason": "Insufficient consistent sample matches; inspect original clip",
+      "evidence": []
+    }
+  ],
+  "applied": true,
+  "reviewer": {
+    "kind": "local_model",
+    "name": "calibrated clothing + temporal consensus"
+  }
+}

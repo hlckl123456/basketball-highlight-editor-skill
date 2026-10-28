@@ -1,0 +1,90 @@
+{
+  "id": "s001",
+  "player_id": "green",
+  "time": 130,
+  "bbox_xyxy": [
+    255,
+    315,
+    295,
+    437
+  ],
+  "description": "Plain green shirt, navy shorts, light shoes; no readable jersey number",
+  "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+  "reviewer_kind": "test_operator",
+  "reference": "samples/s001.jpg",
+  "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+  "track_proposals": [
+    {
+      "time": 129.4,
+      "bbox_xyxy": [
+        223.3,
+        304.2,
+        263.3,
+        426.2
+      ],
+      "surviving_points": 11,
+      "initial_points": 35,
+      "identity_verified": false
+    },
+    {
+      "time": 129.6,
+      "bbox_xyxy": [
+        228.5,
+        308.7,
+        268.5,
+        430.7
+      ],
+      "surviving_points": 12,
+      "initial_points": 35,
+      "identity_verified": false
+    },
+    {
+      "time": 129.8,
+      "bbox_xyxy": [
+        240.2,
+        312.3,
+        280.2,
+        434.3
+      ],
+      "surviving_points": 13,
+      "initial_points": 35,
+      "identity_verified": false
+    },
+    {
+      "time": 130.2,
+      "bbox_xyxy": [
+        277.9,
+        308.6,
+        317.9,
+        430.6
+      ],
+      "surviving_points": 17,
+      "initial_points": 35,
+      "identity_verified": false
+    },
+    {
+      "time": 130.4,
+      "bbox_xyxy": [
+        299.1,
+        325.3,
+        339.1,
+        447.3
+      ],
+      "surviving_points": 14,
+      "initial_points": 35,
+      "identity_verified": false
+    },
+    {
+      "time": 130.6,
+      "bbox_xyxy": [
+        316.5,
+        343.8,
+        356.5,
+        465.8
+      ],
+      "surviving_points": 8,
+      "initial_points": 35,
+      "identity_verified": false
+    }
+  ]
+}

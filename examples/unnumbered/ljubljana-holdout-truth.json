@@ -1,0 +1,214 @@
+{
+  "provenance": {
+    "kind": "test_operator",
+    "annotator": "Codex visual review of randomized original source frames before holdout prediction inspection",
+    "human_verified": false,
+    "scope": "Time-point holdout within existing videos; approximate manually read boxes, no new independent venue"
+  },
+  "frames": [
+    {
+      "time": 129,
+      "people": {
+        "green": [
+          211,
+          315,
+          249,
+          399
+        ],
+        "mustard": [
+          561,
+          310,
+          603,
+          410
+        ]
+      }
+    },
+    {
+      "time": 132,
+      "people": {
+        "green": [
+          354,
+          388,
+          402,
+          480
+        ],
+        "mustard": [
+          475,
+          417,
+          514,
+          480
+        ]
+      }
+    },
+    {
+      "time": 146,
+      "people": {
+        "green": [
+          445,
+          108,
+          480,
+          165
+        ],
+        "mustard": [
+          419,
+          67,
+          442,
+          133
+        ]
+      }
+    },
+    {
+      "time": 147,
+      "people": {
+        "green": [
+          444,
+          105,
+          481,
+          144
+        ],
+        "mustard": [
+          397,
+          44,
+          434,
+          103
+        ]
+      }
+    },
+    {
+      "time": 157,
+      "people": {
+        "green": [
+          342,
+          273,
+          375,
+          338
+        ],
+        "mustard": [
+          273,
+          340,
+          320,
+          392
+        ]
+      }
+    },
+    {
+      "time": 162,
+      "people": {
+        "green": [
+          399,
+          129,
+          432,
+          195
+        ],
+        "mustard": [
+          335,
+          130,
+          370,
+          201
+        ]
+      }
+    },
+    {
+      "time": 166,
+      "people": {
+        "green": [
+          343,
+          141,
+          380,
+          229
+        ],
+        "mustard": [
+          457,
+          240,
+          499,
+          341
+        ]
+      }
+    },
+    {
+      "time": 176,
+      "people": {
+        "green": [
+          559,
+          280,
+          627,
+          386
+        ],
+        "mustard": [
+          358,
+          347,
+          425,
+          445
+        ]
+      }
+    },
+    {
+      "time": 177,
+      "people": {
+        "green": [
+          450,
+          252,
+          502,
+          351
+        ],
+        "mustard": [
+          347,
+          336,
+          403,
+          452
+        ]
+      }
+    },
+    {
+      "time": 182,
+      "people": {
+        "green": [
+          729,
+          168,
+          816,
+          257
+        ],
+        "mustard": [
+          408,
+          367,
+          482,
+          480
+        ]
+      }
+    },
+    {
+      "time": 184,
+      "people": {
+        "green": [
+          699,
+          166,
+          775,
+          263
+        ],
+        "mustard": [
+          456,
+          422,
+          530,
+          480
+        ]
+      }
+    },
+    {
+      "time": 186,
+      "people": {
+        "green": [
+          742,
+          169,
+          817,
+          267
+        ],
+        "mustard": [
+          300,
+          219,
+          352,
+          330
+        ]
+      }
+    }
+  ]
+}

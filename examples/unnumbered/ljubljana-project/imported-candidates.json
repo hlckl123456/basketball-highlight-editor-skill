@@ -1,0 +1,35 @@
+{
+  "provenance": "Predeclared test coverage windows, NOT detected scores",
+  "candidates": [
+    {
+      "start": 129,
+      "end": 138,
+      "reason": "Test coverage window; basket/shooter unverified"
+    },
+    {
+      "start": 139,
+      "end": 148,
+      "reason": "Test coverage window; basket/shooter unverified"
+    },
+    {
+      "start": 149,
+      "end": 158,
+      "reason": "Test coverage window; basket/shooter unverified"
+    },
+    {
+      "start": 159,
+      "end": 168,
+      "reason": "Test coverage window; basket/shooter unverified"
+    },
+    {
+      "start": 169,
+      "end": 178,
+      "reason": "Test coverage window; basket/shooter unverified"
+    },
+    {
+      "start": 179,
+      "end": 189,
+      "reason": "Test coverage window; basket/shooter unverified"
+    }
+  ]
+}

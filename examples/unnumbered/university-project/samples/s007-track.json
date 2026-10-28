@@ -1,0 +1,138 @@
+{
+  "id": "s007",
+  "player_id": "navy",
+  "time": 0,
+  "bbox_xyxy": [
+    128,
+    409,
+    158,
+    487
+  ],
+  "description": "Plain navy top and navy trousers; no jersey number",
+  "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+  "reviewer_kind": "test_operator",
+  "reference": "samples/s007.jpg",
+  "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+  "track_proposals": [
+    {
+      "time": 0.2,
+      "bbox_xyxy": [
+        128.4,
+        409.0,
+        158.4,
+        487.0
+      ],
+      "surviving_points": 15,
+      "initial_points": 15,
+      "identity_verified": false
+    },
+    {
+      "time": 0.4,
+      "bbox_xyxy": [
+        129.1,
+        408.9,
+        159.1,
+        486.9
+      ],
+      "surviving_points": 14,
+      "initial_points": 15,
+      "identity_verified": false
+    },
+    {
+      "time": 0.6,
+      "bbox_xyxy": [
+        129.7,
+        408.8,
+        159.7,
+        486.8
+      ],
+      "surviving_points": 13,
+      "initial_points": 15,
+      "identity_verified": false
+    },
+    {
+      "time": 0.8,
+      "bbox_xyxy": [
+        130.0,
+        408.8,
+        160.0,
+        486.8
+      ],
+      "surviving_points": 13,
+      "initial_points": 15,
+      "identity_verified": false
+    },
+    {
+      "time": 1.0,
+      "bbox_xyxy": [
+        130.1,
+        408.8,
+        160.1,
+        486.8
+      ],
+      "surviving_points": 13,
+      "initial_points": 15,
+      "identity_verified": false
+    },
+    {
+      "time": 1.2,
+      "bbox_xyxy": [
+        130.1,
+        408.7,
+        160.1,
+        486.7
+      ],
+      "surviving_points": 12,
+      "initial_points": 15,
+      "identity_verified": false
+    },
+    {
+      "time": 1.4,
+      "bbox_xyxy": [
+        130.2,
+        408.7,
+        160.2,
+        486.7
+      ],
+      "surviving_points": 12,
+      "initial_points": 15,
+      "identity_verified": false
+    },
+    {
+      "time": 1.6,
+      "bbox_xyxy": [
+        130.3,
+        408.7,
+        160.3,
+        486.7
+      ],
+      "surviving_points": 11,
+      "initial_points": 15,
+      "identity_verified": false
+    },
+    {
+      "time": 1.8,
+      "bbox_xyxy": [
+        130.3,
+        408.7,
+        160.3,
+        486.7
+      ],
+      "surviving_points": 11,
+      "initial_points": 15,
+      "identity_verified": false
+    },
+    {
+      "time": 2.0,
+      "bbox_xyxy": [
+        130.4,
+        408.8,
+        160.4,
+        486.8
+      ],
+      "surviving_points": 11,
+      "initial_points": 15,
+      "identity_verified": false
+    }
+  ]
+}

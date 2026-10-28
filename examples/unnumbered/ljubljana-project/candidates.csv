@@ -1,0 +1,7 @@
+id,start,end,group,player_id,certainty,reason
+c0001,129.0,138.0,high_confidence,green,high,Repeated calibrated clothing and short-track evidence; presence only
+c0002,139.0,148.0,high_confidence,green,high,Repeated calibrated clothing and short-track evidence; presence only
+c0003,149.0,158.0,high_confidence,green,high,Repeated calibrated clothing and short-track evidence; presence only
+c0004,159.0,168.0,high_confidence,green,high,Repeated calibrated clothing and short-track evidence; presence only
+c0005,169.0,178.0,high_confidence,green,high,Repeated calibrated clothing and short-track evidence; presence only
+c0006,179.0,189.0,high_confidence,green,high,Repeated calibrated clothing and short-track evidence; presence only

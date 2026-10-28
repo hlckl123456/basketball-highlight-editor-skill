@@ -1,0 +1,8 @@
+import json
+from pathlib import Path
+r=Path(__file__).parent
+provenance={'kind':'test_operator','annotator':'Codex visual review of randomized original source frames before holdout prediction inspection','human_verified':False,'scope':'Time-point holdout within existing videos; approximate manually read boxes, no new independent venue'}
+uni=[(1,[[185,380,224,489],'unknown','unknown',[142,410,177,486]]),(7,[None,[153,416,179,482],[272,411,299,482],'unknown']),(19,[None,[434,411,464,487],None,None]),(24,[None,[453,439,478,479],None,None]),(26,[None,[444,416,473,481],None,None]),(28,[None,'unknown',None,None]),(47,[None,None,'unknown',None]),(52,[None,[350,411,376,482],[424,421,445,478],None]),(54,[None,[350,411,375,482],[428,419,449,478],None]),(56,[None,[350,411,374,482],[427,419,450,480],None]),(57,[None,[350,411,376,482],[410,418,433,482],None]),(59,[None,[338,411,372,483],[287,418,313,483],None])]
+lj=[(129,[[211,315,249,399],[561,310,603,410]]),(132,[[354,388,402,480],[475,417,514,480]]),(146,[[445,108,480,165],[419,67,442,133]]),(147,[[444,105,481,144],[397,44,434,103]]),(157,[[342,273,375,338],[273,340,320,392]]),(162,[[399,129,432,195],[335,130,370,201]]),(166,[[343,141,380,229],[457,240,499,341]]),(176,[[559,280,627,386],[358,347,425,445]]),(177,[[450,252,502,351],[347,336,403,452]]),(182,[[729,168,816,257],[408,367,482,480]]),(184,[[699,166,775,263],[456,422,530,480]]),(186,[[742,169,817,267],[300,219,352,330]])]
+for name,ids,rows in [('university',['green','white','orange','navy'],uni),('ljubljana',['green','mustard'],lj)]:
+ (r/(name+'-holdout-truth.json')).write_text(json.dumps({'provenance':provenance,'frames':[{'time':t,'people':dict(zip(ids,boxes))} for t,boxes in rows]},indent=2)+'\n')

@@ -1,0 +1,126 @@
+"""Local YOLOX person proposals and clothing-only descriptors, no OCR or faces.
+Pre/postprocessing follows the public YOLOX ONNX demo (Megvii, Apache-2.0).
+This prototype is evaluated before being integrated into the Skill.
+"""
+import argparse,hashlib,json,math
+from pathlib import Path
+import cv2
+import numpy as np
+import onnxruntime as ort
+
+
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+
+def iou(a,b):
+    x=max(0,min(a[2],b[2])-max(a[0],b[0]));y=max(0,min(a[3],b[3])-max(a[1],b[1]))
+    return x*y/max(1e-6,(a[2]-a[0])*(a[3]-a[1])+(b[2]-b[0])*(b[3]-b[1])-x*y)
+
+
+def descriptor(frame,box):
+    x1,y1,x2,y2=[int(round(x)) for x in box]
+    x1=max(0,x1);y1=max(0,y1);x2=min(frame.shape[1],x2);y2=min(frame.shape[0],y2)
+    crop=frame[y1:y2,x1:x2]
+    if crop.size==0:return None
+    # Head/face pixels are excluded. Four clothing regions retain sleeve,
+    # shirt, shorts and footwear differences; no number or face recognizer.
+    h,w=crop.shape[:2];parts=[]
+    for xa,ya,xb,yb in [(.22,.2,.78,.53),(.02,.23,.98,.5),(.15,.53,.85,.8),(.08,.83,.92,.99)]:
+        patch=crop[max(0,int(h*ya)):max(1,int(h*yb)),max(0,int(w*xa)):max(1,int(w*xb))]
+        hsv=cv2.cvtColor(patch,cv2.COLOR_BGR2HSV)
+        hist=cv2.calcHist([hsv],[0,1],None,[16,4],[0,180,0,256])
+        hist=(np.roll(hist,1,axis=0)+hist*2+np.roll(hist,-1,axis=0))/4
+        hist=hist.reshape(-1);hist/=max(1,float(hist.sum()))
+        val=cv2.calcHist([hsv],[2],None,[8],[0,256]).reshape(-1);val/=max(1,float(val.sum()))
+        parts.append(np.concatenate([np.sqrt(hist)*math.sqrt(.7),np.sqrt(val)*math.sqrt(.3)]).tolist())
+    return parts
+
+
+def distance(a,b):
+    vals=np.sqrt(np.sum((np.asarray(a)-np.asarray(b))**2,axis=1)/2)
+    return float(np.dot(vals,[.38,.22,.28,.12]))
+
+
+class Detector:
+    def __init__(self,path):
+        ort.disable_telemetry_events()
+        opts=ort.SessionOptions();opts.intra_op_num_threads=2;opts.inter_op_num_threads=1;opts.log_severity_level=3
+        self.session=ort.InferenceSession(str(path),sess_options=opts,providers=['CPUExecutionProvider'])
+        self.name=self.session.get_inputs()[0].name
+        self.h,self.w=self.session.get_inputs()[0].shape[2:]
+        grids=[];strides=[]
+        for stride in (8,16,32):
+            yy,xx=np.meshgrid(np.arange(self.h//stride),np.arange(self.w//stride),indexing='ij')
+            grids.append(np.stack([xx,yy],axis=-1).reshape(-1,2));strides.append(np.full((xx.size,1),stride))
+        self.grids=np.concatenate(grids);self.strides=np.concatenate(strides)
+
+    def predict(self,frame,roi,threshold=.2):
+        x1,y1,x2,y2=roi;im=frame[y1:y2,x1:x2]
+        ratio=min(self.h/im.shape[0],self.w/im.shape[1])
+        resized=cv2.resize(im,(int(im.shape[1]*ratio),int(im.shape[0]*ratio)))
+        canvas=np.full((self.h,self.w,3),114,dtype=np.uint8);canvas[:resized.shape[0],:resized.shape[1]]=resized
+        tensor=np.ascontiguousarray(canvas.transpose(2,0,1)[None],dtype=np.float32)
+        out=self.session.run(None,{self.name:tensor})[0][0].copy()
+        out[:,:2]=(out[:,:2]+self.grids)*self.strides
+        out[:,2:4]=np.exp(out[:,2:4])*self.strides
+        scores=out[:,4]*out[:,5]  # COCO class zero: person.
+        ids=np.where(scores>=threshold)[0]
+        boxes=out[ids,:4];scores=scores[ids]
+        boxes=np.concatenate([boxes[:,:2]-boxes[:,2:]/2,boxes[:,:2]+boxes[:,2:]/2],axis=1)/ratio
+        boxes+=np.array([x1,y1,x1,y1])
+        kept=[]
+        for idx in np.argsort(-scores):
+            box=boxes[idx].tolist()
+            if any(iou(box,k['box'])>.5 for k in kept):continue
+            box=[max(0,box[0]),max(0,box[1]),min(frame.shape[1],box[2]),min(frame.shape[0],box[3])]
+            if box[3]-box[1]<24 or box[2]-box[0]<7:continue
+            kept.append({'box':[round(v,2) for v in box],'person_score':round(float(scores[idx]),4),'descriptor':descriptor(frame,box)})
+        return sorted(kept,key=lambda o:o['box'][0])
+
+
+def detect(a):
+    cap=cv2.VideoCapture(str(a.video));fps=cap.get(cv2.CAP_PROP_FPS);n=cap.get(cv2.CAP_PROP_FRAME_COUNT)
+    w,h=int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    roi=a.roi or [0,0,w,h];det=Detector(a.model);records=[]
+    times=np.arange(a.start,min(a.end,n/fps),1/a.fps)
+    out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True)
+    previews=out.with_suffix('');previews.mkdir(exist_ok=True)
+    for k,t in enumerate(times):
+        cap.set(cv2.CAP_PROP_POS_MSEC,float(t)*1000);ok,frame=cap.read()
+        if not ok:continue
+        regions=[roi]
+        if a.tile:
+            xs=list(range(roi[0],max(roi[0]+1,roi[2]-a.tile+1),max(1,int(a.tile*.65))))
+            ys=list(range(roi[1],max(roi[1]+1,roi[3]-a.tile+1),max(1,int(a.tile*.65))))
+            xs=sorted(set(xs+[max(roi[0],roi[2]-a.tile)]))
+            ys=sorted(set(ys+[max(roi[1],roi[3]-a.tile)]))
+            regions += [[x,y,min(roi[2],x+a.tile),min(roi[3],y+a.tile)] for x in xs for y in ys]
+        candidates=[o for r in regions for o in det.predict(frame,r,a.threshold)]
+        items=[]
+        for o in sorted(candidates,key=lambda o:-o['person_score']):
+            if not any(iou(o['box'],q['box'])>.4 for q in items):items.append(o)
+        items.sort(key=lambda o:o['box'][0])
+        for j,o in enumerate(items):o['id']=f'f{k:05d}_p{j:02d}'
+        records.append({'time':round(float(t),3),'items':items})
+        if k%max(1,round(a.fps*3))==0:
+            view=frame.copy()
+            for j,o in enumerate(items):
+                x1,y1,x2,y2=map(int,o['box']);cv2.rectangle(view,(x1,y1),(x2,y2),(0,255,0),1)
+                cv2.putText(view,str(j),(x1,max(12,y1-3)),cv2.FONT_HERSHEY_SIMPLEX,.4,(0,0,255),1)
+            cv2.imwrite(str(previews/f'{k:05d}-{t:.1f}.jpg'),view)
+    cap.release()
+    data={'video':str(Path(a.video).resolve()),'video_sha256':sha(a.video),'model_sha256':sha(a.model),
+          'fps':a.fps,'roi':roi,'tile':a.tile,'threshold':a.threshold,'duration':n/fps,'analysis_range':[a.start,min(a.end,n/fps)],'width':w,'height':h,
+          'descriptor':'clothing regions after head exclusion; HSV Hellinger; no OCR or face analysis',
+          'records':records}
+    out.write_text(json.dumps(data,indent=2)+'\n')
+    print(json.dumps({'output':str(out),'samples':len(records),'detections':sum(len(r['items']) for r in records)},ensure_ascii=False))
+
+
+def main():
+    p=argparse.ArgumentParser();p.add_argument('--video',required=True);p.add_argument('--model',required=True)
+    p.add_argument('--roi',nargs=4,type=int);p.add_argument('--start',type=float,default=0);p.add_argument('--end',type=float,default=1e9);p.add_argument('--tile',type=int,default=0);p.add_argument('--fps',type=float,default=5);p.add_argument('--threshold',type=float,default=.2);p.add_argument('--output',required=True)
+    detect(p.parse_args())
+
+
+if __name__=='__main__':main()

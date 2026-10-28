@@ -93,3 +93,32 @@ The duration cap controls EDL clip lengths. Muxed duration can differ slightly t
 Resume from `status PROJECT`; do not start a new project just to make another version. `source.path` must remain available with the same SHA256. If moved, use `relink PROJECT --video NEW_PATH`; this checks the same hash and records the change without invalidating the selection. There is no automatic search through personal files. `features` processes only new candidates by default; `--refresh` recomputes features and clears player profiles. Changes to candidates, annotations, samples or selection invalidate confirmation. Confirmed EDL files are snapshots; the current `project.json` state decides whether rendering is allowed. One writer per project is supported.
 
 Release 1.0.1 also accepts a relative `source.path`, resolved from the project directory, so the public example is portable. `detect --model /absolute/authorized/model.onnx` can use an explicitly supplied compatible model with the vendored MIT BHE source; redistribution rights for that model remain separate. No model download is performed.
+
+
+## Unnumbered people detection and matching (v1.1)
+
+Run these commands with an already available Python containing NumPy, OpenCV and ONNX Runtime. No downloads or installations occur. The default model lives in the Skill's `assets/yolox` directory with its source hash and Apache-2.0 license. This is a generic person detector; BHE scoring uses a different, separately authorized model.
+
+```sh
+# Candidate generation/import remains a separate earlier step.
+python3 scripts/highlight.py people /path/to/project --roi 0 350 478 570 --tile 240 --fps 3
+
+# Inspect person previews and ask the user for the actual target sample.
+python3 scripts/highlight.py sample /path/to/project --player green \
+  --time 0 --bbox 154 380 192 490 --description 'olive top, blue jeans' \
+  --confirmed-by 'Actual user answer reference' --reviewer-kind user
+# Prefer a second clear view and add other known players as distractor profiles.
+
+# Preview model proposals without modifying candidate assignments:
+python3 scripts/highlight.py match-people /path/to/project --player green
+# After inspecting evidence, explicitly apply model proposals:
+python3 scripts/highlight.py match-people /path/to/project --player green --apply
+python3 scripts/highlight.py select /path/to/project --player green --selected-by 'Actual user choice reference'
+python3 scripts/highlight.py rough /path/to/project
+```
+
+Use the actual video's ROI and sample box; the example coordinates apply only to the public university case. The processing range can be limited with `people --start S --end E`; candidates outside it remain uncertain. Person scan parameters are validated, model input/output must match raw YOLOX-Nano 416, and matching checks the source SHA256, scan hash and descriptor version. It compares all saved profile samples, not a jersey number.
+
+`people/detections.json` contains raw boxes, descriptors, times, model hash and source hash. `people/matches.json` contains accepted/uncertain observations and tracklets. `people/candidate-proposals.json` records whether proposals were applied. Applying proposals never records a human confirmation. The role is `merely_visible`; the main review form still requires every high and uncertain clip to be decided before `confirm` can write the EDL. Adding samples, scanning again or applying new matches invalidates the previous clip confirmation.
+
+Unknown or similar-clothing players require additional sample evidence and manual review. Distances and margins are model heuristics, not calibrated probability percentages. No-match clips stay uncertain because detection and matching can miss visible people.

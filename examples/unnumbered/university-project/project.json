@@ -1,0 +1,2087 @@
+{
+  "schema_version": 1,
+  "tool_version": "1.1.0",
+  "revision": 15,
+  "state": "awaiting_edit_prompt",
+  "created_at": "2026-10-28T07:30:27.950233+00:00",
+  "source": {
+    "path": "../sources/university.webm",
+    "sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+    "duration": 60.6,
+    "width": 478,
+    "height": 850,
+    "fps": "30/1",
+    "has_audio": false,
+    "rights": {
+      "id": "university",
+      "title": "File:Cancha de basquetbol universidad.webm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cancha_de_basquetbol_universidad.webm",
+      "creator": "Alejons06",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sha256": "81284b34fd8feb6d0c0c5b396c4ca0f8925b89f75dd2d760f09c546b7acf52d0",
+      "bytes": 12452945,
+      "transformation": "none",
+      "download_authorization": "User requested testing assorted unnumbered public basketball footage.",
+      "selection_notes": "All screened material retained, including hard/partially numbered scenes; target shirt-number status is separately reviewed.",
+      "processing_basis": "Original author public Commons license, local regression and evidence publication",
+      "restrictions": "Keep original attribution and license, no implied endorsement; derivatives keep CC BY-SA 4.0 when applicable"
+    }
+  },
+  "detector": {
+    "backend": "portable-manifest",
+    "provenance": "Predeclared test coverage windows, NOT detected scores"
+  },
+  "candidates": [
+    {
+      "id": "c0001",
+      "start": 0.0,
+      "end": 4.0,
+      "event_time": null,
+      "reason": "Test coverage window; basket/shooter unverified",
+      "event_confirmed": false,
+      "observations": [],
+      "labels": [],
+      "assignment": {
+        "candidate_id": "c0001",
+        "player_id": "green",
+        "certainty": "high",
+        "role": "merely_visible",
+        "reason": "Repeated calibrated clothing and short-track evidence; presence only",
+        "evidence": [
+          {
+            "kind": "confirmed_sample_match",
+            "time": 0.0,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00000_p01",
+            "bbox_xyxy": [
+              150.04,
+              380.16,
+              196.58,
+              489.33
+            ],
+            "track_id": 1,
+            "model_distance": 0.08078
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 0.333,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00001_p02",
+            "bbox_xyxy": [
+              167.11,
+              380.03,
+              202.16,
+              495.37
+            ],
+            "track_id": 1,
+            "model_distance": 0.2471
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 0.667,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00002_p01",
+            "bbox_xyxy": [
+              176.81,
+              389.44,
+              217.71,
+              490.07
+            ],
+            "track_id": 1,
+            "model_distance": 0.21524
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 1.0,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00003_p01",
+            "bbox_xyxy": [
+              185.33,
+              381.76,
+              224.01,
+              490.44
+            ],
+            "track_id": 1,
+            "model_distance": 0.26767
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 1.333,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00004_p01",
+            "bbox_xyxy": [
+              194.62,
+              382.96,
+              230.6,
+              492.7
+            ],
+            "track_id": 1,
+            "model_distance": 0.27232
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 1.667,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00005_p03",
+            "bbox_xyxy": [
+              208.39,
+              383.41,
+              239.52,
+              485.03
+            ],
+            "track_id": 1,
+            "model_distance": 0.35522
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 2.0,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00006_p03",
+            "bbox_xyxy": [
+              219.77,
+              395.7,
+              239.86,
+              490.81
+            ],
+            "track_id": 1,
+            "model_distance": 0.27823
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 2.333,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00007_p01",
+            "bbox_xyxy": [
+              228.22,
+              384.22,
+              281.32,
+              489.62
+            ],
+            "track_id": 7,
+            "model_distance": 0.31364
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 2.667,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00008_p01",
+            "bbox_xyxy": [
+              250.57,
+              379.27,
+              294.06,
+              488.1
+            ],
+            "track_id": 7,
+            "model_distance": 0.35997
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 3.0,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00009_p01",
+            "bbox_xyxy": [
+              264.67,
+              381.78,
+              310.07,
+              488.66
+            ],
+            "track_id": 7,
+            "model_distance": 0.30744
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 3.333,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00010_p03",
+            "bbox_xyxy": [
+              281.91,
+              377.09,
+              330.95,
+              495.31
+            ],
+            "track_id": 7,
+            "model_distance": 0.27564
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 3.667,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00011_p04",
+            "bbox_xyxy": [
+              284.27,
+              385.28,
+              352.41,
+              488.65
+            ],
+            "track_id": 7,
+            "model_distance": 0.25094
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 4.0,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00012_p04",
+            "bbox_xyxy": [
+              329.54,
+              376.59,
+              371.03,
+              486.16
+            ],
+            "track_id": 7,
+            "model_distance": 0.24774
+          }
+        ],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "at": "2026-10-28T07:30:52.168313+00:00"
+      },
+      "preview": "rough/high_confidence/c0001.mp4"
+    },
+    {
+      "id": "c0002",
+      "start": 4.0,
+      "end": 9.0,
+      "event_time": null,
+      "reason": "Test coverage window; basket/shooter unverified",
+      "event_confirmed": false,
+      "observations": [],
+      "labels": [],
+      "assignment": {
+        "candidate_id": "c0002",
+        "player_id": "green",
+        "certainty": "high",
+        "role": "merely_visible",
+        "reason": "Repeated calibrated clothing and short-track evidence; presence only",
+        "evidence": [
+          {
+            "kind": "confirmed_sample_match",
+            "time": 4.0,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00012_p04",
+            "bbox_xyxy": [
+              329.54,
+              376.59,
+              371.03,
+              486.16
+            ],
+            "track_id": 7,
+            "model_distance": 0.24774
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 4.333,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00013_p04",
+            "bbox_xyxy": [
+              344.86,
+              373.95,
+              395.46,
+              493.29
+            ],
+            "track_id": 7,
+            "model_distance": 0.18752
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 4.667,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00014_p04",
+            "bbox_xyxy": [
+              371.9,
+              376.05,
+              416.4,
+              494.74
+            ],
+            "track_id": 7,
+            "model_distance": 0.18871
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 5.0,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00015_p03",
+            "bbox_xyxy": [
+              388.47,
+              374.65,
+              436.94,
+              490.56
+            ],
+            "track_id": 7,
+            "model_distance": 0.04901
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 5.333,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00016_p02",
+            "bbox_xyxy": [
+              407.34,
+              379.04,
+              463.58,
+              491.26
+            ],
+            "track_id": 7,
+            "model_distance": 0.20453
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 5.667,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00017_p04",
+            "bbox_xyxy": [
+              426.61,
+              373.35,
+              472.23,
+              489.61
+            ],
+            "track_id": 7,
+            "model_distance": 0.15927
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 6.0,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00018_p02",
+            "bbox_xyxy": [
+              435.02,
+              370.87,
+              477.62,
+              492.01
+            ],
+            "track_id": 7,
+            "model_distance": 0.13188
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 6.333,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00019_p03",
+            "bbox_xyxy": [
+              448.27,
+              368.42,
+              477.83,
+              493.49
+            ],
+            "track_id": 7,
+            "model_distance": 0.14822
+          },
+          {
+            "kind": "confirmed_sample_match",
+            "time": 6.667,
+            "sample_id": "s001",
+            "detail": "Local model proposal: clothing-v2 + short tracklet; compare all saved samples",
+            "sample_ids": [
+              "s001",
+              "s002"
+            ],
+            "observation_id": "f00020_p02",
+            "bbox_xyxy": [
+              454.99,
+              378.37,
+              477.64,
+              493.92
+            ],
+            "track_id": 7,
+            "model_distance": 0.25808
+          }
+        ],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "at": "2026-10-28T07:30:52.168321+00:00"
+      },
+      "preview": "rough/high_confidence/c0002.mp4"
+    },
+    {
+      "id": "c0003",
+      "start": 10.0,
+      "end": 14.0,
+      "event_time": null,
+      "reason": "Test coverage window; basket/shooter unverified",
+      "event_confirmed": false,
+      "observations": [],
+      "labels": [],
+      "assignment": {
+        "candidate_id": "c0003",
+        "player_id": null,
+        "certainty": "uncertain",
+        "role": "merely_visible",
+        "reason": "Insufficient consistent sample matches; inspect original clip",
+        "evidence": [],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "at": "2026-10-28T07:30:52.168325+00:00"
+      },
+      "preview": "rough/uncertain/c0003.mp4"
+    },
+    {
+      "id": "c0004",
+      "start": 19.0,
+      "end": 27.0,
+      "event_time": null,
+      "reason": "Test coverage window; basket/shooter unverified",
+      "event_confirmed": false,
+      "observations": [],
+      "labels": [],
+      "assignment": {
+        "candidate_id": "c0004",
+        "player_id": null,
+        "certainty": "uncertain",
+        "role": "merely_visible",
+        "reason": "Insufficient consistent sample matches; inspect original clip",
+        "evidence": [],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "at": "2026-10-28T07:30:52.168326+00:00"
+      },
+      "preview": "rough/uncertain/c0004.mp4"
+    },
+    {
+      "id": "c0005",
+      "start": 33.0,
+      "end": 38.0,
+      "event_time": null,
+      "reason": "Test coverage window; basket/shooter unverified",
+      "event_confirmed": false,
+      "observations": [],
+      "labels": [],
+      "assignment": {
+        "candidate_id": "c0005",
+        "player_id": null,
+        "certainty": "uncertain",
+        "role": "merely_visible",
+        "reason": "Insufficient consistent sample matches; inspect original clip",
+        "evidence": [],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "at": "2026-10-28T07:30:52.168327+00:00"
+      },
+      "preview": "rough/uncertain/c0005.mp4"
+    },
+    {
+      "id": "c0006",
+      "start": 49.0,
+      "end": 60.0,
+      "event_time": null,
+      "reason": "Test coverage window; basket/shooter unverified",
+      "event_confirmed": false,
+      "observations": [],
+      "labels": [],
+      "assignment": {
+        "candidate_id": "c0006",
+        "player_id": null,
+        "certainty": "uncertain",
+        "role": "merely_visible",
+        "reason": "Insufficient consistent sample matches; inspect original clip",
+        "evidence": [],
+        "reviewer": {
+          "kind": "local_model",
+          "name": "calibrated clothing + temporal consensus"
+        },
+        "at": "2026-10-28T07:30:52.168328+00:00"
+      },
+      "preview": "rough/uncertain/c0006.mp4"
+    }
+  ],
+  "players": [
+    {
+      "id": "green",
+      "description": "Olive-green top and blue jeans; no readable jersey number",
+      "reference": "samples/s001.jpg"
+    },
+    {
+      "id": "navy",
+      "description": "Plain navy top and navy trousers; no jersey number",
+      "reference": "samples/s007.jpg"
+    },
+    {
+      "id": "orange",
+      "description": "Orange top and black trousers; no jersey number",
+      "reference": "samples/s005.jpg"
+    },
+    {
+      "id": "white",
+      "description": "Plain white top and dark trousers; no jersey number",
+      "reference": "samples/s003.jpg"
+    }
+  ],
+  "selection": {
+    "player_id": "green",
+    "high_confidence": [
+      "c0001",
+      "c0002"
+    ],
+    "uncertain": [
+      "c0003",
+      "c0004",
+      "c0005",
+      "c0006"
+    ],
+    "other": [],
+    "selected_by": "test_operator fixture, not a new user answer"
+  },
+  "confirmation": {
+    "project_revision": 14,
+    "player_id": "green",
+    "reviewer_kind": "test_operator",
+    "reviewer": "Public regression test; no fabricated human confirmation",
+    "decisions": {
+      "c0001": "keep",
+      "c0002": "keep",
+      "c0003": "reject",
+      "c0004": "reject",
+      "c0005": "reject",
+      "c0006": "reject"
+    },
+    "at": "2026-10-28T07:30:56.312630+00:00",
+    "kept": [
+      "c0001",
+      "c0002"
+    ],
+    "decision_sha256": "bd0dbe5a10ca38b9b3824dbec7b5fa6722bbb3c2a2f0f0263520ab556b5ca873"
+  },
+  "versions": [],
+  "history": [
+    {
+      "at": "2026-10-28T07:30:28.193184+00:00",
+      "action": "init",
+      "detail": "local source reference; no upload",
+      "revision": 1
+    },
+    {
+      "at": "2026-10-28T07:30:28.200864+00:00",
+      "action": "import_candidates",
+      "detail": "55d26a44a19daf6e520ada39f287935811723f2668996492c5b0e47a5027bc85",
+      "revision": 2
+    },
+    {
+      "at": "2026-10-28T07:30:28.670391+00:00",
+      "action": "calibration_sample",
+      "detail": {
+        "id": "s001",
+        "track_samples": 10
+      },
+      "revision": 3
+    },
+    {
+      "at": "2026-10-28T07:30:29.273164+00:00",
+      "action": "calibration_sample",
+      "detail": {
+        "id": "s002",
+        "track_samples": 9
+      },
+      "revision": 4
+    },
+    {
+      "at": "2026-10-28T07:30:29.832817+00:00",
+      "action": "calibration_sample",
+      "detail": {
+        "id": "s003",
+        "track_samples": 10
+      },
+      "revision": 5
+    },
+    {
+      "at": "2026-10-28T07:30:30.466076+00:00",
+      "action": "calibration_sample",
+      "detail": {
+        "id": "s004",
+        "track_samples": 12
+      },
+      "revision": 6
+    },
+    {
+      "at": "2026-10-28T07:30:31.025235+00:00",
+      "action": "calibration_sample",
+      "detail": {
+        "id": "s005",
+        "track_samples": 11
+      },
+      "revision": 7
+    },
+    {
+      "at": "2026-10-28T07:30:31.658457+00:00",
+      "action": "calibration_sample",
+      "detail": {
+        "id": "s006",
+        "track_samples": 12
+      },
+      "revision": 8
+    },
+    {
+      "at": "2026-10-28T07:30:31.959831+00:00",
+      "action": "calibration_sample",
+      "detail": {
+        "id": "s007",
+        "track_samples": 10
+      },
+      "revision": 9
+    },
+    {
+      "at": "2026-10-28T07:30:32.978951+00:00",
+      "action": "calibration_sample",
+      "detail": {
+        "id": "s008",
+        "track_samples": 20
+      },
+      "revision": 10
+    },
+    {
+      "at": "2026-10-28T07:30:51.827545+00:00",
+      "action": "scan_people",
+      "detail": {
+        "method": "YOLOX-Nano 416 CPU + clothing-v2",
+        "model_sha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d",
+        "data": "people/detections.json",
+        "data_sha256": "f296bdd7713cc4164968fe1208ab308a941508eebc7f52e4fe8bbf18596e9aac",
+        "ocr_enabled": false
+      },
+      "revision": 11
+    },
+    {
+      "at": "2026-10-28T07:30:52.168334+00:00",
+      "action": "match_people",
+      "detail": {
+        "player_id": "green",
+        "proposals": "people/candidate-proposals.json",
+        "high": 2
+      },
+      "revision": 12
+    },
+    {
+      "at": "2026-10-28T07:30:52.177710+00:00",
+      "action": "select_player",
+      "detail": {
+        "player_id": "green",
+        "high_confidence": [
+          "c0001",
+          "c0002"
+        ],
+        "uncertain": [
+          "c0003",
+          "c0004",
+          "c0005",
+          "c0006"
+        ],
+        "other": [],
+        "selected_by": "test_operator fixture, not a new user answer"
+      },
+      "revision": 13
+    },
+    {
+      "at": "2026-10-28T07:30:56.295228+00:00",
+      "action": "rough_previews",
+      "detail": "separate review clips only; no merged reel",
+      "revision": 14
+    },
+    {
+      "at": "2026-10-28T07:30:56.312683+00:00",
+      "action": "confirm_selection",
+      "detail": {
+        "reviewer_kind": "test_operator",
+        "kept": [
+          "c0001",
+          "c0002"
+        ]
+      },
+      "revision": 15
+    }
+  ],
+  "updated_at": "2026-10-28T07:30:56.312680+00:00",
+  "samples": [
+    {
+      "id": "s001",
+      "player_id": "green",
+      "time": 0,
+      "bbox_xyxy": [
+        154,
+        380,
+        192,
+        490
+      ],
+      "description": "Olive-green top and blue jeans; no readable jersey number",
+      "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+      "reviewer_kind": "test_operator",
+      "reference": "samples/s001.jpg",
+      "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+      "track_proposals": [
+        {
+          "time": 0.2,
+          "bbox_xyxy": [
+            154.5,
+            379.9,
+            192.5,
+            489.9
+          ],
+          "surviving_points": 32,
+          "initial_points": 37,
+          "identity_verified": false
+        },
+        {
+          "time": 0.4,
+          "bbox_xyxy": [
+            154.7,
+            379.9,
+            192.7,
+            489.9
+          ],
+          "surviving_points": 30,
+          "initial_points": 37,
+          "identity_verified": false
+        },
+        {
+          "time": 0.6,
+          "bbox_xyxy": [
+            155.3,
+            379.9,
+            193.3,
+            489.9
+          ],
+          "surviving_points": 29,
+          "initial_points": 37,
+          "identity_verified": false
+        },
+        {
+          "time": 0.8,
+          "bbox_xyxy": [
+            155.5,
+            379.9,
+            193.5,
+            489.9
+          ],
+          "surviving_points": 29,
+          "initial_points": 37,
+          "identity_verified": false
+        },
+        {
+          "time": 1.0,
+          "bbox_xyxy": [
+            155.7,
+            379.9,
+            193.7,
+            489.9
+          ],
+          "surviving_points": 29,
+          "initial_points": 37,
+          "identity_verified": false
+        },
+        {
+          "time": 1.2,
+          "bbox_xyxy": [
+            156.0,
+            379.9,
+            194.0,
+            489.9
+          ],
+          "surviving_points": 26,
+          "initial_points": 37,
+          "identity_verified": false
+        },
+        {
+          "time": 1.4,
+          "bbox_xyxy": [
+            156.0,
+            379.9,
+            194.0,
+            489.9
+          ],
+          "surviving_points": 25,
+          "initial_points": 37,
+          "identity_verified": false
+        },
+        {
+          "time": 1.6,
+          "bbox_xyxy": [
+            156.2,
+            379.9,
+            194.2,
+            489.9
+          ],
+          "surviving_points": 25,
+          "initial_points": 37,
+          "identity_verified": false
+        },
+        {
+          "time": 1.8,
+          "bbox_xyxy": [
+            156.2,
+            379.8,
+            194.2,
+            489.8
+          ],
+          "surviving_points": 25,
+          "initial_points": 37,
+          "identity_verified": false
+        },
+        {
+          "time": 2.0,
+          "bbox_xyxy": [
+            156.2,
+            379.8,
+            194.2,
+            489.8
+          ],
+          "surviving_points": 25,
+          "initial_points": 37,
+          "identity_verified": false
+        }
+      ]
+    },
+    {
+      "id": "s002",
+      "player_id": "green",
+      "time": 5,
+      "bbox_xyxy": [
+        390,
+        374,
+        437,
+        488
+      ],
+      "description": "Olive-green top and blue jeans; no readable jersey number",
+      "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+      "reviewer_kind": "test_operator",
+      "reference": "samples/s002.jpg",
+      "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+      "track_proposals": [
+        {
+          "time": 4.0,
+          "bbox_xyxy": [
+            343.3,
+            373.8,
+            390.3,
+            487.8
+          ],
+          "surviving_points": 9,
+          "initial_points": 48,
+          "identity_verified": false
+        },
+        {
+          "time": 4.2,
+          "bbox_xyxy": [
+            343.5,
+            373.8,
+            390.5,
+            487.8
+          ],
+          "surviving_points": 14,
+          "initial_points": 48,
+          "identity_verified": false
+        },
+        {
+          "time": 4.4,
+          "bbox_xyxy": [
+            359.5,
+            374.1,
+            406.5,
+            488.1
+          ],
+          "surviving_points": 25,
+          "initial_points": 48,
+          "identity_verified": false
+        },
+        {
+          "time": 4.6,
+          "bbox_xyxy": [
+            369.6,
+            373.6,
+            416.6,
+            487.6
+          ],
+          "surviving_points": 28,
+          "initial_points": 48,
+          "identity_verified": false
+        },
+        {
+          "time": 4.8,
+          "bbox_xyxy": [
+            380.2,
+            373.6,
+            427.2,
+            487.6
+          ],
+          "surviving_points": 43,
+          "initial_points": 48,
+          "identity_verified": false
+        },
+        {
+          "time": 5.2,
+          "bbox_xyxy": [
+            398.7,
+            373.9,
+            445.7,
+            487.9
+          ],
+          "surviving_points": 42,
+          "initial_points": 48,
+          "identity_verified": false
+        },
+        {
+          "time": 5.4,
+          "bbox_xyxy": [
+            409.6,
+            373.9,
+            456.6,
+            487.9
+          ],
+          "surviving_points": 38,
+          "initial_points": 48,
+          "identity_verified": false
+        },
+        {
+          "time": 5.6,
+          "bbox_xyxy": [
+            420.8,
+            373.5,
+            467.8,
+            487.5
+          ],
+          "surviving_points": 31,
+          "initial_points": 48,
+          "identity_verified": false
+        },
+        {
+          "time": 5.8,
+          "bbox_xyxy": [
+            429.1,
+            373.5,
+            476.1,
+            487.5
+          ],
+          "surviving_points": 31,
+          "initial_points": 48,
+          "identity_verified": false
+        }
+      ]
+    },
+    {
+      "id": "s003",
+      "player_id": "white",
+      "time": 5,
+      "bbox_xyxy": [
+        80,
+        416,
+        103,
+        485
+      ],
+      "description": "Plain white top and dark trousers; no jersey number",
+      "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+      "reviewer_kind": "test_operator",
+      "reference": "samples/s003.jpg",
+      "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+      "track_proposals": [
+        {
+          "time": 4.8,
+          "bbox_xyxy": [
+            79.7,
+            416.0,
+            102.7,
+            485.0
+          ],
+          "surviving_points": 8,
+          "initial_points": 13,
+          "identity_verified": false
+        },
+        {
+          "time": 5.2,
+          "bbox_xyxy": [
+            80.2,
+            416.2,
+            103.2,
+            485.2
+          ],
+          "surviving_points": 10,
+          "initial_points": 13,
+          "identity_verified": false
+        },
+        {
+          "time": 5.4,
+          "bbox_xyxy": [
+            83.7,
+            416.2,
+            106.7,
+            485.2
+          ],
+          "surviving_points": 10,
+          "initial_points": 13,
+          "identity_verified": false
+        },
+        {
+          "time": 5.6,
+          "bbox_xyxy": [
+            86.7,
+            416.1,
+            109.7,
+            485.1
+          ],
+          "surviving_points": 10,
+          "initial_points": 13,
+          "identity_verified": false
+        },
+        {
+          "time": 5.8,
+          "bbox_xyxy": [
+            89.8,
+            416.3,
+            112.8,
+            485.3
+          ],
+          "surviving_points": 10,
+          "initial_points": 13,
+          "identity_verified": false
+        },
+        {
+          "time": 6.0,
+          "bbox_xyxy": [
+            93.6,
+            416.2,
+            116.6,
+            485.2
+          ],
+          "surviving_points": 10,
+          "initial_points": 13,
+          "identity_verified": false
+        },
+        {
+          "time": 6.2,
+          "bbox_xyxy": [
+            93.6,
+            416.2,
+            116.6,
+            485.2
+          ],
+          "surviving_points": 9,
+          "initial_points": 13,
+          "identity_verified": false
+        },
+        {
+          "time": 6.4,
+          "bbox_xyxy": [
+            93.6,
+            416.2,
+            116.6,
+            485.2
+          ],
+          "surviving_points": 9,
+          "initial_points": 13,
+          "identity_verified": false
+        },
+        {
+          "time": 6.6,
+          "bbox_xyxy": [
+            93.6,
+            416.2,
+            116.6,
+            485.2
+          ],
+          "surviving_points": 9,
+          "initial_points": 13,
+          "identity_verified": false
+        },
+        {
+          "time": 6.8,
+          "bbox_xyxy": [
+            93.6,
+            416.2,
+            116.6,
+            485.2
+          ],
+          "surviving_points": 9,
+          "initial_points": 13,
+          "identity_verified": false
+        }
+      ]
+    },
+    {
+      "id": "s004",
+      "player_id": "white",
+      "time": 60,
+      "bbox_xyxy": [
+        338,
+        411,
+        365,
+        487
+      ],
+      "description": "Plain white top and dark trousers; no jersey number",
+      "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+      "reviewer_kind": "test_operator",
+      "reference": "samples/s004.jpg",
+      "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+      "track_proposals": [
+        {
+          "time": 58.0,
+          "bbox_xyxy": [
+            339.6,
+            411.5,
+            366.6,
+            487.5
+          ],
+          "surviving_points": 16,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 58.2,
+          "bbox_xyxy": [
+            339.5,
+            411.4,
+            366.5,
+            487.4
+          ],
+          "surviving_points": 16,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 58.4,
+          "bbox_xyxy": [
+            339.1,
+            411.4,
+            366.1,
+            487.4
+          ],
+          "surviving_points": 17,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 58.6,
+          "bbox_xyxy": [
+            338.9,
+            411.4,
+            365.9,
+            487.4
+          ],
+          "surviving_points": 17,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 58.8,
+          "bbox_xyxy": [
+            338.6,
+            411.3,
+            365.6,
+            487.3
+          ],
+          "surviving_points": 18,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 59.0,
+          "bbox_xyxy": [
+            338.3,
+            411.1,
+            365.3,
+            487.1
+          ],
+          "surviving_points": 18,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 59.2,
+          "bbox_xyxy": [
+            337.9,
+            411.2,
+            364.9,
+            487.2
+          ],
+          "surviving_points": 18,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 59.4,
+          "bbox_xyxy": [
+            337.8,
+            411.2,
+            364.8,
+            487.2
+          ],
+          "surviving_points": 18,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 59.6,
+          "bbox_xyxy": [
+            337.8,
+            411.3,
+            364.8,
+            487.3
+          ],
+          "surviving_points": 18,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 59.8,
+          "bbox_xyxy": [
+            337.9,
+            411.1,
+            364.9,
+            487.1
+          ],
+          "surviving_points": 18,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 60.2,
+          "bbox_xyxy": [
+            337.9,
+            411.0,
+            364.9,
+            487.0
+          ],
+          "surviving_points": 18,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 60.4,
+          "bbox_xyxy": [
+            337.6,
+            411.0,
+            364.6,
+            487.0
+          ],
+          "surviving_points": 18,
+          "initial_points": 18,
+          "identity_verified": false
+        }
+      ]
+    },
+    {
+      "id": "s005",
+      "player_id": "orange",
+      "time": 5,
+      "bbox_xyxy": [
+        259,
+        410,
+        288,
+        484
+      ],
+      "description": "Orange top and black trousers; no jersey number",
+      "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+      "reviewer_kind": "test_operator",
+      "reference": "samples/s005.jpg",
+      "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+      "track_proposals": [
+        {
+          "time": 4.8,
+          "bbox_xyxy": [
+            259.8,
+            409.5,
+            288.8,
+            483.5
+          ],
+          "surviving_points": 15,
+          "initial_points": 19,
+          "identity_verified": false
+        },
+        {
+          "time": 5.2,
+          "bbox_xyxy": [
+            255.4,
+            410.2,
+            284.4,
+            484.2
+          ],
+          "surviving_points": 18,
+          "initial_points": 19,
+          "identity_verified": false
+        },
+        {
+          "time": 5.4,
+          "bbox_xyxy": [
+            255.1,
+            410.1,
+            284.1,
+            484.1
+          ],
+          "surviving_points": 18,
+          "initial_points": 19,
+          "identity_verified": false
+        },
+        {
+          "time": 5.6,
+          "bbox_xyxy": [
+            254.8,
+            410.1,
+            283.8,
+            484.1
+          ],
+          "surviving_points": 15,
+          "initial_points": 19,
+          "identity_verified": false
+        },
+        {
+          "time": 5.8,
+          "bbox_xyxy": [
+            254.6,
+            410.2,
+            283.6,
+            484.2
+          ],
+          "surviving_points": 14,
+          "initial_points": 19,
+          "identity_verified": false
+        },
+        {
+          "time": 6.0,
+          "bbox_xyxy": [
+            254.7,
+            410.1,
+            283.7,
+            484.1
+          ],
+          "surviving_points": 14,
+          "initial_points": 19,
+          "identity_verified": false
+        },
+        {
+          "time": 6.2,
+          "bbox_xyxy": [
+            254.8,
+            410.1,
+            283.8,
+            484.1
+          ],
+          "surviving_points": 12,
+          "initial_points": 19,
+          "identity_verified": false
+        },
+        {
+          "time": 6.4,
+          "bbox_xyxy": [
+            254.8,
+            410.2,
+            283.8,
+            484.2
+          ],
+          "surviving_points": 11,
+          "initial_points": 19,
+          "identity_verified": false
+        },
+        {
+          "time": 6.6,
+          "bbox_xyxy": [
+            255.1,
+            410.2,
+            284.1,
+            484.2
+          ],
+          "surviving_points": 11,
+          "initial_points": 19,
+          "identity_verified": false
+        },
+        {
+          "time": 6.8,
+          "bbox_xyxy": [
+            256.0,
+            409.9,
+            285.0,
+            483.9
+          ],
+          "surviving_points": 9,
+          "initial_points": 19,
+          "identity_verified": false
+        },
+        {
+          "time": 7.0,
+          "bbox_xyxy": [
+            255.9,
+            409.9,
+            284.9,
+            483.9
+          ],
+          "surviving_points": 9,
+          "initial_points": 19,
+          "identity_verified": false
+        }
+      ]
+    },
+    {
+      "id": "s006",
+      "player_id": "orange",
+      "time": 60,
+      "bbox_xyxy": [
+        258,
+        405,
+        284,
+        487
+      ],
+      "description": "Orange top and black trousers; no jersey number",
+      "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+      "reviewer_kind": "test_operator",
+      "reference": "samples/s006.jpg",
+      "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+      "track_proposals": [
+        {
+          "time": 58.0,
+          "bbox_xyxy": [
+            258.3,
+            405.0,
+            284.3,
+            487.0
+          ],
+          "surviving_points": 12,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 58.2,
+          "bbox_xyxy": [
+            258.3,
+            405.0,
+            284.3,
+            487.0
+          ],
+          "surviving_points": 12,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 58.4,
+          "bbox_xyxy": [
+            258.3,
+            404.9,
+            284.3,
+            486.9
+          ],
+          "surviving_points": 12,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 58.6,
+          "bbox_xyxy": [
+            258.3,
+            404.9,
+            284.3,
+            486.9
+          ],
+          "surviving_points": 12,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 58.8,
+          "bbox_xyxy": [
+            258.3,
+            404.9,
+            284.3,
+            486.9
+          ],
+          "surviving_points": 12,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 59.0,
+          "bbox_xyxy": [
+            258.3,
+            404.9,
+            284.3,
+            486.9
+          ],
+          "surviving_points": 13,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 59.2,
+          "bbox_xyxy": [
+            258.3,
+            404.9,
+            284.3,
+            486.9
+          ],
+          "surviving_points": 13,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 59.4,
+          "bbox_xyxy": [
+            258.3,
+            405.0,
+            284.3,
+            487.0
+          ],
+          "surviving_points": 14,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 59.6,
+          "bbox_xyxy": [
+            258.2,
+            404.7,
+            284.2,
+            486.7
+          ],
+          "surviving_points": 14,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 59.8,
+          "bbox_xyxy": [
+            258.1,
+            405.1,
+            284.1,
+            487.1
+          ],
+          "surviving_points": 16,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 60.2,
+          "bbox_xyxy": [
+            257.9,
+            405.1,
+            283.9,
+            487.1
+          ],
+          "surviving_points": 17,
+          "initial_points": 18,
+          "identity_verified": false
+        },
+        {
+          "time": 60.4,
+          "bbox_xyxy": [
+            257.8,
+            405.0,
+            283.8,
+            487.0
+          ],
+          "surviving_points": 16,
+          "initial_points": 18,
+          "identity_verified": false
+        }
+      ]
+    },
+    {
+      "id": "s007",
+      "player_id": "navy",
+      "time": 0,
+      "bbox_xyxy": [
+        128,
+        409,
+        158,
+        487
+      ],
+      "description": "Plain navy top and navy trousers; no jersey number",
+      "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+      "reviewer_kind": "test_operator",
+      "reference": "samples/s007.jpg",
+      "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+      "track_proposals": [
+        {
+          "time": 0.2,
+          "bbox_xyxy": [
+            128.4,
+            409.0,
+            158.4,
+            487.0
+          ],
+          "surviving_points": 15,
+          "initial_points": 15,
+          "identity_verified": false
+        },
+        {
+          "time": 0.4,
+          "bbox_xyxy": [
+            129.1,
+            408.9,
+            159.1,
+            486.9
+          ],
+          "surviving_points": 14,
+          "initial_points": 15,
+          "identity_verified": false
+        },
+        {
+          "time": 0.6,
+          "bbox_xyxy": [
+            129.7,
+            408.8,
+            159.7,
+            486.8
+          ],
+          "surviving_points": 13,
+          "initial_points": 15,
+          "identity_verified": false
+        },
+        {
+          "time": 0.8,
+          "bbox_xyxy": [
+            130.0,
+            408.8,
+            160.0,
+            486.8
+          ],
+          "surviving_points": 13,
+          "initial_points": 15,
+          "identity_verified": false
+        },
+        {
+          "time": 1.0,
+          "bbox_xyxy": [
+            130.1,
+            408.8,
+            160.1,
+            486.8
+          ],
+          "surviving_points": 13,
+          "initial_points": 15,
+          "identity_verified": false
+        },
+        {
+          "time": 1.2,
+          "bbox_xyxy": [
+            130.1,
+            408.7,
+            160.1,
+            486.7
+          ],
+          "surviving_points": 12,
+          "initial_points": 15,
+          "identity_verified": false
+        },
+        {
+          "time": 1.4,
+          "bbox_xyxy": [
+            130.2,
+            408.7,
+            160.2,
+            486.7
+          ],
+          "surviving_points": 12,
+          "initial_points": 15,
+          "identity_verified": false
+        },
+        {
+          "time": 1.6,
+          "bbox_xyxy": [
+            130.3,
+            408.7,
+            160.3,
+            486.7
+          ],
+          "surviving_points": 11,
+          "initial_points": 15,
+          "identity_verified": false
+        },
+        {
+          "time": 1.8,
+          "bbox_xyxy": [
+            130.3,
+            408.7,
+            160.3,
+            486.7
+          ],
+          "surviving_points": 11,
+          "initial_points": 15,
+          "identity_verified": false
+        },
+        {
+          "time": 2.0,
+          "bbox_xyxy": [
+            130.4,
+            408.8,
+            160.4,
+            486.8
+          ],
+          "surviving_points": 11,
+          "initial_points": 15,
+          "identity_verified": false
+        }
+      ]
+    },
+    {
+      "id": "s008",
+      "player_id": "navy",
+      "time": 5,
+      "bbox_xyxy": [
+        192,
+        406,
+        224,
+        488
+      ],
+      "description": "Plain navy top and navy trousers; no jersey number",
+      "confirmed_by": "Test operator fixture based on source visual review; not the human user",
+      "reviewer_kind": "test_operator",
+      "reference": "samples/s008.jpg",
+      "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+      "track_proposals": [
+        {
+          "time": 3.0,
+          "bbox_xyxy": [
+            191.4,
+            406.0,
+            223.4,
+            488.0
+          ],
+          "surviving_points": 14,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 3.2,
+          "bbox_xyxy": [
+            191.4,
+            406.0,
+            223.4,
+            488.0
+          ],
+          "surviving_points": 14,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 3.4,
+          "bbox_xyxy": [
+            191.4,
+            406.0,
+            223.4,
+            488.0
+          ],
+          "surviving_points": 14,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 3.6,
+          "bbox_xyxy": [
+            191.4,
+            406.0,
+            223.4,
+            488.0
+          ],
+          "surviving_points": 14,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 3.8,
+          "bbox_xyxy": [
+            191.5,
+            406.0,
+            223.5,
+            488.0
+          ],
+          "surviving_points": 14,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 4.0,
+          "bbox_xyxy": [
+            191.5,
+            406.0,
+            223.5,
+            488.0
+          ],
+          "surviving_points": 14,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 4.2,
+          "bbox_xyxy": [
+            191.5,
+            406.0,
+            223.5,
+            488.0
+          ],
+          "surviving_points": 14,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 4.4,
+          "bbox_xyxy": [
+            191.6,
+            405.9,
+            223.6,
+            487.9
+          ],
+          "surviving_points": 14,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 4.6,
+          "bbox_xyxy": [
+            191.6,
+            406.0,
+            223.6,
+            488.0
+          ],
+          "surviving_points": 15,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 4.8,
+          "bbox_xyxy": [
+            191.8,
+            406.0,
+            223.8,
+            488.0
+          ],
+          "surviving_points": 19,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 5.2,
+          "bbox_xyxy": [
+            192.2,
+            405.9,
+            224.2,
+            487.9
+          ],
+          "surviving_points": 17,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 5.4,
+          "bbox_xyxy": [
+            192.2,
+            405.9,
+            224.2,
+            487.9
+          ],
+          "surviving_points": 17,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 5.6,
+          "bbox_xyxy": [
+            192.2,
+            405.9,
+            224.2,
+            487.9
+          ],
+          "surviving_points": 17,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 5.8,
+          "bbox_xyxy": [
+            192.2,
+            405.9,
+            224.2,
+            487.9
+          ],
+          "surviving_points": 17,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 6.0,
+          "bbox_xyxy": [
+            192.2,
+            405.9,
+            224.2,
+            487.9
+          ],
+          "surviving_points": 17,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 6.2,
+          "bbox_xyxy": [
+            192.2,
+            405.9,
+            224.2,
+            487.9
+          ],
+          "surviving_points": 17,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 6.4,
+          "bbox_xyxy": [
+            192.2,
+            405.9,
+            224.2,
+            487.9
+          ],
+          "surviving_points": 17,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 6.6,
+          "bbox_xyxy": [
+            192.2,
+            405.9,
+            224.2,
+            487.9
+          ],
+          "surviving_points": 17,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 6.8,
+          "bbox_xyxy": [
+            192.2,
+            405.9,
+            224.2,
+            487.9
+          ],
+          "surviving_points": 17,
+          "initial_points": 21,
+          "identity_verified": false
+        },
+        {
+          "time": 7.0,
+          "bbox_xyxy": [
+            192.2,
+            405.9,
+            224.2,
+            487.9
+          ],
+          "surviving_points": 17,
+          "initial_points": 21,
+          "identity_verified": false
+        }
+      ]
+    }
+  ],
+  "person_detector": {
+    "method": "YOLOX-Nano 416 CPU + clothing-v2",
+    "model_sha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d",
+    "data": "people/detections.json",
+    "data_sha256": "879ed9b12e651de4583e53b1b14fce9a06ff275da909c089724b140e3471a39c",
+    "ocr_enabled": false
+  }
+}

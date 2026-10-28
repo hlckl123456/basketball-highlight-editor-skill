@@ -1,0 +1,2603 @@
+<!doctype html><meta charset="utf-8"><title>篮球候选复核</title><style>body{font:16px system-ui;max-width:1200px;margin:30px auto;background:#f5f4ef;color:#18232b}article{background:white;padding:20px;margin:20px 0;border-radius:12px}.row{display:flex;flex-wrap:wrap;gap:10px}figure{margin:6px;max-width:210px}figcaption{font-size:12px}pre{white-space:pre-wrap}</style><h1>篮球候选复核</h1><h2>已保存的参考球员</h2><div class="row"><figure><img src="samples/s001.jpg" width="100"><figcaption>green · 130.00s · test_operator</figcaption></figure><figure><img src="samples/s002.jpg" width="100"><figcaption>green · 165.00s · test_operator</figcaption></figure><figure><img src="samples/s003.jpg" width="100"><figcaption>mustard · 130.00s · test_operator</figcaption></figure><figure><img src="samples/s004.jpg" width="100"><figcaption>mustard · 165.00s · test_operator</figcaption></figure></div><p>状态：awaiting_edit_prompt · 修订 11。球衣颜色和 OCR 只是线索；逐段核验号码、稳定服饰及回合归属。</p><p>确认选片后停在 awaiting_edit_prompt；收到下一条剪辑指令才生成版本。</p><pre>{
+  &quot;players&quot;: [
+    {
+      &quot;id&quot;: &quot;green&quot;,
+      &quot;description&quot;: &quot;Plain green shirt, navy shorts, light shoes; no readable jersey number&quot;,
+      &quot;reference&quot;: &quot;samples/s001.jpg&quot;
+    },
+    {
+      &quot;id&quot;: &quot;mustard&quot;,
+      &quot;description&quot;: &quot;Mustard tee, navy shorts, green shoes; no readable jersey number&quot;,
+      &quot;reference&quot;: &quot;samples/s003.jpg&quot;
+    }
+  ],
+  &quot;selection&quot;: {
+    &quot;player_id&quot;: &quot;green&quot;,
+    &quot;high_confidence&quot;: [
+      &quot;c0001&quot;,
+      &quot;c0002&quot;,
+      &quot;c0003&quot;,
+      &quot;c0004&quot;,
+      &quot;c0005&quot;,
+      &quot;c0006&quot;
+    ],
+    &quot;uncertain&quot;: [],
+    &quot;other&quot;: [],
+    &quot;selected_by&quot;: &quot;test_operator fixture, not a new user answer&quot;
+  },
+  &quot;confirmation&quot;: {
+    &quot;project_revision&quot;: 10,
+    &quot;player_id&quot;: &quot;green&quot;,
+    &quot;reviewer_kind&quot;: &quot;test_operator&quot;,
+    &quot;reviewer&quot;: &quot;Public regression test; no fabricated human confirmation&quot;,
+    &quot;decisions&quot;: {
+      &quot;c0001&quot;: &quot;keep&quot;,
+      &quot;c0002&quot;: &quot;keep&quot;,
+      &quot;c0003&quot;: &quot;keep&quot;,
+      &quot;c0004&quot;: &quot;keep&quot;,
+      &quot;c0005&quot;: &quot;keep&quot;,
+      &quot;c0006&quot;: &quot;keep&quot;
+    },
+    &quot;at&quot;: &quot;2026-10-28T07:32:07.792634+00:00&quot;,
+    &quot;kept&quot;: [
+      &quot;c0001&quot;,
+      &quot;c0002&quot;,
+      &quot;c0003&quot;,
+      &quot;c0004&quot;,
+      &quot;c0005&quot;,
+      &quot;c0006&quot;
+    ],
+    &quot;decision_sha256&quot;: &quot;5cdf5cd2dda8a1917ad7f69e27bf6cb0e15c25dbad55b5b9bcc4a3e09ca494a5&quot;
+  }
+}</pre><article><h2>c0001 · 129.00–138.00s</h2><p>Test coverage window; basket/shooter unverified</p><video controls preload="none" width="600" src="rough/high_confidence/c0001.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;candidate_id&quot;: &quot;c0001&quot;,
+  &quot;player_id&quot;: &quot;green&quot;,
+  &quot;certainty&quot;: &quot;high&quot;,
+  &quot;role&quot;: &quot;merely_visible&quot;,
+  &quot;reason&quot;: &quot;Repeated calibrated clothing and short-track evidence; presence only&quot;,
+  &quot;evidence&quot;: [
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 129.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00000_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        213.69,
+        313.17,
+        245.03,
+        400.4
+      ],
+      &quot;track_id&quot;: 5,
+      &quot;model_distance&quot;: 0.25081
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 129.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00002_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        217.44,
+        344.15,
+        253.02,
+        421.94
+      ],
+      &quot;track_id&quot;: 5,
+      &quot;model_distance&quot;: 0.24613
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 130.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00003_p08&quot;,
+      &quot;bbox_xyxy&quot;: [
+        260.45,
+        321.75,
+        296.15,
+        421.54
+      ],
+      &quot;track_id&quot;: 5,
+      &quot;model_distance&quot;: 0.1381
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 130.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00005_p11&quot;,
+      &quot;bbox_xyxy&quot;: [
+        330.27,
+        390.03,
+        373.07,
+        474.2
+      ],
+      &quot;track_id&quot;: 75,
+      &quot;model_distance&quot;: 0.27534
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 131.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00006_p09&quot;,
+      &quot;bbox_xyxy&quot;: [
+        346.42,
+        393.76,
+        388.73,
+        478.15
+      ],
+      &quot;track_id&quot;: 75,
+      &quot;model_distance&quot;: 0.3018
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 131.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00007_p08&quot;,
+      &quot;bbox_xyxy&quot;: [
+        356.43,
+        391.58,
+        396.93,
+        479.64
+      ],
+      &quot;track_id&quot;: 75,
+      &quot;model_distance&quot;: 0.31224
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 131.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00008_p07&quot;,
+      &quot;bbox_xyxy&quot;: [
+        352.29,
+        386.68,
+        400.62,
+        479.25
+      ],
+      &quot;track_id&quot;: 75,
+      &quot;model_distance&quot;: 0.24901
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 132.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00009_p09&quot;,
+      &quot;bbox_xyxy&quot;: [
+        356.7,
+        389.51,
+        401.14,
+        478.99
+      ],
+      &quot;track_id&quot;: 75,
+      &quot;model_distance&quot;: 0.27928
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 132.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00010_p11&quot;,
+      &quot;bbox_xyxy&quot;: [
+        377.79,
+        392.85,
+        417.11,
+        479.67
+      ],
+      &quot;track_id&quot;: 75,
+      &quot;model_distance&quot;: 0.26886
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 132.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00011_p09&quot;,
+      &quot;bbox_xyxy&quot;: [
+        381.81,
+        427.31,
+        425.82,
+        479.0
+      ],
+      &quot;track_id&quot;: 75,
+      &quot;model_distance&quot;: 0.36463
+    }
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;at&quot;: &quot;2026-10-28T07:31:53.170957+00:00&quot;
+}</pre></article><article><h2>c0002 · 139.00–148.00s</h2><p>Test coverage window; basket/shooter unverified</p><video controls preload="none" width="600" src="rough/high_confidence/c0002.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;candidate_id&quot;: &quot;c0002&quot;,
+  &quot;player_id&quot;: &quot;green&quot;,
+  &quot;certainty&quot;: &quot;high&quot;,
+  &quot;role&quot;: &quot;merely_visible&quot;,
+  &quot;reason&quot;: &quot;Repeated calibrated clothing and short-track evidence; presence only&quot;,
+  &quot;evidence&quot;: [
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 139.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00030_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        489.14,
+        231.8,
+        559.69,
+        294.01
+      ],
+      &quot;track_id&quot;: 242,
+      &quot;model_distance&quot;: 0.3584
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 139.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00031_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        518.28,
+        186.04,
+        559.75,
+        261.27
+      ],
+      &quot;track_id&quot;: 242,
+      &quot;model_distance&quot;: 0.31744
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 139.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00032_p08&quot;,
+      &quot;bbox_xyxy&quot;: [
+        521.02,
+        146.58,
+        558.22,
+        216.34
+      ],
+      &quot;track_id&quot;: 242,
+      &quot;model_distance&quot;: 0.37065
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 140.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00033_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        519.22,
+        118.23,
+        559.47,
+        205.9
+      ],
+      &quot;track_id&quot;: 242,
+      &quot;model_distance&quot;: 0.36375
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 140.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00035_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        483.33,
+        83.96,
+        526.67,
+        154.01
+      ],
+      &quot;track_id&quot;: 260,
+      &quot;model_distance&quot;: 0.39986
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 141.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00036_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        472.38,
+        80.44,
+        515.17,
+        155.66
+      ],
+      &quot;track_id&quot;: 260,
+      &quot;model_distance&quot;: 0.35847
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 141.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00037_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        477.79,
+        80.25,
+        511.66,
+        139.85
+      ],
+      &quot;track_id&quot;: 260,
+      &quot;model_distance&quot;: 0.33266
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 142.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00040_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        479.49,
+        142.54,
+        516.0,
+        218.67
+      ],
+      &quot;track_id&quot;: 269,
+      &quot;model_distance&quot;: 0.39113
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 142.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00041_p03&quot;,
+      &quot;bbox_xyxy&quot;: [
+        482.5,
+        148.0,
+        518.06,
+        210.74
+      ],
+      &quot;track_id&quot;: 269,
+      &quot;model_distance&quot;: 0.37784
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 143.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00042_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        479.5,
+        160.21,
+        519.42,
+        210.79
+      ],
+      &quot;track_id&quot;: 269,
+      &quot;model_distance&quot;: 0.37309
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 143.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00043_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        479.7,
+        160.02,
+        525.05,
+        210.06
+      ],
+      &quot;track_id&quot;: 269,
+      &quot;model_distance&quot;: 0.41413
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 143.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00044_p03&quot;,
+      &quot;bbox_xyxy&quot;: [
+        491.75,
+        142.81,
+        520.47,
+        190.77
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.32493
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 144.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00045_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        490.6,
+        138.87,
+        527.24,
+        198.03
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.33874
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 144.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00046_p07&quot;,
+      &quot;bbox_xyxy&quot;: [
+        485.65,
+        135.06,
+        520.23,
+        185.39
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.34666
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 144.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00047_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        469.72,
+        124.54,
+        500.95,
+        171.66
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.30309
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 145.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00048_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        462.91,
+        120.72,
+        483.54,
+        165.66
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.35091
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 145.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00049_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        452.7,
+        126.92,
+        476.59,
+        176.25
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.22775
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 145.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00050_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        447.32,
+        120.83,
+        473.9,
+        175.77
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.2649
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 146.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00051_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        449.39,
+        109.2,
+        477.45,
+        161.66
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.30654
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 146.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00052_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        456.18,
+        96.53,
+        484.65,
+        146.54
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.32494
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 146.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00053_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        456.74,
+        93.78,
+        485.62,
+        137.14
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.3779
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 147.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00054_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        449.19,
+        105.83,
+        478.06,
+        149.28
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.36593
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 147.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00055_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        449.07,
+        124.8,
+        474.49,
+        169.17
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.29536
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 147.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00056_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        451.25,
+        140.83,
+        478.21,
+        188.84
+      ],
+      &quot;track_id&quot;: 274,
+      &quot;model_distance&quot;: 0.34914
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 148.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00057_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        449.52,
+        161.8,
+        479.88,
+        220.37
+      ],
+      &quot;track_id&quot;: 294,
+      &quot;model_distance&quot;: 0.38627
+    }
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;at&quot;: &quot;2026-10-28T07:31:53.170967+00:00&quot;
+}</pre></article><article><h2>c0003 · 149.00–158.00s</h2><p>Test coverage window; basket/shooter unverified</p><video controls preload="none" width="600" src="rough/high_confidence/c0003.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;candidate_id&quot;: &quot;c0003&quot;,
+  &quot;player_id&quot;: &quot;green&quot;,
+  &quot;certainty&quot;: &quot;high&quot;,
+  &quot;role&quot;: &quot;merely_visible&quot;,
+  &quot;reason&quot;: &quot;Repeated calibrated clothing and short-track evidence; presence only&quot;,
+  &quot;evidence&quot;: [
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 149.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00060_p07&quot;,
+      &quot;bbox_xyxy&quot;: [
+        448.06,
+        196.7,
+        475.26,
+        252.0
+      ],
+      &quot;track_id&quot;: 294,
+      &quot;model_distance&quot;: 0.37268
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 149.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00061_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        451.93,
+        190.71,
+        483.46,
+        242.53
+      ],
+      &quot;track_id&quot;: 294,
+      &quot;model_distance&quot;: 0.38729
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 149.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00062_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        455.59,
+        185.46,
+        489.24,
+        242.4
+      ],
+      &quot;track_id&quot;: 294,
+      &quot;model_distance&quot;: 0.36084
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 150.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00063_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        453.81,
+        157.97,
+        490.27,
+        223.53
+      ],
+      &quot;track_id&quot;: 318,
+      &quot;model_distance&quot;: 0.51931
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 150.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00064_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        456.52,
+        144.42,
+        486.6,
+        223.35
+      ],
+      &quot;track_id&quot;: 318,
+      &quot;model_distance&quot;: 0.34485
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 150.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00065_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        452.37,
+        166.71,
+        483.63,
+        220.11
+      ],
+      &quot;track_id&quot;: 318,
+      &quot;model_distance&quot;: 0.34375
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 151.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00066_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        456.33,
+        146.09,
+        481.7,
+        206.8
+      ],
+      &quot;track_id&quot;: 318,
+      &quot;model_distance&quot;: 0.39782
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 151.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00067_p09&quot;,
+      &quot;bbox_xyxy&quot;: [
+        459.12,
+        133.57,
+        480.76,
+        186.68
+      ],
+      &quot;track_id&quot;: 318,
+      &quot;model_distance&quot;: 0.36125
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 152.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00069_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        452.11,
+        125.25,
+        476.52,
+        174.51
+      ],
+      &quot;track_id&quot;: 318,
+      &quot;model_distance&quot;: 0.34381
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 152.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00070_p11&quot;,
+      &quot;bbox_xyxy&quot;: [
+        456.8,
+        118.57,
+        477.61,
+        173.57
+      ],
+      &quot;track_id&quot;: 318,
+      &quot;model_distance&quot;: 0.30133
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 152.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00071_p13&quot;,
+      &quot;bbox_xyxy&quot;: [
+        460.67,
+        107.14,
+        482.92,
+        154.45
+      ],
+      &quot;track_id&quot;: 318,
+      &quot;model_distance&quot;: 0.30786
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 153.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00073_p10&quot;,
+      &quot;bbox_xyxy&quot;: [
+        484.02,
+        112.1,
+        515.23,
+        150.6
+      ],
+      &quot;track_id&quot;: 318,
+      &quot;model_distance&quot;: 0.3683
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 153.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00074_p09&quot;,
+      &quot;bbox_xyxy&quot;: [
+        501.32,
+        120.22,
+        525.5,
+        154.12
+      ],
+      &quot;track_id&quot;: 318,
+      &quot;model_distance&quot;: 0.40292
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 154.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00075_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        383.14,
+        331.52,
+        416.39,
+        378.68
+      ],
+      &quot;track_id&quot;: 351,
+      &quot;model_distance&quot;: 0.45858
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 154.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00077_p03&quot;,
+      &quot;bbox_xyxy&quot;: [
+        362.22,
+        323.96,
+        398.49,
+        386.1
+      ],
+      &quot;track_id&quot;: 351,
+      &quot;model_distance&quot;: 0.45265
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 155.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00078_p02&quot;,
+      &quot;bbox_xyxy&quot;: [
+        343.67,
+        320.67,
+        391.17,
+        385.91
+      ],
+      &quot;track_id&quot;: 351,
+      &quot;model_distance&quot;: 0.39213
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 155.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00079_p02&quot;,
+      &quot;bbox_xyxy&quot;: [
+        331.71,
+        307.83,
+        368.87,
+        361.07
+      ],
+      &quot;track_id&quot;: 351,
+      &quot;model_distance&quot;: 0.44871
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 155.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00080_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        323.62,
+        298.38,
+        362.78,
+        351.86
+      ],
+      &quot;track_id&quot;: 351,
+      &quot;model_distance&quot;: 0.38783
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 156.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00081_p03&quot;,
+      &quot;bbox_xyxy&quot;: [
+        320.25,
+        288.06,
+        356.95,
+        343.66
+      ],
+      &quot;track_id&quot;: 351,
+      &quot;model_distance&quot;: 0.37839
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 156.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00082_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        328.1,
+        284.07,
+        360.99,
+        340.99
+      ],
+      &quot;track_id&quot;: 351,
+      &quot;model_distance&quot;: 0.38605
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 156.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00083_p03&quot;,
+      &quot;bbox_xyxy&quot;: [
+        337.61,
+        278.08,
+        367.81,
+        334.95
+      ],
+      &quot;track_id&quot;: 351,
+      &quot;model_distance&quot;: 0.35054
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 157.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00085_p02&quot;,
+      &quot;bbox_xyxy&quot;: [
+        335.54,
+        278.6,
+        368.68,
+        319.53
+      ],
+      &quot;track_id&quot;: 351,
+      &quot;model_distance&quot;: 0.44756
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 158.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00087_p02&quot;,
+      &quot;bbox_xyxy&quot;: [
+        327.38,
+        298.1,
+        362.05,
+        338.24
+      ],
+      &quot;track_id&quot;: 351,
+      &quot;model_distance&quot;: 0.45133
+    }
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;at&quot;: &quot;2026-10-28T07:31:53.170969+00:00&quot;
+}</pre></article><article><h2>c0004 · 159.00–168.00s</h2><p>Test coverage window; basket/shooter unverified</p><video controls preload="none" width="600" src="rough/high_confidence/c0004.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;candidate_id&quot;: &quot;c0004&quot;,
+  &quot;player_id&quot;: &quot;green&quot;,
+  &quot;certainty&quot;: &quot;high&quot;,
+  &quot;role&quot;: &quot;merely_visible&quot;,
+  &quot;reason&quot;: &quot;Repeated calibrated clothing and short-track evidence; presence only&quot;,
+  &quot;evidence&quot;: [
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 160.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00093_p03&quot;,
+      &quot;bbox_xyxy&quot;: [
+        468.85,
+        123.83,
+        497.06,
+        178.27
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.43056
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 160.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00094_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        451.53,
+        124.05,
+        481.44,
+        173.62
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.35375
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 160.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00095_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        435.69,
+        119.5,
+        469.44,
+        177.08
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.29858
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 161.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00096_p02&quot;,
+      &quot;bbox_xyxy&quot;: [
+        429.48,
+        118.54,
+        455.61,
+        182.34
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.31333
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 161.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00097_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        422.25,
+        125.97,
+        449.11,
+        196.17
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.29708
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 161.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00098_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        416.28,
+        131.71,
+        440.02,
+        197.24
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.33281
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 162.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00099_p03&quot;,
+      &quot;bbox_xyxy&quot;: [
+        397.39,
+        129.15,
+        421.06,
+        184.62
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.418
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 162.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00100_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        389.07,
+        129.63,
+        413.86,
+        194.91
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.37416
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 162.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00101_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        382.35,
+        135.64,
+        403.19,
+        196.13
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.38128
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 163.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00102_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        372.66,
+        142.97,
+        402.45,
+        204.4
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.33309
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 163.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00103_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        369.13,
+        152.96,
+        396.59,
+        211.67
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.26959
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 163.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00104_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        354.11,
+        161.52,
+        389.05,
+        235.83
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.31042
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 164.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00105_p00&quot;,
+      &quot;bbox_xyxy&quot;: [
+        298.2,
+        129.1,
+        345.76,
+        220.17
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.19549
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 164.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00106_p01&quot;,
+      &quot;bbox_xyxy&quot;: [
+        316.31,
+        131.42,
+        345.87,
+        222.46
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.1235
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 164.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00107_p03&quot;,
+      &quot;bbox_xyxy&quot;: [
+        327.71,
+        138.0,
+        366.06,
+        229.02
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.10057
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 165.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00108_p02&quot;,
+      &quot;bbox_xyxy&quot;: [
+        338.93,
+        141.78,
+        366.98,
+        230.02
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.09209
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 165.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00109_p02&quot;,
+      &quot;bbox_xyxy&quot;: [
+        343.49,
+        146.32,
+        381.23,
+        231.07
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.18371
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 165.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00110_p03&quot;,
+      &quot;bbox_xyxy&quot;: [
+        343.41,
+        143.47,
+        373.29,
+        231.73
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.22882
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 166.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00111_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        344.3,
+        160.42,
+        387.07,
+        228.64
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.26301
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 166.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00112_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        349.55,
+        160.21,
+        385.75,
+        225.03
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.2295
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 166.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00113_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        345.16,
+        160.13,
+        387.62,
+        224.58
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.26111
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 167.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00114_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        339.44,
+        160.65,
+        377.1,
+        215.23
+      ],
+      &quot;track_id&quot;: 391,
+      &quot;model_distance&quot;: 0.35881
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 167.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00115_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        330.8,
+        124.19,
+        365.85,
+        204.23
+      ],
+      &quot;track_id&quot;: 474,
+      &quot;model_distance&quot;: 0.27027
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 167.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00116_p03&quot;,
+      &quot;bbox_xyxy&quot;: [
+        313.99,
+        128.73,
+        363.21,
+        212.19
+      ],
+      &quot;track_id&quot;: 474,
+      &quot;model_distance&quot;: 0.19879
+    }
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;at&quot;: &quot;2026-10-28T07:31:53.170970+00:00&quot;
+}</pre></article><article><h2>c0005 · 169.00–178.00s</h2><p>Test coverage window; basket/shooter unverified</p><video controls preload="none" width="600" src="rough/high_confidence/c0005.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;candidate_id&quot;: &quot;c0005&quot;,
+  &quot;player_id&quot;: &quot;green&quot;,
+  &quot;certainty&quot;: &quot;high&quot;,
+  &quot;role&quot;: &quot;merely_visible&quot;,
+  &quot;reason&quot;: &quot;Repeated calibrated clothing and short-track evidence; presence only&quot;,
+  &quot;evidence&quot;: [
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 169.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00120_p08&quot;,
+      &quot;bbox_xyxy&quot;: [
+        311.55,
+        102.22,
+        342.77,
+        173.23
+      ],
+      &quot;track_id&quot;: 493,
+      &quot;model_distance&quot;: 0.30387
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 169.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00121_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        301.16,
+        105.53,
+        343.27,
+        195.81
+      ],
+      &quot;track_id&quot;: 493,
+      &quot;model_distance&quot;: 0.31707
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 169.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00122_p03&quot;,
+      &quot;bbox_xyxy&quot;: [
+        313.78,
+        98.3,
+        347.53,
+        178.31
+      ],
+      &quot;track_id&quot;: 493,
+      &quot;model_distance&quot;: 0.31007
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 170.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00123_p03&quot;,
+      &quot;bbox_xyxy&quot;: [
+        335.88,
+        88.05,
+        369.52,
+        155.77
+      ],
+      &quot;track_id&quot;: 493,
+      &quot;model_distance&quot;: 0.3066
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 170.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00124_p04&quot;,
+      &quot;bbox_xyxy&quot;: [
+        365.04,
+        95.82,
+        400.44,
+        163.64
+      ],
+      &quot;track_id&quot;: 493,
+      &quot;model_distance&quot;: 0.29358
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 170.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00125_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        404.91,
+        92.84,
+        433.08,
+        171.81
+      ],
+      &quot;track_id&quot;: 493,
+      &quot;model_distance&quot;: 0.30692
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 171.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00126_p08&quot;,
+      &quot;bbox_xyxy&quot;: [
+        441.38,
+        105.28,
+        469.52,
+        186.35
+      ],
+      &quot;track_id&quot;: 493,
+      &quot;model_distance&quot;: 0.29097
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 171.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00127_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        456.03,
+        117.36,
+        510.33,
+        208.06
+      ],
+      &quot;track_id&quot;: 493,
+      &quot;model_distance&quot;: 0.32968
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 171.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00128_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        479.59,
+        115.35,
+        526.88,
+        209.23
+      ],
+      &quot;track_id&quot;: 493,
+      &quot;model_distance&quot;: 0.43493
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 172.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00129_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        501.32,
+        114.29,
+        527.6,
+        154.35
+      ],
+      &quot;track_id&quot;: 528,
+      &quot;model_distance&quot;: 0.44977
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 172.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00131_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        476.28,
+        121.13,
+        516.4,
+        199.29
+      ],
+      &quot;track_id&quot;: 528,
+      &quot;model_distance&quot;: 0.2856
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 173.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00132_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        481.81,
+        146.44,
+        505.07,
+        219.8
+      ],
+      &quot;track_id&quot;: 547,
+      &quot;model_distance&quot;: 0.21475
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 173.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00134_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        483.19,
+        148.49,
+        555.29,
+        262.47
+      ],
+      &quot;track_id&quot;: 547,
+      &quot;model_distance&quot;: 0.31408
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 174.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00135_p07&quot;,
+      &quot;bbox_xyxy&quot;: [
+        518.81,
+        185.14,
+        588.11,
+        291.96
+      ],
+      &quot;track_id&quot;: 547,
+      &quot;model_distance&quot;: 0.36307
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 174.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00136_p07&quot;,
+      &quot;bbox_xyxy&quot;: [
+        549.47,
+        233.03,
+        612.51,
+        303.69
+      ],
+      &quot;track_id&quot;: 547,
+      &quot;model_distance&quot;: 0.28525
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 174.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00137_p10&quot;,
+      &quot;bbox_xyxy&quot;: [
+        561.57,
+        256.87,
+        626.73,
+        343.28
+      ],
+      &quot;track_id&quot;: 547,
+      &quot;model_distance&quot;: 0.24289
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 175.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00138_p09&quot;,
+      &quot;bbox_xyxy&quot;: [
+        572.84,
+        276.78,
+        690.93,
+        401.07
+      ],
+      &quot;track_id&quot;: 547,
+      &quot;model_distance&quot;: 0.45468
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 175.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00139_p09&quot;,
+      &quot;bbox_xyxy&quot;: [
+        591.03,
+        282.58,
+        665.55,
+        383.97
+      ],
+      &quot;track_id&quot;: 563,
+      &quot;model_distance&quot;: 0.28145
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 175.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00140_p07&quot;,
+      &quot;bbox_xyxy&quot;: [
+        576.57,
+        285.04,
+        656.53,
+        383.29
+      ],
+      &quot;track_id&quot;: 563,
+      &quot;model_distance&quot;: 0.26988
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 176.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00141_p10&quot;,
+      &quot;bbox_xyxy&quot;: [
+        564.08,
+        281.84,
+        625.09,
+        384.62
+      ],
+      &quot;track_id&quot;: 563,
+      &quot;model_distance&quot;: 0.28643
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 176.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00142_p08&quot;,
+      &quot;bbox_xyxy&quot;: [
+        533.68,
+        271.94,
+        580.05,
+        359.89
+      ],
+      &quot;track_id&quot;: 563,
+      &quot;model_distance&quot;: 0.32219
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 176.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00143_p06&quot;,
+      &quot;bbox_xyxy&quot;: [
+        478.95,
+        259.7,
+        526.31,
+        358.86
+      ],
+      &quot;track_id&quot;: 563,
+      &quot;model_distance&quot;: 0.2291
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 177.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00144_p05&quot;,
+      &quot;bbox_xyxy&quot;: [
+        447.18,
+        252.14,
+        506.23,
+        349.69
+      ],
+      &quot;track_id&quot;: 563,
+      &quot;model_distance&quot;: 0.21974
+    }
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;at&quot;: &quot;2026-10-28T07:31:53.170972+00:00&quot;
+}</pre></article><article><h2>c0006 · 179.00–189.00s</h2><p>Test coverage window; basket/shooter unverified</p><video controls preload="none" width="600" src="rough/high_confidence/c0006.mp4"></video><div class="row"></div><details><summary>Local feature proposals (0)</summary><div class="row"></div></details><pre>{
+  &quot;candidate_id&quot;: &quot;c0006&quot;,
+  &quot;player_id&quot;: &quot;green&quot;,
+  &quot;certainty&quot;: &quot;high&quot;,
+  &quot;role&quot;: &quot;merely_visible&quot;,
+  &quot;reason&quot;: &quot;Repeated calibrated clothing and short-track evidence; presence only&quot;,
+  &quot;evidence&quot;: [
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 179.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00150_p09&quot;,
+      &quot;bbox_xyxy&quot;: [
+        685.84,
+        204.51,
+        735.71,
+        310.43
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.31173
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 179.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00151_p10&quot;,
+      &quot;bbox_xyxy&quot;: [
+        696.09,
+        190.99,
+        759.8,
+        269.99
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.3701
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 179.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00152_p11&quot;,
+      &quot;bbox_xyxy&quot;: [
+        709.83,
+        182.21,
+        785.92,
+        273.19
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.3041
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 180.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00153_p11&quot;,
+      &quot;bbox_xyxy&quot;: [
+        713.4,
+        182.18,
+        797.47,
+        266.46
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.30228
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 180.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00154_p12&quot;,
+      &quot;bbox_xyxy&quot;: [
+        741.05,
+        172.4,
+        806.3,
+        262.99
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.29394
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 180.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00155_p11&quot;,
+      &quot;bbox_xyxy&quot;: [
+        749.32,
+        162.58,
+        806.06,
+        259.59
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.28837
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 181.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00156_p14&quot;,
+      &quot;bbox_xyxy&quot;: [
+        751.01,
+        157.72,
+        810.99,
+        253.72
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.26112
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 181.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00157_p13&quot;,
+      &quot;bbox_xyxy&quot;: [
+        752.29,
+        161.65,
+        815.66,
+        255.51
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.27874
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 181.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00158_p15&quot;,
+      &quot;bbox_xyxy&quot;: [
+        756.73,
+        166.63,
+        823.79,
+        257.87
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.29874
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 182.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00159_p13&quot;,
+      &quot;bbox_xyxy&quot;: [
+        734.24,
+        167.11,
+        815.19,
+        258.15
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.30897
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 182.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00160_p14&quot;,
+      &quot;bbox_xyxy&quot;: [
+        732.11,
+        162.3,
+        799.4,
+        255.8
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.29992
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 182.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00161_p15&quot;,
+      &quot;bbox_xyxy&quot;: [
+        733.04,
+        163.12,
+        788.32,
+        250.64
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.27238
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 183.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00162_p17&quot;,
+      &quot;bbox_xyxy&quot;: [
+        723.04,
+        167.83,
+        788.94,
+        260.44
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.28701
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 183.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00163_p14&quot;,
+      &quot;bbox_xyxy&quot;: [
+        720.25,
+        174.2,
+        789.71,
+        258.93
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.29013
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 183.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00164_p16&quot;,
+      &quot;bbox_xyxy&quot;: [
+        701.61,
+        169.63,
+        778.88,
+        260.95
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.29644
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 184.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00165_p17&quot;,
+      &quot;bbox_xyxy&quot;: [
+        706.54,
+        167.99,
+        769.58,
+        261.51
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.29234
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 184.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00166_p17&quot;,
+      &quot;bbox_xyxy&quot;: [
+        701.88,
+        168.54,
+        774.49,
+        264.64
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.30717
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 184.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00167_p16&quot;,
+      &quot;bbox_xyxy&quot;: [
+        703.37,
+        175.74,
+        791.35,
+        264.64
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.29849
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 185.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00168_p16&quot;,
+      &quot;bbox_xyxy&quot;: [
+        712.98,
+        180.04,
+        803.68,
+        264.62
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.31913
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 185.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00169_p14&quot;,
+      &quot;bbox_xyxy&quot;: [
+        734.56,
+        175.49,
+        811.33,
+        263.44
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.29523
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 185.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00170_p13&quot;,
+      &quot;bbox_xyxy&quot;: [
+        736.49,
+        169.16,
+        811.14,
+        263.16
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.28361
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 186.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00171_p13&quot;,
+      &quot;bbox_xyxy&quot;: [
+        752.63,
+        169.19,
+        817.49,
+        261.08
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.27191
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 186.333,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00172_p14&quot;,
+      &quot;bbox_xyxy&quot;: [
+        744.6,
+        176.79,
+        833.25,
+        261.2
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.28051
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 186.667,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00173_p19&quot;,
+      &quot;bbox_xyxy&quot;: [
+        769.54,
+        183.26,
+        848.82,
+        271.04
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.28217
+    },
+    {
+      &quot;kind&quot;: &quot;confirmed_sample_match&quot;,
+      &quot;time&quot;: 187.0,
+      &quot;sample_id&quot;: &quot;s001&quot;,
+      &quot;detail&quot;: &quot;Local model proposal: clothing-v2 + short tracklet; compare all saved samples&quot;,
+      &quot;sample_ids&quot;: [
+        &quot;s001&quot;,
+        &quot;s002&quot;
+      ],
+      &quot;observation_id&quot;: &quot;f00174_p13&quot;,
+      &quot;bbox_xyxy&quot;: [
+        782.07,
+        199.08,
+        853.79,
+        289.03
+      ],
+      &quot;track_id&quot;: 588,
+      &quot;model_distance&quot;: 0.3066
+    }
+  ],
+  &quot;reviewer&quot;: {
+    &quot;kind&quot;: &quot;local_model&quot;,
+    &quot;name&quot;: &quot;calibrated clothing + temporal consensus&quot;
+  },
+  &quot;at&quot;: &quot;2026-10-28T07:31:53.170973+00:00&quot;
+}</pre></article><section style="background:#e3eee9;padding:20px"><h2>逐段决定</h2><p>填写后下载复核 JSON，交给 Codex 保存项目。此页不会合并成片或联网。</p><label>复核人 <input id="reviewer" placeholder="你的称呼"></label><div id="choices"></div><button id="download">下载选片决定 JSON</button><p id="message"></p></section><script>const config={"revision": 11, "player": "green", "ids": ["c0001", "c0002", "c0003", "c0004", "c0005", "c0006"]};
+const choices=document.getElementById('choices');
+for(const id of config.ids){const label=document.createElement('label');label.style.display='block';label.append(id+' ');const s=document.createElement('select');s.id='decision-'+id;for(const [v,t] of [['','请选择'],['keep','保留'],['reject','删除']]){const o=document.createElement('option');o.value=v;o.textContent=t;s.append(o)}label.append(s);choices.append(label)}
+document.getElementById('download').onclick=()=>{const reviewer=document.getElementById('reviewer').value.trim();const decisions={};for(const id of config.ids){decisions[id]=document.getElementById('decision-'+id).value}if(!reviewer||Object.values(decisions).some(v=>!v)){document.getElementById('message').textContent='请填写复核人并决定每一段。';return}const data={project_revision:config.revision,player_id:config.player,reviewer_kind:'user',reviewer,authorization_reference:'Manual local review.html submission at revision '+config.revision,decisions};const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='review-decisions.json';a.click();URL.revokeObjectURL(a.href);document.getElementById('message').textContent='已下载。请把决定文件交给 Codex，保存后会等待下一条剪辑指令。'};</script>

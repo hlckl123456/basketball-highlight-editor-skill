@@ -1,6 +1,6 @@
 # Validation scope and limits
 
-Test date: 2026-10-27, America/Los_Angeles. This is a working assisted workflow, not a validated autonomous basketball-player recognition model.
+Initial test: 2026-10-27; unnumbered extension: 2026-10-28, America/Los_Angeles. This is a working assisted workflow, not a validated autonomous basketball-player recognition model.
 
 ## Public real-video smoke test
 
@@ -19,8 +19,20 @@ Test date: 2026-10-27, America/Los_Angeles. This is a working assisted workflow,
 
 `tests/test_workflow.py` exercises source integrity, out-of-bounds ranges, color-only identity rejection, saved-sample requirements, uncertainty routing, explicit reviewer attribution, incomplete/stale/wrong-player review rejection, no render on confirmation, rejection of excluded clips in later versions, and two independent rendered versions from silent source. The concrete run log accompanies the task's outputs; run the suite again after code changes.
 
+## Unnumbered extension, v1.1
+
+See the repository's `docs/UNNUMBERED_CASE_STUDY.zh-CN.md` for source media, full annotation provenance and every failure. Five licensed videos from four filming scenes were retained. University casual clothing (four targets) and Ljubljana park footage (two plain-clothing targets among numbered distractors) were measured with explicit one/two sample calibration per target, excluded from scoring. Labels were produced by Codex visual review as a test operator, not independently human-verified.
+
+The algorithm was frozen before seed 20261028 selected twelve additional times in each video. These are within-video holdouts, not new independent venues. At those times, university had 14 TP / 0 FP / 3 FN (17 visible target frames, 43 scored player-time pairs, 5 unknown labels); park had 22 TP / 0 FP / 2 FN (24 visible target frames). Combined observed precision is 36/36 and visible-frame recall 36/41. The predeclared short-clip gate was precision >=95% and recall >=80%; both scenes passed. Small correlated samples and no independent label audit limit this evidence.
+
+Final development scoring requires IoU >=.35 and the correct identity's truth box to be the best-overlapping known identity. It counts a crossing/merged university box as an identity error: 21 TP / 1 FP / 5 FN, rather than crediting either overlapping person. Park development: 16 / 0 / 2. Similar-clothing Ukraine stress footage: 4 / 0 / 4, failing recall. Moscow moving/fenced footage remains a screening failure without reliable identity ground truth. None is silently dropped or represented as a full-game success.
+
+Production code exactly reproduced frozen v3 accepted/uncertain predictions on all archived observations. Fresh video decoding changed some per-frame distances/acceptances compared with the rounded-time re-description cache (4/182 university records, 141/180 park records); both development and holdout evaluation counts were unchanged. The fresh-run receipt discloses this difference rather than asserting byte-identical inference. Fresh integrated CPU scans yielded 182 samples / 272 person boxes at the university and 180 samples / 2571 boxes at the park. Complete test projects produced respectively 2 high + 4 uncertain windows and 6 high windows, then saved EDLs with test-operator confirmations and no versions. Windows are test coverage, not detected scores. The original real-user Indiana project remains revision 10.
+
+Eight additional tests cover isolated-glimpse rejection, lookalike ambiguity, long-gap breaks, incompatible clothing, conflicting anchors and overlapping identity scoring, plus short-track support and exposure tolerance. Two additional state tests reject altered scan files and verify that model proposals invalidate confirmation without promoting test operators to users. Together with the original 15 state tests, 25 pass in the existing runtime. Base environments without vision packages explicitly skip these eight vision tests.
+
 ## What has not been established
 
-No measured full-game precision/recall, tracking identity-switch rate or unnumbered-player identification accuracy. No guarantee of all possessions, assists, steals or defensive involvement. No validated face recognition, person re-identification embedding model, smart portrait reframing, soundtrack/caption system, or native CapCut/Jianying project integration. A short clip with one selected player and manual evidence review cannot substantiate those claims.
+No measured full-game precision/recall or long-term tracking identity-switch rate. Unnumbered-player measurements above cover short, correlated samples only. No guarantee of all possessions, assists, steals or defensive involvement. No validated face recognition, person re-identification embedding model, smart portrait reframing, soundtrack/caption system, or native CapCut/Jianying project integration. A short clip with one selected player and manual evidence review cannot substantiate those claims.
 
 For similar uniforms without unique visible clothing, ask for additional confirmed samples and keep unresolved clips uncertain. If clothing remains indistinguishable, manual review is required. Never make an unsupported person match simply to fill the high-confidence group.
