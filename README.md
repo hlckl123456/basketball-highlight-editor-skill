@@ -8,13 +8,15 @@ A local, review-first basketball highlight skill for Codex. Includes runnable sc
 
 这次用固定视角的校园便装篮球录像验证。选一张**白色 T 恤、深色长裤**参考，程序从后段自动找回同一个穿着的人。主演示每次只给目标一张参考，没有逐段手填高置信或保留编号。
 
-[![看固定机位自动识别 demo](docs/automatic-fixed-demo/cover.png)](docs/automatic-fixed-demo/fixed-automatic-demo.mp4)
+[![看固定机位自动识别 demo](docs/automatic-fixed-demo/cover.png)](https://raw.githubusercontent.com/hlckl123456/basketball-highlight-editor-skill/main/docs/automatic-fixed-demo/fixed-automatic-demo.mp4)
 
-**[▶ 看实际操作演示，中文 AI 配音](docs/automatic-fixed-demo/fixed-automatic-demo.mp4)** · **[▶ 看自动选出并导出的 6 秒草稿](examples/fixed-camera-automatic/project/versions/automatic-draft-v2/reel.mp4)**
+**[▶ 看实际操作演示，中文 AI 配音](https://raw.githubusercontent.com/hlckl123456/basketball-highlight-editor-skill/main/docs/automatic-fixed-demo/fixed-automatic-demo.mp4)** · **[▶ 看自动选出并导出的 6 秒草稿](https://raw.githubusercontent.com/hlckl123456/basketball-highlight-editor-skill/main/examples/fixed-camera-automatic/project/versions/automatic-draft-v2/reel.mp4)**
 
-<video controls preload="metadata" width="960" poster="docs/automatic-fixed-demo/cover.png" src="docs/automatic-fixed-demo/fixed-automatic-demo.mp4"><a href="docs/automatic-fixed-demo/fixed-automatic-demo.mp4">播放或下载 demo</a></video>
+<video controls preload="metadata" width="960" poster="docs/automatic-fixed-demo/cover.png" src="https://raw.githubusercontent.com/hlckl123456/basketball-highlight-editor-skill/main/docs/automatic-fixed-demo/fixed-automatic-demo.mp4"><a href="https://raw.githubusercontent.com/hlckl123456/basketball-highlight-editor-skill/main/docs/automatic-fixed-demo/fixed-automatic-demo.mp4">播放或下载 demo</a></video>
 
-[可操作的真实结果回放](examples/fixed-camera-automatic/recognition.html) · [完整案例与新旧对照](docs/AUTOMATIC_FIXED_CASE.zh-CN.md) · [全部粗剪复核页](examples/fixed-camera-automatic/project/review-before-confirm.html) · [算法与验证报告](docs/reports/automatic-appearance.md)
+[本地交互结果回放](examples/fixed-camera-automatic/recognition.html) · [完整案例与新旧对照](docs/AUTOMATIC_FIXED_CASE.zh-CN.md) · [全部粗剪复核页](examples/fixed-camera-automatic/project/review-before-confirm.html) · [算法与验证报告](docs/reports/automatic-appearance.md)
+
+视频链接可直接打开。交互回放和粗剪复核页需要先下载完整仓库，再在本地打开 HTML；GitHub 网页只展示这些 HTML 的源码。
 
 同一原片、同一张参考、同一批 21 个覆盖窗口：旧颜色策略 0 个高置信，新服饰纹理与连续证据策略 **2 个高置信、19 个不确定**。两个高置信窗口均远离参考，程序自动接成六秒草稿；它们相邻，属于同一次后段重新出现，不能当成两个独立成功实验。绿色框来自实际本地推理输出，回放页不做实时推理。
 
@@ -34,7 +36,7 @@ A local, review-first basketball highlight skill for Codex. Includes runnable sc
 
 本机 60 分钟 1080p 带音轨输入在缓存命中时，独立 CLI 流程用时 246.2 秒、进程树采样峰值 275.5 MiB；工作量为 120 个六秒窗口、全部 12 分钟粗剪、最后输出 60 秒。
 
-检测结果按视频和参数哈希缓存。VFR 与音频预留时间按视频 PTS 定位，渲染保留名义帧率，并记录累计帧数。大视频只由脚本在忽略的 work 目录生成。CI 模板已接入快速矩阵，完整矩阵和性能测试可选启用；这次只在本地分支提交，没有推送。
+检测结果按视频和参数哈希缓存。VFR 与音频预留时间按视频 PTS 定位，渲染保留名义帧率，并记录累计帧数。大视频只由脚本在忽略的 work 目录生成。CI 模板已接入快速矩阵，完整矩阵和性能测试可选启用。
 
 ## 召回优先检测实验（goal-3-detection）
 
