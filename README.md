@@ -4,6 +4,18 @@
 
 A local, review-first basketball highlight skill for Codex. Includes runnable scripts, tests, licensed real-video cases and evidence replay. Player identity is evidence-backed and reviewable, not an autonomous recognition guarantee.
 
+## 两分钟使用演示
+
+<video controls preload="metadata" width="960" poster="docs/demo/cover.png" src="docs/demo/basketball-skill-demo.mp4">
+  <a href="docs/demo/basketball-skill-demo.mp4">播放或下载使用演示</a>
+</video>
+
+[播放／下载 Demo（MP4）](docs/demo/basketball-skill-demo.mp4) · [口播稿](docs/demo/口播稿.md) · [字幕](docs/demo/demo.srt) · [演示来源与说明](docs/demo/README.md)
+
+1 分 52 秒，1080p，中文 AI 配音。按“交本地录像 → 选参考球员 → 复核保留／删除 → 另提剪辑要求 → 看实际导出”展示用法。
+
+视频使用公开案例重放，模拟操作均记为 `test_operator`，没有新增人工确认；在场证据不等于得分归属，也不代表整场无号码识别已验证。
+
 **已加入真实无号码场景测试：大学球场与公园航拍的随机留出时间点共认对 36/41 个可见目标帧，未发现误认。方法、全部样本和失败记录见[无号码实测案例](docs/UNNUMBERED_CASE_STUDY.zh-CN.md)。这是短片抽样结果，尚无整场比赛验证。**
 
 ![公开测试视频的候选画面](examples/indiana/project/frames/c0003_f001.jpg)

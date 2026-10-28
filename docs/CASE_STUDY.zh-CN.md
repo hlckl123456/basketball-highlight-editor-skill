@@ -2,6 +2,16 @@
 
 这份案例记录了一次实际执行，包括失败、人工选择和最终状态。所有链接对应仓库内的真实文件，不用虚构的高光结果代替测试。原始实验日期为 2026 年 10 月 27 日，时区为 America/Los_Angeles。
 
+## 使用流程视频
+
+<video controls preload="metadata" width="960" poster="demo/cover.png" src="demo/basketball-skill-demo.mp4">
+  <a href="demo/basketball-skill-demo.mp4">播放或下载 Demo</a>
+</video>
+
+[播放／下载 1 分 52 秒演示](demo/basketball-skill-demo.mp4) · [口播稿与字幕说明](demo/README.md)
+
+这是后续制作的公开案例重放，包含真实复核页和实际导出，配音为 AI；演示操作均为 `test_operator`，不是原用户操作实录，不改写下文的原始确认记录。
+
 ## 1. 输入是什么
 
 视频来自 Wikimedia Commons 的 [Indiana Legends Versus Indiana Lyons](https://commons.wikimedia.org/wiki/File:Indiana_Legends_Versus_Indiana_Lyons,_20240224_183141_(165)_(165).webm)。作者为 Koavf / Justin Anthony Knapp，文件页标明自己的作品并以 CC0 1.0 提供。本仓库保留来源和作者；这不是任务用户本人的比赛，也不暗示画中人物参与或认可本项目。
