@@ -1,0 +1,13 @@
+{
+  "project_revision": 9,
+  "player_id": "purple2",
+  "reviewer_kind": "user",
+  "reviewer": "本聊天用户",
+  "authorization_reference": "本聊天用户实际回复：确认参考球员；保留 c0001、c0003，删除 c0002、c0004",
+  "decisions": {
+    "c0001": "keep",
+    "c0002": "reject",
+    "c0003": "keep",
+    "c0004": "reject"
+  }
+}

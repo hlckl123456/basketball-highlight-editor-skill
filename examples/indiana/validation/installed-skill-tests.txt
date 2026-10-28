@@ -1,0 +1,19 @@
+test_changed_source_detected (test_workflow.Workflow.test_changed_source_detected) ... ok
+test_color_alone_cannot_be_high (test_workflow.Workflow.test_color_alone_cannot_be_high) ... ok
+test_confirm_saves_edl_without_render (test_workflow.Workflow.test_confirm_saves_edl_without_render) ... ok
+test_duplicate_review_priority_stays_uncertain (test_workflow.Workflow.test_duplicate_review_priority_stays_uncertain) ... ok
+test_excluded_clip_cannot_reenter_version (test_workflow.Workflow.test_excluded_clip_cannot_reenter_version) ... ok
+test_no_version_before_confirmation (test_workflow.Workflow.test_no_version_before_confirmation) ... ok
+test_out_of_range_candidates_rejected (test_workflow.Workflow.test_out_of_range_candidates_rejected) ... ok
+test_review_must_include_uncertain (test_workflow.Workflow.test_review_must_include_uncertain) ... ok
+test_stale_review_rejected (test_workflow.Workflow.test_stale_review_rejected) ... ok
+test_two_versions_keep_master_and_render_silent_source (test_workflow.Workflow.test_two_versions_keep_master_and_render_silent_source) ... ok
+test_uncertainty_stays_separate (test_workflow.Workflow.test_uncertainty_stays_separate) ... ok
+test_unnumbered_requires_saved_sample (test_workflow.Workflow.test_unnumbered_requires_saved_sample) ... ok
+test_user_confirmation_needs_authorization (test_workflow.Workflow.test_user_confirmation_needs_authorization) ... ok
+test_wrong_player_review_rejected (test_workflow.Workflow.test_wrong_player_review_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 3.557s
+
+OK

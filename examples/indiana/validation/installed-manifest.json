@@ -1,0 +1,37 @@
+[
+  {
+    "path": "SKILL.md",
+    "sha256": "c7bcb609214074db456ad8c6e5de0c7d44903b4f57f6ac6ed131b15de9e013f8",
+    "installed_identical": true
+  },
+  {
+    "path": "agents/openai.yaml",
+    "sha256": "c860e4382737dc3a41ef27d74ad4e37f6df66d6ce5a531cf1378bad848b9dae8",
+    "installed_identical": true
+  },
+  {
+    "path": "references/runtime.md",
+    "sha256": "96136b0f8d9a148f8f520b36d183e68a110c51354c68e34dc55e9e6d74059f71",
+    "installed_identical": true
+  },
+  {
+    "path": "references/validation.md",
+    "sha256": "0d3f9ceb3bfa1e11ed50bc1e77fadd46dc1d35d2f97078f418730a27ffb93f5a",
+    "installed_identical": true
+  },
+  {
+    "path": "references/workflow.md",
+    "sha256": "017eebfac966eebd7aad6d5039bf71dac76966fd5be71c05812a7f4fb7cd5e45",
+    "installed_identical": true
+  },
+  {
+    "path": "scripts/highlight.py",
+    "sha256": "35b763b0c3896e5fa31d4687429347c5ff2f8992b6d25120e89d6a0c88dc084a",
+    "installed_identical": true
+  },
+  {
+    "path": "tests/test_workflow.py",
+    "sha256": "1dc3c5741973e455b250419fd39e214de8434427124e76432dd35652daf57d38",
+    "installed_identical": true
+  }
+]

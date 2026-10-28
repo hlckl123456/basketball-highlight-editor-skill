@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+work/
+.pytest_cache/
+third_party/bhe/models/*.pt
+third_party/bhe/models/*.onnx
+*.dmg
+*.apk
+*.exe
+.env
+.env.*

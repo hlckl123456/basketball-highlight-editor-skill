@@ -1,0 +1,203 @@
+{
+  "extractor": {
+    "backend": "opencv-uniform-color-proposals-hsv-tesseract",
+    "opencv": "5.0.0",
+    "interval": 1.5,
+    "number_policy": "OCR hints only; require visual verification"
+  },
+  "candidates": [
+    {
+      "id": "c0001",
+      "observations": 166,
+      "color_counts": {
+        "black": 24,
+        "blue": 42,
+        "gray": 6,
+        "orange": 9,
+        "red": 36,
+        "white": 49
+      },
+      "number_hints": [
+        {
+          "observation_id": "c0001_f001_o07",
+          "time": 1.7363,
+          "crop": "crops/c0001_f001_o07.jpg",
+          "text": "84",
+          "confidence": 44.164413,
+          "verified": false
+        },
+        {
+          "observation_id": "c0001_f001_o18",
+          "time": 1.7363,
+          "crop": "crops/c0001_f001_o18.jpg",
+          "text": "4",
+          "confidence": 43.226032,
+          "verified": false
+        },
+        {
+          "observation_id": "c0001_f002_o23",
+          "time": 2.8937,
+          "crop": "crops/c0001_f002_o23.jpg",
+          "text": "4",
+          "confidence": 41.299866,
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "c0002",
+      "observations": 168,
+      "color_counts": {
+        "black": 46,
+        "blue": 32,
+        "gray": 7,
+        "orange": 8,
+        "red": 24,
+        "white": 51
+      },
+      "number_hints": [
+        {
+          "observation_id": "c0002_f001_o18",
+          "time": 3.445,
+          "crop": "crops/c0002_f001_o18.jpg",
+          "text": "7",
+          "confidence": 49.579811,
+          "verified": false
+        },
+        {
+          "observation_id": "c0002_f002_o12",
+          "time": 4.695,
+          "crop": "crops/c0002_f002_o12.jpg",
+          "text": "2",
+          "confidence": 72.032089,
+          "verified": false
+        },
+        {
+          "observation_id": "c0002_f002_o30",
+          "time": 4.695,
+          "crop": "crops/c0002_f002_o30.jpg",
+          "text": "5",
+          "confidence": 63.85392,
+          "verified": false
+        },
+        {
+          "observation_id": "c0002_f002_o30",
+          "time": 4.695,
+          "crop": "crops/c0002_f002_o30.jpg",
+          "text": "4",
+          "confidence": 38.364594,
+          "verified": false
+        },
+        {
+          "observation_id": "c0002_f002_o36",
+          "time": 4.695,
+          "crop": "crops/c0002_f002_o36.jpg",
+          "text": "7",
+          "confidence": 63.37558,
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "c0003",
+      "observations": 160,
+      "color_counts": {
+        "black": 23,
+        "blue": 42,
+        "gray": 10,
+        "orange": 13,
+        "red": 31,
+        "white": 41
+      },
+      "number_hints": [
+        {
+          "observation_id": "c0003_f000_o22",
+          "time": 9.195,
+          "crop": "crops/c0003_f000_o22.jpg",
+          "text": "7",
+          "confidence": 54.493507,
+          "verified": false
+        },
+        {
+          "observation_id": "c0003_f000_o27",
+          "time": 9.195,
+          "crop": "crops/c0003_f000_o27.jpg",
+          "text": "4",
+          "confidence": 68.026611,
+          "verified": false
+        },
+        {
+          "observation_id": "c0003_f003_o12",
+          "time": 12.945,
+          "crop": "crops/c0003_f003_o12.jpg",
+          "text": "1",
+          "confidence": 43.001102,
+          "verified": false
+        },
+        {
+          "observation_id": "c0003_f003_o29",
+          "time": 12.945,
+          "crop": "crops/c0003_f003_o29.jpg",
+          "text": "4",
+          "confidence": 43.785931,
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": "c0004",
+      "observations": 145,
+      "color_counts": {
+        "black": 21,
+        "blue": 40,
+        "gray": 8,
+        "orange": 13,
+        "red": 27,
+        "white": 36
+      },
+      "number_hints": [
+        {
+          "observation_id": "c0004_f000_o06",
+          "time": 10.055,
+          "crop": "crops/c0004_f000_o06.jpg",
+          "text": "4",
+          "confidence": 68.177605,
+          "verified": false
+        },
+        {
+          "observation_id": "c0004_f000_o35",
+          "time": 10.055,
+          "crop": "crops/c0004_f000_o35.jpg",
+          "text": "4",
+          "confidence": 38.486385,
+          "verified": false
+        },
+        {
+          "observation_id": "c0004_f001_o20",
+          "time": 11.305,
+          "crop": "crops/c0004_f001_o20.jpg",
+          "text": "1",
+          "confidence": 43.929611,
+          "verified": false
+        },
+        {
+          "observation_id": "c0004_f002_o08",
+          "time": 12.555,
+          "crop": "crops/c0004_f002_o08.jpg",
+          "text": "3",
+          "confidence": 46.984554,
+          "verified": false
+        },
+        {
+          "observation_id": "c0004_f002_o31",
+          "time": 12.555,
+          "crop": "crops/c0004_f002_o31.jpg",
+          "text": "7",
+          "confidence": 72.019814,
+          "verified": false
+        }
+      ]
+    }
+  ],
+  "identity_verified": false
+}

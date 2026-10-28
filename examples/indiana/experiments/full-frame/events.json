@@ -1,0 +1,44 @@
+{
+  "video": "<original-workspace>/work/indiana-cc0.webm",
+  "model": "<BHE_RUNTIME>/models/bball_model.static.onnx",
+  "rim": {
+    "center_x": 957.38,
+    "rim_y": 199.78,
+    "width": 74.76,
+    "height": 63.27,
+    "source": "median_hoop_detections",
+    "confidence_threshold": 0.08
+  },
+  "rim_mode": "windowed",
+  "candidates": [
+    {
+      "time": 6.55,
+      "x_cross": 958,
+      "above": {
+        "time": 6.0,
+        "x": 135.97,
+        "y": 68.39,
+        "confidence": 0.3365,
+        "width": 86.38999999999999,
+        "height": 54.85
+      },
+      "below": {
+        "time": 7.1,
+        "x": 1289.42,
+        "y": 252.78,
+        "confidence": 0.4969,
+        "width": 33.950000000000045,
+        "height": 51.02000000000001
+      },
+      "rim": {
+        "center_x": 957.38,
+        "rim_y": 199.78,
+        "width": 74.76,
+        "height": 63.27,
+        "source": "median_hoop_detections",
+        "confidence_threshold": 0.08
+      },
+      "rim_source": "global"
+    }
+  ]
+}

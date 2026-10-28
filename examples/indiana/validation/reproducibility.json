@@ -1,0 +1,18 @@
+{
+  "comparison": "repeat CPU BHE scan, same source hash/model/ROI/fps",
+  "event_times_first": [
+    2.63,
+    4.57,
+    11.57,
+    12.43
+  ],
+  "event_times_repeat": [
+    2.63,
+    4.57,
+    11.57,
+    12.43
+  ],
+  "identical": true,
+  "same_source_sha256": true,
+  "same_detector_hashes": true
+}

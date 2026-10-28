@@ -1,0 +1,131 @@
+{
+  "video": "<original-workspace>/work/indiana-cc0.webm",
+  "model": "<BHE_RUNTIME>/models/bball_model.static.onnx",
+  "rim": {
+    "center_x": 255.17,
+    "rim_y": 353.3,
+    "width": 91.82,
+    "height": 86.61,
+    "source": "median_hoop_detections",
+    "confidence_threshold": 0.08
+  },
+  "rim_mode": "windowed",
+  "candidates": [
+    {
+      "time": 2.63,
+      "x_cross": 327,
+      "above": {
+        "time": 1.4,
+        "x": 525.93,
+        "y": 93.01,
+        "confidence": 0.6129,
+        "width": 31.97999999999996,
+        "height": 24.36
+      },
+      "below": {
+        "time": 3.867,
+        "x": 188.75,
+        "y": 533.93,
+        "confidence": 0.2004,
+        "width": 18.779999999999973,
+        "height": 30.42999999999995
+      },
+      "rim": {
+        "center_x": 255.17,
+        "rim_y": 353.3,
+        "width": 91.82,
+        "height": 86.61,
+        "source": "median_hoop_detections",
+        "confidence_threshold": 0.08
+      },
+      "rim_source": "global"
+    },
+    {
+      "time": 4.57,
+      "x_cross": 311,
+      "above": {
+        "time": 4.4,
+        "x": 650.65,
+        "y": 10.18,
+        "confidence": 0.2062,
+        "width": 98.70000000000005,
+        "height": 19.92
+      },
+      "below": {
+        "time": 4.733,
+        "x": 78.35,
+        "y": 588.19,
+        "confidence": 0.4254,
+        "width": 29.33,
+        "height": 59.55000000000007
+      },
+      "rim": {
+        "center_x": 255.17,
+        "rim_y": 353.3,
+        "width": 91.82,
+        "height": 86.61,
+        "source": "median_hoop_detections",
+        "confidence_threshold": 0.08
+      },
+      "rim_source": "global"
+    },
+    {
+      "time": 11.57,
+      "x_cross": 266,
+      "above": {
+        "time": 11.267,
+        "x": 505.56,
+        "y": 126.14,
+        "confidence": 0.6466,
+        "width": 51.94,
+        "height": 51.239999999999995
+      },
+      "below": {
+        "time": 11.867,
+        "x": 221.18,
+        "y": 395.81,
+        "confidence": 0.7605,
+        "width": 48.73000000000002,
+        "height": 43.75999999999999
+      },
+      "rim": {
+        "center_x": 255.17,
+        "rim_y": 353.3,
+        "width": 91.82,
+        "height": 86.61,
+        "source": "median_hoop_detections",
+        "confidence_threshold": 0.08
+      },
+      "rim_source": "global"
+    },
+    {
+      "time": 12.43,
+      "x_cross": 481,
+      "above": {
+        "time": 11.267,
+        "x": 505.56,
+        "y": 126.14,
+        "confidence": 0.6466,
+        "width": 51.94,
+        "height": 51.239999999999995
+      },
+      "below": {
+        "time": 13.6,
+        "x": 456.22,
+        "y": 629.39,
+        "confidence": 0.3271,
+        "width": 25.46999999999997,
+        "height": 51.97000000000003
+      },
+      "rim": {
+        "center_x": 509.23,
+        "rim_y": 372.98,
+        "width": 87.08,
+        "height": 84.45,
+        "source": "median_hoop_detections",
+        "confidence_threshold": 0.08
+      },
+      "rim_source": "local_window"
+    }
+  ]
+}

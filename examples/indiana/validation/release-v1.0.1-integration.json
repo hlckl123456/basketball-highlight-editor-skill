@@ -1,0 +1,39 @@
+{
+  "fresh_BHE_inference": {
+    "uses_vendored_public_source": true,
+    "model": "external authorized existing local model, not distributed",
+    "event_times": [
+      2.63,
+      4.57,
+      11.57,
+      12.43
+    ],
+    "matches_original": true,
+    "recorded_hashes": {
+      "scripts/scan_video.py": "398b3efdfd09efb121b29e05418d7a0ddef153d755bc5338e517de2c1b523bcf",
+      "scripts/generate_candidates.py": "b2a33beb5a093a0e69cc4c8725b0af9b33fc36b9b7561b3a821582cf28ae1720",
+      "external-model/bball_model.static.onnx": "5d39b28ee312bd8ef90c04a07ccc16115693cfc42edb46f032932cf93c3b06de"
+    }
+  },
+  "fixture_replay": {
+    "reviewer_kind": "test_operator",
+    "state": "awaiting_edit_prompt",
+    "test_versions": [
+      {
+        "version": "test-long",
+        "duration": 9.635352,
+        "full_decode_passed": true
+      },
+      {
+        "version": "test-short",
+        "duration": 6.03,
+        "full_decode_passed": true
+      }
+    ]
+  },
+  "public_live_fixture": {
+    "revision": 10,
+    "state": "awaiting_edit_prompt",
+    "versions": []
+  }
+}

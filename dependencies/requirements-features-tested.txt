@@ -1,0 +1,3 @@
+# Observed macOS arm64 BHE runtime; not a cross-platform installation guarantee.
+numpy==2.4.6
+opencv-python==5.0.0.93

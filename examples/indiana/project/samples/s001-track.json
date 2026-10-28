@@ -1,0 +1,225 @@
+{
+  "id": "s001",
+  "player_id": "purple2",
+  "time": 9.5,
+  "bbox_xyxy": [
+    1355,
+    465,
+    1660,
+    1075
+  ],
+  "description": "紫色球衣和短裤、白色短袖内搭、双膝外露、白灰鞋、白袜；无号码路径不使用 OCR。",
+  "confirmed_by": "本聊天用户选择紫色2号；9.5秒参考框由测试操作定位，待用户看图复核。",
+  "reviewer_kind": "user",
+  "reference": "samples/s001.jpg",
+  "matching_method": "bidirectional sparse optical flow; no OCR; no automatic identity assignment",
+  "track_proposals": [
+    {
+      "time": 8.9,
+      "bbox_xyxy": [
+        1378.2,
+        463.6,
+        1683.2,
+        1073.6
+      ],
+      "surviving_points": 10,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 9.1,
+      "bbox_xyxy": [
+        1345.4,
+        462.8,
+        1650.4,
+        1072.8
+      ],
+      "surviving_points": 21,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 9.3,
+      "bbox_xyxy": [
+        1351.7,
+        462.3,
+        1656.7,
+        1072.3
+      ],
+      "surviving_points": 47,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 9.7,
+      "bbox_xyxy": [
+        1356.4,
+        467.9,
+        1661.4,
+        1077.9
+      ],
+      "surviving_points": 48,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 9.9,
+      "bbox_xyxy": [
+        1356.0,
+        466.5,
+        1661.0,
+        1076.5
+      ],
+      "surviving_points": 32,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 10.1,
+      "bbox_xyxy": [
+        1350.7,
+        466.0,
+        1655.7,
+        1076.0
+      ],
+      "surviving_points": 24,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 10.3,
+      "bbox_xyxy": [
+        1338.3,
+        466.0,
+        1643.3,
+        1076.0
+      ],
+      "surviving_points": 22,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 10.5,
+      "bbox_xyxy": [
+        1328.5,
+        441.7,
+        1633.5,
+        1051.7
+      ],
+      "surviving_points": 19,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 10.7,
+      "bbox_xyxy": [
+        1304.4,
+        441.5,
+        1609.4,
+        1051.5
+      ],
+      "surviving_points": 18,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 10.9,
+      "bbox_xyxy": [
+        1265.0,
+        441.4,
+        1570.0,
+        1051.4
+      ],
+      "surviving_points": 18,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 11.1,
+      "bbox_xyxy": [
+        1233.7,
+        427.4,
+        1538.7,
+        1037.4
+      ],
+      "surviving_points": 18,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 11.3,
+      "bbox_xyxy": [
+        1229.9,
+        431.9,
+        1534.9,
+        1041.9
+      ],
+      "surviving_points": 18,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 11.5,
+      "bbox_xyxy": [
+        1240.7,
+        418.8,
+        1545.7,
+        1028.8
+      ],
+      "surviving_points": 17,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 11.7,
+      "bbox_xyxy": [
+        1254.1,
+        412.7,
+        1559.1,
+        1022.7
+      ],
+      "surviving_points": 17,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 11.9,
+      "bbox_xyxy": [
+        1265.2,
+        413.4,
+        1570.2,
+        1023.4
+      ],
+      "surviving_points": 17,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 12.1,
+      "bbox_xyxy": [
+        1272.4,
+        394.1,
+        1577.4,
+        1004.1
+      ],
+      "surviving_points": 17,
+      "initial_points": 80,
+      "identity_verified": false
+    },
+    {
+      "time": 12.3,
+      "bbox_xyxy": [
+        1295.4,
+        396.4,
+        1600.4,
+        1006.4
+      ],
+      "surviving_points": 17,
+      "initial_points": 80,
+      "identity_verified": false
+    }
+  ],
+  "original_reviewer_kind": "test_operator",
+  "user_confirmation_reference": "本聊天用户实际回复：确认参考球员；保留 c0001、c0003，删除 c0002、c0004",
+  "user_confirmed_at": "2026-10-28T04:18:29.149972+00:00"
+}

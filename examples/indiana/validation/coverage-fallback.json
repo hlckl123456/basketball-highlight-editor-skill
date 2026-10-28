@@ -1,0 +1,22 @@
+{
+  "backend": {
+    "backend": "motion-coverage",
+    "fps": 2,
+    "limitations": "Coverage windows, NOT detected possessions or scoring events. Review all windows."
+  },
+  "candidate_ranges": [
+    [
+      0.0,
+      8.0
+    ],
+    [
+      6.0,
+      14.0
+    ],
+    [
+      12.0,
+      16.3
+    ]
+  ],
+  "full_source_covered": true
+}

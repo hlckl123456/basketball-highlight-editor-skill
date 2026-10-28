@@ -1,0 +1,24 @@
+Creating new Ultralytics Settings v0.0.8 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '<original-workspace>/outputs/indiana-test/detection/yolo/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/usage/settings.
+device=mps
+Loading <BHE_RUNTIME>/models/bball_model.static.onnx for ONNX Runtime inference...
+WARNING ⚠️ [31m[1mrequirements:[0m Ultralytics requirement ['onnx'] not found, AutoUpdate disabled by YOLO_AUTOINSTALL=False
+Using ONNX Runtime 1.31.0 with CPUExecutionProvider
+progress=0.0000
+progress=0.0801
+progress=0.1663
+progress=0.2526
+progress=0.3326
+progress=0.4127
+progress=0.4928
+progress=0.5729
+progress=0.6591
+progress=0.7454
+progress=0.8316
+progress=0.9179
+progress=1.0
+
+rim={'center_x': 957.38, 'rim_y': 199.78, 'width': 74.76, 'height': 63.27, 'source': 'median_hoop_detections', 'confidence_threshold': 0.08} mode=windowed drift_windows=1
+candidates=1
+6.55s x_cross=958

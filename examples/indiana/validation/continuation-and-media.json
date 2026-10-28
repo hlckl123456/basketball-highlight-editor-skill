@@ -1,0 +1,64 @@
+{
+  "media": [
+    {
+      "path": "<original-workspace>/outputs/indiana-review/rough/uncertain/c0004.mp4",
+      "decode_passed": true,
+      "duration": 5.0,
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "has_audio": true
+    },
+    {
+      "path": "<original-workspace>/outputs/indiana-review/rough/uncertain/c0002.mp4",
+      "decode_passed": true,
+      "duration": 5.0,
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "has_audio": true
+    },
+    {
+      "path": "<original-workspace>/outputs/indiana-review/rough/high_confidence/c0003.mp4",
+      "decode_passed": true,
+      "duration": 5.0,
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "has_audio": true
+    },
+    {
+      "path": "<original-workspace>/outputs/indiana-review/rough/high_confidence/c0001.mp4",
+      "decode_passed": true,
+      "duration": 4.635333,
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "has_audio": true
+    },
+    {
+      "path": "<original-workspace>/work/continuation-test/versions/test-short/reel.mp4",
+      "decode_passed": true,
+      "duration": 6.03,
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "has_audio": true
+    },
+    {
+      "path": "<original-workspace>/work/continuation-test/versions/test-long/reel.mp4",
+      "decode_passed": true,
+      "duration": 9.635352,
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "has_audio": true
+    }
+  ],
+  "live_project_state": "awaiting_edit_prompt",
+  "live_has_no_versions": true,
+  "live_has_no_merged_reel": true,
+  "live_reviewer": "user",
+  "continuation_test_reviewer": "test_operator",
+  "confirmed_master_unchanged": true
+}

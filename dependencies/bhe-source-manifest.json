@@ -1,0 +1,171 @@
+{
+  "upstream": "https://github.com/fly7632785/basketball-highlight-editor",
+  "tag": "v0.1.12",
+  "commit": "4d78d6fa2da74fa3d5f3c9719ab7189f24c545e3",
+  "license": "MIT",
+  "source": "source files from the read-only v0.1.12 macOS release runtime; verified against public git blobs",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1097,
+      "sha256": "07620c85ffad801232c974af36b05d54cae800c6b0a6029d27e1747c8a3fc301",
+      "git_blob_sha1": "14760075fa92cd8caebcff78168a416ee6434270",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "models/UPSTREAM_MODEL_POLICY.md",
+      "bytes": 1141,
+      "sha256": "b14edbff0b5892f4271d155d0f30eac6e76ae88ef83ca5029691deaa5bd33899",
+      "git_blob_sha1": "1e1354cca3413a2acab39de7ec27c926d47573e5",
+      "documentation_change": "Relative documentation links redirected to official v0.1.12 URLs; policy text unchanged.",
+      "upstream_document_git_blob_sha1": "3586c6b1f30417e58ba306827f5334d50a9aba37"
+    },
+    {
+      "path": "scripts/cache_io.py",
+      "bytes": 737,
+      "sha256": "614011e1e047b06299d06379000137f064aa2afb1d59917712c1b685fef887a2",
+      "git_blob_sha1": "8633c745b0746cc8d430efbda1c2ea7f88f1eefd",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "scripts/generate_candidates.py",
+      "bytes": 6705,
+      "sha256": "b2a33beb5a093a0e69cc4c8725b0af9b33fc36b9b7561b3a821582cf28ae1720",
+      "git_blob_sha1": "50851e44d0a3cec78f16d0a4cd03cc78f04a190d",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "scripts/scan_video.py",
+      "bytes": 10223,
+      "sha256": "398b3efdfd09efb121b29e05418d7a0ddef153d755bc5338e517de2c1b523bcf",
+      "git_blob_sha1": "58c0ab0a2bdffe07e24492dc61928292cc2ee891",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/audio.py",
+      "bytes": 4484,
+      "sha256": "220dfee7c147a9adc3c1abfcc36290f88cb2851e475ffaf465bc54017f1aa6bd",
+      "git_blob_sha1": "fc2af9820c2ba7cb9f1def9753ca965dfa74c5ea",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/classifier.py",
+      "bytes": 3447,
+      "sha256": "0f25eb6ffd2d3968458b3c6548cde12ee6ebbc5920cc1476baad16c8982c3997",
+      "git_blob_sha1": "7d0d40417eeebbb63b10c072629adc78cc83bdc2",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/events.py",
+      "bytes": 46362,
+      "sha256": "cb73fef430dd726f626f0dd85322beed070144bf7987be9920502afadc73eb42",
+      "git_blob_sha1": "f060b3d475765ffda310241cdf06ab8e72f4cc58",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/features.py",
+      "bytes": 818,
+      "sha256": "29afc6e8c5437a33d27cb272fac5e1ddfaab54f9ac8d53c90859ed69f398ddaa",
+      "git_blob_sha1": "dd09e969fa1ce527bfdccad9d3b18b6c00d27bbe",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/geometry.py",
+      "bytes": 430,
+      "sha256": "7a67126aff1f3bd5d212db8d0724b22c0cbd8d57d8b1a7b0bc1cd076f0016c51",
+      "git_blob_sha1": "2495cc9616ea15dcc690a86e690ff3354babebbd",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/inference.py",
+      "bytes": 11393,
+      "sha256": "fbc64e1920b81b17bbd85ebb2d354fef5582c04ed99792eac78cc904d0aa67a1",
+      "git_blob_sha1": "43c71dddc074ceec9a48943e035ee357cff380fc",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/net_motion.py",
+      "bytes": 2782,
+      "sha256": "2426b69f47e6df39e0d40e1c56b9ab811a3cafe648f3f8ab3e349df39c11ce92",
+      "git_blob_sha1": "6448ea9ed57c7459cc4f7f4adc34d8efde49e200",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/onnx_detector.py",
+      "bytes": 16877,
+      "sha256": "37cfb2456aae4f2525c0fa2ec8569e902db4fb860b97c8d0f418c7e170ea8a7a",
+      "git_blob_sha1": "afc6340325ee56fd2549ddef1ffb2d4a5ce3635a",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/ranking.py",
+      "bytes": 1286,
+      "sha256": "d6d4567eca08e4a71f8122ade04e118c41204d702e62d47c4910ffe17715a902",
+      "git_blob_sha1": "46348319c422f4b665a7d79ec1ec52d47e09b878",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/review_reason.py",
+      "bytes": 6943,
+      "sha256": "32351ab60b4ced4fa67ef2d3ebdae1089b31688073c3cdb0c0539bf172cdb59f",
+      "git_blob_sha1": "8c7c533a9be2d4a57fa0dec272e05b9bd6dcfe8d",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/rim_check.py",
+      "bytes": 13801,
+      "sha256": "f5fb90b58c4ff0c2815f62a53fa1e01910dc8da77401196474b7ae1e0076561e",
+      "git_blob_sha1": "c56fe8f3b18304db9bdd35a24960363782213eec",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/roi.py",
+      "bytes": 8632,
+      "sha256": "7985ab45b8e01fde83d76e9691289872c903e77e32824535b3759dc179a2a75d",
+      "git_blob_sha1": "f2c02b433bdd2d28e8be97be90c27207b76d31d4",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/sampling.py",
+      "bytes": 2178,
+      "sha256": "ef0739dfcb269d26c966fe21c830e72aea7c3be2224eb273603901d65b3341c7",
+      "git_blob_sha1": "5991dce0898d56bac811ac519675f3d31dd2ac84",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/tracking.py",
+      "bytes": 3213,
+      "sha256": "9bca567f139eb7151ceb41ab16256e2ebbd39897c79c8cd8b311d38f5ae1b275",
+      "git_blob_sha1": "0ebb87b649e3806f2e6e0510ec87d33f05f81859",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/trajectory.py",
+      "bytes": 3666,
+      "sha256": "9941bcbad07256fc61290e74b312eb20c4e1dc8316fb0210ab38d2be0a568e45",
+      "git_blob_sha1": "67292ee4ad1da4cb17a1b0beeed5a9714a52688e",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/validation.py",
+      "bytes": 519,
+      "sha256": "0e9f195a2ac44642caf783b7ace0d5feedae964343aa7c75e39ed2825ee9e5b9",
+      "git_blob_sha1": "9de0aead790aeec59e1c5d1b450263f541f8658f",
+      "public_git_blob_verified": true
+    },
+    {
+      "path": "src/basketball_highlight/verdict.py",
+      "bytes": 6561,
+      "sha256": "629d0e1f2b42de7217c019df3578742a4911885835d676b1c20349572918d0a2",
+      "git_blob_sha1": "9172412d9f8781fcbd95e48487cbe200be3f8319",
+      "public_git_blob_verified": true
+    }
+  ]
+}

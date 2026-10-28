@@ -1,0 +1,101 @@
+{
+  "reviewer": {
+    "kind": "agent_visual_review",
+    "name": "Codex visual review of original frames; not automatic identity recognition"
+  },
+  "players": [
+    {
+      "id": "purple2",
+      "description": "紫色球衣和短裤，白色短袖内搭，双膝外露，白袜、白灰鞋。本视频中可见号码 2。",
+      "reference": "samples/s001.jpg"
+    },
+    {
+      "id": "purple13",
+      "description": "紫色球衣，黑色单侧长护袖，黑色球鞋。本视频中可见号码 13。",
+      "reference": "frames/c0002_f002.jpg"
+    },
+    {
+      "id": "white21",
+      "description": "白色球衣，黑色袜子、深色鞋。本视频中可见号码 21。",
+      "reference": "frames/c0003_f000.jpg"
+    }
+  ],
+  "assignments": [
+    {
+      "candidate_id": "c0001",
+      "player_id": "purple2",
+      "certainty": "high",
+      "reason": "1.736 秒可见紫色背号 2、白色短袖内搭和白鞋。这里只确认球员在场，不确认 BHE 2.63 秒是进球。",
+      "role": "visible",
+      "evidence": [
+        {
+          "kind": "number_visible",
+          "time": 1.7363,
+          "detail": "左侧紫色背号 2，白色短袖内搭，裸露双膝；原始帧 frames/c0001_f001.jpg。"
+        }
+      ],
+      "labels": [
+        "球员在场",
+        "回防",
+        "进球未核实"
+      ]
+    },
+    {
+      "candidate_id": "c0002",
+      "player_id": "purple2",
+      "certainty": "uncertain",
+      "needs_review": true,
+      "reason": "与 c0001 重叠，早段人物较远、横移模糊；自动 OCR 的 2 可能缺失前一位数字，不足以独立认人。人工决定是否保留或合并。",
+      "role": "uncertain",
+      "evidence": [],
+      "labels": [
+        "疑似重复",
+        "横移"
+      ]
+    },
+    {
+      "candidate_id": "c0003",
+      "player_id": "purple2",
+      "certainty": "high",
+      "reason": "与 9.5 秒参考样本服饰一致，10.445 秒背号 2 可见。紫衣球员主要处于无球防守位置，白衣球员完成进攻，不能标成紫衣 2 号进球。",
+      "role": "off_ball_defense",
+      "evidence": [
+        {
+          "kind": "number_visible",
+          "time": 10.445,
+          "detail": "右侧紫色背号 2，白色短袖内搭、白袜与白灰鞋，frames/c0003_f001.jpg。"
+        },
+        {
+          "kind": "confirmed_sample_match",
+          "sample_id": "s001",
+          "time": 9.5,
+          "detail": "与 s001 中的白色短袖、裸露双膝、白灰鞋一致；样本框为测试定位，尚未冒称用户确认。"
+        }
+      ],
+      "labels": [
+        "球员在场",
+        "无球防守",
+        "他人投篮"
+      ]
+    },
+    {
+      "candidate_id": "c0004",
+      "player_id": "purple2",
+      "certainty": "high",
+      "needs_review": true,
+      "reason": "人物清楚，但与 c0003 重叠约 4.14 秒，疑似同一回合重复候选；单列供人工删选，不当作独立高光。",
+      "role": "off_ball_defense",
+      "evidence": [
+        {
+          "kind": "number_visible",
+          "time": 10.055,
+          "detail": "右侧紫色背号 2、白色短袖内搭，frames/c0004_f000.jpg。"
+        }
+      ],
+      "labels": [
+        "疑似重复",
+        "无球防守"
+      ]
+    }
+  ]
+}

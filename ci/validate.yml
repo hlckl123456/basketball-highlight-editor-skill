@@ -1,0 +1,20 @@
+name: Validate skill and public case
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, verified at publication
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5, verified at publication
+        with:
+          python-version: '3.11'
+      - name: Install media test dependency
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Verify public case and license manifests
+        run: python3 scripts/verify_release.py
+      - name: Run behavior and portability tests
+        run: python3 -m unittest discover -s skills/basketball-highlight-editor/tests -v
+      - name: Check local review form logic
+        run: node scripts/test_review_form.js examples/indiana/project/review.html

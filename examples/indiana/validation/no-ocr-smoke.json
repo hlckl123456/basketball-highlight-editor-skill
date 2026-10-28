@@ -1,0 +1,9 @@
+{
+  "source": "same licensed real-video smoke test, numbers intentionally ignored by feature extractor",
+  "ocr_enabled": false,
+  "candidate_count": 3,
+  "color_proposals": 234,
+  "number_hints": 0,
+  "identity_assigned_automatically": false,
+  "claim": "Feature extraction without OCR works; not an accuracy test on genuinely unnumbered games."
+}
