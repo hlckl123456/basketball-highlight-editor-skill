@@ -1,0 +1,3 @@
+phase	hypothesis	scorer_honesty	scorer_retrieval	scorer_high_coverage	visible_honesty	visible_retrieval	visible_high_coverage	decision	limitation
+baseline	legacy clothing presence is reused for every role	NA	NA	NA	1/1	1/1	1/1	frozen	one positive legacy clip; no negatives or scorer/handler truth
+policy-v1	quality and region gates, actual margins, contiguous tracks and role separation avoid unsupported highs	NA	NA	NA	NA	1/1	0/1	retain structural safety contracts	no empirical identity precision claim; weaker high coverage explicitly accepted for review-first safety

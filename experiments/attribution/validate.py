@@ -6,8 +6,17 @@ import argparse,hashlib,json,os,subprocess,sys,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 
+def implementation():
+ paths=set()
+ for folder in ['skills/basketball-highlight-editor/scripts','skills/basketball-highlight-editor/tests','experiments/attribution','robustness']:
+  paths.update((ROOT/folder).rglob('*.py'))
+ return {str(f.relative_to(ROOT)):hashlib.sha256(f.read_bytes()).hexdigest() for f in sorted(paths)}
+
 def main():
- p=argparse.ArgumentParser();p.add_argument('--output',type=Path,default=ROOT/'work/goal-4/validation');p.add_argument('--slow',action='store_true');p.add_argument('--node',default='node');a=p.parse_args();a.output.mkdir(parents=True,exist_ok=True)
+ p=argparse.ArgumentParser();p.add_argument('--output',type=Path,default=ROOT/'work/goal-4/validation');p.add_argument('--slow',action='store_true');p.add_argument('--node',default='node');a=p.parse_args();a.output=a.output.resolve();a.output.mkdir(parents=True,exist_ok=True)
+ try:a.output.relative_to(ROOT)
+ except ValueError:p.error('--output must be inside this repository (normally work/goal-4/)')
+ frozen=implementation()
  py=sys.executable
  jobs=[('manifest',[py,'experiments/detection/gates.py','--job','release','--write-manifest']),
  ('behavior',[py,'-m','unittest','discover','-s','skills/basketball-highlight-editor/tests','-v']),
@@ -29,9 +38,10 @@ def main():
    try:r=subprocess.run(cmd,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=3600 if name in ('full-matrix','people-matrix','performance') else 180);code=r.returncode
    except subprocess.TimeoutExpired:code=124
   row={'name':name,'returncode':code,'seconds':round(time.monotonic()-begin,3),'log':str((a.output/(name+'.log')).relative_to(ROOT))};rows.append(row)
-  report={'scope':'sequential development gates; one real-corpus holdout-reading unit deferred; full verification after freeze','all_passed':all(x['returncode']==0 for x in rows),'jobs':rows,
-   'implementation':{str(f.relative_to(ROOT)):hashlib.sha256(f.read_bytes()).hexdigest() for f in sorted((ROOT/'skills/basketball-highlight-editor/scripts').glob('*.py'))}}
+  unchanged=implementation()==frozen
+  report={'scope':'sequential development gates; one real-corpus holdout-reading unit deferred; full verification after freeze','all_passed':unchanged and all(x['returncode']==0 for x in rows),'code_unchanged_during_run':unchanged,'jobs':rows,'implementation':frozen}
   (a.output/'results.json').write_text(json.dumps(report,indent=2)+'\n');print('END',name,code,row['seconds'],flush=True)
   if code:return code
+  if not unchanged:raise RuntimeError('CODE_CHANGED_DURING_VALIDATION: restart in a new output directory')
  return 0
 if __name__=='__main__':sys.exit(main())

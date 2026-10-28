@@ -28,8 +28,10 @@ def predict(data,calibration,max_distance=.40,profile_margin=.035,person_margin=
     if refs:raw,tracks=assign(data,refs,usable_cal,max_distance,profile_margin,person_margin)
     else:raw,tracks=[{'time':r['time'],'accepted':[],'uncertain':[]} for r in data['records']],[]
     results,audit=filter_matches(data,raw,evidence)
+    summaries=[{**t,'legacy_margin':t.get('margin'),'margin':None,'is_probability':False,
+                'identity_verified':False,'scope':'raw_tracklet_hypothesis'} for t in tracks]
     return {'parameters':{'max_distance':max_distance,'profile_margin':profile_margin,'person_margin':person_margin},
-            'calibration':calibration,'reference_evidence':evidence,'records':results,'tracks':tracks,
+            'calibration':calibration,'reference_evidence':evidence,'records':results,'tracks':summaries,
             'raw_hypotheses':raw,'confidence_audit':audit,'policy_version':POLICY_VERSION,'is_probability':False,
             'method':'clothing quality + region agreement + actual competing evidence + short tracklets; presence only, no scorer inference'}
 

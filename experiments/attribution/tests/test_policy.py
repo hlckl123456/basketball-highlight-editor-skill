@@ -110,4 +110,24 @@ class Policy(unittest.TestCase):
    out=person_match.predict({'video':'synthetic','records':[{'time':0,'items':[obs()]}]},{'people':[{'id':'p1','samples':[ref(is_automatic=True)]}]})
   self.assertEqual(out['records'][0]['accepted'],[])
 
+ def test_review_required_wins_even_over_a_prior_absence_flag(self):
+  q={'certainty':'other','absence_verified':True,'exclusion_for':'p1','needs_review':True,'reviewer':{'kind':'test_operator'}}
+  self.assertEqual(p.route_assignment(q,'p1')[0],'uncertain')
+ def test_legacy_model_high_cannot_bypass_new_policy(self):
+  self.assertEqual(p.route_assignment({'certainty':'high','player_id':'p1','reviewer':{'kind':'local_model'}},'p1')[0],'uncertain')
+ def test_explicit_uncertain_presence_cannot_fall_back_to_legacy_high(self):
+  q={'certainty':'high','player_id':'p1','presence_certainty':'uncertain','reviewer':{'kind':'test_operator'}}
+  self.assertEqual(p.route_assignment(q,'p1')[0],'uncertain')
+ def test_forged_origin_without_manual_reviewer_is_not_reference(self):
+  s=ref(origin='test_operator');s.pop('reviewer_kind');self.assertFalse(p.trusted(s))
+ def test_actual_unknown_margin_replaces_legacy_anchor_margin(self):
+  raw=[{'time':.5,'accepted':[{'observation_id':'a','player_id':'p1','profile_margin':1}]}]
+  safe,audit=p.filter_matches({'records':[{'time':.5,'items':[self.o,obs('b',desc(8),150)]}]},raw,{'p1':[ref()]})
+  self.assertIsNone(safe[0]['accepted'][0]['profile_margin']);self.assertIsNone(audit[0]['profile_margin'])
+ def test_track_summary_does_not_present_anchor_margin_as_certainty(self):
+  import person_match,person_temporal
+  with patch.object(person_match.media_io,'probe',return_value={}),patch.object(person_match.media_io,'frame_bgr',return_value=None),patch.object(person_match,'descriptor',return_value=desc(0)),patch.object(p,'crop_quality',return_value={'usable':True}),patch.object(person_temporal,'assign',return_value=([],[{'track_id':0,'margin':1}])):
+   out=person_match.predict({'video':'synthetic','records':[]},{'people':[{'id':'p1','samples':[ref()]}]})
+  self.assertIsNone(out['tracks'][0]['margin']);self.assertFalse(out['tracks'][0]['identity_verified']);self.assertEqual(out['tracks'][0]['legacy_margin'],1)
+
 if __name__=='__main__':unittest.main()

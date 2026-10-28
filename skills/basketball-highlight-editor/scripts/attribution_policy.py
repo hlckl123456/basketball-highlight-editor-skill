@@ -146,10 +146,10 @@ def candidate_evidence(result,candidate,player):
 def route_assignment(assignment,target,role='visible'):
  if role not in ROLES:raise ValueError('INVALID_ATTRIBUTION_ROLE')
  q=assignment or {};kind=(q.get('reviewer') or {}).get('kind')
+ if q.get('needs_review'):return 'uncertain','explicit_review_required'
  if q.get('certainty')=='other' and kind in ('user','test_operator') and q.get('absence_verified') is True and q.get('exclusion_for')==target:
   return 'other','explicit_reviewed_target_absence'
  presence=(q.get('presence_player_id') if q.get('presence_certainty')=='high' else None) if 'presence_certainty' in q else (q.get('player_id') if q.get('certainty')=='high' and kind!='local_model' else None)
- if q.get('needs_review'):return 'uncertain','explicit_review_required'
  if presence!=target:return 'uncertain','other_person_presence_is_not_target_absence' if presence else 'identity_unresolved'
  if role=='visible':return 'high_confidence','supported_target_presence'
  ev=q.get('role_evidence') or {}

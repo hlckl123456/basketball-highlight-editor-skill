@@ -4,7 +4,7 @@
 
 高置信不是概率。它要求清晰、大小足够、未被边缘截断的参考及检测框，上衣／下装等区域分别一致，在真实同场人物或其他已保存球员样本中有区分证据，并且同一条短轨迹至少有三个时间点、跨越 0.5 秒、间隔不超过 0.71 秒。发现相似人物、参考冲突或某区域矛盾时降级。没有比较对象时，margin 是未知 `null`，不会写成 1。工程阈值尚未经过充分人工数据校准。
 
-`people/matches.json` 的安全结果在 `records`，每个匹配附 `confidence_evidence` 和原因。旧算法的未经验证提议只留在 `raw_hypotheses`，其 margin/anchor 不能用作概率或高置信依据。旧扫描缺少质量字段时保守降级，请重新运行 `people`。候选的 `presence_certainty`、`role_certainty` 和 `reason_codes` 分开保存。
+`people/matches.json` 的安全结果在 `records`，每个匹配附 `confidence_evidence` 和原因。旧算法的未经验证提议留在 `raw_hypotheses` 及带 legacy_ 前缀的审计字段，其 margin/anchor 不能用作概率或高置信依据；轨迹摘要的 margin 保持 null，明确标为未验证身份。旧扫描缺少质量字段时保守降级，请重新运行 `people`。候选的 `presence_certainty`、`role_certainty` 和 `reason_codes` 分开保存。
 
 同一人物建议保存 1–3 张清晰的人工参考。每个服饰组最多融合三个不同样本；反复复制同一时间和框不增加证据。更换衣服后，另加参考，指定 `sample --appearance new-outfit --valid-from S --valid-until E`。时间区间只表示该服饰适用范围；自动程序不会确认换衣服前后是同一个人。未确认的空档保留不确定。不做脸、肤色或体型身份识别；框几何只检查是否残缺／合并。
 

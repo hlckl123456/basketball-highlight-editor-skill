@@ -126,6 +126,8 @@ def run(directory,label):
  denied=install_holdout_guard(directory);tasks=json.loads((directory/'tasks.json').read_text())['tasks'];rows=[]
  for task in tasks:
   path=ROOT/task['confirmed_path'];assert sha(path)==task['confirmed_sha256'];doc=json.loads(path.read_text());root=directory/task['video_id'];data=json.loads((root/('detections.json' if label=='baseline' else 'detections-quality.json')).read_text());cal=json.loads((root/'references.json').read_text())
+  assert data['video_sha256']==task['source_sha256'] and sha(data['video'])==task['source_sha256'],'Source changed; rebuild fixed inputs'
+  if label!='baseline':assert data['quality_only_enrichment_of_sha256']==sha(root/'detections.json'),'Fixed scan changed; recompute quality'
   result=person_match.predict(data,cal);groups={role:{} for role in ['scorer','handler','visible']};proposals=[]
   for w in task['windows']:
    if label=='baseline':
