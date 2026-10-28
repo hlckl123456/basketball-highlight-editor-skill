@@ -1,0 +1,379 @@
+{
+  "schema_version": 1,
+  "scope": "one real YOLOX sample and clothing descriptor/matcher per valid input; no accuracy labels or confirmations",
+  "implementation": {
+    "people_matrix.py": "84adab112c518282bbb27f922885b6b0bdcdff7d741193353c99354e1a5f7fcc",
+    "person_engine.py": "cd393dedd82cbd9a947bfa6881f4601f47a4e4affb02b6c81fdba2a8ab6f3394",
+    "person_match.py": "84945dfb4aa693e469c6858348b3874f8bf0bd0b1c5685cad7e02db4c8c7d63d",
+    "media_io.py": "56b2b323130510bcc8dbfe249b5390563bfdef87daf04e5c344663a77b960269"
+  },
+  "model_sha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d",
+  "cases": [
+    {
+      "id": "480p-24-h264",
+      "status": "passed",
+      "seconds": 1.5817624169867486,
+      "detections": 14
+    },
+    {
+      "id": "480p-24-hevc",
+      "status": "passed",
+      "seconds": 1.6189302499988116,
+      "detections": 14
+    },
+    {
+      "id": "480p-24-vp9",
+      "status": "passed",
+      "seconds": 1.8381950830225833,
+      "detections": 14
+    },
+    {
+      "id": "480p-30-h264",
+      "status": "passed",
+      "seconds": 1.4132996660191566,
+      "detections": 14
+    },
+    {
+      "id": "480p-30-hevc",
+      "status": "passed",
+      "seconds": 1.7756094159849454,
+      "detections": 13
+    },
+    {
+      "id": "480p-30-vp9",
+      "status": "passed",
+      "seconds": 1.880623541015666,
+      "detections": 13
+    },
+    {
+      "id": "480p-60-h264",
+      "status": "passed",
+      "seconds": 1.504070374998264,
+      "detections": 13
+    },
+    {
+      "id": "480p-60-hevc",
+      "status": "passed",
+      "seconds": 1.7699732499895617,
+      "detections": 13
+    },
+    {
+      "id": "480p-60-vp9",
+      "status": "passed",
+      "seconds": 2.0906987079943065,
+      "detections": 14
+    },
+    {
+      "id": "480p-vfr-h264",
+      "status": "passed",
+      "seconds": 1.4288450420135632,
+      "detections": 13
+    },
+    {
+      "id": "480p-vfr-hevc",
+      "status": "passed",
+      "seconds": 1.6544700000085868,
+      "detections": 13
+    },
+    {
+      "id": "480p-vfr-vp9",
+      "status": "passed",
+      "seconds": 1.6556420839915518,
+      "detections": 14
+    },
+    {
+      "id": "720p-24-h264",
+      "status": "passed",
+      "seconds": 1.5484418330015615,
+      "detections": 13
+    },
+    {
+      "id": "720p-24-hevc",
+      "status": "passed",
+      "seconds": 2.0219180829881225,
+      "detections": 14
+    },
+    {
+      "id": "720p-24-vp9",
+      "status": "passed",
+      "seconds": 2.261150832986459,
+      "detections": 12
+    },
+    {
+      "id": "720p-30-h264",
+      "status": "passed",
+      "seconds": 1.508189999993192,
+      "detections": 13
+    },
+    {
+      "id": "720p-30-hevc",
+      "status": "passed",
+      "seconds": 2.0018275000038557,
+      "detections": 12
+    },
+    {
+      "id": "720p-30-vp9",
+      "status": "passed",
+      "seconds": 2.469980082998518,
+      "detections": 12
+    },
+    {
+      "id": "720p-60-h264",
+      "status": "passed",
+      "seconds": 1.5490906669874676,
+      "detections": 11
+    },
+    {
+      "id": "720p-60-hevc",
+      "status": "passed",
+      "seconds": 2.1952891669934615,
+      "detections": 13
+    },
+    {
+      "id": "720p-60-vp9",
+      "status": "passed",
+      "seconds": 2.1584282080002595,
+      "detections": 11
+    },
+    {
+      "id": "720p-vfr-h264",
+      "status": "passed",
+      "seconds": 1.5807039590144996,
+      "detections": 11
+    },
+    {
+      "id": "720p-vfr-hevc",
+      "status": "passed",
+      "seconds": 2.09940516599454,
+      "detections": 13
+    },
+    {
+      "id": "720p-vfr-vp9",
+      "status": "passed",
+      "seconds": 1.9487763750075828,
+      "detections": 11
+    },
+    {
+      "id": "1080p-24-h264",
+      "status": "passed",
+      "seconds": 1.7090807499771472,
+      "detections": 13
+    },
+    {
+      "id": "1080p-24-hevc",
+      "status": "passed",
+      "seconds": 2.6712433329958003,
+      "detections": 13
+    },
+    {
+      "id": "1080p-24-vp9",
+      "status": "passed",
+      "seconds": 3.314751708006952,
+      "detections": 12
+    },
+    {
+      "id": "1080p-30-h264",
+      "status": "passed",
+      "seconds": 1.7701062919804826,
+      "detections": 12
+    },
+    {
+      "id": "1080p-30-hevc",
+      "status": "passed",
+      "seconds": 2.844016791001195,
+      "detections": 13
+    },
+    {
+      "id": "1080p-30-vp9",
+      "status": "passed",
+      "seconds": 3.5831973330059554,
+      "detections": 13
+    },
+    {
+      "id": "1080p-60-h264",
+      "status": "passed",
+      "seconds": 1.7732021250121761,
+      "detections": 12
+    },
+    {
+      "id": "1080p-60-hevc",
+      "status": "passed",
+      "seconds": 3.2151135839812923,
+      "detections": 12
+    },
+    {
+      "id": "1080p-60-vp9",
+      "status": "passed",
+      "seconds": 3.065258708986221,
+      "detections": 12
+    },
+    {
+      "id": "1080p-vfr-h264",
+      "status": "passed",
+      "seconds": 1.8983535000006668,
+      "detections": 12
+    },
+    {
+      "id": "1080p-vfr-hevc",
+      "status": "passed",
+      "seconds": 2.939290334004909,
+      "detections": 12
+    },
+    {
+      "id": "1080p-vfr-vp9",
+      "status": "passed",
+      "seconds": 2.821205208019819,
+      "detections": 12
+    },
+    {
+      "id": "4k-24-h264",
+      "status": "passed",
+      "seconds": 2.6052982909895945,
+      "detections": 12
+    },
+    {
+      "id": "4k-24-hevc",
+      "status": "passed",
+      "seconds": 5.959841000003507,
+      "detections": 12
+    },
+    {
+      "id": "4k-24-vp9",
+      "status": "passed",
+      "seconds": 7.877443542005494,
+      "detections": 12
+    },
+    {
+      "id": "4k-30-h264",
+      "status": "passed",
+      "seconds": 2.6622883749951143,
+      "detections": 12
+    },
+    {
+      "id": "4k-30-hevc",
+      "status": "passed",
+      "seconds": 6.69982029197854,
+      "detections": 12
+    },
+    {
+      "id": "4k-30-vp9",
+      "status": "passed",
+      "seconds": 9.176110166008584,
+      "detections": 12
+    },
+    {
+      "id": "4k-60-h264",
+      "status": "passed",
+      "seconds": 2.7789637919922825,
+      "detections": 12
+    },
+    {
+      "id": "4k-60-hevc",
+      "status": "passed",
+      "seconds": 7.952945416996954,
+      "detections": 13
+    },
+    {
+      "id": "4k-60-vp9",
+      "status": "passed",
+      "seconds": 7.024148750002496,
+      "detections": 12
+    },
+    {
+      "id": "4k-vfr-h264",
+      "status": "passed",
+      "seconds": 3.139623833994847,
+      "detections": 12
+    },
+    {
+      "id": "4k-vfr-hevc",
+      "status": "passed",
+      "seconds": 6.932054208999034,
+      "detections": 13
+    },
+    {
+      "id": "4k-vfr-vp9",
+      "status": "passed",
+      "seconds": 5.194643958006054,
+      "detections": 12
+    },
+    {
+      "id": "portrait",
+      "status": "passed",
+      "seconds": 1.383013624988962,
+      "detections": 10
+    },
+    {
+      "id": "rotation-90",
+      "status": "passed",
+      "seconds": 1.5199934169941116,
+      "detections": 3
+    },
+    {
+      "id": "rotation-180",
+      "status": "passed",
+      "seconds": 1.4139981249754783,
+      "detections": 4
+    },
+    {
+      "id": "audio-full",
+      "status": "passed",
+      "seconds": 1.412463165994268,
+      "detections": 14
+    },
+    {
+      "id": "audio-short",
+      "status": "passed",
+      "seconds": 1.4428092919988558,
+      "detections": 14
+    },
+    {
+      "id": "audio-vfr-short",
+      "status": "passed",
+      "seconds": 1.6150597920059226,
+      "detections": 14
+    },
+    {
+      "id": "shake",
+      "status": "passed",
+      "seconds": 1.4246757079963572,
+      "detections": 15
+    },
+    {
+      "id": "lowlight",
+      "status": "passed",
+      "seconds": 1.429073209001217,
+      "detections": 13
+    },
+    {
+      "id": "backlight",
+      "status": "passed",
+      "seconds": 1.3874701249878854,
+      "detections": 12
+    },
+    {
+      "id": "noise",
+      "status": "passed",
+      "seconds": 1.5684551669983193,
+      "detections": 13
+    },
+    {
+      "id": "lowbitrate",
+      "status": "passed",
+      "seconds": 1.4201435839931946,
+      "detections": 10
+    },
+    {
+      "id": "long-60min",
+      "status": "passed",
+      "seconds": 2.703967040986754,
+      "detections": 14
+    },
+    {
+      "id": "long-120min",
+      "status": "passed",
+      "seconds": 3.831186333001824,
+      "detections": 14
+    }
+  ]
+}

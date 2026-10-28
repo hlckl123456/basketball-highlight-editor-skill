@@ -1,0 +1,50 @@
+{
+  "checked_at": "2026-10-28T10:38:01.389652+00:00",
+  "branch": "goal-2-robustness",
+  "tested_code_commit": "5d9eadf5be58462dd03efb8015603cc6e28430af",
+  "main_unchanged": "93fc9063787ec5b9f09b0977d7e3bfc71cd62fbe",
+  "goal_1_unchanged": "ee0d88e92ca717497306624ef091e267ec42a937",
+  "protected_files": 815,
+  "protected_tree_sha256": "c714556246329ba46b92e725960c4505ab79da8e0ae9a6634ef7a25e0d7df4e9",
+  "protected_files_and_file_set_unchanged": true,
+  "original_tests_and_verifiers_unchanged": {
+    "skills/basketball-highlight-editor/tests/test_people.py": "b40462044380b4f493c653ca154d9e3d7a0bb1993f99ba44c6bbb84a00d83629",
+    "skills/basketball-highlight-editor/tests/test_workflow.py": "30b2b37e62225cf893ec5e911009940a71453e735857256886722a40d574b0c1",
+    "scripts/verify_release.py": "703325e8bd7309c016ba99d33313731141afdb43fa3ebb93a600070b9ea1bb46",
+    "scripts/replay_case.py": "47e4f4236582799645faa1c78939f2e4f9cbcc3ae4c78fd357ed47a3a2b5b7d8",
+    "scripts/test_review_form.js": "fa0992d0fa5de46d5fc939b8e8110056de0f187ce50eb92b29f9db5fd08f5249"
+  },
+  "unit_tests": {
+    "original": 25,
+    "evaluation": 50,
+    "new_robustness": 17,
+    "total": 92,
+    "skipped_in_primary_runtime": 0
+  },
+  "matrix_cases": 65,
+  "person_io_cases": 61,
+  "test_operator_projects": 122,
+  "historical_replay": "passed; test_operator; two rendered versions",
+  "html_review_form": "passed with Node 24",
+  "hardware": {
+    "cpu": "Apple M1 Pro",
+    "physical_memory_bytes": 17179869184,
+    "logical_cpus": 10,
+    "ffmpeg_architecture": "x86_64, Rosetta on Apple Silicon",
+    "python_architecture": "arm64"
+  },
+  "performance_cli_gate_passed": true,
+  "large_generated_media_tracked": false,
+  "new_model_weights_tracked": false,
+  "ci": "template updated and YAML parsed locally; GitHub Actions not run",
+  "release_verifier": {
+    "passed": true,
+    "release_files": 1535,
+    "command": "python3 scripts/verify_release.py"
+  },
+  "additional_base_python": {
+    "tests": 25,
+    "skipped": 8,
+    "result": "passed; optional vision tests skipped by their unchanged guards"
+  }
+}

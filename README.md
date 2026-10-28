@@ -14,6 +14,14 @@ A local, review-first basketball highlight skill for Codex. Includes runnable sc
 
 `eval/score.py` 只使用经哈希锁验证的人工确认事实，分别输出事件 P/R/F1 与三项人物指标；hold-out 必须显式启用。Indiana 历史决定只确认了两段球员出现，进球指标保持 null，等待实际人工标注。完整工作与限制见 [goal-1 报告](docs/reports/goal-1.md)。
 
+## 输入稳健性与性能（goal-2-robustness）
+
+新增 [输入矩阵与复现命令](robustness/README.md)、[完整测试报告](docs/reports/goal-2.md)。65 项格式／帧率／旋转／音轨／画质／异常与长视频变体通过；61 个有效输入分别重跑两次，项目 JSON 与 EDL 逐字节一致。另有 61 项真实人物检测读取检查，所有自动确认都记为 test_operator。
+
+本机 60 分钟 1080p 带音轨输入在缓存命中时，独立 CLI 流程用时 246.2 秒、进程树采样峰值 275.5 MiB；工作量为 120 个六秒窗口、全部 12 分钟粗剪、最后输出 60 秒。
+
+检测结果按视频和参数哈希缓存。VFR 与音频预留时间按视频 PTS 定位，渲染保留名义帧率，并记录累计帧数。大视频只由脚本在忽略的 work 目录生成。CI 模板已接入快速矩阵，完整矩阵和性能测试可选启用；这次只在本地分支提交，没有推送。
+
 ## 完整案例
 
 新增 **[无号码选人实测与迭代记录](docs/UNNUMBERED_CASE_STUDY.zh-CN.md)**：五个公开许可视频、两处无号码目标场景、三版方法对照、随机时间点留出、逐帧错误分析，以及两套完整粗剪项目。

@@ -40,7 +40,7 @@ python3 robustness/performance.py --output work/goal-2/performance
 
 时间码是加在派生画面上的二进制帧序号。测试直接读取每个粗剪和版本片段的首尾画面，对照源视频 PTS。起止误差均不得超过一个源帧，片段与整条成片的时长误差不得超过一个输出帧。VFR 的源帧容差取该窗口实际的相邻 PTS 间隔，同时报告帧序号误差和秒数。低码率画面先按 90kb/s 压缩，再加测量条，防止把时间码损坏当成剪切偏移；带测量条的文件总码率会高于 90kb/s。
 
-旋转素材同时验证实际 display matrix 和显示尺寸。FFmpeg 6 使用旧 rotate metadata 接口，支持 display_rotation 的新版本使用输入显示变换接口，避免生成没有真实旋转信息的测试文件。
+旋转素材同时验证实际 display matrix 和显示尺寸。不支持 display_rotation 的版本尝试旧 rotate metadata 接口，支持该选项时使用输入显示变换接口，避免生成没有真实旋转信息的测试文件。
 
 ## 缓存与可复现模式
 
